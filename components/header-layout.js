@@ -1,21 +1,26 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Form, Button, Container, Row, Col, Div} from "react-bootstrap";
+import styles from '../styles/layout.module.css'
 import React, { useEffect, useState } from "react"
 import {lightTheme, darkTheme, GlobalStyles} from "../styles/themes.js";
 import styled, { ThemeProvider} from "styled-components";
 
-import {getTheme, themeToggler} from '../pages/_app';
+import {FormControl, FormControlLabel,Switch, Grid, Box} from '@material-ui/core'
+import { spacing } from '@material-ui/system';
 
 export const siteTitle = 'Optical Font Website'
 let menu ="V";
 let dmText = "dark mode OFF"
 
+let dm = false;
+
 const StyledApp= styled.div`
   color: ${props => props.theme.fontColor};
 `;
 
+export const getDM = () =>
+{
+  return {dm};
+}
 
 export default function HeaderLayout({lightSwitchOn, children }) {
 
@@ -33,7 +38,7 @@ export default function HeaderLayout({lightSwitchOn, children }) {
   }
 
   function toggleDM(){      
-
+    dm =!dm;
     setShowDM(!showDM);
 }
 
@@ -58,46 +63,44 @@ export default function HeaderLayout({lightSwitchOn, children }) {
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
 
-        <Container fluid className={styles.container}>
-          <Row>
-            <Col md={5}> left SIDE LOGO </Col>
+        <Grid container className={styles.container}>
+          <Grid item container direction ="row">
+            <Grid item sm={5}> left SIDE LOGO </Grid>
                   
-            <Col md={4}> middle  
+            <Grid item sm={4}> middle  
                 
                 <button onClick={toggle}>
                     {menu}
                 </button>
 
                 
-            </Col>
-            <Col md={3}>
+            </Grid>
+            <Grid item sm={3}>
               {lightSwitchOn ? (
-                <Form>
-                  <Form.Check type ="switch"  onClick={toggleDM}/>
-                </Form>
+                <FormControl>
+                  <FormControlLabel control = { <Switch onChange={toggleDM} />}
+                  />
+                </FormControl>
                 ) :
                 (<div></div>)
                 }
                     
-            </Col>
-          </Row>
-          <Row>
-                <div style = {{display :showMe? "block":"none"}}>
-                        <Container>
-                            <Row>
-                                <Col s="auto">Fonts & Low Vision</Col>
-                                <Col s="auto"> Use Guide </Col>
-                                <Col s="auto"> Partners</Col>
-                                <Col s="auto"> Accessibility</Col>
-                                <Col s="auto">Privacy</Col>
-                                <Col s="auto"> CO2 </Col>
-                            </Row>
-                        </Container>
-                        
-                </div>
-            </Row>
+            </Grid>
+          </Grid>
+                <Grid item container  sm="auto" style = {{display :showMe? "block":"none" }} >
+                      <Box m={5}>
+                  <Grid item container direction="row" p={5} justifyContent="space-evenly" style ={{background:"red"}}>
+                      <Grid item sm="auto" style ={{background:"yellow"}} >Fonts & Low Vision</Grid>
+                      <Grid item sm="auto" style ={{background:"blue"}} > Use Guide </Grid>
+                      <Grid item sm="auto" > Partners</Grid>
+                      <Grid item sm="auto"> Accessibility</Grid>
+                      <Grid item sm="auto" >Privacy</Grid>
+                      <Grid item sm="auto" > CO2 </Grid>
+                  </Grid>
+                      </Box>
+                  </Grid>
 
-        </Container>
+        </Grid>
 
         {/* make children dark or light? */}
 

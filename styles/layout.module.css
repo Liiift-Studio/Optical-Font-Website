@@ -1,0 +1,13 @@
+.container {
+  height: 20vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
