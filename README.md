@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+## install dependencies
+
+npm install react-bootstrap@next bootstrap@5.1.0
+
+npm install styled-components
+
 ## Getting Started
 
 First, run the development server:
