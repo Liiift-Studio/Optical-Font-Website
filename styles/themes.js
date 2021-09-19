@@ -16,11 +16,19 @@ export const darkTheme ={
     fontColor: "yellow",
 };
 
-export const GlobalStyles = createGlobalStyle`
-    body {
-        background-color: ${(props) => props.theme.body};
-    }
-`;
+
+
+export const darkParentTheme = createTheme({ 
+        palette:{
+            type: "dark",
+        },
+});
+
+
+export const lightParentTheme = createTheme({
+
+});
+
 
 export const landingTheme = createTheme({
     palette:{

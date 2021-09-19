@@ -1,16 +1,17 @@
 import Head from 'next/head'
 import styles from '../styles/layout.module.css'
 import React, { useEffect, useState } from "react"
-import {lightTheme, darkTheme, GlobalStyles} from "../styles/themes.js";
 import styled, { ThemeProvider} from "styled-components";
 
-import {FormControl, FormControlLabel,Switch, Grid, Box} from '@material-ui/core'
+import {Card, CardContent, Grid, Box} from '@material-ui/core'
 import { spacing } from '@material-ui/system';
 
 export default function FooterLayout({children }) {
 
     return(
-        <Grid container>
+      <Card>
+        <CardContent>
+        <Grid container >
         <Grid container item direction='column' sm={6}>
           <Grid item>
             <h2>SITE MAP</h2>
@@ -52,5 +53,7 @@ export default function FooterLayout({children }) {
           </Grid>
         </Grid>
       </Grid>
+      </CardContent>
+      </Card>
     )
 }

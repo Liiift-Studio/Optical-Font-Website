@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## install dependencies
 
-npm install react-bootstrap@next bootstrap@5.1.0
+npm install @material-ui/core
 
 npm install styled-components
 
