@@ -1,37 +1,40 @@
 import Head from 'next/head'
 import styles from '../styles/layout.module.css'
 import React, { useEffect, useState } from "react"
-import {darkParentTheme, lightParentTheme } from "../styles/themes.js";
+// import {darkParentTheme, lightParentTheme } from "../styles/themes.js";
 
-import styled from "styled-components";
 
 import {ThemeProvider, createTheme} from "@material-ui/core/styles"
-import {FormControl, FormControlLabel,Switch, Grid, Box,Paper, } from '@material-ui/core'
-import { spacing } from '@material-ui/system';
+import {Icon, FormControlLabel,Switch, Grid, Box,Paper, Typography ,Button} from '@material-ui/core'
+
+// import {ArrowDownwardIcon} from '@material-ui/icons';
 
 export const siteTitle = 'Optical Font Website'
 let dmText = "dark mode OFF"
 
+export let dm = false;
 
 export default function HeaderLayout({lightSwitchOn, children }) {
-
+  
   const [showMe, setShowMe] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-
+  
   const darkTheme = createTheme({
     palette:{
       type:"dark",
-    
     },
   });
   const lightTheme = createTheme({
     
   });
-
-  const chooseTheme = (darkMode ? {darkParentTheme} : {lightParentTheme}) ;
+  function changeDarkMode(){
+    setDarkMode(!darkMode);
+    dm=!dm;
+  }
+  
   const chooseThemeLocal = (darkMode ? darkTheme : lightTheme) ;
     return (
-      <div>
+      <>
         {/* <ThemeProvider theme = {chooseTheme}> */}
        <ThemeProvider theme = {chooseThemeLocal}>
           <Paper>
@@ -51,50 +54,65 @@ export default function HeaderLayout({lightSwitchOn, children }) {
               <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
-            <Grid container className={styles.container}>
-              <Grid item container direction ="row">
-                <Grid item sm={5}> left SIDE LOGO </Grid>
-                      
-                <Grid item sm={4}> middle  
-                    
-                    <button onClick={() => setShowMe(!showMe)}>
-                        {showMe ? "V" :" ^"}
-                    </button>
 
-                    
-                </Grid>
-                <Grid item sm={3}>
-                  {lightSwitchOn ? (
-                    <FormControlLabel
-                      control = {<Switch checked={darkMode} onChange= {()=>setDarkMode(!darkMode)} />}
-                      label = {(darkMode ? "Light Mode" : "Dark Mode")}
-                    /> 
-                    ) :
-                    (<div></div>)
-                    }
+              <Grid container className={styles.header_container} >
+                <Grid item container direction ="row">
+                  <Grid item sm={6} className ={styles.optical_logo}> 
+                      Optical 
+                    </Grid>
                         
+                  <Grid item sm={3}> 
+
+                      <Button 
+                        onClick={() => setShowMe(!showMe)} 
+                        className = {styles.about_button}
+                        // endIcon = {<ArrowDownwardIcon/>}
+                        >
+                        
+                        About
+                          {showMe ? " V" : " <"}
+                      </Button>
+
+                      
+                  </Grid>
+
+                  <Grid item sm={3}>
+                    {lightSwitchOn ? (
+                      <FormControlLabel
+                        control = {<Switch checked={darkMode} onChange= {changeDarkMode} />}
+                        
+                      /> 
+                      ) :
+                      (<div></div>)
+                      }
+                          
+                  </Grid>
                 </Grid>
-              </Grid>
-                    <Grid item container  sm="auto" style = {{display :showMe? "block":"none" }} >
-                          <Box m={5}>
-                      <Grid item container direction="row" p={5} justifyContent="space-evenly" >
-                          <Grid item sm="auto" >Fonts & Low Vision</Grid>
+                  <Grid item container  sm="auto" style = {{display :showMe? "block":"none" }  }  className={styles.about_menu_container} >
+                    <Box sx={{mt:'1.5vh'}}>
+                      <Grid item container direction="row" p={5} className={styles.about_menu} >
+                          <Grid item sm="auto" >Fonts & Low Vision  </Grid>
+                          <Grid item sm="auto" >|</Grid>
                           <Grid item sm="auto" > Use Guide </Grid>
+                          <Grid item sm="auto" >|</Grid>
                           <Grid item sm="auto" > Partners</Grid>
+                          <Grid item sm="auto" >|</Grid>
                           <Grid item sm="auto"> Accessibility</Grid>
+                          <Grid item sm="auto" >|</Grid>
                           <Grid item sm="auto" >Privacy</Grid>
+                          <Grid item sm="auto" >|</Grid>
                           <Grid item sm="auto" > CO2 </Grid>
                       </Grid>
-                          </Box>
-                      </Grid>
+                    </Box>
+                  </Grid>
 
-            </Grid>
+              </Grid>
 
     
                   {children}
                 </Paper>
             </ThemeProvider>
 
-        </div>
+        </>
     )
   }

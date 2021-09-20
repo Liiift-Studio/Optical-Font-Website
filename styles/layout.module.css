@@ -1,13 +1,45 @@
-.container {
+.header_container {
   height: 20vh;
+  padding: 4vw;
+  vertical-align: bottom;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.about_menu{
+  display:flex;
+  flex-wrap: nowrap;
+  background-color: #CBDDFF;
+  border-radius:15px;
+  padding: 1%;
+  justify-content: space-evenly;
+  font-size: 1.5vw;
+  font-weight: 400;
+
+}
+.about_menu_container{
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.optical_logo{
+  
+  font-weight: 400;
+  font-size:2.5vw;
 }
 
+.landing_container{
+  padding: 4vw;
+}
+
+.h1{
+  font-size:4vw;
+  font-weight: 600;
+}
+.subText{
+  font-size:1vw;
+  font-weight:100;
+}
+
+.body{
+  
+}
 .backToHome {
   margin: 3rem 0 0;
 }

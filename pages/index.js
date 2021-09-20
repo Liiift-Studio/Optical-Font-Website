@@ -1,24 +1,22 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { ThemeProvider } from 'styled-components'
-import { landingTheme } from '../styles/themes'
+import {ThemeProvider, createTheme} from "@material-ui/core/styles"
 
 // import HeaderLayout from '../components/header-layout'
 import utilStyles from '../styles/utils.module.css'
-import {FormControl, FormControlLabel,Button, Grid, Box} from '@material-ui/core'
+import {Typography ,Button, Grid, Paper, colors, Box} from '@material-ui/core'
 import { palette } from '@material-ui/system';
+
 
 
 import dials from '../public/images/dials.png'
 
 import FooterLayout from '../components/footer-layout'
+import styles from '../styles/layout.module.css'
 
 
-
-// const theme 
 
 export default function Home() {
   return (
@@ -40,18 +38,21 @@ export default function Home() {
     {/* BODY -> TODO : put into its own layout */}
      
     
-      <section id="landing" className={utilStyles.headingMd}>
+      <section id="landing" >
         
         <Grid container spacing={6}>
           <Grid container item sm={6}>
-            <Grid item>
-              <h1>
+            <Grid item className={styles.landing_container}>
+              <Grid item className={styles.h1}>
                 Fonts customized to varied vision
-              </h1>
-                <Button  onClick="">Download</Button>
-              Install the extension and customize your fonts
+              </Grid>
+              <Button>
+                Download
+              </Button>
+              <Grid item className={styles.subtext}>
+                  Install the extension and {'\n'} customize your fonts
+              </Grid>        
             </Grid>
-
           </Grid>
           <Grid container item sm={6}>
             <Image src={dials} alt=""/>
@@ -61,11 +62,13 @@ export default function Home() {
 
       </section>
       <section id="about">
-        <Grid container >
-          <Box p={5} bgcolor="lightBlue">
-          Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More
-          </Box>
-        </Grid>
+       <ThemeProvider >
+            <Grid container className={styles.landing_container} style={{backgroundColor:"#CBDDFF"}} >
+              <Grid item className={styles.body}>
+                Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More
+              </Grid>
+            </Grid>
+        </ThemeProvider>
       </section>
 
       {/* FOOTER TOD0 : put into its own layout */}
