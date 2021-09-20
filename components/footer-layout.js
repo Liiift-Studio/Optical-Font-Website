@@ -3,15 +3,13 @@ import styles from '../styles/layout.module.css'
 import React, { useEffect, useState } from "react"
 import styled, { ThemeProvider} from "styled-components";
 
-import {Card, CardContent, Grid, Box} from '@material-ui/core'
-import { spacing } from '@material-ui/system';
+import {Card, CardContent, Grid, Box} from '@mui/material/'
 
 export default function FooterLayout({children }) {
 
     return(
-      <Card>
-        <CardContent>
-        <Grid container >
+     
+        <Grid container className = {styles.footer_container} bgcolor="background.footer" >
         <Grid container item direction='column' sm={6}>
           <Grid item>
             <h2>SITE MAP</h2>
@@ -53,7 +51,6 @@ export default function FooterLayout({children }) {
           </Grid>
         </Grid>
       </Grid>
-      </CardContent>
-      </Card>
+
     )
 }

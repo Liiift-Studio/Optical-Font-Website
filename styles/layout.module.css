@@ -7,7 +7,7 @@
 .about_menu{
   display:flex;
   flex-wrap: nowrap;
-  background-color: #CBDDFF;
+  /* background-color: #CBDDFF; */
   border-radius:15px;
   padding: 1%;
   justify-content: space-evenly;
@@ -28,6 +28,14 @@
   padding: 4vw;
 }
 
+.footer_container{
+  padding: 4vw;
+  /* background-color: #AFC8F8; */
+
+}
+.dials_container{
+  padding:4vw;
+}
 .h1{
   font-size:4vw;
   font-weight: 600;

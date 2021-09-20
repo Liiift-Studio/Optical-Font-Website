@@ -1,11 +1,16 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## node version
+
+v14.17.6 
+
 
 ## install dependencies
 
-npm install @material-ui/core
+npm install @mui/material@next @emotion/react @emotion/styled
+npm install @mui/icons-material@next @mui/lab@next
+npm install @mui/styles@next
 
-npm install styled-components
 
 ## Getting Started
 

@@ -2,19 +2,17 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import {ThemeProvider, createTheme} from "@material-ui/core/styles"
+import {ThemeProvider, createTheme} from "@mui/material/styles"
 
 // import HeaderLayout from '../components/header-layout'
 import utilStyles from '../styles/utils.module.css'
-import {Typography ,Button, Grid, Paper, colors, Box} from '@material-ui/core'
-import { palette } from '@material-ui/system';
-
-
+import {Typography ,Button, Grid, Paper, colors, Box} from '@mui/material/'
 
 import dials from '../public/images/dials.png'
 
 import FooterLayout from '../components/footer-layout'
 import styles from '../styles/layout.module.css'
+
 
 
 
@@ -55,20 +53,20 @@ export default function Home() {
             </Grid>
           </Grid>
           <Grid container item sm={6}>
-            <Image src={dials} alt=""/>
+            <Grid item  className={styles.dials_container}>
+              <Image src={dials} alt=""/>
+            </Grid>
           </Grid>
 
         </Grid>
 
       </section>
       <section id="about">
-       <ThemeProvider >
-            <Grid container className={styles.landing_container} style={{backgroundColor:"#CBDDFF"}} >
-              <Grid item className={styles.body}>
+            <Grid container className={styles.landing_container } bgcolor="background.about" >
+              <Grid item className={styles.body} >
                 Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More
               </Grid>
             </Grid>
-        </ThemeProvider>
       </section>
 
       {/* FOOTER TOD0 : put into its own layout */}

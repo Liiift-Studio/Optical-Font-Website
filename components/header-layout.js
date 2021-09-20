@@ -4,10 +4,9 @@ import React, { useEffect, useState } from "react"
 // import {darkParentTheme, lightParentTheme } from "../styles/themes.js";
 
 
-import {ThemeProvider, createTheme} from "@material-ui/core/styles"
-import {Icon, FormControlLabel,Switch, Grid, Box,Paper, Typography ,Button} from '@material-ui/core'
+import {ThemeProvider, createTheme} from "@mui/material/styles"
+import {FormControlLabel, Switch, Typography ,Button, Grid, Paper, colors, Box} from '@mui/material/'
 
-// import {ArrowDownwardIcon} from '@material-ui/icons';
 
 export const siteTitle = 'Optical Font Website'
 let dmText = "dark mode OFF"
@@ -27,6 +26,7 @@ export default function HeaderLayout({lightSwitchOn, children }) {
   const lightTheme = createTheme({
     
   });
+
   function changeDarkMode(){
     setDarkMode(!darkMode);
     dm=!dm;
@@ -109,7 +109,6 @@ export default function HeaderLayout({lightSwitchOn, children }) {
               </Grid>
 
     
-                  {children}
                 </Paper>
             </ThemeProvider>
 
