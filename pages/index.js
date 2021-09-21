@@ -1,22 +1,31 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import React, { useState } from "react"
 
 import {ThemeProvider, createTheme} from "@mui/material/styles"
 
 // import HeaderLayout from '../components/header-layout'
 import utilStyles from '../styles/utils.module.css'
-import {Typography ,Button, Grid, Paper, colors, Box} from '@mui/material/'
+import {Typography ,ToggleButton,Button, Grid, Paper, colors, Box, ToggleButtonGroup} from '@mui/material'
 
 import dials from '../public/images/dials.png'
 
 import FooterLayout from '../components/footer-layout'
+import MenuSelect from '../components/menu-select'
 import styles from '../styles/layout.module.css'
+// import {buttonStyle} from '../src/themes'
 
 
-
+import {About,FLV,UG,P,A,PR} from '../styles/utils.module.constants'
+import { lightGreen } from '@mui/material/colors'
 
 export default function Home() {
+
+  const [toggleValue, setToggle]= useState(About);
+
+  console.log(toggleValue);
+  
   return (
     <>
     {/* HEADER 
@@ -38,17 +47,35 @@ export default function Home() {
     
       <section id="landing" >
         
-        <Grid container spacing={6}>
-          <Grid container item sm={6}>
+        <Grid container spacing={10}>
+          <Grid container item sm={6} alignItems = "flex-start">
             <Grid item className={styles.landing_container}>
-              <Grid item className={styles.h1}>
-                Fonts customized to varied vision
-              </Grid>
-              <Button>
-                Download
+              <Grid item >
+                <Typography variant = 'h1'>
+                  Fonts customized to varied vision
+                </Typography> 
+                </Grid>
+              <Button
+                variant ="string"
+                sx={{
+                    // padding:1,
+                    // paddingRight:2,
+                    my:5,
+                    px:5,
+                    py:1,
+                    border:1,
+                    borderRadius:5,
+                }}
+
+                >
+                  <Typography variant = "h5">
+                    Download
+                  </Typography>
               </Button>
               <Grid item className={styles.subtext}>
+                <Typography variant="h5">
                   Install the extension and {'\n'} customize your fonts
+                </Typography>
               </Grid>        
             </Grid>
           </Grid>
@@ -61,15 +88,121 @@ export default function Home() {
         </Grid>
 
       </section>
-      <section id="about">
-            <Grid container className={styles.landing_container } bgcolor="background.about" >
-              <Grid item className={styles.body} >
-                Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More
+      <section id="menu">
+        <Grid container sm={12} className={styles.landing_container} spacing ={10}>
+
+          <Grid item container sm={4} direction="column" justifyContent="flex-start" className={styles.menuButtons_container}>
+                {/* <ToggleButtonGroup
+                    value = {toggleValue}
+                    // onChange={()=>setToggle(value)}
+                    orientation='vertical'
+                  > */}
+                  <ToggleButton 
+                    variant ="string"
+                    value={About}
+                    href="#about"
+                      sx={{
+                        width : "100%",
+                        my:5,
+                        px:5,
+                        py:1,
+                        borderRadius:5,
+                    }}
+                    >
+  
+                    <Typography variant="h4" align="left" 
+                      > 
+                      About
+                    </Typography>
+
+                  </ToggleButton>
+
+                  <ToggleButton
+                    variant="string"
+                    value={FLV}
+                    href="#FLV"
+                  >
+                      Fonts & Low Vision
+                  </ToggleButton>
+                  <ToggleButton
+                    variant="string"
+                    value={UG}
+                    href="#UG"
+                  > 
+                    User Guide</ToggleButton>
+                  <ToggleButton
+                    variant="string"
+                    value={P}
+                    href="#P"
+                  > 
+                    Project
+                  </ToggleButton>
+                  <ToggleButton
+                    variant="string"
+                    value={A}
+                    href="#A"
+                  >
+                    Accessibility
+                  </ToggleButton>
+                  <ToggleButton
+                    variant="string"
+                    value={PR}
+                    href="#PR"
+                  > 
+                    Privacy
+                  </ToggleButton>
+                {/* </ToggleButtonGroup> */}
+                
+
+          </Grid>
+      
+          <Grid item container sm={8} alignItems="center" >
+              <Grid item  >
+              <section id="about" className={styles.about_sections}  >
+                  <Typography variant='body'>
+                    "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
+                  </Typography>
+              </section>
+              
+              <section id="FLV" className={styles.about_sections}>
+                <Typography variant='body'>
+                  "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
+                </Typography>
+              </section>
+
+              <section id="UG" className={styles.about_sections}>
+                <Typography variant='body'>
+                  "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
+                </Typography>
+              </section>
+              
+              
+              <section id="P" className={styles.about_sections}>
+                <Typography variant='body'>
+                  "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
+                </Typography>
+              </section>
+              
+              <section id="A" className={styles.about_sections}>
+                <Typography variant='body'>
+                  "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
+                </Typography>
+              </section>
+
+              
+              <section id="PR" className={styles.about_sections}>
+                <Typography variant='body'>
+                  "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
+                </Typography>
+              </section>
+
+
               </Grid>
-            </Grid>
+          </Grid>
+        </Grid>
+
       </section>
 
-      {/* FOOTER TOD0 : put into its own layout */}
       <section id = "footer">
         <FooterLayout></FooterLayout>
 

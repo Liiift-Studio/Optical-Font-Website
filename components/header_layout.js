@@ -2,25 +2,30 @@ import Head from 'next/head'
 import styles from '../styles/layout.module.css'
 import React, { useEffect, useState } from "react"
 
-import {FormControlLabel,Switch,Paper,Card, CardContent, Grid, Box} from '@mui/material/'
+import {Button,Typography,Switch,Paper, Grid, Box} from '@mui/material/'
+import { makeStyles} from '@mui/styles'
+import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
 
-import {ThemeProvider, createTheme} from "@mui/material/styles"
 
 import {darkTheme, lightTheme} from '../src/themes'
-import { Button, Typography } from '@material-ui/core';
+import { fontWeight } from '@mui/system'
 
 export const siteTitle = 'Optical Font Website'
 
+// import {buttonStyle} from '../src/themes'
 
 export default function HeaderLayout({lightSwitchOn, children }) {
+    // const classes = buttonStyle();
+    
     const [darkMode, setDarkMode] = useState(false);
     
+
     function changeDarkMode(){
         setDarkMode(!darkMode);
     }
 
     function chooseTheme(){
-        return (darkMode ? darkTheme : lightTheme);
+        return (darkMode ? responsiveFontSizes(darkTheme) : responsiveFontSizes(lightTheme));
     }
 
     return(
@@ -51,16 +56,23 @@ export default function HeaderLayout({lightSwitchOn, children }) {
                                 </Typography>
                             </Grid>
 
-                            <Grid item sm={3}>
-                                <Button
-                                    // onClick{}
-                                    >
-                                    <Typography variant = 'h6'>
+                            <Grid container item sm={4} justifyContent="flex-end"  alignItems="flex-start" >
+                                <Button 
+                                    variant ="string"
+                                    href="#menu"
+                                    sx={{
+                                        // padding:1,
+                                        border: 1,
+                                        borderRadius:4,
+                                        fontWeight:'medium',
+                                        
+                                    }}
+
+                                >
                                         About
-                                    </Typography>
                                 </Button>
                             </Grid>
-                            <Grid item sm={3}>
+                            <Grid container item sm={2} justifyContent="flex-end" alignItems="flex-start">
                                 <Switch
                                     checked={darkMode}
                                     onChange={changeDarkMode}

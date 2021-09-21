@@ -1,3 +1,20 @@
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about_sections {
+  display: flex;
+  align-items: center;
+
+  min-height : 50vh;
+}
+
+.menu_item{
+  min-height : 30vh;
+}
+
 .header_container {
   height: 20vh;
   padding: 4vw;
