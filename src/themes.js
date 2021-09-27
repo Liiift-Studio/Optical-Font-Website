@@ -34,7 +34,7 @@ const button = {
     fontSize:30,
 }
 const h1 = {
-    lineHeight:1.2,
+    lineHeight:1.15,
 }
 const body ={
     fontSize:20,

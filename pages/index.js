@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import {ThemeProvider, createTheme} from "@mui/material/styles"
 
@@ -19,13 +19,30 @@ import styles from '../styles/layout.module.css'
 
 import {About,FLV,UG,P,A,PR} from '../styles/utils.module.constants'
 import { lightGreen } from '@mui/material/colors'
+import { VisibilityOff } from '@mui/icons-material'
 
 export default function Home() {
 
   const [toggleValue, setToggle]= useState(About);
-
-  console.log(toggleValue);
+  const [sectionMarker, setSection] = useState(About);
+  // const [y, setY] = useState(0);
   
+
+  const handleToggle = (e, toggle) => {
+    setToggle(toggle);
+  }
+
+  // useEffect(()=>{
+
+  //   console.log('section marker : '+ sectionMarker);
+  // },[screen.scrollY]);
+
+  // // console.log(toggleValue);
+
+  // let y = window.scrollY;
+  // console.log('screen section : '+ y);
+
+
   return (
     <>
     {/* HEADER 
@@ -42,13 +59,13 @@ export default function Home() {
       </Head>
     
     
-    {/* BODY -> TODO : put into its own layout */}
+    {/* BODY */}
      
     
       <section id="landing" >
         
         <Grid container spacing={10}>
-          <Grid container item sm={6} alignItems = "flex-start">
+          <Grid container item md={6} alignItems = "flex-start">
             <Grid item className={styles.landing_container}>
               <Grid item >
                 <Typography variant = 'h1'>
@@ -79,7 +96,8 @@ export default function Home() {
               </Grid>        
             </Grid>
           </Grid>
-          <Grid container item sm={6}>
+
+          <Grid container item md={6} >
             <Grid item  className={styles.dials_container}>
               <Image src={dials} alt=""/>
             </Grid>
@@ -88,26 +106,25 @@ export default function Home() {
         </Grid>
 
       </section>
+
       <section id="menu">
+        {/* TODO : Put in own layout */}
+        {/* set to value to scroll position useEffect */}
         <Grid container sm={12} className={styles.landing_container} spacing ={10}>
 
-          <Grid item container sm={4} direction="column" justifyContent="flex-start" className={styles.menuButtons_container}>
-                {/* <ToggleButtonGroup
+          <Grid item container sm={4} className={styles.menuButtons_container} >
+                <ToggleButtonGroup
+                    color = 'primary'
                     value = {toggleValue}
-                    // onChange={()=>setToggle(value)}
+                    exclusive
+                    onChange={handleToggle}
                     orientation='vertical'
-                  > */}
+                    spacing ={5}
+                  >
                   <ToggleButton 
                     variant ="string"
                     value={About}
                     href="#about"
-                      sx={{
-                        width : "100%",
-                        my:5,
-                        px:5,
-                        py:1,
-                        borderRadius:5,
-                    }}
                     >
   
                     <Typography variant="h4" align="left" 
@@ -151,7 +168,7 @@ export default function Home() {
                   > 
                     Privacy
                   </ToggleButton>
-                {/* </ToggleButtonGroup> */}
+                </ToggleButtonGroup>
                 
 
           </Grid>
@@ -205,8 +222,6 @@ export default function Home() {
 
       <section id = "footer">
         <FooterLayout></FooterLayout>
-
-
       </section>
     
     

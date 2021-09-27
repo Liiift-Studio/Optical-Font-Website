@@ -8,13 +8,22 @@
   display: flex;
   align-items: center;
 
-  min-height : 50vh;
+  min-height : 100vh;
 }
 
 .menu_item{
   min-height : 30vh;
 }
+.menuButtons_container{
+    /* background-color: #CBDDFF; */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  height :100vh;
 
+}
 .header_container {
   height: 20vh;
   padding: 4vw;
