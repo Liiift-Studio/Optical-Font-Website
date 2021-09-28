@@ -12,6 +12,8 @@ npm install @mui/icons-material@next @mui/lab@next
 npm install @mui/styles@next
 
 
+npm install react-waypoint --save
+
 ## Getting Started
 
 First, run the development server:

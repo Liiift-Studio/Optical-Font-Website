@@ -1,3 +1,4 @@
+import { ArrowLeft } from '@mui/icons-material';
 import { createTheme } from '@mui/material/styles';
 // import grey from '@mui/material/colors/grey'
 import {  Button,alpha, styled,makeStyles} from '@mui/styles'
@@ -21,10 +22,10 @@ const toggleButtonLightT_hover= "#2c2e33";
 const toggleButtonLightBG_hover= "#e8f0ff";
 
 
-const buttonDarkT = black;
-const buttonDarkT_hover= landingBlue;
+const buttonDarkT ="#FCFF55";
+const buttonDarkT_hover= black;
 const buttonDarkBG = "#FCFF55";
-const buttonDarkBG_hover = black;
+const buttonDarkBG_hover = "#FCFF55";
 
 
 
@@ -34,7 +35,23 @@ const button = {
     fontSize:30,
 }
 const h1 = {
-    lineHeight:1.15,
+    fontSize:45,
+    fontWeight:550,
+    lineHeight:1.35,
+}
+const h2 = {
+    fontSize:45,
+    fontWeight:400,
+}
+const h3 = {
+    fontSize:25,
+    fontWeight:550,
+}
+
+// toggle buttons & menu titles
+const h4 = {
+    fontSize:17,
+    fontWeight:600,
 }
 const body ={
     fontSize:20,
@@ -43,20 +60,24 @@ const body ={
 
 const parentTheme = createTheme({
     typography:{
-        h1: h1,
+        h1 : h1,
+        h2 : h2, 
+        h3 : h3,
+        h4 : h4,
         // button: button,
         body:body,        
     },
-
     components:{
-        MuiButton :{
-            styleOverrides:{
-                root:{
-                    textTransform: 'none',
-                    fontSize:20,
-                }
         
+        MuiListItemButton :{
+            styleOverrides:{
+                stringPrimary:{
+                '&:hover' : {
+                    backgroundColor: landingBlue,
+                },
             }
+
+            },
         }
     }
 })
@@ -68,6 +89,9 @@ export let lightTheme = createTheme({
         mode: 'light',
         
         //   buttons
+        primary:{
+            main:black,
+        },
         secondary:{
             light: white ,
             main: buttonText
@@ -87,8 +111,8 @@ export let lightTheme = createTheme({
         MuiButton :{
             styleOverrides:{
                 root:{
-                    textTransform: 'none',
-                    fontSize:20,
+                    // textTransform: 'none',
+                    // fontSize:20,
                     // borderRadius: 5,
                     // borderColor:landingBlue,
                 },
@@ -110,17 +134,17 @@ export let lightTheme = createTheme({
         MuiToggleButton:{
             styleOverrides:{
                 root:{
-                    textTransform: 'none',
-                    fontSize:20,
+
                     backgroundColor : buttonLightBG,
                     color: buttonLightT,
                     border:0,
+                    justifyContent: "flex-start",
             
                     
                     '&:hover' : {
-                        backgroundColor: toggleButtonLightBG_hover,
-                        color: toggleButtonLightT_hover,
-                        borderColor: toggleButtonLightBG_hover,
+                        // backgroundColor: toggleButtonLightBG_hover,
+                        // color: toggleButtonLightT_hover,
+                        // borderColor: toggleButtonLightBG_hover,
     
                     },
 
@@ -140,9 +164,7 @@ export let darkTheme =createTheme({
     palette:{
         mode: 'dark',
 
-        // primary : {
-        //     main:black,
-        // },
+
 
         secondary:{
             main: buttonText ,
@@ -161,8 +183,8 @@ export let darkTheme =createTheme({
         MuiButton :{
             styleOverrides:{
                 root:{
-                    textTransform: 'none',
-                    fontSize:20,
+                    // textTransform: 'none',
+                    // fontSize:20,
                     // borderRadius: 5,
                     // borderColor:landingBlue,
                 },
@@ -186,12 +208,9 @@ export let darkTheme =createTheme({
         MuiToggleButton:{
             styleOverrides:{
                 root:{
-                    textTransform: 'none',
-                    fontSize:20,
-                    // backgroundColor : black,
-                    // color: primary,
                     border:0,
-            
+                    justifyContent: "flex-start",
+
                     
                     '&:hover' : {
                         backgroundColor: toggleButtonLightBG_hover,
@@ -210,7 +229,30 @@ export let darkTheme =createTheme({
     }
     
 });
+ darkTheme = createTheme(darkTheme,{
+    components:{
+        MuiButton :{
+            styleOverrides:{
 
+
+                stringPrimary:{
+                    backgroundColor : darkTheme.palette.secondary,
+                    color: buttonDarkT,
+
+                    '&:hover' : {
+                        backgroundColor: buttonDarkBG_hover,
+                        color: buttonDarkT_hover,
+                        borderColor:buttonDarkT_hover,
+
+                    },
+                }
+                
+
+        
+            }
+        },
+    }
+ });
 
 
 // darkTheme.overrides ={

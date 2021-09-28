@@ -20,27 +20,10 @@ import styles from '../styles/layout.module.css'
 import {About,FLV,UG,P,A,PR} from '../styles/utils.module.constants'
 import { lightGreen } from '@mui/material/colors'
 import { VisibilityOff } from '@mui/icons-material'
+import MenusLayout from '../components/menu-layout'
 
 export default function Home() {
 
-  const [toggleValue, setToggle]= useState(About);
-  const [sectionMarker, setSection] = useState(About);
-  // const [y, setY] = useState(0);
-  
-
-  const handleToggle = (e, toggle) => {
-    setToggle(toggle);
-  }
-
-  // useEffect(()=>{
-
-  //   console.log('section marker : '+ sectionMarker);
-  // },[screen.scrollY]);
-
-  // // console.log(toggleValue);
-
-  // let y = window.scrollY;
-  // console.log('screen section : '+ y);
 
 
   return (
@@ -69,7 +52,7 @@ export default function Home() {
             <Grid item className={styles.landing_container}>
               <Grid item >
                 <Typography variant = 'h1'>
-                  Fonts customized to varied vision
+                  Varied fonts for <br /> varied vision. 
                 </Typography> 
                 </Grid>
               <Button
@@ -78,22 +61,22 @@ export default function Home() {
                     // padding:1,
                     // paddingRight:2,
                     my:5,
-                    px:5,
+                    px:4,
                     py:1,
-                    border:1,
-                    borderRadius:5,
+                    border:3,
+                    borderRadius:11,
                 }}
 
                 >
-                  <Typography variant = "h5">
-                    Download
+                  <Typography variant = "h3">
+                    Install
                   </Typography>
               </Button>
-              <Grid item className={styles.subtext}>
+              {/* <Grid item className={styles.subtext}>
                 <Typography variant="h5">
                   Install the extension and {'\n'} customize your fonts
                 </Typography>
-              </Grid>        
+              </Grid>         */}
             </Grid>
           </Grid>
 
@@ -108,116 +91,8 @@ export default function Home() {
       </section>
 
       <section id="menu">
-        {/* TODO : Put in own layout */}
         {/* set to value to scroll position useEffect */}
-        <Grid container sm={12} className={styles.landing_container} spacing ={10}>
-
-          <Grid item container sm={4} className={styles.menuButtons_container} >
-                <ToggleButtonGroup
-                    color = 'primary'
-                    value = {toggleValue}
-                    exclusive
-                    onChange={handleToggle}
-                    orientation='vertical'
-                    spacing ={5}
-                  >
-                  <ToggleButton 
-                    variant ="string"
-                    value={About}
-                    href="#about"
-                    >
-  
-                    <Typography variant="h4" align="left" 
-                      > 
-                      About
-                    </Typography>
-
-                  </ToggleButton>
-
-                  <ToggleButton
-                    variant="string"
-                    value={FLV}
-                    href="#FLV"
-                  >
-                      Fonts & Low Vision
-                  </ToggleButton>
-                  <ToggleButton
-                    variant="string"
-                    value={UG}
-                    href="#UG"
-                  > 
-                    User Guide</ToggleButton>
-                  <ToggleButton
-                    variant="string"
-                    value={P}
-                    href="#P"
-                  > 
-                    Project
-                  </ToggleButton>
-                  <ToggleButton
-                    variant="string"
-                    value={A}
-                    href="#A"
-                  >
-                    Accessibility
-                  </ToggleButton>
-                  <ToggleButton
-                    variant="string"
-                    value={PR}
-                    href="#PR"
-                  > 
-                    Privacy
-                  </ToggleButton>
-                </ToggleButtonGroup>
-                
-
-          </Grid>
-      
-          <Grid item container sm={8} alignItems="center" >
-              <Grid item  >
-              <section id="about" className={styles.about_sections}  >
-                  <Typography variant='body'>
-                    "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
-                  </Typography>
-              </section>
-              
-              <section id="FLV" className={styles.about_sections}>
-                <Typography variant='body'>
-                  "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
-                </Typography>
-              </section>
-
-              <section id="UG" className={styles.about_sections}>
-                <Typography variant='body'>
-                  "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
-                </Typography>
-              </section>
-              
-              
-              <section id="P" className={styles.about_sections}>
-                <Typography variant='body'>
-                  "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
-                </Typography>
-              </section>
-              
-              <section id="A" className={styles.about_sections}>
-                <Typography variant='body'>
-                  "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
-                </Typography>
-              </section>
-
-              
-              <section id="PR" className={styles.about_sections}>
-                <Typography variant='body'>
-                  "Optical is a free set of font and a web tools for low vision created out of a research project in the Health Design Lab at Emily Carr University with support from The Accessible Technology Program and Disability Alliance BC. Start with a base font, then fine tune it to your specific needs using either our simple or advanced customization tools. Then use your font with a browser extension to use it online, or download it to use on your desktop. > Learn More"
-                </Typography>
-              </section>
-
-
-              </Grid>
-          </Grid>
-        </Grid>
-
+        <MenusLayout/>
       </section>
 
       <section id = "footer">
