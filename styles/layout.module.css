@@ -18,9 +18,19 @@
   display: flex;
   align-items: top;
   min-height : 50vh;
-  /* top: 2vh; */
-
+  /* top:-200px; */
+  /* background-color: "blue"; */
+  
+  
 }
+
+/* .about_sections:target:before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
+} */
+
 .is_current{
   color:green;
   font-size: 5vw;
@@ -32,10 +42,11 @@
   min-height : 30vh;
 }
 .menuButtons_container{
-    /* background-color: #CBDDFF; */
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+  padding-top: 0%;
+  /* background-color:white; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   align-items: top;
   justify-content: space-evenly;
   height :100%;

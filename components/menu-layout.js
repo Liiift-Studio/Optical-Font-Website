@@ -32,9 +32,11 @@ return (
 
 
 
-    <Grid container item sm={12} className={styles.landing_container} spacing ={10}>
+    <Grid container item sm={12} className={styles.landing_container} spacing ={5}>
 
-        <Grid item container sm={4} className={styles.menuButtons_container} >
+        <Grid item container sm={4} className={styles.menuButtons_container} 
+            bgcolor="background.menuSelector"
+            >
             <List >
                 <ListItem disablePadding 
                 className={styles.a}
@@ -157,20 +159,18 @@ return (
                 >
                 <section id="FLV" className={styles.about_sections}>
                     <Grid item>
-                        
-                    <Typography variant ='h4'>
-                       {flv}<br /><br />
-                    </Typography>
-                    
-                    
-                    
-                    <Typography variant='body' display ="block">
+                        <Typography variant ='h4'>
+                        {flv}<br /><br />
+                        </Typography>
 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. USE GUIDELorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. etc...                        <br /><br />
-                        <br /> <br />
-                    </Typography>
+                        <Typography variant='body' display ="block">
+
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. USE GUIDELorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. etc...                        <br /><br />
+                            <br /> <br />
+                        </Typography>
                     </Grid>
                 </section>
+                
                 </Waypoint>
 
                 <Waypoint 

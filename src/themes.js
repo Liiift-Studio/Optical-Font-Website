@@ -40,8 +40,8 @@ const h1 = {
     lineHeight:1.35,
 }
 const h2 = {
-    fontSize:45,
-    fontWeight:400,
+    fontSize:55,
+    fontWeight:500,
 }
 const h3 = {
     fontSize:25,
@@ -58,7 +58,7 @@ const body ={
 }
 
 
-const parentTheme = createTheme({
+let parentTheme = createTheme({
     typography:{
         h1 : h1,
         h2 : h2, 
@@ -67,6 +67,7 @@ const parentTheme = createTheme({
         // button: button,
         body:body,        
     },
+
     components:{
         
         MuiListItemButton :{
@@ -81,6 +82,7 @@ const parentTheme = createTheme({
         }
     }
 })
+
 
 
 export let lightTheme = createTheme({
@@ -102,6 +104,7 @@ export let lightTheme = createTheme({
             footer : footerBlue ,
             buttonHover : black,
             button: landingBlue,
+            menuSelector: white,
 
         },
   
@@ -173,6 +176,7 @@ export let darkTheme =createTheme({
         background:{
             button: buttonBackDark,
             buttonHover : landingBlue,
+            menuSelector: black,
         },
     
 
@@ -230,6 +234,13 @@ export let darkTheme =createTheme({
     
 });
  darkTheme = createTheme(darkTheme,{
+    palette:{
+        mode:'dark',
+        background:{
+            menuSelector: "#1e1e1e",
+        },
+    },
+
     components:{
         MuiButton :{
             styleOverrides:{
