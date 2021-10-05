@@ -1,9 +1,8 @@
-import utilStyles from '../styles/utils.module.css'
 import Image from 'next/image'
-import {Typography ,ToggleButton,Button, Grid, Paper, colors, Box, ToggleButtonGroup} from '@mui/material'
+import {Typography ,Button, Grid, } from '@mui/material'
 import styles from '../styles/layout.module.css'
-
-import dials from '../public/images/dials.png'
+import dials from '../public/images/lightGraphic.png'
+import { shadows } from '@mui/system';
 
 export default function LandingLayout({ children }) {
   return (
@@ -11,74 +10,76 @@ export default function LandingLayout({ children }) {
 
     {/* DESKTOP */}
     <Grid container display={{xs:'none', md:'block'}}>
-      <Grid container spacing={10} >
-        <Grid container item md={6} alignItems = "flex-start">
-          <Grid item className={styles.landing_container}>
-            <Grid item >
-              <Typography variant = 'h1'>
-                Varied fonts for <br /> varied vision. 
-              </Typography> 
+      <Grid container item  className={styles.landing_container}>
+        <Grid container item md={7} direction="column" className={styles.landing_left_container}>
+            <Grid container item >
+                <Typography variant = 'h1'>
+                    Varied fonts for <br /> varied vision. 
+                  </Typography> 
               </Grid>
-            <Button
-              variant ="string"
-              sx={{
-                  // padding:1,
-                  // paddingRight:2,
-                  my:5,
-                  px:4,
-                  py:1,
-                  border:3,
-                  borderRadius:11,
-              }}
+            <Grid container item >
+              <Button
+                variant ="string"
+                sx={{
+                    my:5,
+                    px:4,
+                    py:1,
+                    border:3,
+                    borderRadius:11,
+                }}
 
-              >
-                <Typography variant = "h3">
-                  Install
-                </Typography>
-            </Button>
-            {/* <Grid item className={styles.subtext}>
-              <Typography variant="h5">
-                Install the extension and {'\n'} customize your fonts
-              </Typography>
-            </Grid>         */}
-          </Grid>
+                >
+                  <Typography variant = "h3">
+                    Install
+                  </Typography>
+              </Button>
+            </Grid>
+
+
         </Grid>
 
-        <Grid container item md={6}  >
-          <Grid item  className={styles.dials_container}>
-            <Image src={dials} alt=""/>
-          </Grid>
+        <Grid container item md={5} className={styles.landing_right_container} >
+          <Grid item>
+
+            <Image  src={dials} alt=""/>
+          </Grid> 
         </Grid>
     </Grid>
   </Grid>
 
   {/* MOBILE */}
 
-  <Grid container display={{xs:'block', md:'none'}}  >
-      <Grid container item sx={{display:"flex", alignItems: 'center'}}>
-      <Grid container item xs={12}  >
-        <Typography variant = 'h1'
+  <Grid container display={{xs:'block', md:'none'}} >
+      <Grid container item  sx={{display:"flex", alignItems: 'center'}}>
+        <Grid container item xs={12} 
           sx={{
-            px:"20%",
-            fontSize:30,
-          }}>
-            Varied fonts for <br /> varied vision. 
-        </Typography> 
-      </Grid>
+            pt:4,
+            // pb:2,
+            justifyContent:'center',
 
-      <Grid container item xs={12} justifyContent="center" px={5} >
-        <Grid item  className={styles.dials_container}>
-            <Image src={dials} alt=""/>
-        </Grid> 
-      </Grid>
+          }} >
+            <Typography variant = 'h1'
+              sx={{
+                fontSize:50,
+                textAlign: "center", 
+              }}>
+                Varied fonts for <br /> varied vision. 
+            </Typography> 
+        </Grid>
 
-      <Grid container item xs={12} justifyContent="center" px={5} >
+        <Grid container item xs={12} justifyContent="center" px={5}  className={styles.dials_container}>
+          <Grid item p={10}>
+              <Image elevation={2} src={dials} alt=""/>
+          </Grid> 
+        </Grid>
+
+        <Grid container item xs={12} justifyContent="center" px={5} >
           <Button
                 variant ="string"
                 sx={{
                     // padding:1,
                     // paddingRight:2,
-                    my:5,
+                    mb:5,
                     px:"20%",
                     py:1,
                     border:3,
@@ -90,9 +91,9 @@ export default function LandingLayout({ children }) {
                     Install
                   </Typography>
               </Button>
+          </Grid>
         </Grid>
-        </Grid>
-  </Grid>
+    </Grid>
   </>
   )
 }

@@ -1,8 +1,6 @@
-import { ArrowLeft } from '@mui/icons-material';
-import { createTheme } from '@mui/material/styles';
-// import grey from '@mui/material/colors/grey'
-import {  Button,alpha, styled,makeStyles} from '@mui/styles'
-import { typography } from '@mui/system';
+import { green } from '@mui/material/colors';
+import { createTheme , styled} from '@mui/material/styles';
+
 
 
 
@@ -28,33 +26,39 @@ const buttonDarkBG = "#FCFF55";
 const buttonDarkBG_hover = "#FCFF55";
 
 
-
-
 const button = {
     textTransform:'none',
     fontSize:30,
 }
 const h1 = {
-    fontSize:45,
+    fontSize:'4.5rem',
     fontWeight:550,
     lineHeight:1.35,
+    letterSpacing: '.1rem'
+
+    // m:0,
 }
 const h2 = {
-    fontSize:55,
+    fontSize:'3.7rem',
     fontWeight:500,
 }
 const h3 = {
-    fontSize:25,
+    fontSize:'1.5rem',
     fontWeight:550,
 }
 
 // toggle buttons & menu titles
 const h4 = {
-    fontSize:17,
+    fontSize:'1.1125rem',
     fontWeight:600,
+    letterSpacing: '.15rem'
 }
 const body ={
-    fontSize:20,
+    fontSize:'1.1rem',
+    fontWeight:500,
+    letterSpacing: '.025rem'
+
+
 }
 
 
@@ -64,24 +68,47 @@ let parentTheme = createTheme({
         h2 : h2, 
         h3 : h3,
         h4 : h4,
-        // button: button,
         body:body,        
-    },
 
-    components:{
         
-        MuiListItemButton :{
-            styleOverrides:{
-                stringPrimary:{
-                '&:hover' : {
-                    backgroundColor: landingBlue,
-                },
-            }
+    },
+    
 
-            },
-        }
-    }
 })
+
+export const Root = styled('div')(({ theme }) => ({
+    padding: theme.spacing(1),
+    [theme.breakpoints.down('md')]: {
+        h1 : {
+            fontSize:'2.5rem',
+            fontWeight:550,
+            lineHeight:1.35,
+            letterSpacing: '.1rem'
+        
+            // m:0,
+        }
+    },
+    [theme.breakpoints.up('md')]: {
+        h1 : {
+            fontSize:'3.5rem',
+            fontWeight:550,
+            lineHeight:1.35,
+            letterSpacing: '.1rem'
+        
+            // m:0,
+        }
+    },
+    [theme.breakpoints.up('xl')]: {
+        h1 : {
+            fontSize:'4.25rem',
+            fontWeight:550,
+            lineHeight:1.35,
+            letterSpacing: '.1rem'
+        
+            // m:0,
+        },
+    },
+}));
 
 
 
@@ -166,14 +193,16 @@ export let darkTheme =createTheme({
 
     palette:{
         mode: 'dark',
-
-
-
+        // common:
+        text:{
+            primary:white
+        },
         secondary:{
             main: buttonText ,
 
         },
         background:{
+            default: black,
             button: buttonBackDark,
             buttonHover : landingBlue,
             menuSelector: black,
@@ -266,37 +295,4 @@ export let darkTheme =createTheme({
  });
 
 
-// darkTheme.overrides ={
-//     ...darkTheme.overrides,
-//         MuiButton :{
-//             ...darkTheme.MuiButton,
-            
-//             // ...parentTheme.MuiButton,
-//             root:{
-//                 ...darkTheme.root,
-//                 letterSpacing: '0.05em',
-
-//                 '& .hover' : landingBlue,
-//             },
-//         },
-// }
-
-
-// export const buttonStyle = makeStyles(theme =>({
-//     button:{
-//         color:"red",
-//         '&:hover': {
-//             backgroundColor: 'background.buttonHover',
-//             color:"black",
-//         }
-//     }
-// }));
-
-// export const styledButton = styled(Button)(({theme}=>){
-//     '& .MuiButton':{
-//         '&:hover':{
-
-//         }
-//     }
-// })
 

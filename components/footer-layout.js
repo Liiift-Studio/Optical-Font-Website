@@ -11,44 +11,51 @@ export default function FooterLayout({children }) {
      
         <Grid container className = {styles.footer_container} bgcolor="background.footer" >
 
-        <Grid container item sm={4}>
+        <Grid container item sm={4}  sx={{pl:"4vw"}}>
           <Grid item sm={12}>
             <h2>PARTNERS</h2>
           </Grid>
       {/* TODO : THESE LINKS NEED LOCATIONS */}
           <Grid container item direction='column' sm={12}>          
             <Grid item>
-              <Link href="/" >
-                  <a className={styles.a}>The Accessible Technology Program</a>
-              </Link>
+              <a  rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" className={styles.aFooter}>
+                The Accessible Technology Program
+              </a>
               
             </Grid>
             <Grid item>
-            <Link href="/" >
-                  <a className={styles.a}>Disibility Alliance BC</a>
-              </Link>
+              <a className={styles.aFooter} href="https://disabilityalliancebc.org/" target="_blank" rel="noopener">
+                Disibility Alliance BC
+              </a>
             </Grid>
             <Grid item>
-            <Link href="/" >
-                  <a className={styles.a}>Emily Carr University</a>
-              </Link>
+            <a href="https://www.ecuad.ca/" target="_blank" rel="noopener" className={styles.aFooter}>
+              Emily Carr University
+            </a>
             </Grid>
             <Grid item>
-            <Link href="/" >
-                  <a className={styles.a}>The Health Design Lab at ECU</a>
-              </Link>
+            <a href="https://research.ecuad.ca/healthdesignlab/"  target="_blank" rel="noopener" className={styles.aFooter}>
+              The Health Design Lab at ECU
+              </a>
             </Grid>
             <Grid item>
-            <Link href="/" >
-                  <a className={styles.a}>Shumka Centre at ECU</a>
-              </Link>
+            <a href="https://shumka.ecuad.ca/"  target="_blank" rel="noopener"className={styles.aFooter}>
+              Shumka Centre at ECU
+              </a>
               
             </Grid>
           </Grid>
         </Grid>
 
 
-        <Grid container item sm={8}>
+        <Grid container item sm={8} sx={{
+          pl:"7vw",
+          '@media only screen and (max-width:600px)' :{
+            pl:"4vw"
+          },
+          
+          }}>
+          
           <Grid item sm={12}>
             <h2>SITE MAP</h2>
           </Grid>
@@ -57,27 +64,27 @@ export default function FooterLayout({children }) {
             <Grid container item direction='column' sm={6}>
               <Grid item>
                 <Link href="/" >
-                  <a className={styles.a}>Home</a>
+                  <a className={styles.aFooter}>Home</a>
                 </Link>
               </Grid>
               <Grid item>
               <Link href="/" >
-                  <a className={styles.a}>About</a>
+                  <a className={styles.aFooter}>About</a>
                 </Link>
               </Grid>
               <Grid item>
               <Link href="/" >
-                  <a className={styles.a}>Download Extension</a>
+                  <a className={styles.aFooter}>Download Extension</a>
                 </Link>
               </Grid>
               <Grid item>
               <Link href="/" >
-                  <a className={styles.a}>Download Typeface</a>
+                  <a className={styles.aFooter}>Download Typeface</a>
                 </Link>
               </Grid>
               <Grid item>
               <Link href="/" >
-                  <a className={styles.a}>Github</a>
+                  <a className={styles.aFooter}>Github</a>
               </Link>
               </Grid>     
 
@@ -85,19 +92,19 @@ export default function FooterLayout({children }) {
 
             <Grid container item direction='column' sm={6}>
               <Grid item>
-                <a className={styles.a} href="#FLV">Fonts & Low Vision</a>
+                <a className={styles.aFooter} href="#FLV">Fonts & Low Vision</a>
               </Grid>
               <Grid item>
-                <a className={styles.a} href="#UG">Use Guide</a>
+                <a className={styles.aFooter} href="#UG">Use Guide</a>
               </Grid>
               <Grid item>
-              <a className={styles.a} href="#P">Projects</a>
+              <a className={styles.aFooter} href="#P">Projects</a>
               </Grid>
               <Grid item>
-              <a className={styles.a} href="#A">Accesibility</a> 
+              <a className={styles.aFooter} href="#A">Accesibility</a> 
               </Grid>
               <Grid item>
-              <a className={styles.a} href="#PR">Privacy</a> 
+              <a className={styles.aFooter} href="#PR">Privacy</a> 
               </Grid>     
 
             </Grid>

@@ -1,8 +1,7 @@
-import Head from 'next/head'
 import styles from '../styles/layout.module.css'
 import React, { useEffect, useState } from "react"
 
-import {IconButton, Button,Typography,Switch,Paper, Grid, Box} from '@mui/material/'
+import {IconButton, Button,Typography,Switch,Paper, Grid, Box, CssBaseline} from '@mui/material/'
 import { makeStyles} from '@mui/styles'
 import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
 import Brightness3Icon from '@mui/icons-material/Brightness3';
@@ -10,7 +9,6 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import {darkTheme, lightTheme} from '../src/themes'
 import { fontWeight } from '@mui/system'
 
-export const siteTitle = 'Optical Font Website'
 
 // import {buttonStyle} from '../src/themes'
 
@@ -30,23 +28,10 @@ export default function HeaderLayout({lightSwitch, children }) {
 
     return(
         <>
+
                 <ThemeProvider theme={chooseTheme()}>
-                    <Paper>
-                    <Head>
-                        <link rel="icon" href="/favicon.ico" />
-                        <meta
-                            name="description"
-                            content="Optical Font"
-                        />
-                        <meta
-                            property="og:image"
-                            content={`https://og-image.vercel.app/${encodeURI(
-                            siteTitle
-                            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-                        />
-                        <meta name="og:title" content={siteTitle} />
-                        <meta name="twitter:card" content="summary_large_image" />
-                    </Head>
+                    {/* <Paper elevation={0} className={styles.paper_container}> */}
+                    <CssBaseline/>
 
                     <Grid container className={styles.header_container}>
                         <Grid item container direction ="row">
@@ -92,7 +77,7 @@ export default function HeaderLayout({lightSwitch, children }) {
                         </Grid>
                     </Grid>
             {children}
-                </Paper>
+                {/* </Paper> */}
             </ThemeProvider>
         </>
         )
