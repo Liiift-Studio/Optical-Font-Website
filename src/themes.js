@@ -1,6 +1,7 @@
 import { green } from '@mui/material/colors';
-import { createTheme , styled} from '@mui/material/styles';
+import { createTheme , styled,responsiveFontSizes} from '@mui/material/styles';
 
+// import opt_dark from './public/images/opt_dark'
 
 
 
@@ -20,9 +21,9 @@ const toggleButtonLightT_hover= "#2c2e33";
 const toggleButtonLightBG_hover= "#e8f0ff";
 
 
-const buttonDarkT ="#FCFF55";
+export const buttonDarkT ="#FCFF55";
 const buttonDarkT_hover= black;
-const buttonDarkBG = "#FCFF55";
+export const buttonDarkBG = "#FCFF55";
 const buttonDarkBG_hover = "#FCFF55";
 
 
@@ -31,32 +32,52 @@ const button = {
     fontSize:30,
 }
 const h1 = {
-    fontSize:'4.5rem',
-    fontWeight:550,
-    lineHeight:1.35,
-    letterSpacing: '.1rem'
+    fontSize:'6rem',
+    fontWeight:600,
+    lineHeight:1.215,
+    letterSpacing: '-.1rem',
+    fontFamily:'Optical02'
 
     // m:0,
 }
 const h2 = {
-    fontSize:'3.7rem',
+    fontSize:'5.7rem',
+    
     fontWeight:500,
+    letterSpacing:'-.4rem',
+    fontFamily:'Optical02'
+
 }
 const h3 = {
-    fontSize:'1.5rem',
+    fontSize:'3rem',
     fontWeight:550,
+    // letterSpacing:'-.2rem',
+
+    fontFamily:'Optical02'
 }
 
 // toggle buttons & menu titles
 const h4 = {
-    fontSize:'1.1125rem',
+    fontFamily:'Optical02',
+    fontSize:'1.25rem',
     fontWeight:600,
-    letterSpacing: '.15rem'
+    letterSpacing: '.1rem',
 }
 const body ={
     fontSize:'1.1rem',
     fontWeight:500,
-    letterSpacing: '.025rem'
+    letterSpacing: '.025rem',
+    fontFamily:"Optical02",
+    // color:black,
+
+
+}
+
+const footer ={
+    fontSize:'.95rem',
+    fontWeight:500,
+    letterSpacing: '.025rem',
+    fontFamily:"Optical02"
 
 
 }
@@ -68,7 +89,8 @@ let parentTheme = createTheme({
         h2 : h2, 
         h3 : h3,
         h4 : h4,
-        body:body,        
+        body:body,  
+        footer:footer,      
 
         
     },
@@ -76,40 +98,28 @@ let parentTheme = createTheme({
 
 })
 
-export const Root = styled('div')(({ theme }) => ({
-    padding: theme.spacing(1),
-    [theme.breakpoints.down('md')]: {
-        h1 : {
-            fontSize:'2.5rem',
-            fontWeight:550,
-            lineHeight:1.35,
-            letterSpacing: '.1rem'
-        
-            // m:0,
-        }
-    },
-    [theme.breakpoints.up('md')]: {
-        h1 : {
-            fontSize:'3.5rem',
-            fontWeight:550,
-            lineHeight:1.35,
-            letterSpacing: '.1rem'
-        
-            // m:0,
-        }
-    },
-    [theme.breakpoints.up('xl')]: {
-        h1 : {
-            fontSize:'4.25rem',
-            fontWeight:550,
-            lineHeight:1.35,
-            letterSpacing: '.1rem'
-        
-            // m:0,
-        },
-    },
-}));
+parentTheme=responsiveFontSizes(parentTheme);
 
+parentTheme.typography.body ={
+    fontSize:'1.1rem',
+    fontWeight:500,
+    letterSpacing: '.025rem',
+    fontFamily:"Optical02",
+    [parentTheme.breakpoints.down('md')]:{
+        fontSize:'.95rem',
+
+    }
+
+
+}
+
+
+export const iconStyles = theme =>({
+    brightness7Icon :{
+            fontSize : "30em",
+        
+    }
+})
 
 
 export let lightTheme = createTheme({
@@ -125,7 +135,10 @@ export let lightTheme = createTheme({
             light: white ,
             main: buttonText
         },
-        
+        text:{
+            main: black,
+            
+        },
         background:{
             about : landingBlue ,
             footer : footerBlue ,
@@ -148,7 +161,7 @@ export let lightTheme = createTheme({
                 },
 
                 stringPrimary:{
-                    backgroundColor : buttonLightBG,
+                    // backgroundColor : buttonLightBG,
                     color: buttonLightT,
 
                     '&:hover' : {
@@ -161,20 +174,12 @@ export let lightTheme = createTheme({
 
             },
         },
-        MuiToggleButton:{
+
+        MuiIconButton:{
             styleOverrides:{
                 root:{
-
-                    backgroundColor : buttonLightBG,
-                    color: buttonLightT,
-                    border:0,
-                    justifyContent: "flex-start",
-            
-                    
                     '&:hover' : {
-                        // backgroundColor: toggleButtonLightBG_hover,
-                        // color: toggleButtonLightT_hover,
-                        // borderColor: toggleButtonLightBG_hover,
+                        backgroundColor: "transparent",
     
                     },
 
@@ -182,7 +187,41 @@ export let lightTheme = createTheme({
 
                          
             },  
-        }
+        },
+        MuiListItemButton:{
+            styleOverrides:{
+                root:{
+
+                    // backgroundColor : buttonLightBG,
+                    // color: buttonLightT,
+                    // border:0,
+                    justifyContent: "flex-start",
+            
+                    
+                    '&:hover' : {
+                        backgroundColor: "transparent",
+                        // color: toggleButtonLightT_hover,
+                        // borderColor: toggleButtonLightBG_hover,
+    
+                    },
+
+
+                },
+
+                         
+            },  
+        },
+
+            MuiCssBaseline:{
+                styleOverrides: {
+                    body: {
+                      background: 'linear-gradient(0deg, #f6f6f6 30%, #f6f6f6 90%)',
+                      backgroundRepeat: "no-repeat",
+                      backgroundAttachment: "fixed",
+                   },
+                }
+            }
+        
     }
     
 
@@ -238,17 +277,38 @@ export let darkTheme =createTheme({
         
             }
         },
-        MuiToggleButton:{
+
+        MuiListItemButton:{
             styleOverrides:{
                 root:{
-                    border:0,
-                    justifyContent: "flex-start",
 
+                    // backgroundColor : buttonLightBG,
+                    // color: buttonLightT,
+                    // border:0,
+                    justifyContent: "flex-start",
+            
                     
                     '&:hover' : {
-                        backgroundColor: toggleButtonLightBG_hover,
-                        color: toggleButtonLightT_hover,
-                        borderColor: toggleButtonLightBG_hover,
+                        backgroundColor: "transparent",
+                        // color: toggleButtonLightT_hover,
+                        // borderColor: toggleButtonLightBG_hover,
+    
+                    },
+
+
+                },
+
+                         
+            },  
+        },
+
+        
+
+        MuiIconButton:{
+            styleOverrides:{
+                root:{
+                    '&:hover' : {
+                        backgroundColor: "transparent",
     
                     },
 

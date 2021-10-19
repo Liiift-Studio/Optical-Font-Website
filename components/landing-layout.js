@@ -1,10 +1,17 @@
 import Image from 'next/image'
-import {Typography ,Button, Grid, } from '@mui/material'
+import {Typography ,Button, Grid, Box } from '@mui/material'
 import styles from '../styles/layout.module.css'
-import dials from '../public/images/lightGraphic.png'
+import dials from '../public/images/opt_light.png'
 import { shadows } from '@mui/system';
+import { imgSource, source } from '../styles/utils.module.constants';
+import { useEffect } from 'react';
 
-export default function LandingLayout({ children }) {
+
+
+export default function LandingLayout({children,imgSrc}) {
+
+  // const [imgSource,setSource] = useState(false);
+
   return (
     <>
 
@@ -14,22 +21,24 @@ export default function LandingLayout({ children }) {
         <Grid container item md={7} direction="column" className={styles.landing_left_container}>
             <Grid container item >
                 <Typography variant = 'h1'>
-                    Varied fonts for <br /> varied vision. 
+                    <nobr>Varied fonts for</nobr> <br /> varied vision. 
                   </Typography> 
               </Grid>
             <Grid container item >
               <Button
                 variant ="string"
                 sx={{
-                    my:5,
+                    my:2.5,
                     px:4,
-                    py:1,
-                    border:3,
-                    borderRadius:11,
+                    py:1.25,
+
+                    // py:1,
+                    border:4,
+                    borderRadius:10,
                 }}
 
                 >
-                  <Typography variant = "h3">
+                  <Typography variant = "h3" sx={{pt:.65, alignContent:'center'}}>
                     Install
                   </Typography>
               </Button>
@@ -39,10 +48,10 @@ export default function LandingLayout({ children }) {
         </Grid>
 
         <Grid container item md={5} className={styles.landing_right_container} >
-          <Grid item>
+          <Grid item >
 
-            <Image  src={dials} alt=""/>
-          </Grid> 
+            <Image  src={imgSrc}  alt="" />
+          </Grid > 
         </Grid>
     </Grid>
   </Grid>
@@ -50,7 +59,7 @@ export default function LandingLayout({ children }) {
   {/* MOBILE */}
 
   <Grid container display={{xs:'block', md:'none'}} >
-      <Grid container item  sx={{display:"flex", alignItems: 'center'}}>
+      <Grid container item  className={styles.mobile_landing_container}>
         <Grid container item xs={12} 
           sx={{
             pt:4,
@@ -60,16 +69,16 @@ export default function LandingLayout({ children }) {
           }} >
             <Typography variant = 'h1'
               sx={{
-                fontSize:50,
+                // fontSize:50,
                 textAlign: "center", 
               }}>
                 Varied fonts for <br /> varied vision. 
             </Typography> 
         </Grid>
 
-        <Grid container item xs={12} justifyContent="center" px={5}  className={styles.dials_container}>
-          <Grid item p={10}>
-              <Image elevation={2} src={dials} alt=""/>
+        <Grid container item xs={12} justifyContent="center"  >
+          <Grid item py={5} px={10}>
+              <Image  src={imgSrc} alt=""/>
           </Grid> 
         </Grid>
 
@@ -79,9 +88,9 @@ export default function LandingLayout({ children }) {
                 sx={{
                     // padding:1,
                     // paddingRight:2,
-                    mb:5,
+                    my:5,
                     px:"20%",
-                    py:1,
+                    pt:1.5,
                     border:3,
                     borderRadius:11,
                 }}

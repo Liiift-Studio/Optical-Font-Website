@@ -5,6 +5,7 @@ import Head from 'next/head'
 import HeaderLayout from '../components/header-layout';
 
 export const siteTitle = 'Optical Font Website'
+import { CssBaseline } from '@mui/material'
 
 function MyApp({ Component, pageProps }) {
   
@@ -19,11 +20,41 @@ function MyApp({ Component, pageProps }) {
               />
             <meta name="og:title" content={siteTitle} />
             <link rel="shortcut icon" href="/images/favicon.ico" />
+            <link
+              rel="preload"
+              href="/fonts/Optical02-Regular.woff2"
+              as="font"
+              crossOrigin=""
+              />
+            <link
+              rel="preload"
+              href="/fonts/Optical02-Light.woff2"
+              as="font"
+              crossOrigin=""
+              />
+              <link
+              rel="preload"
+              href="/fonts/Optical02-Medium.woff2"
+              as="font"
+              crossOrigin=""
+              />
+              <link
+              rel="preload"
+              href="/fonts/Optical02-Bold.woff2"
+              as="font"
+              crossOrigin=""
+              />
+            
+            
+            
                         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <HeaderLayout lightSwitch={true}>
+      
+      
+
+      {/* <HeaderLayout lightSwitch={true}> */}
         <Component {...pageProps} />
-      </HeaderLayout>
+      {/* </HeaderLayout> */}
 </>
 
     );

@@ -1,20 +1,27 @@
 import styles from '../styles/layout.module.css'
 import React, { useEffect, useState } from "react"
+import Image from 'next/image'
 
-import {IconButton, Button,Typography,Switch,Paper, Grid, Box, CssBaseline} from '@mui/material/'
+import {Icon,IconButton, Button,Typography,Switch,Paper, Grid, Box, CssBaseline} from '@mui/material/'
 import { makeStyles} from '@mui/styles'
 import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-import {darkTheme, lightTheme} from '../src/themes'
+import {buttonDarkT, darkTheme, lightTheme} from '../src/themes'
 import { fontWeight } from '@mui/system'
+import logo from '../public/images/logo.svg'
+import logoDark from '../public/images/logoDark.svg'
 
 
-// import {buttonStyle} from '../src/themes'
+import imgLight from '../public/images/opt_light.png'
+import imgDark from '../public/images/opt_dark.png'
+import LandingLayout from './landing-layout'
+import MenusLayout from '../components/menu-layout'
+
+
 
 export default function HeaderLayout({lightSwitch, children }) {
-    // const classes = buttonStyle();
-    
+
     const [darkMode, setDarkMode] = useState(false);
     
 
@@ -23,8 +30,14 @@ export default function HeaderLayout({lightSwitch, children }) {
     }
 
     function chooseTheme(){
-        return (darkMode ? responsiveFontSizes(darkTheme) : responsiveFontSizes(lightTheme));
+        var x =(darkMode ? responsiveFontSizes(darkTheme) : responsiveFontSizes(lightTheme));
+        return x;
     }
+
+    useEffect(()=>{
+
+        // src ="no";
+    })
 
     return(
         <>
@@ -33,12 +46,21 @@ export default function HeaderLayout({lightSwitch, children }) {
                     {/* <Paper elevation={0} className={styles.paper_container}> */}
                     <CssBaseline/>
 
-                    <Grid container className={styles.header_container}>
-                        <Grid item container direction ="row">
-                            <Grid item xs={6} className={styles.optical_logo}>
-                                <Typography variant = 'h2'>
-                                    Optical
-                                </Typography>
+                    <Grid container className={styles.header_container} >
+                        <Grid item container direction ="row" >
+
+                            <Grid container item xs={6}  >
+                                    <Grid container item xs={8} md={4} className={styles.optical_logo}
+                                    >
+                                    <Icon sx={{marginBottom:".2em", fontSize:".8em",color:'white', 
+                                        position:'relative', height:'15em', width:'15em'}} >
+                                        <Image  src={darkMode? logoDark:logo}  
+                                            layout='fill'
+                                            // sx={{pt:2}}
+                                        />
+                                    </Icon>
+                                    </Grid>
+
                             </Grid>
 
                             <Grid container item xs={4} justifyContent="flex-end"  alignItems="flex-start" >
@@ -57,7 +79,7 @@ export default function HeaderLayout({lightSwitch, children }) {
                                         About
                                 </Button> */}
                             </Grid>
-                            <Grid container item xs={2} justifyContent="flex-end" alignItems="flex-start">
+                            <Grid container item xs={2} justifyContent="flex-end" alignItems="center">
                                 {( lightSwitch ) ? (
                                 
                                 // <Switch
@@ -68,7 +90,11 @@ export default function HeaderLayout({lightSwitch, children }) {
                                 <IconButton
                                     onClick={changeDarkMode}
                                     >
-                                        {(darkMode ? <Brightness7Icon /> : <Brightness3Icon />)}
+                                        {(darkMode ? <Brightness7Icon 
+                                                       sx={{fontSize:"1.2em",color:buttonDarkT}}/> :
+                                                     <Brightness3Icon 
+                                                     sx={{fontSize:"1.2em",color:'black'}}
+                                                     />)}
                                 </IconButton>
                                 ) : (<></>)}
 
@@ -76,7 +102,12 @@ export default function HeaderLayout({lightSwitch, children }) {
                             </Grid>
                         </Grid>
                     </Grid>
-            {children}
+                
+                <LandingLayout imgSrc = {darkMode ? imgDark : imgLight}/>
+                <MenusLayout darkMode={darkMode} />
+                {/* <LandingLayout imgSrc = {darkMode ? "dar" : "hi"}/> */}
+
+                {children}
                 {/* </Paper> */}
             </ThemeProvider>
         </>

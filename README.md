@@ -8,7 +8,9 @@ v14.17.6
 ## install dependencies
 
 npm install @mui/material@next @emotion/react @emotion/styled
-npm install @mui/icons-material@next @mui/lab@next
+npm install @mui/icons-material
+
+<!-- @next @mui/lab@next -->
 npm install @mui/styles@next
 
 

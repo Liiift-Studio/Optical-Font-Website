@@ -5,37 +5,36 @@ import React, { useEffect, useState } from "react"
 import FooterLayout from '../components/footer-layout'
 import MenusLayout from '../components/menu-layout'
 import LandingLayout from '../components/landing-layout'
+import HeaderLayout from '../components/header-layout'
+import { CssBaseline } from '@mui/material'
+
+import imgLight from '../public/images/opt_light.png'
+import imgDark from '../public/images/opt_dark.png'
+
+
 
 export default function Home() {
-
+  let imgSource = imgLight;
   return (
     <>
-    {/* HEADER 
-      HeaderLayout is in _app.js as it's applied to all pages
-      
-      App.js also contains the outer-most theme (light/dark) applied to all pages
-      
-    */}
-    
 
-    
     
     {/* BODY */}
-     
-    
-      <section id="landing" >
-        <LandingLayout/>
-      </section>
 
-      <section id="menu">
+    <HeaderLayout lightSwitch={true}>
+      {/* <section id="landing" > */}
+        {/* <LandingLayout imgSource={imgSource}/> */}
+      {/* </section> */}
+
+      {/* <section id="menu"> */}
         {/* set to value to scroll position useEffect */}
-        <MenusLayout/>
-      </section>
+        {/* <MenusLayout props/> */}
+      {/* </section> */}
 
       <section id = "footer">
         <FooterLayout/>
       </section>
-    
+    </HeaderLayout>
     
     </>
   )

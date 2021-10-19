@@ -3,19 +3,10 @@ import {List,ListItem,ListItemText, ListItemIcon,ListItemButton,Typography ,Togg
 import styles from '../styles/layout.module.css'
 import {About,FLV,UG,P,A,PR} from '../styles/utils.module.constants'
 import CircleIcon from '@mui/icons-material/Circle';
-
-
-
+import { flv,ug,p,a,pr,flvCopy,ugCopy,pCopy,aCopy,prCopy } from "../styles/utils.module.constants";
 import { Waypoint } from 'react-waypoint';
 
-
-const flv = 'FONTS & LOW VISION'
-const ug = "USE GUIDE"
-const p = "PROJECT"
-const a = "ACCESSIBILITY"
-const pr = "PRIVACY"
-
-export default function MenusLayout({children }) {
+export default function MenusLayout({children,darkMode }) {
     const [toggleValue, setToggle]= useState(FLV);
 
 
@@ -24,12 +15,11 @@ return (
 
 
 
-    <Grid container item sm={12} className={styles.menu_container}>
+    <Grid container item sm={12} className={styles.menu_container} >
         {/* <Grid item container sm={4}> */}
             <Grid item container sm={4} className={styles.menuButtons_container} 
-                //  spacing ={5}
-                
-                bgcolor="background.default"
+                display={{xs:'none', md:'block'}}
+                // bgcolor="background.default"
 
                 >
                 <List >
@@ -42,7 +32,7 @@ return (
                         <ListItemButton   variant ="string"> 
                             {toggleValue === FLV ? 
                                 <ListItemIcon >
-                                    <CircleIcon fontSize='small'   />
+                                    <CircleIcon sx={{marginLeft:"1.5em",marginBottom:".2em", fontSize:".8em", color:'text.main'}}   />
                                 </ListItemIcon>
                             : <></>}
                             <ListItemText  inset={toggleValue !== FLV}>
@@ -62,7 +52,7 @@ return (
                         <ListItemButton >
                             {toggleValue === UG ? 
                                 <ListItemIcon >
-                                    <CircleIcon fontSize='small' />
+                                    <CircleIcon sx={{marginLeft:"1.5em",marginBottom:".2em", fontSize:".8em",color:'text.main'}} />
                                 </ListItemIcon>
                             : <></>}
                             <ListItemText  inset={toggleValue !== UG} >
@@ -83,7 +73,7 @@ return (
                         <ListItemButton >
                             {toggleValue === P ? 
                                 <ListItemIcon >
-                                    <CircleIcon fontSize='small' />
+                                    <CircleIcon sx={{marginLeft:"1.5em",marginBottom:".2em", fontSize:".8em",color:'text.main'}} />
                                 </ListItemIcon>
                             : <></>}
                             <ListItemText  inset={toggleValue !== P} >
@@ -104,7 +94,7 @@ return (
                         <ListItemButton >
                             {toggleValue === A ? 
                                 <ListItemIcon >
-                                    <CircleIcon fontSize='small' />
+                                    <CircleIcon sx={{marginLeft:"1.5em",marginBottom:".2em", fontSize:".8em",color:'text.main'}} />
                                 </ListItemIcon>
                             : <></>}
                             <ListItemText  inset={toggleValue !== A} >
@@ -123,8 +113,8 @@ return (
                         >
                         <ListItemButton >
                             {toggleValue === PR ? 
-                                <ListItemIcon >
-                                    <CircleIcon fontSize='small' />
+                                <ListItemIcon  >
+                                    <CircleIcon  sx={{marginLeft:"1.5em",marginBottom:".2em", fontSize:".8em",color:'text.main'}}/>
                                 </ListItemIcon>
                             : <></>}
                             <ListItemText  inset={toggleValue !== PR} >
@@ -140,8 +130,10 @@ return (
         {/* </Grid> */}
 
         
-            <Grid item container sm={8} alignItems="center" className={styles.menu_text_container}  >
-                <Grid item container pt={2.3} >
+            <Grid item container md={8} alignItems="center" className={styles.menu_text_container}  
+            // 
+            >
+                <Grid item container pt={2.3} px = {{xs:5}}  >
 
                 
                 <Waypoint 
@@ -150,15 +142,27 @@ return (
                 onEnter={()=>setToggle(FLV)}
                 >
                     <section id="FLV" className={styles.about_sections}>
-                        <Grid item>
-                            <Typography variant ='h4'>
+                        <Grid item container>
+                            <Typography variant ='h4' display={{xs:'none', md:'block'}}>
                             {flv}<br /><br />
                             </Typography>
 
-                            <Typography variant='body' display ="block">
+                            <Grid item container
+                                sx={{justifyContent:'center'}} 
+                            >
+                            <Typography variant ='h4' 
+                            
+                                display={{xs:'block', md:'none'}}>
+                                {flv}<br /><br />
+                            </Typography>
+                            </Grid>
 
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. USE GUIDELorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. etc...                        <br /><br />
-                                <br /> <br />
+                            <Typography variant='body' display ="block">
+                                <div className={styles.body_type}>
+
+                                    {flvCopy}
+                                    <br /> <br />
+                                </div>
                             </Typography>
                         </Grid>
                     </section>
@@ -172,14 +176,27 @@ return (
 
                     <section id="UG" className={styles.about_sections}>
                         <Grid item>
-                            <Typography variant ='h4'>
+                            <Typography variant ='h4' display={{xs:'none', md:'block'}}>
                             {ug}<br /><br />
                             </Typography>
-                        
-                            <Typography variant='body'>
+                            
+                            <Grid item container
+                                sx={{justifyContent:'center'}} 
+                            >
+                                <Typography variant ='h4' 
+                                
+                                    display={{xs:'block', md:'none'}}>
+                                    {ug}<br /><br />
+                                </Typography>
+                            </Grid>
 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. USE GUIDELorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. etc...                        <br /><br />
-                        <br /> <br />
+
+                            <Typography variant='body'>
+                                <div className={styles.body_type}>
+
+                                    {ugCopy}
+                                    <br /> <br />
+                                </div>
                             </Typography>
                         </Grid>
                     </section>
@@ -191,14 +208,24 @@ return (
                     onEnter={()=>setToggle(P)}>
                 <section id="P" className={styles.about_sections}>
                     <Grid item>
-                    <Typography variant ='h4'>
-                       {p}<br /><br />
+                    <Typography variant ='h4' display={{xs:'none', md:'block'}}>
+                            {p}<br /><br />
                     </Typography>
-                    <Typography variant='body'>
 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. USE GUIDELorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. etc...                        <br /><br />
-                        <br /> <br />
-                    </Typography>
+                    <Grid item container
+                        sx={{justifyContent:'center'}} 
+                    >
+                        <Typography variant ='h4'                             
+                            display={{xs:'block', md:'none'}}>
+                            {p}<br /><br />
+                        </Typography>
+                    </Grid>
+                        <Typography variant='body'>
+                            <div className={styles.body_type}>
+                                {pCopy}
+                                <br /> <br />
+                            </div>
+                        </Typography>
                     </Grid>
                 </section>
                 </Waypoint>
@@ -209,13 +236,28 @@ return (
                     onEnter={()=>setToggle(A)}>
                 <section id="A" className={styles.about_sections}>
                     <Grid item>
-                    <Typography variant ='h4'>
-                       {a}<br /><br />
-                    </Typography>
-                    <Typography variant='body'>
+                    <Typography variant ='h4' display={{xs:'none', md:'block'}}>
+                        <div className={styles.body_type}>
 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. USE GUIDELorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. etc...                        <br /><br />
-                        <br /> <br />
+                            {a}<br /><br />
+                        </div>
+                    </Typography>
+
+                    <Grid item container
+                        sx={{justifyContent:'center'}} 
+                    >
+                        <Typography variant ='h4' 
+                        
+                            display={{xs:'block', md:'none'}}>
+                            {a}<br /><br />
+                        </Typography>
+                    </Grid>
+                    <Typography variant='body'>
+                        <div className={styles.body_type}>
+
+                            {aCopy}
+                            <br /> <br />
+                        </div>
                     </Typography>
                     </Grid>
                 </section>
@@ -226,16 +268,30 @@ return (
                     topOffset="35%"
                     bottomOffset="55%"
                     onEnter={()=>setToggle(PR)}>
-                <section id="PR" className={styles.about_sections}>
+                    <section id="PR" className={styles.about_sections}>
                     <Grid item>
-                    <Typography variant ='h4'>
-                       {pr} <br /><br />
-                    </Typography>
-                    <Typography variant='body'>
+                        <Typography variant ='h4' display={{xs:'none', md:'block'}}>
+                        <div className={styles.body_type}>
 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. USE GUIDELorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. etc...                        <br /><br />
-                        <br /> <br />
-                    </Typography>
+                            {pr} <br /><br />
+                        </div>
+                        </Typography>
+
+                    <Grid item container
+                        sx={{justifyContent:'center'}} 
+                        >
+                            <Typography variant ='h4' 
+                            
+                                display={{xs:'block', md:'none'}}>
+                                {pr}<br /><br />
+                            </Typography>
+                    </Grid>
+                        <Typography variant='body' >
+                            <div className={styles.body_type}>
+                                {prCopy}
+                            </div>
+                            <br /> <br />
+                        </Typography>
                     </Grid>
                 </section>
                 </Waypoint>

@@ -13,16 +13,31 @@ body {
   box-sizing: border-box;
 }
 
-a {
-  color: #0070f3;
-  text-decoration: none;
+@font-face{
+  font-family:"Optical02";
+  src:url("/fonts/Optical02-Regular.woff2");
+  font-size: normal;
+  font-weight:400;
+  font-dsplay:swap;
 }
-
-a:hover {
-  text-decoration: underline;
+@font-face{
+  font-family:"Optical02";
+  src:url("/fonts/Optical02-Medium.woff2");
+  font-size: medium;
+  font-weight:500;
+  font-dsplay:swap;
 }
-
-img {
-  max-width: 100%;
-  display: block;
+@font-face{
+  font-family:"Optical02";
+  src:url("/fonts/Optical02-Bold.woff2");
+  font-size: large;
+  font-weight:600;
+  font-dsplay:swap;
+}
+@font-face{
+  font-family:"Optical02";
+  src:url("/fonts/Optical02-Light.woff2");
+  font-size: small;
+  font-weight:300;
+  font-dsplay:swap;
 }
