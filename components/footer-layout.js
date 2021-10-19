@@ -57,7 +57,7 @@ export default function FooterLayout({children }) {
             </Typography>
 
           </Grid>
-          <Grid container item sm={4} className = {styles.footer_column_container} sx={{marginLeft:'-1.5vw'}} >
+          <Grid container item sm={4} className = {styles.footer_column_container}  >
             <Grid item sm={12} sx={{paddingBottom:"2rem"}} >
               <Typography variant="h4">
               SITE MAP
