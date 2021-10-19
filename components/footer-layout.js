@@ -14,18 +14,27 @@ export default function FooterLayout({children }) {
       <Grid container className = {styles.footer_container} bgcolor="background.footer"   display={{xs:'none', md:'block'}}
       >
         <Grid container item sm={12} sx={{
-          alignContent:'top'}} spacing={5} 
+          alignContent:'top',
+        }} 
+          spacing={5} 
           >
         
           <Grid container item sm={4} className = {styles.footer_column_container} >
-            <Grid item sm={12} >
+            <Grid item sm={12} 
+              sx={{
+                pl:'2vw'
+              }}>
               <Typography variant="h4" sx={{paddingBottom:"2rem"}}>
               PARTNERS
               </Typography>
             </Grid>
             
             <Typography variant="footer">
-            <Grid container item direction='column' sm={12}>          
+            <Grid container item direction='column' sm={12}
+            sx={{
+              pl:'2vw'
+            }}
+            >          
               <Grid item>
                 <a  rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" className={styles.aFooter}>
                   The Accessible Technology Program
@@ -132,9 +141,11 @@ export default function FooterLayout({children }) {
         </Grid>
       </Grid>
 
+
+{/*  Mobile */}
       <Grid container className = {styles.footer_container} bgcolor="background.footer"   display={{xs:'block', md:'none'}} >
         <Grid container item sm={12} sx={{
-          paddingLeft:3.3,
+          
           alignContent:'top'}} 
           spacing={5} 
           

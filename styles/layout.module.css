@@ -6,8 +6,8 @@
 .a{
   color: inherit;
   text-decoration: inherit; /* no underline */
-  padding-left:2vw;
-  margin-right:2vw;
+  /* padding-left:2vw; */
+  /* margin-right:2vw; */
 }
 
 .a:hover{
@@ -53,8 +53,8 @@
   justify-content: flex-start;
 }
 .menuButtons_container{
+  padding-left: 2vw;
   padding-top: 0%;
-  margin-left: 0vw;
   position: -webkit-sticky;
   position: sticky;
   justify-content: flex-start;
@@ -83,11 +83,9 @@
 .body_type{
   max-width: 850px;
 }
-.menu_container{
 
-}
 .optical_logo{
-  position:relative;
+  /* position:relative; */
   height:100%;
 
 
@@ -115,13 +113,14 @@
 }
 
 .footer_container{
-  padding-left: 5em;
+  /* padding-left: 5em; */
   align-items: center;
   
   padding-bottom: 5%;
 
   padding-top: 5%;
 
+  padding-left: 2vw;
 
 }
 .footer_column_container{

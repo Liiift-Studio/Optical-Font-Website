@@ -52,11 +52,10 @@ export default function HeaderLayout({lightSwitch, children }) {
                             <Grid container item xs={6}  >
                                     <Grid container item xs={8} md={4} className={styles.optical_logo}
                                     >
-                                    <Icon sx={{marginBottom:".2em", fontSize:".8em",color:'white', 
-                                        position:'relative', height:'15em', width:'15em'}} >
+                                    <Icon sx={{marginBottom:".2em",  
+                                        position:'relative', height:'10em', width:'10em'}} >
                                         <Image  src={darkMode? logoDark:logo}  
                                             layout='fill'
-                                            // sx={{pt:2}}
                                         />
                                     </Icon>
                                     </Grid>

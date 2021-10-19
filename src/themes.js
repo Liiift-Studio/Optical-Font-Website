@@ -114,12 +114,7 @@ parentTheme.typography.body ={
 }
 
 
-export const iconStyles = theme =>({
-    brightness7Icon :{
-            fontSize : "30em",
-        
-    }
-})
+
 
 
 export let lightTheme = createTheme({
@@ -154,10 +149,7 @@ export let lightTheme = createTheme({
         MuiButton :{
             styleOverrides:{
                 root:{
-                    // textTransform: 'none',
-                    // fontSize:20,
-                    // borderRadius: 5,
-                    // borderColor:landingBlue,
+
                 },
 
                 stringPrimary:{
@@ -173,6 +165,32 @@ export let lightTheme = createTheme({
                 },
 
             },
+        },
+
+
+        MuiIcon:{
+            styleOverrides:{
+                root:{
+
+                    [parentTheme.breakpoints.down('sm')]:{
+                        fontSize:'.75rem',
+                
+                    },
+                    [parentTheme.breakpoints.up('sm')]:{
+                        fontSize:'1rem',
+                
+                    },
+                    [parentTheme.breakpoints.up('md')]:{
+                        fontSize:'1.1rem',
+                
+                    },
+                    [parentTheme.breakpoints.up('lg')]:{
+                        fontSize:'1.2rem',
+                
+                    }
+                    // fontSize:"1vw"
+                }
+            }
         },
 
         MuiIconButton:{
@@ -192,16 +210,11 @@ export let lightTheme = createTheme({
             styleOverrides:{
                 root:{
 
-                    // backgroundColor : buttonLightBG,
-                    // color: buttonLightT,
-                    // border:0,
                     justifyContent: "flex-start",
             
                     
                     '&:hover' : {
                         backgroundColor: "transparent",
-                        // color: toggleButtonLightT_hover,
-                        // borderColor: toggleButtonLightBG_hover,
     
                     },
 
@@ -212,15 +225,15 @@ export let lightTheme = createTheme({
             },  
         },
 
-            MuiCssBaseline:{
-                styleOverrides: {
-                    body: {
-                      background: 'linear-gradient(0deg, #f6f6f6 30%, #f6f6f6 90%)',
-                      backgroundRepeat: "no-repeat",
-                      backgroundAttachment: "fixed",
-                   },
-                }
+        MuiCssBaseline:{
+            styleOverrides: {
+                body: {
+                    background: 'linear-gradient(0deg, #f6f6f6 30%, #f6f6f6 90%)',
+                    backgroundRepeat: "no-repeat",
+                    backgroundAttachment: "fixed",
+                },
             }
+        }
         
     }
     
@@ -302,7 +315,30 @@ export let darkTheme =createTheme({
             },  
         },
 
-        
+        MuiIcon:{
+            styleOverrides:{
+                root:{
+
+                    [parentTheme.breakpoints.down('sm')]:{
+                        fontSize:'.75rem',
+                
+                    },
+                    [parentTheme.breakpoints.up('sm')]:{
+                        fontSize:'1rem',
+                
+                    },
+                    [parentTheme.breakpoints.up('md')]:{
+                        fontSize:'1.1rem',
+                
+                    },
+                    [parentTheme.breakpoints.up('lg')]:{
+                        fontSize:'1.2rem',
+                
+                    }
+                    // fontSize:"1vw"
+                }
+            }
+        },
 
         MuiIconButton:{
             styleOverrides:{

@@ -15,11 +15,9 @@ return (
 
 
 
-    <Grid container item sm={12} className={styles.menu_container} >
-        {/* <Grid item container sm={4}> */}
+    <Grid container item sm={12}  >
             <Grid item container sm={4} className={styles.menuButtons_container} 
                 display={{xs:'none', md:'block'}}
-                // bgcolor="background.default"
 
                 >
                 <List >
@@ -127,13 +125,12 @@ return (
 
                 </List>
             </Grid>
-        {/* </Grid> */}
 
         
             <Grid item container md={8} alignItems="center" className={styles.menu_text_container}  
             // 
             >
-                <Grid item container pt={2.3} px = {{xs:5}}  >
+                <Grid item container pt={2.3}   >
 
                 
                 <Waypoint 

@@ -76,7 +76,7 @@ export default function LandingLayout({children,imgSrc}) {
             </Typography> 
         </Grid>
 
-        <Grid container item xs={12} justifyContent="center"  >
+        <Grid container item xs={12} justifyContent="center" className={styles.landing_right_container} >
           <Grid item py={5} px={10}>
               <Image  src={imgSrc} alt=""/>
           </Grid> 
