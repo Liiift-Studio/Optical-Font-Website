@@ -1,6 +1,13 @@
+import { flexbox } from "@mui/system"
+
 //Header Bar
 export const dm_icon ={
-    fontSize:{lg:"2em",md:"1.85em",sm:"1.75em",xs:"1.5em"}
+    display:'flex',
+    fontSize:{lg:"2em",md:"1.70em",sm:"1.5em",xs:"1.5em"},
+    mb:{lg:".75em",md:".35em",sm:".2em",xs:".2em"},
+    // alignContent:"start",
+    alignItems:"stretch",
+
 }
 
 export const logo_container={
@@ -12,8 +19,7 @@ export const logo_container={
 
 //Landing
 export const landing_container_mobile = {
-    // pt:10,
-    // mt:15,
+
     height:'90vh',
     alignContent:'center',
 }
