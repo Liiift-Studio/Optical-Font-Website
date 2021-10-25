@@ -21,7 +21,7 @@ const toggleButtonLightT_hover= "#2c2e33";
 const toggleButtonLightBG_hover= "#e8f0ff";
 
 
-export const buttonDarkT ="#FCFF55";
+export const yellow ="#FCFF55";
 const buttonDarkT_hover= black;
 export const buttonDarkBG = "#FCFF55";
 const buttonDarkBG_hover = "#FCFF55";
@@ -77,7 +77,11 @@ const footer ={
     fontSize:'.95rem',
     fontWeight:500,
     letterSpacing: '.025rem',
-    fontFamily:"Optical02"
+    fontFamily:"Optical02",
+    // justifyContent:{sm:'center'},
+    textAlign:'start',
+    bgColor:"green",
+
 
 
 }
@@ -90,7 +94,8 @@ let parentTheme = createTheme({
         h3 : h3,
         h4 : h4,
         body:body,  
-        footer:footer,      
+        footer:footer,   
+           
 
         
     },
@@ -100,18 +105,58 @@ let parentTheme = createTheme({
 
 parentTheme=responsiveFontSizes(parentTheme);
 
-parentTheme.typography.body ={
-    fontSize:'1.1rem',
-    fontWeight:500,
-    letterSpacing: '.025rem',
-    fontFamily:"Optical02",
-    [parentTheme.breakpoints.down('md')]:{
-        fontSize:'.95rem',
+    parentTheme.typography.body ={
+        fontSize:'1.1rem',
+        fontWeight:500,
+        letterSpacing: '.025rem',
+        fontFamily:"Optical02",
+        [parentTheme.breakpoints.down('md')]:{
+            fontSize:'.95rem',
 
+        },
     }
 
+        
+    parentTheme.typography.footer ={
+        fontSize:'.95rem',
+        fontWeight:500,
+        letterSpacing: '.025rem',
+        fontFamily:"Optical02",
+        // justifyContent:{sm:'center'},
+        textAlign:'start',
+        [parentTheme.breakpoints.down('md')]:{
+            textAlign:'center',
+        }
+    }
 
-}
+    parentTheme.typography.h1 ={
+        fontSize:'5.5vw',
+        fontWeight:600,
+        lineHeight:1.215,
+        letterSpacing: '-.1rem',
+        fontFamily:'Optical02',
+        
+        [parentTheme.breakpoints.down('lg')]:{
+            fontSize:'5vw',
+
+        },
+
+        [parentTheme.breakpoints.down('md')]:{
+            textAlign:'center',
+            fontSize:'8vw',
+
+        },
+        //mobile
+        [parentTheme.breakpoints.down('sm')]:{
+            textAlign:'center',
+            fontSize:'10vw',
+
+        }
+    }
+
+    
+
+
 
 
 
@@ -140,6 +185,8 @@ export let lightTheme = createTheme({
             buttonHover : black,
             button: landingBlue,
             menuSelector: white,
+            footerBorder: footerBlue,
+
 
         },
   
@@ -196,6 +243,8 @@ export let lightTheme = createTheme({
         MuiIconButton:{
             styleOverrides:{
                 root:{
+                    color:black,
+
                     '&:hover' : {
                         backgroundColor: "transparent",
     
@@ -255,9 +304,8 @@ export let darkTheme =createTheme({
         },
         background:{
             default: black,
-            button: buttonBackDark,
-            buttonHover : landingBlue,
-            menuSelector: black,
+            // button: buttonBackDark,
+            // menuSelector: black,
         },
     
 
@@ -265,31 +313,7 @@ export let darkTheme =createTheme({
     },
     
     components:{
-        MuiButton :{
-            styleOverrides:{
-                root:{
-                    // textTransform: 'none',
-                    // fontSize:20,
-                    // borderRadius: 5,
-                    // borderColor:landingBlue,
-                },
-
-                stringPrimary:{
-                    backgroundColor : buttonDarkBG,
-                    color: buttonDarkT,
-
-                    '&:hover' : {
-                        backgroundColor: buttonDarkBG_hover,
-                        color: buttonDarkT_hover,
-                        borderColor:buttonDarkT_hover,
-
-                    },
-                }
-                
-
         
-            }
-        },
 
         MuiListItemButton:{
             styleOverrides:{
@@ -343,6 +367,7 @@ export let darkTheme =createTheme({
         MuiIconButton:{
             styleOverrides:{
                 root:{
+                    color:yellow,
                     '&:hover' : {
                         backgroundColor: "transparent",
     
@@ -363,6 +388,8 @@ export let darkTheme =createTheme({
         mode:'dark',
         background:{
             menuSelector: "#1e1e1e",
+            footerBorder: darkTheme.palette.primary,
+
         },
     },
 
@@ -373,7 +400,7 @@ export let darkTheme =createTheme({
 
                 stringPrimary:{
                     backgroundColor : darkTheme.palette.secondary,
-                    color: buttonDarkT,
+                    color: yellow,
 
                     '&:hover' : {
                         backgroundColor: buttonDarkBG_hover,

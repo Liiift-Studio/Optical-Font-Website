@@ -17,6 +17,7 @@ import imgLight from '../public/images/opt_light.png'
 import imgDark from '../public/images/opt_dark.png'
 import LandingLayout from './landing-layout'
 import MenusLayout from '../components/menu-layout'
+import { dm_icon, logo_container } from '../styles/layout.styles'
 
 
 
@@ -50,10 +51,9 @@ export default function HeaderLayout({lightSwitch, children }) {
                         <Grid item container direction ="row" >
 
                             <Grid container item xs={6}  >
-                                    <Grid container item xs={8} md={4} className={styles.optical_logo}
-                                    >
-                                    <Icon sx={{marginBottom:".2em",  
-                                        position:'relative', height:'10em', width:'10em'}} >
+                                    <Grid container item xs={8} md={4} >
+                                    <Icon 
+                                    sx={logo_container} >
                                         <Image  src={darkMode? logoDark:logo}  
                                             layout='fill'
                                         />
@@ -90,9 +90,9 @@ export default function HeaderLayout({lightSwitch, children }) {
                                     onClick={changeDarkMode}
                                     >
                                         {(darkMode ? <Brightness7Icon 
-                                                       sx={{fontSize:"1.2em",color:buttonDarkT}}/> :
+                                                       sx={dm_icon}/> :
                                                      <Brightness3Icon 
-                                                     sx={{fontSize:"1.2em",color:'black'}}
+                                                     sx={dm_icon}
                                                      />)}
                                 </IconButton>
                                 ) : (<></>)}

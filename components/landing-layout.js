@@ -6,6 +6,8 @@ import { shadows } from '@mui/system';
 import { imgSource, source } from '../styles/utils.module.constants';
 import { useEffect } from 'react';
 
+import { img_container_mobile, img_container_tablet, landing_container_mobile, landing_container_tablet } from '../styles/layout.styles';
+
 
 
 export default function LandingLayout({children,imgSrc}) {
@@ -16,7 +18,7 @@ export default function LandingLayout({children,imgSrc}) {
     <>
 
     {/* DESKTOP */}
-    <Grid container display={{xs:'none', md:'block'}}>
+    <Grid container display={{xs:'none', md:'flex'}}>
       <Grid container item  className={styles.landing_container}>
         <Grid container item md={7} direction="column" className={styles.landing_left_container}>
             <Grid container item >
@@ -38,7 +40,7 @@ export default function LandingLayout({children,imgSrc}) {
                 }}
 
                 >
-                  <Typography variant = "h3" sx={{pt:.65, alignContent:'center'}}>
+                  <Typography variant = "h3" sx={{ alignContent:'center'}}>
                     Install
                   </Typography>
               </Button>
@@ -58,18 +60,18 @@ export default function LandingLayout({children,imgSrc}) {
 
   {/* MOBILE */}
 
-  <Grid container display={{xs:'block', md:'none'}} >
-      <Grid container item  className={styles.mobile_landing_container}>
+  <Grid container display={{xs:'flex', sm:'none'}} >
+      <Grid container item  sx={landing_container_mobile} >
         <Grid container item xs={12} 
           sx={{
-            pt:4,
-            // pb:2,
+            // pt:4,
+            pb:8,
             justifyContent:'center',
 
           }} >
             <Typography variant = 'h1'
               sx={{
-                // fontSize:50,
+                fontSize:'10vw',
                 textAlign: "center", 
               }}>
                 Varied fonts for <br /> varied vision. 
@@ -77,7 +79,9 @@ export default function LandingLayout({children,imgSrc}) {
         </Grid>
 
         <Grid container item xs={12} justifyContent="center" className={styles.landing_right_container} >
-          <Grid item py={5} px={10}>
+          <Grid item container
+          sx={img_container_mobile}
+          >
               <Image  src={imgSrc} alt=""/>
           </Grid> 
         </Grid>
@@ -90,7 +94,60 @@ export default function LandingLayout({children,imgSrc}) {
                     // paddingRight:2,
                     my:5,
                     px:"20%",
-                    pt:1.5,
+                    // pt:1.5,
+                    border:3,
+                    borderRadius:11,
+                }}
+
+                >
+                  <Typography variant = "h3">
+                    Install
+                  </Typography>
+              </Button>
+          </Grid>
+        </Grid>
+    </Grid>
+
+
+      
+
+    {/* TABLET */}
+
+    <Grid container display={{sm:'flex', xs:'none',md:'none'}} >
+      <Grid container item  sx={landing_container_tablet} >
+        <Grid container item xs={12} 
+          sx={{
+            // pt:4,
+            pb:8,
+            justifyContent:'center',
+
+          }} >
+            <Typography variant = 'h1'
+              sx={{
+                fontSize:'200vw',
+                textAlign: "center", 
+              }}>
+                Varied fonts for <br /> varied vision. 
+            </Typography> 
+        </Grid>
+
+        <Grid container item xs={12} justifyContent="center" className={styles.landing_right_container} >
+          <Grid item container
+          sx={img_container_tablet}
+          >
+              <Image  src={imgSrc} alt=""/>
+          </Grid> 
+        </Grid>
+
+        <Grid container item xs={12} justifyContent="center" px={5} >
+          <Button
+                variant ="string"
+                sx={{
+                    // padding:1,
+                    // paddingRight:2,
+                    my:5,
+                    px:"20%",
+                    // pt:1.5,
                     border:3,
                     borderRadius:11,
                 }}

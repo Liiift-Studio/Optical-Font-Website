@@ -5,10 +5,14 @@ import {About,FLV,UG,P,A,PR} from '../styles/utils.module.constants'
 import CircleIcon from '@mui/icons-material/Circle';
 import { flv,ug,p,a,pr,flvCopy,ugCopy,pCopy,aCopy,prCopy } from "../styles/utils.module.constants";
 import { Waypoint } from 'react-waypoint';
+import { copy_container } from "../styles/layout.styles";
+
+
+
 
 export default function MenusLayout({children,darkMode }) {
     const [toggleValue, setToggle]= useState(FLV);
-
+    const SECTION_SPACING = 10;
 
 return (
     <>
@@ -16,8 +20,10 @@ return (
 
 
     <Grid container item sm={12}  >
-            <Grid item container sm={4} className={styles.menuButtons_container} 
-                display={{xs:'none', md:'block'}}
+            <Grid item container sm={4} 
+            
+            className={styles.menuButtons_container} 
+                display={{xs:'none', md:'flex'}}
 
                 >
                 <List >
@@ -127,8 +133,8 @@ return (
             </Grid>
 
         
-            <Grid item container md={8} alignItems="center" className={styles.menu_text_container}  
-            // 
+            <Grid item container md={8} alignItems="center"   
+                sx={copy_container}
             >
                 <Grid item container pt={2.3}   >
 
@@ -138,14 +144,20 @@ return (
                   bottomOffset="55%"
                 onEnter={()=>setToggle(FLV)}
                 >
-                    <section id="FLV" className={styles.about_sections}>
-                        <Grid item container>
+                    <section id="FLV">
+                        <Grid item container
+                            sx={{
+                                mb:SECTION_SPACING,
+                            }}
+                        >
                             <Typography variant ='h4' display={{xs:'none', md:'block'}}>
                             {flv}<br /><br />
                             </Typography>
 
                             <Grid item container
-                                sx={{justifyContent:'center'}} 
+                                sx={{justifyContent:'center'
+                                
+                            }} 
                             >
                             <Typography variant ='h4' 
                             
@@ -158,7 +170,6 @@ return (
                                 <div className={styles.body_type}>
 
                                     {flvCopy}
-                                    <br /> <br />
                                 </div>
                             </Typography>
                         </Grid>
@@ -171,8 +182,12 @@ return (
                     bottomOffset="55%"
                     onEnter={()=>setToggle(UG)}>
 
-                    <section id="UG" className={styles.about_sections}>
-                        <Grid item>
+                    <section id="UG" >
+                        <Grid item container
+                            sx={{
+                                mb:SECTION_SPACING,
+                            }}
+                        >
                             <Typography variant ='h4' display={{xs:'none', md:'block'}}>
                             {ug}<br /><br />
                             </Typography>
@@ -192,7 +207,7 @@ return (
                                 <div className={styles.body_type}>
 
                                     {ugCopy}
-                                    <br /> <br />
+
                                 </div>
                             </Typography>
                         </Grid>
@@ -203,8 +218,12 @@ return (
                     topOffset="35%"
                     bottomOffset="55%"
                     onEnter={()=>setToggle(P)}>
-                <section id="P" className={styles.about_sections}>
-                    <Grid item>
+                <section id="P" >
+                    <Grid item container
+                        sx={{
+                            mb:SECTION_SPACING,
+                        }}
+                    >
                     <Typography variant ='h4' display={{xs:'none', md:'block'}}>
                             {p}<br /><br />
                     </Typography>
@@ -220,7 +239,7 @@ return (
                         <Typography variant='body'>
                             <div className={styles.body_type}>
                                 {pCopy}
-                                <br /> <br />
+
                             </div>
                         </Typography>
                     </Grid>
@@ -231,8 +250,12 @@ return (
                     topOffset="35%"
                     bottomOffset="55%"
                     onEnter={()=>setToggle(A)}>
-                <section id="A" className={styles.about_sections}>
-                    <Grid item>
+                <section id="A">
+                    <Grid item container
+                        sx={{
+                            mb:SECTION_SPACING,
+                        }}
+                    >
                     <Typography variant ='h4' display={{xs:'none', md:'block'}}>
                         <div className={styles.body_type}>
 
@@ -265,8 +288,12 @@ return (
                     topOffset="35%"
                     bottomOffset="55%"
                     onEnter={()=>setToggle(PR)}>
-                    <section id="PR" className={styles.about_sections}>
-                    <Grid item>
+                    <section id="PR" >
+                    <Grid item container
+                        sx={{
+                            mb:SECTION_SPACING,
+                        }}
+                    > 
                         <Typography variant ='h4' display={{xs:'none', md:'block'}}>
                         <div className={styles.body_type}>
 

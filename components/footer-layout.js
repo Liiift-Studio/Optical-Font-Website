@@ -5,35 +5,45 @@ import React, { useEffect, useState } from "react"
 import { Grid, Typography} from '@mui/material/'
 import Link from 'next/link'
 import { bgcolor } from '@mui/system'
+import { footer_container, footer_container_mobile } from '../styles/layout.styles'
 
 export default function FooterLayout({children }) {
 
     return(
      //desk
      <>
-      <Grid container className = {styles.footer_container} bgcolor="background.footer"   display={{xs:'none', md:'block'}}
+
+     <Grid container 
+      sx={footer_container} 
       >
-        <Grid container item sm={12} sx={{
-          alignContent:'top',
-        }} 
-          spacing={5} 
-          >
-        
-          <Grid container item sm={4} className = {styles.footer_column_container} >
-            <Grid item sm={12} 
+        <Grid container item sm={12}
+        sx={{
+          // bgcolor:"orange",
+          pl:'3vw'
+        }}
+        >
+          <Grid container item sm={4}
+          sx={{
+            // bgcolor:'brown',
+            alignContent:'start',
+            pl:'2vw',
+            pb:'2em',
+
+          }}>
+              <Grid item container sm={12} 
               sx={{
-                pl:'2vw'
+                pb:'2em',
+
+                // bgcolor:"green",
               }}>
-              <Typography variant="h4" sx={{paddingBottom:"2rem"}}>
-              PARTNERS
-              </Typography>
-            </Grid>
-            
-            <Typography variant="footer">
+                <Typography variant="h4" >
+                PARTNERS
+                </Typography>
+              </Grid>
+
+              <Typography variant="footer">
             <Grid container item direction='column' sm={12}
-            sx={{
-              pl:'2vw'
-            }}
+
             >          
               <Grid item>
                 <a  rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" className={styles.aFooter}>
@@ -62,19 +72,43 @@ export default function FooterLayout({children }) {
                 </a>
                 
               </Grid>
+
+              <Grid item>
+              <a href=""  target="_blank" rel="noopener"className={styles.aFooter}>
+                Liiift Studio
+                </a>
+                
+              </Grid>
             </Grid>
             </Typography>
 
           </Grid>
-          <Grid container item sm={4} className = {styles.footer_column_container}  >
-            <Grid item sm={12} sx={{paddingBottom:"2rem"}} >
+
+
+
+          <Grid container item sm={4}  
+            sx={{
+              alignContent:'start',
+            }}
+          >
+            <Grid item container sm={12} 
+            sx={{
+                pb:'2em',
+
+                }} >
               <Typography variant="h4">
-              SITE MAP
+                SITE MAP
               </Typography>
             </Grid>
 
             <Typography variant="footer">
-                <Grid container item direction='column' sm={12} >
+                <Grid container item direction='column' sm={12}
+                  sx={{
+                    height:'100%',
+                    // bgcolor:'green',
+                    alignItems:'start'
+                  }}
+                >
                   <Grid item>
                     <Link href="/" >
                       <a className={styles.aFooter}>Home</a>
@@ -107,10 +141,19 @@ export default function FooterLayout({children }) {
             </Typography>
 
           </Grid>
-
-          <Grid container item sm={4} className = {styles.footer_column_container}>
-            <Grid item sm={12} >
-              <Typography variant="h4" sx={{paddingBottom:"2rem"}}>
+          <Grid container item sm={4}
+           sx={{
+            alignContent:'start',
+          }}
+          >
+            <Grid item container sm={12} 
+              sx={{
+                // bgcolor:"yellow",
+              pb:'2em',
+                
+            }}
+            >
+              <Typography variant="h4" >
               <br></br>
               </Typography>
             </Grid>
@@ -137,13 +180,18 @@ export default function FooterLayout({children }) {
             </Typography>
 
           </Grid>
-
         </Grid>
+      
+
+
       </Grid>
 
+ 
 
 {/*  Mobile */}
-      <Grid container className = {styles.footer_container} bgcolor="background.footer"   display={{xs:'block', md:'none'}} >
+      <Grid container 
+        sx={footer_container_mobile}
+      >
         <Grid container item sm={12} sx={{
           
           alignContent:'top'}} 
@@ -151,14 +199,20 @@ export default function FooterLayout({children }) {
           
           >
 
-            <Grid item container sm={12}  
+            <Grid item container sm={12} 
+            sx={{
+              justifyContent:'center',
+
+            }} 
             >
               <Typography variant="h4" >
               PARTNERS
               </Typography>
             </Grid>
 
-            <Grid item container sm={12}>
+            <Grid item container sm={12}
+              sx={{justifyContent:'center',}}
+            >
               <Typography variant="footer">
                 <Grid item>
                   <a  rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" className={styles.aFooter}>
@@ -184,13 +238,17 @@ export default function FooterLayout({children }) {
               </Typography>
             </Grid>
 
-            <Grid item sm={12} >
+            <Grid item container sm={12} 
+            sx={{justifyContent:'center',}}
+            >
               <Typography variant="h4" >
               SITE MAP
               </Typography>
             </Grid>
 
-            <Grid item container sm={12}>
+            <Grid item container sm={12}
+              sx={{justifyContent:'center',}}
+            >
             <Typography variant="footer">
 
               <Grid item>
