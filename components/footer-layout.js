@@ -74,7 +74,7 @@ export default function FooterLayout({children }) {
               </Grid>
 
               <Grid item>
-              <a href=""  target="https://www.liiift.studio/" rel="noopener"className={styles.aFooter}>
+              <a href="https://www.liiift.studio/"  target="_blank" rel="noopener"className={styles.aFooter}>
                 Liiift Studio
                 </a>
                 
@@ -242,7 +242,7 @@ export default function FooterLayout({children }) {
                 </Grid>
 
                 <Grid item>
-              <a href=""  target="https://www.liiift.studio/" rel="noopener"className={styles.aFooter}>
+              <a ref="https://www.liiift.studio/"  target="_blank" rel="noopener"className={styles.aFooter}>
                 Liiift Studio
                 </a>
                 
