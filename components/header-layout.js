@@ -2,13 +2,11 @@ import styles from '../styles/layout.module.css'
 import React, { useEffect, useState } from "react"
 import Image from 'next/image'
 
-import {Icon,IconButton, Button,Typography,Switch,Paper, Grid, Box, CssBaseline} from '@mui/material/'
-import { makeStyles} from '@mui/styles'
+import {Icon,IconButton, Grid, Box, CssBaseline} from '@mui/material/'
 import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import {buttonDarkT, darkTheme, lightTheme} from '../src/themes'
-import { fontWeight } from '@mui/system'
 import logo from '../public/images/logo.svg'
 import logoDark from '../public/images/logoDark.svg'
 
@@ -35,10 +33,6 @@ export default function HeaderLayout({lightSwitch, children }) {
         return x;
     }
 
-    useEffect(()=>{
-
-        // src ="no";
-    })
 
     return(
         <>
