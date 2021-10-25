@@ -3,7 +3,8 @@ import { flexbox } from "@mui/system"
 //Header Bar
 export const dm_icon ={
     display:'flex',
-    fontSize:{lg:"2em",md:"1.70em",sm:"1.5em",xs:"1.5em"},
+    // fontSize:{lg:"1.2em",md:"1.2em",sm:"1.3em",xs:"1.3em"},
+    fontSize:"1.3em",
     mb:{lg:".75em",md:".35em",sm:".2em",xs:".2em"},
     // alignContent:"start",
     alignItems:"stretch",
@@ -18,15 +19,23 @@ export const logo_container={
 }
 
 //Landing
-export const landing_container_mobile = {
 
+export const landing_container={
+    pt: '17vh',
+    pl: '6vw',
+    pr: '6vw',
+    // alignItems:'center',
+    height:'85vh',
+}
+export const landing_container_mobile = {
+    
     height:'90vh',
     alignContent:'center',
 }
 
 export const landing_container_tablet = {
     // pt:10,
-    mt:10,
+    mt:5,
     height:'75vh',
     alignContent:'center',
 }
@@ -44,12 +53,12 @@ export const img_container_mobile ={
 
 export const img_container_tablet ={
     
-    pt:5,
-    pb:10,
+    pt:3,
+    pb:5,
     px:5,
 
-    maxWidth:'60%',
-    minWidth:'70%'
+    maxWidth:'55%',
+    minWidth:'50%'
 
 }
 
@@ -57,12 +66,37 @@ export const img_container_tablet ={
 
 
 export const copy_container ={
-    pl: {xs:'6vw', md:'2vw',lg:'10vw'},
+    // pl: {xs:'6vw', md:'2vw',lg:'10vw'},
+    pl:'1vw',
     pr: {xs:'6vw', md:'6vw',},
     justifyContent: 'center',
 }
 
+export const header ={
+    display:"flex",
+    justifyContent:{md:"start",sm:"center",xs:"center"},
+    pb:"2.5em"
+}
+export const copy ={
+    justifyContent:{md:"start",sm:"center",xs:"center"},
+    px:{md:0,sm:4,xs:2},
+    maxWidth: {xs:"750px", lg:"900px"}
 
+
+}
+
+export const circle ={
+    bgcolor:'text.main',
+    // bgcolor:'white',
+    color:'text.main',
+    width :'.7em',
+    height:'.7em',
+    // mr:2,
+    // ml:3.45,
+    // mb:.6,
+    borderRadius:"50%",
+
+}
 //left menu
 
 //?? stick not working -> still using css for this rn
@@ -87,10 +121,11 @@ export const footer_container={
     bgcolor:"background.footer",
     // display:'flex',
     display:{xs:'none', md:'flex'},
-    height:300,
+    // height:300,
     // pb:'2.5%',
-    pt:'10vh',
+    pt:'8vh',
     pb:'3vh',
+    px:'3vw',
 
     alignContent:'center',
     borderTopStyle:'solid',
@@ -100,7 +135,7 @@ export const footer_container={
 }
 
 export const footer_container_mobile={
-    display:{xs:'flex', md:'none'},
+    display:{xs:'flex', sm:'none'},
     bgcolor:"background.footer",
     justifyContent:'center',
     pt:'5vh',
@@ -112,3 +147,19 @@ export const footer_container_mobile={
     borderColor:"background.footerBorder"
 
 }
+
+
+export const footer_container_tablet={
+    display:{xs:'none', sm:'flex',md:'none'},
+    bgcolor:"background.footer",
+    // justifyContent:'center',
+    pt:'5vh',
+    pb:'3vh',
+
+    px:'6vw',
+    borderTopStyle:'solid',
+    borderWidth:'1px',
+    borderColor:"background.footerBorder"
+
+}
+

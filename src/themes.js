@@ -124,7 +124,7 @@ parentTheme=responsiveFontSizes(parentTheme);
         fontFamily:"Optical02",
         // justifyContent:{sm:'center'},
         textAlign:'start',
-        [parentTheme.breakpoints.down('md')]:{
+        [parentTheme.breakpoints.down('sm')]:{
             textAlign:'center',
         }
     }
@@ -296,7 +296,7 @@ export let darkTheme =createTheme({
         mode: 'dark',
         // common:
         text:{
-            primary:white
+            main:white
         },
         secondary:{
             main: buttonText ,

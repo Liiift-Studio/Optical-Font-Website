@@ -5,7 +5,7 @@ import {About,FLV,UG,P,A,PR} from '../styles/utils.module.constants'
 import CircleIcon from '@mui/icons-material/Circle';
 import { flv,ug,p,a,pr,flvCopy,ugCopy,pCopy,aCopy,prCopy } from "../styles/utils.module.constants";
 import { Waypoint } from 'react-waypoint';
-import { copy_container } from "../styles/layout.styles";
+import { circle, copy, copy_container, header } from "../styles/layout.styles";
 
 
 
@@ -29,10 +29,11 @@ return (
             
             className={styles.menuButtons_container} 
                 display={{xs:'none', md:'flex'}}
+                
 
                 >
                 <List >
-                    <ListItem disablePadding 
+                    <ListItem  disablePadding
                     className={styles.a}
                     component="a" 
                     href="#FLV" 
@@ -41,35 +42,38 @@ return (
                         <ListItemButton   variant ="string"> 
                             {toggleValue === FLV ? 
                                 <ListItemIcon >
-                                    <CircleIcon sx={{marginLeft:"1.5em",marginBottom:".2em", fontSize:".8em", color:'text.main'}}   />
+                                    <Box sx={circle}/>
                                 </ListItemIcon>
-                            : <></>}
-                            <ListItemText  inset={toggleValue !== FLV}>
-                                <Typography variant ="h4">
-                                    {flv}
-                                </Typography>
-                            </ListItemText>
-                        </ListItemButton>
+                                : <></>}
+
+                                <ListItemText  inset={toggleValue !== FLV}>
+                                    <Typography variant ="h4">
+                                        {flv}
+                                    </Typography>
+                                </ListItemText>
+                            </ListItemButton>
+
                     </ListItem>
 
                     <ListItem disablePadding 
                         className={styles.a}
                         component="a" 
                         href="#UG"
-                        // onClick={()=>{setToggle(UG)}}
                         >
                         <ListItemButton >
                             {toggleValue === UG ? 
                                 <ListItemIcon >
-                                    <CircleIcon sx={{marginLeft:"1.5em",marginBottom:".2em", fontSize:".8em",color:'text.main'}} />
+                                    <Box sx={circle}/>
                                 </ListItemIcon>
                             : <></>}
+
                             <ListItemText  inset={toggleValue !== UG} >
                                 <Typography variant ="h4">  
                                 {ug}
                                 </Typography>
                             </ListItemText>
                         </ListItemButton>
+
                     </ListItem>
 
                     
@@ -82,7 +86,7 @@ return (
                         <ListItemButton >
                             {toggleValue === P ? 
                                 <ListItemIcon >
-                                    <CircleIcon sx={{marginLeft:"1.5em",marginBottom:".2em", fontSize:".8em",color:'text.main'}} />
+                                    <Box sx={circle}/>
                                 </ListItemIcon>
                             : <></>}
                             <ListItemText  inset={toggleValue !== P} >
@@ -91,6 +95,7 @@ return (
                                 </Typography>
                             </ListItemText>
                         </ListItemButton>
+
                     </ListItem>
 
                     
@@ -103,7 +108,7 @@ return (
                         <ListItemButton >
                             {toggleValue === A ? 
                                 <ListItemIcon >
-                                    <CircleIcon sx={{marginLeft:"1.5em",marginBottom:".2em", fontSize:".8em",color:'text.main'}} />
+                                <Box sx={circle}/>
                                 </ListItemIcon>
                             : <></>}
                             <ListItemText  inset={toggleValue !== A} >
@@ -123,7 +128,7 @@ return (
                         <ListItemButton >
                             {toggleValue === PR ? 
                                 <ListItemIcon  >
-                                    <CircleIcon  sx={{marginLeft:"1.5em",marginBottom:".2em", fontSize:".8em",color:'text.main'}}/>
+                                    <Box sx={circle}/>
                                 </ListItemIcon>
                             : <></>}
                             <ListItemText  inset={toggleValue !== PR} >
@@ -137,7 +142,7 @@ return (
                 </List>
             </Grid>
 
-        
+        {/* COPY */}
             <Grid item container md={8} alignItems="center"   
                 sx={copy_container}
             >
@@ -155,28 +160,20 @@ return (
                                 mb:SECTION_SPACING,
                             }}
                         >
-                            <Typography variant ='h4' display={{xs:'none', md:'block'}}>
-                            {flv}<br /><br />
-                            </Typography>
-
                             <Grid item container
-                                sx={{justifyContent:'center'
-                                
-                            }} 
+                                sx={header}
                             >
-                            <Typography variant ='h4' 
-                            
-                                display={{xs:'block', md:'none'}}>
-                                {flv}<br /><br />
+                            <Typography variant ='h4'> 
+                                {flv}
                             </Typography>
                             </Grid>
-
-                            <Typography variant='body' display ="block">
-                                <div className={styles.body_type}>
-
-                                    {flvCopy}
-                                </div>
-                            </Typography>
+                            <Grid item container
+                                sx={copy}
+                            >
+                                <Typography variant='body' display ="block">
+                                        {flvCopy}
+                                </Typography>
+                            </Grid>
                         </Grid>
                     </section>
                 
@@ -193,28 +190,23 @@ return (
                                 mb:SECTION_SPACING,
                             }}
                         >
-                            <Typography variant ='h4' display={{xs:'none', md:'block'}}>
-                            {ug}<br /><br />
-                            </Typography>
-                            
                             <Grid item container
-                                sx={{justifyContent:'center'}} 
+                                sx={header}
                             >
-                                <Typography variant ='h4' 
-                                
-                                    display={{xs:'block', md:'none'}}>
-                                    {ug}<br /><br />
+                                <Typography variant ='h4'>
+                                    {ug}
                                 </Typography>
                             </Grid>
 
+                            <Grid item container
+                                sx ={ copy}
+                                >
+                                <Typography variant='body'>
 
-                            <Typography variant='body'>
-                                <div className={styles.body_type}>
+                                        {ugCopy}
 
-                                    {ugCopy}
-
-                                </div>
-                            </Typography>
+                                </Typography>
+                            </Grid>
                         </Grid>
                     </section>
                 </Waypoint>
@@ -229,24 +221,21 @@ return (
                             mb:SECTION_SPACING,
                         }}
                     >
-                    <Typography variant ='h4' display={{xs:'none', md:'block'}}>
-                            {p}<br /><br />
-                    </Typography>
-
                     <Grid item container
-                        sx={{justifyContent:'center'}} 
+                    sx={header}
                     >
-                        <Typography variant ='h4'                             
-                            display={{xs:'block', md:'none'}}>
-                            {p}<br /><br />
+
+                        <Typography variant ='h4' >
+                                {p}
                         </Typography>
                     </Grid>
+                    <Grid item container
+                    sx={copy}>
+                        
                         <Typography variant='body'>
-                            <div className={styles.body_type}>
                                 {pCopy}
-
-                            </div>
                         </Typography>
+                    </Grid>
                     </Grid>
                 </section>
                 </Waypoint>
@@ -261,29 +250,21 @@ return (
                             mb:SECTION_SPACING,
                         }}
                     >
-                    <Typography variant ='h4' display={{xs:'none', md:'block'}}>
-                        <div className={styles.body_type}>
-
-                            {a}<br /><br />
-                        </div>
-                    </Typography>
+                  
 
                     <Grid item container
-                        sx={{justifyContent:'center'}} 
+                        sx={header} 
                     >
-                        <Typography variant ='h4' 
-                        
-                            display={{xs:'block', md:'none'}}>
-                            {a}<br /><br />
+                        <Typography variant ='h4' >
+                            {a}
                         </Typography>
                     </Grid>
+                    <Grid item container 
+                        sx = {copy}>
                     <Typography variant='body'>
-                        <div className={styles.body_type}>
-
                             {aCopy}
-                            <br /> <br />
-                        </div>
                     </Typography>
+                    </Grid>
                     </Grid>
                 </section>
 
@@ -299,28 +280,20 @@ return (
                             mb:SECTION_SPACING,
                         }}
                     > 
-                        <Typography variant ='h4' display={{xs:'none', md:'block'}}>
-                        <div className={styles.body_type}>
-
-                            {pr} <br /><br />
-                        </div>
-                        </Typography>
 
                     <Grid item container
-                        sx={{justifyContent:'center'}} 
+                        sx={header} 
                         >
-                            <Typography variant ='h4' 
-                            
-                                display={{xs:'block', md:'none'}}>
-                                {pr}<br /><br />
+                            <Typography variant ='h4' >
+                                {pr}
                             </Typography>
                     </Grid>
+                    <Grid item container
+                        sx = {copy}>
                         <Typography variant='body' >
-                            <div className={styles.body_type}>
                                 {prCopy}
-                            </div>
-                            <br /> <br />
                         </Typography>
+                    </Grid>
                     </Grid>
                 </section>
                 </Waypoint>

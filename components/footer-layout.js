@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react"
 import { Grid, Typography} from '@mui/material/'
 import Link from 'next/link'
 import { bgcolor } from '@mui/system'
-import { footer_container, footer_container_mobile } from '../styles/layout.styles'
+import { footer_container, footer_container_mobile, footer_container_tablet } from '../styles/layout.styles'
 
 export default function FooterLayout({children }) {
 
@@ -17,10 +17,7 @@ export default function FooterLayout({children }) {
       sx={footer_container} 
       >
         <Grid container item sm={12}
-        sx={{
-          // bgcolor:"orange",
-          pl:'3vw'
-        }}
+
         >
           <Grid container item sm={4}
           sx={{
@@ -41,7 +38,10 @@ export default function FooterLayout({children }) {
                 </Typography>
               </Grid>
 
-              <Typography variant="footer">
+              <Typography variant="footer"
+                              sx={{pr:2}}
+
+              >
             <Grid container item direction='column' sm={12}
 
             >          
@@ -74,7 +74,7 @@ export default function FooterLayout({children }) {
               </Grid>
 
               <Grid item>
-              <a href=""  target="_blank" rel="noopener"className={styles.aFooter}>
+              <a href=""  target="https://www.liiift.studio/" rel="noopener"className={styles.aFooter}>
                 Liiift Studio
                 </a>
                 
@@ -101,7 +101,9 @@ export default function FooterLayout({children }) {
               </Typography>
             </Grid>
 
-            <Typography variant="footer">
+            <Typography variant="footer"
+            
+            >
                 <Grid container item direction='column' sm={12}
                   sx={{
                     height:'100%',
@@ -158,7 +160,9 @@ export default function FooterLayout({children }) {
               </Typography>
             </Grid>
 
-            <Typography variant="footer">
+            <Typography variant="footer"
+              sx={{pr:2}}
+            >
               <Grid container item direction='column' sm={12} >
 
                 <Grid item>
@@ -188,7 +192,134 @@ export default function FooterLayout({children }) {
 
  
 
-{/*  Mobile */}
+{/*  Tablet */}
+      <Grid container sm = {12}
+        sx={footer_container_tablet}
+      >
+        <Grid container item sm={6} sx={{
+          
+          alignContent:'start'}} 
+          spacing={5} 
+          
+          >
+
+            <Grid item container sm={12} 
+            sx={{
+              // justifyContent:'center',
+
+            }} 
+            >
+              <Typography variant="h4" >
+              PARTNERS
+              </Typography>
+            </Grid>
+
+            <Grid item container sm={12}
+              // sx={{justifyContent:'center',}}
+            >
+              <Typography variant="footer"
+              sx={{pr:2}}
+              >
+                <Grid item>
+                  <a  rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" className={styles.aFooter}>
+                    The Accessible Technology Program
+                  </a>
+                </Grid>
+                <Grid item>
+                  <a href="https://www.ecuad.ca/" target="_blank" rel="noopener" className={styles.aFooter}>
+                  Emily Carr University
+                  </a>
+                </Grid>
+                <Grid item>
+                  <a href="https://research.ecuad.ca/healthdesignlab/"  target="_blank" rel="noopener" className={styles.aFooter}>
+                  The Health Design Lab at ECU
+                  </a>
+                </Grid>
+                <Grid item>
+                  <a href="https://shumka.ecuad.ca/"  target="_blank" rel="noopener"className={styles.aFooter}>
+                  Shumka Centre at ECU
+                  </a>
+                </Grid>
+
+                <Grid item>
+              <a href=""  target="https://www.liiift.studio/" rel="noopener"className={styles.aFooter}>
+                Liiift Studio
+                </a>
+                
+              </Grid>
+
+              </Typography>
+            </Grid>
+            </Grid>
+            <Grid container item sm={6} sx={{
+          
+          alignContent:'top'}} 
+          spacing={5} 
+          
+          >
+            <Grid item container sm={12} 
+            // sx={{justifyContent:'center',}}
+            >
+              <Typography variant="h4" >
+              SITE MAP
+              </Typography>
+            </Grid>
+
+            <Grid item container sm={12}
+              // sx={{justifyContent:'center',}}
+            >
+            <Typography variant="footer">
+
+              <Grid item>
+                <Link href="/" >
+                  <a className={styles.aFooter}>Home</a>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link href="/" >
+                  <a className={styles.aFooter}>About</a>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link href="/" >
+                  <a className={styles.aFooter}>Download Extension</a>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link href="/" >
+                    <a className={styles.aFooter}>Download Typeface</a>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link href="/" >
+                    <a className={styles.aFooter}>Github</a>
+                </Link>
+              </Grid>
+              <Grid item>
+                  <a className={styles.aFooter} href="#FLV">Fonts & Low Vision</a>
+                </Grid>
+                <Grid item>
+                  <a className={styles.aFooter} href="#UG">Use Guide</a>
+                </Grid>
+                <Grid item>
+                <a className={styles.aFooter} href="#P">Projects</a>
+                </Grid>
+                <Grid item>
+                <a className={styles.aFooter} href="#A">Accesibility</a> 
+                </Grid>
+                <Grid item>
+                <a className={styles.aFooter} href="#PR">Privacy</a> 
+                </Grid>     
+              </Typography>
+            </Grid>
+
+            
+
+        </Grid>
+      </Grid>
+
+
+      {/*  Mobile */}
       <Grid container 
         sx={footer_container_mobile}
       >
@@ -234,6 +365,12 @@ export default function FooterLayout({children }) {
                   Shumka Centre at ECU
                   </a>
                 </Grid>
+                <Grid item>
+              <a href=""  target="https://www.liiift.studio/" rel="noopener"className={styles.aFooter}>
+                Liiift Studio
+                </a>
+                
+              </Grid>
 
               </Typography>
             </Grid>

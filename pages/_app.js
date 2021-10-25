@@ -44,17 +44,12 @@ function MyApp({ Component, pageProps }) {
               as="font"
               crossOrigin=""
               />
-            
-            
-            
-                        {/* <link rel="icon" href="/favicon.ico" /> */}
+
       </Head>
       
       
 
-      {/* <HeaderLayout lightSwitch={true}> */}
         <Component {...pageProps} />
-      {/* </HeaderLayout> */}
 </>
 
     );

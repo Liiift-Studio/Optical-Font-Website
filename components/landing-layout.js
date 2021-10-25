@@ -6,7 +6,7 @@ import { shadows } from '@mui/system';
 import { imgSource, source } from '../styles/utils.module.constants';
 import { useEffect } from 'react';
 
-import { img_container_mobile, img_container_tablet, landing_container_mobile, landing_container_tablet } from '../styles/layout.styles';
+import { img_container_mobile, img_container_tablet, landing_container_mobile, landing_container_tablet, landing_container } from '../styles/layout.styles';
 
 
 
@@ -19,8 +19,10 @@ export default function LandingLayout({children,imgSrc}) {
 
     {/* DESKTOP */}
     <Grid container display={{xs:'none', md:'flex'}}>
-      <Grid container item  className={styles.landing_container}>
-        <Grid container item md={7} direction="column" className={styles.landing_left_container}>
+      <Grid container item 
+        sx ={landing_container}
+      >
+        <Grid container item md={7} direction="column" >
             <Grid container item >
                 <Typography variant = 'h1'>
                     <nobr>Varied fonts for</nobr> <br /> varied vision. 
