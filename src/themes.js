@@ -99,6 +99,14 @@ let parentTheme = createTheme({
 
         
     },
+    components:{
+        MuiButtonBase :{
+            defaultProps:{
+
+                disableRipple:true,
+            }
+        }
+    }
     
 
 })
@@ -193,8 +201,11 @@ export let lightTheme = createTheme({
     },
 
     components:{
+
         MuiButton :{
+
             styleOverrides:{
+                
                 root:{
 
                 },
@@ -216,31 +227,18 @@ export let lightTheme = createTheme({
 
 
         MuiIcon:{
-            styleOverrides:{
-                root:{
+            defaultProps:{
 
-                    [parentTheme.breakpoints.down('sm')]:{
-                        fontSize:'.75rem',
-                
-                    },
-                    [parentTheme.breakpoints.up('sm')]:{
-                        fontSize:'1rem',
-                
-                    },
-                    [parentTheme.breakpoints.up('md')]:{
-                        fontSize:'1.1rem',
-                
-                    },
-                    [parentTheme.breakpoints.up('lg')]:{
-                        fontSize:'1.2rem',
-                
-                    }
-                    // fontSize:"1vw"
-                }
-            }
+                disableRipple:true,
+            },
+
         },
 
         MuiIconButton:{
+            defaultProps:{
+
+                disableRipple:true,
+            },
             styleOverrides:{
                 root:{
                     color:black,
@@ -256,6 +254,10 @@ export let lightTheme = createTheme({
             },  
         },
         MuiListItemButton:{
+            defaultProps:{
+
+                disableRipple:true,
+            },
             styleOverrides:{
                 root:{
 
@@ -314,8 +316,11 @@ export let darkTheme =createTheme({
     
     components:{
         
-
         MuiListItemButton:{
+            defaultProps:{
+
+                disableRipple:true,
+            },
             styleOverrides:{
                 root:{
 
@@ -340,31 +345,18 @@ export let darkTheme =createTheme({
         },
 
         MuiIcon:{
-            styleOverrides:{
-                root:{
+            defaultProps:{
 
-                    [parentTheme.breakpoints.down('sm')]:{
-                        fontSize:'.75rem',
-                
-                    },
-                    [parentTheme.breakpoints.up('sm')]:{
-                        fontSize:'1rem',
-                
-                    },
-                    [parentTheme.breakpoints.up('md')]:{
-                        fontSize:'1.1rem',
-                
-                    },
-                    [parentTheme.breakpoints.up('lg')]:{
-                        fontSize:'1.2rem',
-                
-                    }
-                    // fontSize:"1vw"
-                }
-            }
+                disableRipple:true,
+            },
+            
         },
 
         MuiIconButton:{
+            defaultProps:{
+
+                disableRipple:true,
+            },
             styleOverrides:{
                 root:{
                     color:yellow,

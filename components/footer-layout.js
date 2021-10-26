@@ -242,7 +242,7 @@ export default function FooterLayout({children }) {
                 </Grid>
 
                 <Grid item>
-              <a ref="https://www.liiift.studio/"  target="_blank" rel="noopener"className={styles.aFooter}>
+              <a href="https://www.liiift.studio/"  target="_blank"  rel="noopener"className={styles.aFooter}>
                 Liiift Studio
                 </a>
                 

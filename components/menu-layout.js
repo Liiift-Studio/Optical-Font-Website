@@ -5,7 +5,7 @@ import {About,FLV,UG,P,A,PR} from '../styles/utils.module.constants'
 import CircleIcon from '@mui/icons-material/Circle';
 import { flv,ug,p,a,pr,flvCopy,ugCopy,pCopy,aCopy,prCopy } from "../styles/utils.module.constants";
 import { Waypoint } from 'react-waypoint';
-import { circle, copy, copy_container, header } from "../styles/layout.styles";
+import { body_container, circle, copy, copy_container, header } from "../styles/layout.styles";
 
 
 
@@ -21,10 +21,7 @@ return (
 
     <Grid container item sm={12}  
     
-    sx={{
-        pt:{sm:8},
-        // bgcolor:"green",
-    }}>
+    sx={body_container}>
             <Grid item container sm={4} 
             
             className={styles.menuButtons_container} 
@@ -107,8 +104,10 @@ return (
                         >
                         <ListItemButton >
                             {toggleValue === A ? 
-                                <ListItemIcon >
-                                <Box sx={circle}/>
+                                <ListItemIcon 
+                                   
+                                >
+                                    <Box sx={circle}/>
                                 </ListItemIcon>
                             : <></>}
                             <ListItemText  inset={toggleValue !== A} >

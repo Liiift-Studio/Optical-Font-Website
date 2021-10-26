@@ -1,6 +1,12 @@
 import { flexbox } from "@mui/system"
 
 //Header Bar
+
+export const header_container={
+    height: '15vh',
+    px:{xs:'6vw',lg:'9vw'},
+    verticalAlign: 'bottom',
+}
 export const dm_icon ={
     display:'flex',
     // fontSize:{lg:"1.2em",md:"1.2em",sm:"1.3em",xs:"1.3em"},
@@ -14,7 +20,9 @@ export const dm_icon ={
 export const logo_container={
     pb:{lg:'1em',md:'1.5em',sm:'2em',xs:'3em'},
     position:'relative',
-     height:{lg:'9em',md:'9em',sm:'9em',xs:'12em'},
+
+    fontSize:{lg:'1.2rem',md:'1.1rem',sm:'1rem',xs:'.75rem'},
+    height:{lg:'9em',md:'9em',sm:'9em',xs:'12em'},
     width:{lg:'9em',md:'9em',sm:'9em',xs:'12em'}
 }
 
@@ -22,8 +30,8 @@ export const logo_container={
 
 export const landing_container={
     pt: '17vh',
-    pl: '6vw',
-    pr: '6vw',
+    px:{md:'6vw',lg:'9vw'},
+
     // alignItems:'center',
     height:'85vh',
 }
@@ -64,7 +72,11 @@ export const img_container_tablet ={
 
 //COPY (menu)
 
+export const body_container={
+    px:{xs:'1vw',lg:'4vw'},
+    pt:{sm:8},
 
+}
 export const copy_container ={
     // pl: {xs:'6vw', md:'2vw',lg:'10vw'},
     pl:'1vw',
@@ -86,15 +98,16 @@ export const copy ={
 }
 
 export const circle ={
+    alignContent:"center",
     bgcolor:'text.main',
     // bgcolor:'white',
     color:'text.main',
     width :'.7em',
     height:'.7em',
-    // mr:2,
-    // ml:3.45,
-    // mb:.6,
     borderRadius:"50%",
+    
+    pt:.3,
+    mb:.75,
 
 }
 //left menu
@@ -125,7 +138,7 @@ export const footer_container={
     // pb:'2.5%',
     pt:'8vh',
     pb:'3vh',
-    px:'3vw',
+    px:{md:'3vw',lg:'6vw'},
 
     alignContent:'center',
     borderTopStyle:'solid',

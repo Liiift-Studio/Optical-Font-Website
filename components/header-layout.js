@@ -16,7 +16,7 @@ import imgDark from '../public/images/opt_dark.png'
 import LandingLayout from './landing-layout'
 import MenusLayout from '../components/menu-layout'
 import FooterLayout from '../components/footer-layout'
-import { dm_icon, logo_container } from '../styles/layout.styles'
+import { dm_icon, header_container, logo_container } from '../styles/layout.styles'
 
 
 
@@ -44,8 +44,10 @@ export default function HeaderLayout({lightSwitch, children }) {
                     {/* <Paper elevation={0} className={styles.paper_container}> */}
                     <CssBaseline/>
 
-                    <Grid container className={styles.header_container}
-            >
+
+                    <Grid container 
+                        sx ={header_container}
+                        >
                         <Grid item container direction ="row" >
 
                             <Grid container item xs={6}  >
@@ -102,6 +104,7 @@ export default function HeaderLayout({lightSwitch, children }) {
                 
                 <LandingLayout imgSrc = {darkMode ? imgDark : imgLight}/>
                 <MenusLayout darkMode={darkMode} />
+
                 <FooterLayout/>
 
                 {/* <LandingLayout imgSrc = {darkMode ? "dar" : "hi"}/> */}
