@@ -89,7 +89,7 @@ export const img_container_tablet ={
 //COPY (menu)
 export const img_container_ext={
     display:"flex",
-    py:5,
+    // py:5,
     // pr:'6vw',
     alignItems:"start",
     justifyContent:"center",
@@ -149,13 +149,13 @@ export const circle2 ={
     color:'text.main',
     width :'.3em',
     height:'.3em',
-    borderRadius:"50%",
+    borderRadius:"100%",
     
     pt:.3,
     mb:.75,
     mt:1.75,
-    ml:4,
-
+    ml:{xs:5,sm:4},
+    
 }
 
 export const listItems={

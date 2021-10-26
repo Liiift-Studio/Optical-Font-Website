@@ -62,8 +62,9 @@ export function ControlsCopy(){
     return(
         
         <List 
-            sx={{right:"4rem",
-        
+            sx={{
+                right:"4rem",
+                top:-15
         }}
         
         >

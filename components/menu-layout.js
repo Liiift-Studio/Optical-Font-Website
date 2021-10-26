@@ -301,7 +301,7 @@ return (
                         </Grid>
 
                         <Grid item container
-                            sx ={ copy}
+                            sx ={copy}
                             >
                             <Typography variant='body'>
                                 <ControlsCopy/>
