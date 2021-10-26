@@ -26,12 +26,13 @@ export const logo_container={
     width:{lg:'9em',md:'9em',sm:'9em',xs:'12em'}
 }
 
-//Landing
+//Landing - this could be condensed into just 1 container function & 1 img container
+// 
 
 export const landing_container={
     // pt: '17vh',
     px:{md:'6vw',lg:'9vw'},
-
+    // bgcolor:'blue',
     alignItems:'center',
     height:'85vh',
 }
@@ -46,6 +47,21 @@ export const landing_container_tablet = {
     mt:5,
     height:'85vh',
     alignContent:'center',
+}
+
+export const img_container ={
+    display:"flex",
+    // pt:5,
+    pb:15,
+    // pl:10,
+    // pl:'10vw',
+    // bgcolor:"green",
+    alignItems:"start",
+    justifyContent:"end",
+
+    // maxWidth:'75%',
+    minWidth:'100%'
+
 }
 
 export const img_container_mobile ={
@@ -71,7 +87,21 @@ export const img_container_tablet ={
 }
 
 //COPY (menu)
+export const img_container_ext={
+    display:"flex",
+    py:5,
+    // pr:'6vw',
+    alignItems:"start",
+    justifyContent:"center",
+    // minWidth:'100%',
+    bgColor:'green',
+    // minWidth: {xs:"750px", lg:"900px"},
+    width:'inherit'
 
+
+    // maxHeight:'50%'
+    
+}
 export const body_container={
     px:{xs:'1vw',lg:'4vw'},
     pt:{sm:8},
@@ -80,7 +110,7 @@ export const body_container={
 export const copy_container ={
     // pl: {xs:'6vw', md:'2vw',lg:'10vw'},
     pl:'1vw',
-    pr: {xs:'6vw', md:'6vw',},
+    pr: {xs:'1vw', md:'7vw',},
     justifyContent: 'center',
 }
 
@@ -90,6 +120,7 @@ export const header ={
     pb:"2.5em"
 }
 export const copy ={
+    // diplay"flex
     justifyContent:{md:"start",sm:"center",xs:"center"},
     px:{md:0,sm:4,xs:2},
     maxWidth: {xs:"750px", lg:"900px"}
@@ -109,6 +140,27 @@ export const circle ={
     pt:.3,
     mb:.75,
 
+}
+
+export const circle2 ={
+    alignContent:"center",
+    bgcolor:'text.main',
+    // bgcolor:'white',
+    color:'text.main',
+    width :'.3em',
+    height:'.3em',
+    borderRadius:"50%",
+    
+    pt:.3,
+    mb:.75,
+    mt:1.75,
+    ml:4,
+
+}
+
+export const listItems={
+    display:'flex',
+    alignItems:'start',
 }
 //left menu
 

@@ -7,7 +7,7 @@ import { createTheme , styled,responsiveFontSizes} from '@mui/material/styles';
 
 const landingBlue = "#CBDDFF";
 const footerBlue ="#AFC8F8"
-const black ="#000";
+const black ="#111111";
 const buttonText = "#111111"
 const buttonBackDark= "#FCFF55"
 const white = "#FFFFFF"

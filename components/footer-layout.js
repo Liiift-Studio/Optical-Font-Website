@@ -117,7 +117,7 @@ export default function FooterLayout({children }) {
                     </Link>
                   </Grid>
                   <Grid item>
-                    <Link href="/" >
+                    <Link href="#FLV" >
                       <a className={styles.aFooter}>About</a>
                     </Link>
                   </Grid>
@@ -166,20 +166,21 @@ export default function FooterLayout({children }) {
               <Grid container item direction='column' sm={12} >
 
                 <Grid item>
-                  <a className={styles.aFooter} href="#FLV">Fonts & Low Vision</a>
-                </Grid>
-                <Grid item>
-                  <a className={styles.aFooter} href="#UG">Use Guide</a>
+                  <a className={styles.aFooter} href="#FLV">Intro</a>
                 </Grid>
                 <Grid item>
                 <a className={styles.aFooter} href="#P">Projects</a>
                 </Grid>
                 <Grid item>
+                  <a className={styles.aFooter} href="#UG">Use Guide</a>
+                </Grid>
+                
+                {/* <Grid item>
                 <a className={styles.aFooter} href="#A">Accesibility</a> 
                 </Grid>
                 <Grid item>
                 <a className={styles.aFooter} href="#PR">Privacy</a> 
-                </Grid>     
+                </Grid>      */}
               </Grid>
             </Typography>
 
@@ -276,7 +277,7 @@ export default function FooterLayout({children }) {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="/" >
+                <Link href="#FLV" >
                   <a className={styles.aFooter}>About</a>
                 </Link>
               </Grid>
@@ -296,20 +297,21 @@ export default function FooterLayout({children }) {
                 </Link>
               </Grid>
               <Grid item>
-                  <a className={styles.aFooter} href="#FLV">Fonts & Low Vision</a>
-                </Grid>
-                <Grid item>
-                  <a className={styles.aFooter} href="#UG">Use Guide</a>
+                  <a className={styles.aFooter} href="#FLV">Intro</a>
                 </Grid>
                 <Grid item>
                 <a className={styles.aFooter} href="#P">Projects</a>
                 </Grid>
                 <Grid item>
+                  <a className={styles.aFooter} href="#UG">Use Guide</a>
+                </Grid>
+
+                {/* <Grid item>
                 <a className={styles.aFooter} href="#A">Accesibility</a> 
                 </Grid>
                 <Grid item>
                 <a className={styles.aFooter} href="#PR">Privacy</a> 
-                </Grid>     
+                </Grid>      */}
               </Typography>
             </Grid>
 
@@ -394,7 +396,7 @@ export default function FooterLayout({children }) {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="/" >
+                <Link href="#FLV" >
                   <a className={styles.aFooter}>About</a>
                 </Link>
               </Grid>
@@ -414,20 +416,21 @@ export default function FooterLayout({children }) {
                 </Link>
               </Grid>
               <Grid item>
-                  <a className={styles.aFooter} href="#FLV">Fonts & Low Vision</a>
-                </Grid>
-                <Grid item>
-                  <a className={styles.aFooter} href="#UG">Use Guide</a>
+                  <a className={styles.aFooter} href="#FLV">Intro</a>
                 </Grid>
                 <Grid item>
                 <a className={styles.aFooter} href="#P">Projects</a>
                 </Grid>
                 <Grid item>
+                  <a className={styles.aFooter} href="#UG">Use Guide</a>
+                </Grid>
+{/*    
+                <Grid item>
                 <a className={styles.aFooter} href="#A">Accesibility</a> 
                 </Grid>
                 <Grid item>
                 <a className={styles.aFooter} href="#PR">Privacy</a> 
-                </Grid>     
+                </Grid>      */}
               </Typography>
             </Grid>
 

@@ -11,8 +11,10 @@ import logo from '../public/images/logo.svg'
 import logoDark from '../public/images/logoDark.svg'
 
 
-import imgLight from '../public/images/opt_light.png'
-import imgDark from '../public/images/opt_dark.png'
+import imgLight from '../public/images/Optical_3D.png'
+import imgDark from '../public/images/Optical_3D.png'
+
+
 import LandingLayout from './landing-layout'
 import MenusLayout from '../components/menu-layout'
 import FooterLayout from '../components/footer-layout'
