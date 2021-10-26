@@ -29,22 +29,22 @@ export const logo_container={
 //Landing
 
 export const landing_container={
-    pt: '17vh',
+    // pt: '17vh',
     px:{md:'6vw',lg:'9vw'},
 
-    // alignItems:'center',
+    alignItems:'center',
     height:'85vh',
 }
 export const landing_container_mobile = {
     
-    height:'90vh',
+    height:'85vh',
     alignContent:'center',
 }
 
 export const landing_container_tablet = {
     // pt:10,
     mt:5,
-    height:'75vh',
+    height:'85vh',
     alignContent:'center',
 }
 
