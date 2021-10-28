@@ -126,7 +126,7 @@ export default function FooterLayout({children }) {
                       <a className={styles.aFooter}>Download Extension</a>
                     </Link>
                   </Grid>
-                  <Grid item>
+                  {/* <Grid item>
                     <Link href="/" >
                         <a className={styles.aFooter}>Download Typeface</a>
                     </Link>
@@ -134,6 +134,16 @@ export default function FooterLayout({children }) {
                   <Grid item>
                     <Link href="/" >
                         <a className={styles.aFooter}>Github</a>
+                    </Link>
+                  </Grid>  */}
+                  <Grid item>
+                    <Link href="/privacy-policy" >
+                        <a className={styles.aFooter}>Privacy Policy</a>
+                    </Link>
+                  </Grid> 
+                  <Grid item>
+                    <Link href="/terms" >
+                        <a className={styles.aFooter}>Terms</a>
                     </Link>
                   </Grid>     
 
