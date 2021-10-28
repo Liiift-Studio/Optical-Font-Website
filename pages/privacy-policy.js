@@ -47,7 +47,7 @@ export default function Page() {
             for other operational, legal or regulatory reasons.
             <br/><br/>
 
-            CONTACT US<br/>
+            CONTACT US<br/> 
 
             For more information about our privacy practices, if you have questions, or if you would like to make a complaint,
             please contact us by e-mail at hello@liiift.studio or by mail using the details provided below:
