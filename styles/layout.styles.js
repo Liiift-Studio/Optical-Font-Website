@@ -89,14 +89,15 @@ export const img_container_tablet ={
 //COPY (menu)
 export const img_container_ext={
     display:"flex",
-    // py:5,
+    // my:50,
     // pr:'6vw',
     alignItems:"start",
     justifyContent:"center",
     // minWidth:'100%',
-    bgColor:'green',
     // minWidth: {xs:"750px", lg:"900px"},
-    width:'inherit'
+    maxWidth:{xs:'40%',lg:'40%',xl:'40%'},
+    // minWidth:{xs:'40%',lg:'50%',xl:'40%'},
+
 
 
     // maxHeight:'50%'
@@ -112,6 +113,7 @@ export const copy_container ={
     pl:'1vw',
     pr: {xs:'1vw', md:'7vw',},
     justifyContent: 'center',
+    
 }
 
 export const header ={

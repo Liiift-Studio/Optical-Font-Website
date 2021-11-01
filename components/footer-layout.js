@@ -191,6 +191,9 @@ export default function FooterLayout({children }) {
                 <Grid item>
                 <a className={styles.aFooter} href="#PR">Privacy</a> 
                 </Grid>      */}
+
+   
+
               </Grid>
             </Typography>
 
@@ -322,6 +325,17 @@ export default function FooterLayout({children }) {
                 <Grid item>
                 <a className={styles.aFooter} href="#PR">Privacy</a> 
                 </Grid>      */}
+
+                  <Grid item>
+                    <Link href="/privacy-policy" >
+                        <a className={styles.aFooter}>Privacy Policy</a>
+                    </Link>
+                  </Grid> 
+                  <Grid item>
+                    <Link href="/terms" >
+                        <a className={styles.aFooter}>Terms</a>
+                    </Link>
+                  </Grid>    
               </Typography>
             </Grid>
 
@@ -441,6 +455,16 @@ export default function FooterLayout({children }) {
                 <Grid item>
                 <a className={styles.aFooter} href="#PR">Privacy</a> 
                 </Grid>      */}
+                      <Grid item>
+                    <Link href="/privacy-policy" >
+                        <a className={styles.aFooter}>Privacy Policy</a>
+                    </Link>
+                  </Grid> 
+                  <Grid item>
+                    <Link href="/terms" >
+                        <a className={styles.aFooter}>Terms</a>
+                    </Link>
+                  </Grid>    
               </Typography>
             </Grid>
 
