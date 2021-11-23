@@ -29,7 +29,7 @@ export default function LandingLayout({children,imgSrc}) {
           bgColor:'green',
           // height:
         }}>
-        <Grid container item md={7}  >
+        <Grid container item md={6}  >
               <Grid item>
                   <Typography variant = 'h1'>
                       <nobr>Varied fonts for</nobr> <br /> varied vision. 
