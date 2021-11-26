@@ -23,56 +23,46 @@ export default function LandingLayout({children,imgSrc}) {
         sx ={landing_container}
       >
         <Grid container item
-        sx={{
+        sx={{  
           display:"flex",
-          alignContent:"start",
-          bgColor:'green',
-          // height:
         }}>
-        <Grid container item md={7}  >
-              <Grid item>
-                  <Typography variant = 'h1'>
-                      <nobr>Varied fonts for</nobr> <br /> varied vision. 
-                    </Typography> 
-                </Grid>
-         
-               <Grid item >
-          
-                  <Button
-                    variant ="string"
-                    sx={{
-                        my:2.5,
-                        px:4,
-                        py:1.25,
+          <Grid container item md={7} className={styles.landing_right_container}>
+            <Grid item sx={img_container} justifyContent={'center'}>
+              <Image  src={imgSrc}  alt="" />
+            </Grid > 
+          </Grid>
 
-                        // py:1,
-                        border:4,
-                        borderRadius:10,
-                    }}
-
-                    >
-                      <Typography variant = "h3" sx={{ alignContent:'center'}}>
-                        Install
-                      </Typography>
-                  </Button>
+          <Grid container item md={5}>
+            <Grid item>
+              <Typography variant = 'h1'>
+                  <nobr>Varied fonts for</nobr> <br /> varied vision. 
+              </Typography> 
             </Grid>
-
-
-        </Grid>
-
-        <Grid container item md={5} className={styles.landing_right_container} >
-          <Grid item sx ={img_container}>
-
-            <Image  src={imgSrc}  alt="" />
-          </Grid > 
-        </Grid>
+            <Grid item>
+                <Button
+                  variant ="string"
+                  sx={{
+                      my:3,
+                      px:4,
+                      py:1.25,
+                      // py:1,
+                      border: 0,
+                      borderRadius:10,
+                  }}
+                >
+                  <Typography variant = "h3" sx={{ alignContent:'center'}}>
+                    Install
+                  </Typography>
+                </Button>
+              </Grid>
+          </Grid>
         </Grid>
     </Grid>
   </Grid>
 
   {/* MOBILE */}
 
-  <Grid container display={{xs:'flex', sm:'none'}} >
+  <Grid container display={{xs:'flex', md:'none'}} >
       <Grid container item  sx={landing_container_mobile} >
         <Grid container item xs={12} 
           sx={{

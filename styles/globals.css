@@ -18,7 +18,7 @@ body {
 @font-face{
   font-family:"Optical02";
   src:url("/fonts/Optical02-Regular.woff2");
-  font-size: normal;
+  font-size: normal; 
   font-weight:400;
   font-dsplay:swap;
 }

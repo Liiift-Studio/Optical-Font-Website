@@ -12,19 +12,18 @@ const buttonText = "#111111"
 const buttonBackDark= "#FCFF55"
 const white = "#FFFFFF"
 
-const buttonLightT = black;
-const buttonLightT_hover= black;
-const buttonLightBG = white;
-const buttonLightBG_hover =landingBlue;
-
-const toggleButtonLightT_hover= "#2c2e33";
-const toggleButtonLightBG_hover= "#e8f0ff";
-
-
 export const yellow ="#FCFF55";
 const buttonDarkT_hover= black;
 export const buttonDarkBG = "#FCFF55";
 const buttonDarkBG_hover = "#FCFF55";
+
+const buttonLightT = white;
+const buttonLightT_hover= yellow;
+const buttonLightBG = white;
+const buttonLightBG_hover = black;
+
+const toggleButtonLightT_hover= "#2c2e33";
+const toggleButtonLightBG_hover= "#e8f0ff";
 
 
 const button = {
@@ -52,7 +51,6 @@ const h3 = {
     fontSize:'3rem',
     fontWeight:550,
     // letterSpacing:'-.2rem',
-
     fontFamily:'Optical02'
 }
 
@@ -138,7 +136,7 @@ parentTheme=responsiveFontSizes(parentTheme);
     }
 
     parentTheme.typography.h1 ={
-        fontSize:'5.5vw',
+        fontSize:'4vw',
         fontWeight:600,
         lineHeight:1.215,
         letterSpacing: '-.1rem',
@@ -185,7 +183,6 @@ export let lightTheme = createTheme({
         },
         text:{
             main: black,
-            
         },
         background:{
             about : landingBlue ,
@@ -194,63 +191,67 @@ export let lightTheme = createTheme({
             button: landingBlue,
             menuSelector: white,
             footerBorder: footerBlue,
-
-
         },
   
     },
 
     components:{
-
         MuiButton :{
-
             styleOverrides:{
-                
                 root:{
-
                 },
-
-                stringPrimary:{
-                    // backgroundColor : buttonLightBG,
-                    color: buttonLightT,
-
+                text:{
+                    backgroundColor: 'transparent',
+                    color:black,
+                    border: '.3em solid black',
+                    borderRadius: 50,
                     '&:hover' : {
                         backgroundColor: buttonLightBG_hover,
                         color: buttonLightT_hover,
-                        borderColor: buttonLightBG_hover,
-
-                    },
+                    },  
+                    '&:focus' : {
+                        border: '.5em solid black',
+                    }
                 },
-
+                stringPrimary:{
+                    backgroundColor : black,
+                    color: buttonLightT,
+                    '&:hover' : {
+                        backgroundColor: buttonLightBG_hover,
+                        color: buttonLightT_hover,
+                    },
+                    //need to work on focus states
+                    '&:focus': {
+                        backgroundColor: white,
+                        borderColor: black,
+                        border: 5,
+                        color: black,
+                    }
+                },
             },
         },
-
-
         MuiIcon:{
             defaultProps:{
-
                 disableRipple:true,
             },
 
         },
-
         MuiIconButton:{
             defaultProps:{
-
                 disableRipple:true,
             },
             styleOverrides:{
                 root:{
-                    color:black,
-
-                    '&:hover' : {
-                        backgroundColor: "transparent",
-    
+                    svg:{
+                        fill:yellow,
+                        stroke: yellow,
+                        '&:hover' : {
+                            backgroundColor: "transparent",
+                            color: landingBlue,
+                            borderColor: yellow,
                     },
-
                 },
-
-                         
+                },      
             },  
         },
         MuiListItemButton:{
@@ -309,13 +310,46 @@ export let darkTheme =createTheme({
             // button: buttonBackDark,
             // menuSelector: black,
         },
-    
-
-        
     },
-    
     components:{
-        
+        MuiButton :{
+            styleOverrides:{
+                root:{
+                },
+                text:{
+                    backgroundColor: 'transparent',
+                    color: white,
+                    border: '.3em solid white',
+                    borderRadius: 50,
+                    '&:hover' : {
+                        backgroundColor: buttonDarkBG_hover,
+                        color: buttonDarkT_hover,
+                        border: '.3em solid yellow',
+                    },  
+                    '&:focus' : {
+                        border: '.5em solid black',
+                    }
+                }, 
+                string:{
+                    backgroundColor: white,
+                    color: black,
+                    '&:hover' : {
+                        backgroundColor: buttonLightBG_hover,
+                        color: buttonLightT_hover,
+                    },
+                    //need to work on focus states
+                    '&:focus': {
+                        backgroundColor: white,
+                        borderColor: black,
+                        border: 5,
+                        color: black,
+                    },
+                    h3:{
+                        color:black,
+                    }
+                }
+            }
+        },
         MuiListItemButton:{
             defaultProps:{
 
@@ -328,33 +362,23 @@ export let darkTheme =createTheme({
                     // color: buttonLightT,
                     // border:0,
                     justifyContent: "flex-start",
-            
-                    
                     '&:hover' : {
                         backgroundColor: "transparent",
                         // color: toggleButtonLightT_hover,
                         // borderColor: toggleButtonLightBG_hover,
     
                     },
-
-
-                },
-
-                         
+                },         
             },  
         },
-
         MuiIcon:{
             defaultProps:{
 
                 disableRipple:true,
             },
-            
         },
-
         MuiIconButton:{
             defaultProps:{
-
                 disableRipple:true,
             },
             styleOverrides:{
@@ -362,18 +386,11 @@ export let darkTheme =createTheme({
                     color:yellow,
                     '&:hover' : {
                         backgroundColor: "transparent",
-    
                     },
-
-                },
-
-                         
+                },         
             },  
-        }
-
-        
-    }
-    
+        }  
+    }   
 });
  darkTheme = createTheme(darkTheme,{
     palette:{
