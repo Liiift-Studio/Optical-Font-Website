@@ -31,11 +31,11 @@ const button = {
     fontSize:30,
 }
 const h1 = {
-    fontSize:'6rem',
+    fontSize:{sm:'4rem',md:'6rem'},
     fontWeight:600,
     lineHeight:1.215,
     letterSpacing: '-.1rem',
-    fontFamily:'Optical02'
+    fontFamily:'Optical9'
 
     // m:0,
 }
@@ -44,19 +44,19 @@ const h2 = {
     
     fontWeight:500,
     letterSpacing:'-.4rem',
-    fontFamily:'Optical02'
+    fontFamily:'Optical9'
 
 }
 const h3 = {
     fontSize:'3rem',
     fontWeight:550,
     // letterSpacing:'-.2rem',
-    fontFamily:'Optical02'
+    fontFamily:'Optical9'
 }
 
 // toggle buttons & menu titles
 const h4 = {
-    fontFamily:'Optical02',
+    fontFamily:'Optical9',
     fontSize:'1.25rem',
     fontWeight:600,
     letterSpacing: '.1rem',
@@ -65,23 +65,17 @@ const body ={
     fontSize:'1.1rem',
     fontWeight:500,
     letterSpacing: '.025rem',
-    fontFamily:"Optical02",
-    // color:black,
-
-
+    fontFamily:"Optical9",
 }
 
 const footer ={
     fontSize:'.95rem',
     fontWeight:500,
     letterSpacing: '.025rem',
-    fontFamily:"Optical02",
+    fontFamily:"Optical9",
     // justifyContent:{sm:'center'},
     textAlign:'start',
     bgColor:"green",
-
-
-
 }
 
 
@@ -115,7 +109,7 @@ parentTheme=responsiveFontSizes(parentTheme);
         fontSize:'1.1rem',
         fontWeight:500,
         letterSpacing: '.025rem',
-        fontFamily:"Optical02",
+        fontFamily:"Optical9",
         [parentTheme.breakpoints.down('md')]:{
             fontSize:'.95rem',
 
@@ -127,7 +121,7 @@ parentTheme=responsiveFontSizes(parentTheme);
         fontSize:'.95rem',
         fontWeight:500,
         letterSpacing: '.025rem',
-        fontFamily:"Optical02",
+        fontFamily:"Optical9",
         // justifyContent:{sm:'center'},
         textAlign:'start',
         [parentTheme.breakpoints.down('sm')]:{
@@ -140,7 +134,7 @@ parentTheme=responsiveFontSizes(parentTheme);
         fontWeight:600,
         lineHeight:1.215,
         letterSpacing: '-.1rem',
-        fontFamily:'Optical02',
+        fontFamily:'Optical9',
         
         [parentTheme.breakpoints.down('lg')]:{
             fontSize:'5vw',
@@ -160,19 +154,10 @@ parentTheme=responsiveFontSizes(parentTheme);
         }
     }
 
-    
-
-
-
-
-
-
-
 export let lightTheme = createTheme({
     ...parentTheme,
     palette:{
         mode: 'light',
-        
         //   buttons
         primary:{
             main:black,
@@ -332,20 +317,26 @@ export let darkTheme =createTheme({
                 }, 
                 string:{
                     backgroundColor: white,
-                    color: black,
+                    border: '.3em solid white',
                     '&:hover' : {
-                        backgroundColor: buttonLightBG_hover,
-                        color: buttonLightT_hover,
+                        backgroundColor: yellow,
+                        color: black,
+                        border: '.3em solid yellow',
                     },
                     //need to work on focus states
                     '&:focus': {
-                        backgroundColor: white,
-                        borderColor: black,
-                        border: 5,
-                        color: black,
+                        backgroundColor: black,
+                        borderColor: white,
+                        border: '.5em solid white',
+                        h3:{
+                            color: white,
+                            '& hover':{
+                                color: black,     
+                            }
+                        }
                     },
                     h3:{
-                        color:black,
+                        color: black,
                     }
                 }
             }

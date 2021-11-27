@@ -59,7 +59,7 @@ export default function HeaderLayout({lightSwitch, children }) {
                                     </Grid>
                             </Grid>
 
-                            <Grid container item  display={{xs:'none', sm:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
+                            <Grid container item  display={{xs:'none', sm:'none', md:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
                                 <Button 
                                     variant="text"
                                     href="#menu"
@@ -71,7 +71,7 @@ export default function HeaderLayout({lightSwitch, children }) {
                                     <Typography variant='h4' alt="About">About</Typography>
                                 </Button>
                             </Grid>
-                            <Grid container item  display={{xs:'none', sm:'flex'}} sm={2} md={1} justifyContent="flex-end" alignItems="center">
+                            <Grid container item  display={{xs:'none', sm:'flex'}} xs={2} sm={6} md={1} justifyContent="flex-end" alignItems="center">
                                 {( lightSwitch ) ? (
                                 // <Switch
                                 //     checked={darkMode}

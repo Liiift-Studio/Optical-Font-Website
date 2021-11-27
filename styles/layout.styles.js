@@ -43,9 +43,9 @@ export const landing_container={
     height:'85vh',
 }
 export const landing_container_mobile = {
-    
-    height:'85vh',
-    alignContent:'center',
+    mt: 8,
+    // height:'85vh',
+    alignContent:'flex-start',
 }
 
 export const landing_container_tablet = {
@@ -63,15 +63,15 @@ export const img_container ={
     // pl:'10vw',
     // bgcolor:"green",
     alignItems:"start",
+    justifyContent:"center",
     // maxWidth:'75%',
     minWidth:'100%'
 
 }
 
 export const img_container_mobile ={
-    
         pt:5,
-        pb:10,
+        pb:2,
         px:5,
 
         maxWidth:'75%',

@@ -22,29 +22,16 @@ function MyApp({ Component, pageProps }) {
             <link rel="shortcut icon" href="/images/favicon.ico" />
             <link
               rel="preload"
-              href="/fonts/Optical02-Regular.woff2"
+              href="/fonts/Optical9VF.woff2"
               as="font"
               crossOrigin=""
               />
             <link
               rel="preload"
-              href="/fonts/Optical02-Light.woff2"
+              href="/fonts/Optical9VF.woff"
               as="font"
               crossOrigin=""
               />
-              <link
-              rel="preload"
-              href="/fonts/Optical02-Medium.woff2"
-              as="font"
-              crossOrigin=""
-              />
-              <link
-              rel="preload"
-              href="/fonts/Optical02-Bold.woff2"
-              as="font"
-              crossOrigin=""
-              />
-
       </Head>
       
       
