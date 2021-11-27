@@ -190,47 +190,11 @@ export const menuButtons_container={
 export const footer_container={
     
     bgcolor:"background.footer",
-    // display:'flex',
-    display:{xs:'none', md:'flex'},
-    // height:300,
-    // pb:'2.5%',
     pt:'8vh',
     pb:'3vh',
-    px:{md:'3vw',lg:'6vw'},
-
-    alignContent:'center',
-    borderTopStyle:'solid',
-    borderWidth:'1px',
-    borderColor:"background.footerBorder"
-      
+    px:{lg:'4vw'},
+    borderColor:"background.footerBorder",
+    textAlign:{xs:'center',lg:'left'},
 }
 
-export const footer_container_mobile={
-    display:{xs:'flex', sm:'none'},
-    bgcolor:"background.footer",
-    justifyContent:'center',
-    pt:'5vh',
-    pb:'3vh',
-
-    px:'6vw',
-    borderTopStyle:'solid',
-    borderWidth:'1px',
-    borderColor:"background.footerBorder"
-
-}
-
-
-export const footer_container_tablet={
-    display:{xs:'none', sm:'flex',md:'none'},
-    bgcolor:"background.footer",
-    // justifyContent:'center',
-    pt:'5vh',
-    pb:'3vh',
-
-    px:'6vw',
-    borderTopStyle:'solid',
-    borderWidth:'1px',
-    borderColor:"background.footerBorder"
-
-}
 
