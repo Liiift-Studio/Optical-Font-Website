@@ -97,7 +97,7 @@ export function ControlsCopy() {
           <Box sx={circle2} />
         </ListItemIcon>
         <ListItemText>
-          <Typography variant="body">
+          <Typography variant="body1">
             Differentiation controls the amount of distinction between commonly
             misread letters: capital ‘I’s and lowercase ‘l’s, lowercase ‘i’s, rn
             and m, etc... Increasing differentiation makes for unique letters,
@@ -111,7 +111,7 @@ export function ControlsCopy() {
           <Box sx={circle2} />
         </ListItemIcon>
         <ListItemText>
-          <Typography variant="body">
+          <Typography variant="body1">
             Boldness controls the line widths, or ‘weight’ of your letters. For
             many people, thin lines decrease the legibility of fine details, but
             bold lines can crowd out the negative spaces. You know your vision
@@ -126,7 +126,7 @@ export function ControlsCopy() {
           <Box sx={circle2} />
         </ListItemIcon>
         <ListItemText>
-          <Typography variant="body">
+          <Typography variant="body1">
             Spacing controls the gaps between letters and words. Legibility is
             improved by generous space, but too widely spaced text can disrupt
             the flow of reading paragraph text. Again, use what works best for
@@ -140,7 +140,7 @@ export function ControlsCopy() {
           <Box sx={circle2} />
         </ListItemIcon>
         <ListItemText>
-          <Typography variant="body">
+          <Typography variant="body1">
             Punctuation controls the size of punctuation. Fine details are lost
             at small sizes, but we don’t often read over large punctuation, so
             it can disrupt text. Find your balance.
@@ -159,7 +159,7 @@ export function MenuCopy() {
           <Box sx={circle2} />
         </ListItemIcon>
         <ListItemText>
-          <Typography variant="body">
+          <Typography variant="body1">
             Dark Mode/ Light Mode: choose what works best for you.
           </Typography>
         </ListItemText>
@@ -170,7 +170,7 @@ export function MenuCopy() {
           <Box sx={circle2} />
         </ListItemIcon>
         <ListItemText>
-          <Typography variant="body">
+          <Typography variant="body1">
             Feedback: Send us any feedback you have.
           </Typography>
         </ListItemText>
@@ -181,7 +181,7 @@ export function MenuCopy() {
           <Box sx={circle2} />
         </ListItemIcon>
         <ListItemText>
-          <Typography variant="body">
+          <Typography variant="body1">
             Use Guide: brings you back here.
           </Typography>
         </ListItemText>
@@ -192,7 +192,7 @@ export function MenuCopy() {
           <Box sx={circle2} />
         </ListItemIcon>
         <ListItemText>
-          <Typography variant="body">
+          <Typography variant="body1">
             Soon we’ll have a download button to download your font to use
             offline.
           </Typography>
@@ -204,7 +204,7 @@ export function MenuCopy() {
           <Box sx={circle2} />
         </ListItemIcon>
         <ListItemText>
-          <Typography variant="body">Reset: reset your settings.</Typography>
+          <Typography variant="body1">Reset: reset your settings.</Typography>
         </ListItemText>
       </ListItem>
     </List>

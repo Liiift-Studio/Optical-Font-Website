@@ -57,12 +57,6 @@ const h4 = {
 	letterSpacing: ".1rem",
 };
 
-const body = {
-	fontSize: "1.1rem",
-	fontWeight: 500,
-	letterSpacing: ".025rem",
-	fontFamily: "Optical02",
-};
 
 const footer = {
 	fontSize: ".95rem",
@@ -79,21 +73,16 @@ let parentTheme = createTheme({
 		h2: h2,
 		h3: h3,
 		h4: h4,
-		body: body,
 		footer: footer,
 	},
 });
 
 parentTheme = responsiveFontSizes(parentTheme);
 
-parentTheme.typography.body = {
-	fontSize: "1.1rem",
-	fontWeight: 500,
-	letterSpacing: ".025rem",
+parentTheme.typography.body1 = {
+	fontWeight: 400,
 	fontFamily: "Optical02",
-	[parentTheme.breakpoints.down("md")]: {
-		fontSize: ".95rem",
-	},
+	fontSize: 18
 };
 
 parentTheme.typography.footer = {
