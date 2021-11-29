@@ -2,24 +2,43 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
   scroll-behavior: smooth;
   height: 100%;
-
 }
 
 * {
   box-sizing: border-box;
 }
 
-@font-face{
-  font-family:"Optical02";
-  src:url("/fonts/Optical9VF.woff2"),
-      url("/fonts/Optical9VF.woff");
-  font-weight:100 1000;
-  font-stretch: 25% 151%;
-  font-dsplay:swap;
+@font-face {
+  font-family: "Optical02";
+  src: url("/fonts/Optical02-Regular.woff2");
+  font-size: normal;
+  font-weight: 400;
+  font-dsplay: swap;
+}
+@font-face {
+  font-family: "Optical02";
+  src: url("/fonts/Optical02-Medium.woff2");
+  font-size: medium;
+  font-weight: 500;
+  font-dsplay: swap;
+}
+@font-face {
+  font-family: "Optical02";
+  src: url("/fonts/Optical02-Bold.woff2");
+  font-size: large;
+  font-weight: 600;
+  font-dsplay: swap;
+}
+@font-face {
+  font-family: "Optical02";
+  src: url("/fonts/Optical02-Light.woff2");
+  font-size: small;
+  font-weight: 300;
+  font-dsplay: swap;
 }
