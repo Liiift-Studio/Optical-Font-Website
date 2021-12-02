@@ -35,7 +35,7 @@ export default function LandingLayout({ children, imgSrc }) {
             </Grid>
 
             <Grid container item md={5}>
-              <Grid item>
+              <Grid height={'40%'} item>
                 <Typography variant='h1'>
                   <nobr>Varied fonts for</nobr> <br /> varied vision.
                 </Typography>
@@ -44,7 +44,7 @@ export default function LandingLayout({ children, imgSrc }) {
                 <Button
                   variant="string"
                   sx={{
-                    my: 3,
+                    my: 4,
                     px: 4,
                     py: 1.25,
                     // py:1,
@@ -52,10 +52,7 @@ export default function LandingLayout({ children, imgSrc }) {
                     borderRadius: 10,
                   }}
                 >
-                  <Typography variant="h3" sx={{ 
-                    position:'relative',
-                    top: '.1rem',
-                    alignContent: 'center' }}>
+                  <Typography variant="h3">
                     Install
                   </Typography>
                 </Button>
@@ -102,7 +99,7 @@ export default function LandingLayout({ children, imgSrc }) {
               >
                 <Typography variant="h3">Install</Typography>
               </Button>
-              <Button display={'inline-block'}  variant="text"
+              <Button display={'inline-block'}  variant="outlined"
                 sx={{
                   my: 5,
                   px: '10%',
@@ -167,7 +164,7 @@ export default function LandingLayout({ children, imgSrc }) {
             </Grid>
             <Grid item sm={6}>
               <Button
-                variant="text"
+                variant="outlined"
                 sx={{
                   // padding:1,
                   // paddingRight:2,

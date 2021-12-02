@@ -149,22 +149,29 @@ export let lightTheme = createTheme({
 		MuiButton: {
 			styleOverrides: {
 				root: {},
-				text: {
+				outlined: {
 					backgroundColor: "transparent",
 					color: black,
 					border: ".3em solid black",
 					borderRadius: 50,
 					"&:hover": {
+						border: ".3em solid black",
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
 					},
 					"&:focus": {
 						border: ".5em solid black",
 					},
+					h3: {
+						position:"relative",
+						top: "0.1em",
+						alignContent: "center",
+					},
 				},
 				stringPrimary: {
 					backgroundColor: black,
 					color: buttonLightT,
+					border: ".3em solid black",
 					"&:hover": {
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
@@ -177,12 +184,23 @@ export let lightTheme = createTheme({
 						border: 5,
 						color: black,
 					},
+					h3: {
+					position:"relative",
+					top: "0.1em",
+					alignContent: "center",
+					},
 				},
 			},
 		},
 		MuiIconButton: {
+			defaultProps: {
+				disableRipple: true,
+			},
 			styleOverrides: {
 				root: {
+					"&:hover": {
+						backgroundColor: 'transparent',
+					},
 					svg: {
 						fill: yellow,
 						stroke: yellow,
@@ -238,7 +256,7 @@ export let darkTheme = createTheme({
 		MuiButton: {
 			styleOverrides: {
 				root: {},
-				text: {
+				outlined: {
 					backgroundColor: "transparent",
 					color: white,
 					border: ".3em solid white",
@@ -250,6 +268,11 @@ export let darkTheme = createTheme({
 					},
 					"&:focus": {
 						border: ".5em solid black",
+					},
+					h3: {
+						position:"relative",
+						top: "0.1em",
+						alignContent: "center",
 					},
 				},
 				string: {
@@ -269,6 +292,9 @@ export let darkTheme = createTheme({
 					},
 					h3: {
 						color: black,
+						position:"relative",
+						top: "0.1em",
+						alignContent: "center",
 					},
 				},
 			},
@@ -289,8 +315,12 @@ export let darkTheme = createTheme({
 			},
 		},
 		MuiIconButton: {
+			defaultProps: {
+				disableRipple: true,
+			},
 			styleOverrides: {
 				root: {
+					
 					color: yellow,
 					"&:hover": {
 						backgroundColor: "transparent",

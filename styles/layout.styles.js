@@ -58,7 +58,7 @@ export const landing_container_tablet = {
 export const img_container ={
     display:"flex",
     // pt:5,
-    pb:15,
+    // pb:15,
     // pl:10,
     // pl:'10vw',
     // bgcolor:"green",
@@ -196,5 +196,3 @@ export const footer_container={
     borderColor:"background.footerBorder",
     textAlign:{xs:'center',lg:'left'},
 }
-
-
