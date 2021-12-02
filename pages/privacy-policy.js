@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 export default function Page() {
   return (
     <>
+    
       <div>
         <h1>Liiift Studio Privacy Policy</h1>
         <br />

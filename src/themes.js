@@ -33,25 +33,25 @@ const h1 = {
 	fontWeight: 600,
 	lineHeight: 1.215,
 	letterSpacing: "-.1rem",
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 };
 
 const h2 = {
 	fontSize: "5.7rem",
 	fontWeight: 500,
 	letterSpacing: "-.4rem",
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 };
 
 const h3 = {
 	fontSize: "3rem",
 	fontWeight: 550,
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 };
 
 // toggle buttons & menu titles
 const h4 = {
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 	fontSize: "1.25rem",
 	fontWeight: 600,
 	letterSpacing: ".1rem",
@@ -62,7 +62,7 @@ const footer = {
 	fontSize: ".95rem",
 	fontWeight: 500,
 	letterSpacing: ".025rem",
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 	textAlign: "start",
 	bgColor: "green",
 };
@@ -80,8 +80,8 @@ let parentTheme = createTheme({
 parentTheme = responsiveFontSizes(parentTheme);
 
 parentTheme.typography.body1 = {
-	fontWeight: 400,
-	fontFamily: "Optical02",
+	fontWeight: 100,
+	fontFamily: "Optical",
 	fontSize: 18
 };
 
@@ -89,7 +89,7 @@ parentTheme.typography.footer = {
 	fontSize: ".95rem",
 	fontWeight: 500,
 	letterSpacing: ".025rem",
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 	textAlign: "start",
 	[parentTheme.breakpoints.down("sm")]: {
 		textAlign: "center",
@@ -101,7 +101,7 @@ parentTheme.typography.h1 = {
 	fontWeight: 600,
 	lineHeight: 1.215,
 	letterSpacing: "-.1rem",
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 
 	[parentTheme.breakpoints.down("lg")]: {
 		fontSize: "5vw",

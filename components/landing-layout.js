@@ -50,7 +50,10 @@ export default function LandingLayout({ children, imgSrc }) {
                     borderRadius: 10,
                   }}
                 >
-                  <Typography variant="h3" sx={{ alignContent: 'center' }}>
+                  <Typography variant="h3" sx={{ 
+                    position:'relative',
+                    top: '.1rem',
+                    alignContent: 'center' }}>
                     Install
                   </Typography>
                 </Button>

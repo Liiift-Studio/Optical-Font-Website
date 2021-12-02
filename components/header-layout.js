@@ -64,11 +64,16 @@ export default function HeaderLayout({lightSwitch, children }) {
                                     variant="text"
                                     href="#menu"
                                     sx={{
+                                        
                                         paddingX: 2,
                                         fontWeight:'medium',
                                     }}
                                 >
-                                    <Typography variant='h4' alt="About">About</Typography>
+                                    <Typography variant='h4' sx=
+                                        {{position:'relative',
+                                        top: '.1rem',}}
+                                        alt="About">
+                                        About</Typography>
                                 </Button>
                             </Grid>
                             <Grid container item  display={{xs:'none', sm:'flex'}} xs={2} sm={6} md={1} justifyContent="flex-end" alignItems="center">
