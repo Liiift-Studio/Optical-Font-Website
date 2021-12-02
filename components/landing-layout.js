@@ -30,6 +30,8 @@ export default function LandingLayout({ children, imgSrc }) {
               <Grid item sx={img_container} justifyContent={'center'}>
                 <Image src={imgSrc} alt="" />
               </Grid >
+
+  
             </Grid>
 
             <Grid container item md={5}>
