@@ -17,7 +17,6 @@ export const m = "Menu";
 export function FlvCopy() {
   return (
     <>
-    <Typography variant={"body1"}>
       Optical is a customizeable font and a web tool for low vision. Install the
       Google Chrome browser extension, fine tune your font and read the internet
       in letters set to your legibility needs.
@@ -32,7 +31,6 @@ export function FlvCopy() {
       you’ve spent reading a specific font, Optical lets you read the internet
       in consistent letters and find the balance between conventional and
       unconventional letter shapes.
-    </Typography>
     </>
   );
 }
@@ -40,12 +38,10 @@ export function FlvCopy() {
 export function UgCopy() {
   return (
     <>
-    <Typography variant={"body1"}>
       Install Optical by clicking on the install button on the top of this page.
       Find it by clicking the text cursor icon to the right of the web address
       bar in Chrome. Click the question mark icons to bring you to the
       explanations page.
-    </Typography>
     </>
   );
 }
@@ -53,7 +49,6 @@ export function UgCopy() {
 export function ProjectCopy() {
   return (
     <>
-    <Typography variant={"body1"}>
       Optical is being developed out of the Health Design Lab at Emily Carr
       University in partnership with Disability Alliance BC and The Accessible
       Technology Program.
@@ -74,7 +69,6 @@ export function ProjectCopy() {
       better. Our goal is to use new research and technology to put another tool
       in your toolbox. We owe deep gratitude to the publications of researchers
       like Kevin Larson, Sofie Beier, Aries Ardititi, Fiset and others.
-    </Typography>
     </>
   );
 }
@@ -82,12 +76,10 @@ export function ProjectCopy() {
 export function LevelOfEnhancementCopy() {
   return (
     <>
-    <Typography variant={"body1"}>
       Level 1 is designed for mild low vision. Level 5 is designed for more
       advanced low vision. Levels 2,3, and 4 are in between. These levels make
       larger changes to the font’s legibility. The controls below make smaller
       fine tuning adjustments.
-    </Typography>
     </>
   );
 }

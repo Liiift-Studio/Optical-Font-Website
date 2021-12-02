@@ -61,11 +61,10 @@ export default function HeaderLayout({lightSwitch, children }) {
 
                             <Grid container item  display={{xs:'none', sm:'none', md:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
                                 <Button 
-                                    variant="outlined"
+                                    variant="text"
                                     href="#menu"
                                     sx={{
-                                        py:1,
-                                        px: 2,
+                                        paddingX: 2,
                                         fontWeight:'medium',
                                     }}
                                 >
