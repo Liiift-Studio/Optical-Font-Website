@@ -50,25 +50,23 @@ export default function HeaderLayout({lightSwitch, children }) {
                         <Grid item container direction ="row" >
                             <Grid container item  xs={12} sm={6} md={6} justifyContent={{xs:'center', sm:'center', md:'flex-start'}}>
                                     <Grid container item xs={8} md={4} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
-                                        <Icon 
+                                        <IconButton href="/"
                                         sx={logo_container} >
                                             <Image  src={darkMode? logoDark:logo}  
                                                 layout='fill'
                                             />
-                                        </Icon>
+                                        </IconButton>
                                     </Grid>
                             </Grid>
 
                             <Grid container item  display={{xs:'none', sm:'none', md:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
                                 <Button 
-                                    variant="text"
+                                    variant="outlined"
                                     href="#FLV"
                                     sx={{
-                                        
                                         paddingX: 2,
                                         fontWeight:'medium',
-                                    }}
-                                >
+                                    }}>
                                     <Typography variant='h4' sx=
                                         {{position:'relative',
                                         top: '.1rem',}}
@@ -95,16 +93,6 @@ export default function HeaderLayout({lightSwitch, children }) {
                             </Grid>
                         </Grid>
                     </Grid>
-                
-                <LandingLayout imgSrc = {darkMode ? imgDark : imgLight}/>
-                <MenusLayout darkMode={darkMode} />
-
-                <FooterLayout/>
-
-                {/* <LandingLayout imgSrc = {darkMode ? "dar" : "hi"}/> */}
-
-                {children}
-                {/* </Paper> */}
             </ThemeProvider>
         </>
         )
