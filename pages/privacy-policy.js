@@ -1,60 +1,93 @@
-import React, { useEffect, useState } from "react";
+import styles from '../styles/layout.module.css'
+import React, { useEffect, useState } from "react"
+import Image from 'next/image'
+import {Icon,IconButton, Grid, Box, CssBaseline, Button, Typography} from '@mui/material/'
+import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
+import Brightness3Icon from '@mui/icons-material/Brightness3';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import {buttonDarkT, darkTheme, lightTheme} from '../src/themes'
+import logo from '../public/images/logo.svg'
+import logoDark from '../public/images/logoDark.svg'
+import {ReactComponent as Logo} from '../public/images/moon.svg'
+import lightIcon from '../public/images/sun.svg'
+import darkIcon from '../public/images/moon.svg'
+import imgLight from '../public/images/Optical_3D.png'
+import imgDark from '../public/images/Optical_3D.png'
+import FooterLayout from '../components/footer-layout'
+import { dm_icon, header_container, logo_container } from '../styles/layout.styles'
+import LandingLayout from '../components/landing-layout'
+import MenusLayout from '../components/menu-layout'
 
-export default function Page() {
-  return (
+export default function Home({lightSwitch, children }) {
+
+  lightSwitch = lightSwitch || true;
+  const [darkMode, setDarkMode] = useState(false);
+  function changeDarkMode(){
+    setDarkMode(!darkMode);
+  }
+
+  function chooseTheme(){
+    var x =(darkMode ? responsiveFontSizes(darkTheme) : responsiveFontSizes(lightTheme));
+    return x;
+  }
+
+  return(
     <>
-      <div>
-        <h1>Liiift Studio Privacy Policy</h1>
-        <br />
-        <p>
-          This Privacy Policy describes how your personal information is
-          collected, used, and shared when you visit or make a purchase from
-          https://opticalfont.com/ (the “Site”).
-          <br />
-          <br />
-          PERSONAL INFORMATION WE COLLECT
-          <br />
-          When you visit the Site, we automatically collect certain information
-          about your device, including information about your web browser, IP
-          address, time zone, and some of the cookies that are installed on your
-          device. Additionally, as you browse the Site, we collect information
-          about the individual web pages or products that you view, what
-          websites or search terms referred you to the Site, and information
-          about how you interact with the Site. We refer to this
-          automatically-collected information as “Device Information.”
-          <br />
-          We collect Device Information using the following technologies:
-          <br />
-          - “Log files” track actions occurring on the Site, and collect data
-          including your IP address, browser type, Internet service provider,
-          referring/exit pages, and date/time stamps. - “Web beacons,” “tags,”
-          and “pixels” are electronic files used to record information about how
-          you browse the Site.
-          <br />
-          <br />
-          DO NOT TRACK
-          <br />
-          Please note that we do not alter our Site’s data collection and use
-          practices when we see a Do Not Track signal from your browser.
-          <br />
-          <br />
-          CHANGES
-          <br />
-          We may update this privacy policy from time to time in order to
-          reflect, for example, changes to our practices or for other
-          operational, legal or regulatory reasons.
-          <br />
-          <br />
-          CONTACT US
-          <br />
-          For more information about our privacy practices, if you have
-          questions, or if you would like to make a complaint, please contact us
-          by e-mail at hello@liiift.studio or by mail using the details provided
-          below:
-          <br />
-          520 E 1st Ave, Vancouver, BC, V5T 1E1, Canada
-        </p>
-      </div>
+        <ThemeProvider theme={chooseTheme()}>
+          {/* <Paper elevation={0} className={styles.paper_container}> */}
+          <CssBaseline/>
+          <Grid container sx ={header_container} >
+              <Grid item container direction ="row" >
+                <Grid container item  xs={12} sm={6} md={6} justifyContent={{xs:'center', sm:'center', md:'flex-start'}}>
+                    <Grid container item xs={8} md={4} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
+                      <Icon sx={logo_container} >
+                          <Image src={darkMode? logoDark:logo} layout='fill' />
+                      </Icon>
+                    </Grid>
+                </Grid>
+
+                <Grid container item  display={{xs:'none', sm:'flex'}} sm={4} md={5} justifyContent="flex-end" alignItems="center" >
+                    <Button 
+                      variant="text"
+                      href="/"
+                      sx={{
+                        paddingX: 2,
+                        fontWeight:'medium',
+                      }}
+                    >
+                      <Typography variant='h4' alt="About">home</Typography>
+                    </Button>
+                </Grid>
+                <Grid container item  display={{xs:'none', sm:'flex'}} sm={2} md={1} justifyContent="flex-end" alignItems="center">
+                    {( lightSwitch ) ? (
+                      <IconButton onClick={changeDarkMode}  >
+                          {(darkMode ? 
+                            <Image src={lightIcon} alt="Light Mode" sx={dm_icon} /> 
+                          :
+                            <Image src={darkIcon} alt="Dark Mode" sx={dm_icon} />
+                          )}
+                      </IconButton>
+                    ) : (<></>)}
+                </Grid>
+              </Grid>
+          </Grid>
+
+          {/* Main Content Starts */}
+          <MenusLayout darkMode={darkMode} />
+
+          {/* Main Content Ends */}
+
+          <FooterLayout/>
+        </ThemeProvider>
     </>
-  );
+  )
 }
+
+
+
+
+
+
+
+
+

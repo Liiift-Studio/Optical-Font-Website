@@ -33,25 +33,24 @@ const h1 = {
 	fontWeight: 600,
 	lineHeight: 1.215,
 	letterSpacing: "-.1rem",
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 };
 
 const h2 = {
 	fontSize: "5.7rem",
 	fontWeight: 500,
 	letterSpacing: "-.4rem",
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 };
 
 const h3 = {
 	fontSize: "3rem",
 	fontWeight: 550,
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 };
 
-// toggle buttons & menu titles
 const h4 = {
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 	fontSize: "1.25rem",
 	fontWeight: 600,
 	letterSpacing: ".1rem",
@@ -62,9 +61,15 @@ const footer = {
 	fontSize: ".95rem",
 	fontWeight: 500,
 	letterSpacing: ".025rem",
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 	textAlign: "start",
 	bgColor: "green",
+};
+const body1 = {
+	fontSize:'.95rem',
+	fontWeight: 100,
+	fontFamily: "Optical",
+	textAlign: "start",
 };
 
 let parentTheme = createTheme({
@@ -73,6 +78,7 @@ let parentTheme = createTheme({
 		h2: h2,
 		h3: h3,
 		h4: h4,
+		body1: body1,
 		footer: footer,
 	},
 });
@@ -80,8 +86,8 @@ let parentTheme = createTheme({
 parentTheme = responsiveFontSizes(parentTheme);
 
 parentTheme.typography.body1 = {
-	fontWeight: 400,
-	fontFamily: "Optical02",
+	fontWeight: 100,
+	fontFamily: "Optical",
 	fontSize: 18
 };
 
@@ -89,7 +95,7 @@ parentTheme.typography.footer = {
 	fontSize: ".95rem",
 	fontWeight: 500,
 	letterSpacing: ".025rem",
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 	textAlign: "start",
 	[parentTheme.breakpoints.down("sm")]: {
 		textAlign: "center",
@@ -101,7 +107,7 @@ parentTheme.typography.h1 = {
 	fontWeight: 600,
 	lineHeight: 1.215,
 	letterSpacing: "-.1rem",
-	fontFamily: "Optical02",
+	fontFamily: "Optical",
 
 	[parentTheme.breakpoints.down("lg")]: {
 		fontSize: "5vw",
@@ -148,15 +154,16 @@ export let lightTheme = createTheme({
 	components: {
 		MuiButton: {
 			styleOverrides: {
-				root: {},
-				text: {
+				outlined: {
 					backgroundColor: "transparent",
 					color: black,
-					border: ".3em solid black",
+					border: ".2em solid black",
 					borderRadius: 50,
 					"&:hover": {
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
+						border: ".3em solid black",
+						borderRadius: 50,
 					},
 					"&:focus": {
 						border: ".5em solid black",
@@ -237,16 +244,15 @@ export let darkTheme = createTheme({
 	components: {
 		MuiButton: {
 			styleOverrides: {
-				root: {},
-				text: {
+				outlined: {
 					backgroundColor: "transparent",
 					color: white,
-					border: ".3em solid white",
+					border: ".2em solid white",
 					borderRadius: 50,
 					"&:hover": {
 						backgroundColor: buttonDarkBG_hover,
 						color: buttonDarkT_hover,
-						border: ".3em solid yellow",
+						border: ".2em solid yellow",
 					},
 					"&:focus": {
 						border: ".5em solid black",
@@ -255,6 +261,9 @@ export let darkTheme = createTheme({
 				string: {
 					backgroundColor: white,
 					color: black,
+					"& h4":{
+						color: black,
+					},
 					"&:hover": {
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
