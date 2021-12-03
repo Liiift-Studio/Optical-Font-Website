@@ -25,16 +25,19 @@ return (
                     <ListItem  disablePadding
                     className={styles.a}
                     component="a" 
-                    href="#FLV" 
                     // onClick={()=>{setToggle(FLV)}}
                     >
-                        <ListItemButton variant ="string"> 
+                        <ListItemButton  href="#FLV" variant ="string"> 
                             {toggleValue === FLV ? 
                                 <ListItemIcon >
                                     <Box sx={circle}/>
                                 </ListItemIcon>
                                 : <></>}
-                                <ListItemText  inset={toggleValue !== FLV}>
+                                <ListItemText                   sx={{
+                        position:"relative",
+						top: "0.1em",
+						alignContent: "center",
+                    }} inset={toggleValue !== FLV}>
                                     <Typography variant ="h4">
                                         {flv}
                                     </Typography>
@@ -45,10 +48,9 @@ return (
                     <ListItem disablePadding 
                         className={styles.a}
                         component="a" 
-                        href="#P"
                         // onClick={()=>{setToggle(P)}}
                         >
-                        <ListItemButton>
+                        <ListItemButton  href="#P">
                             {toggleValue === P ? 
                                 <ListItemIcon >
                                     <Box sx={circle}/>
@@ -64,9 +66,8 @@ return (
 
                     <ListItem disablePadding 
                         className={styles.a}
-                        component="a" 
-                        href="#UG">
-                        <ListItemButton >
+                        component="a">
+                        <ListItemButton href="#UG">
                             {toggleValue === UG ? 
                                 <ListItemIcon >
                                     <Box sx={circle}/>

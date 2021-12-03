@@ -46,9 +46,9 @@ export default function Home({lightSwitch, children }) {
         <>
             <ThemeProvider theme={chooseTheme()}>
               <CssBaseline/>
-              <ThemeProvider theme={chooseTheme()}>
                     {/* <Paper elevation={0} className={styles.paper_container}> */}
                     <CssBaseline/>
+                    {/* Mobile */}
                     <Grid container 
                         sx ={header_container}>
                         <Grid item container direction ="row">
@@ -76,9 +76,11 @@ export default function Home({lightSwitch, children }) {
                                         </IconButton>
                                     </Grid>
                             </Grid>
+                            {/* Desktop */}
                             <Grid container item  display={{xs:'none', sm:'none', md:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
                                 <Button 
                                     variant="outlined"
+                                    tabIndex={1}
                                     href="#menu"
                                     sx={{
                                         paddingX: 2,
@@ -99,6 +101,7 @@ export default function Home({lightSwitch, children }) {
                                 //     onChange={changeDarkMode}
                                 //     />
                                 <IconButton
+                                    tabIndex={2}
                                     onClick={changeDarkMode}
                                     >
                                         {(darkMode ? <Image src={lightIcon} alt="Light Mode"
@@ -111,7 +114,6 @@ export default function Home({lightSwitch, children }) {
                             </Grid>
                         </Grid>
                     </Grid>
-            </ThemeProvider>
               <LandingLayout imgSrc = {darkMode ? imgDark : imgLight}/>
               <MenusLayout darkMode={darkMode} />
               <FooterLayout/>

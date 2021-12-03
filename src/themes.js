@@ -147,9 +147,9 @@ export let lightTheme = createTheme({
 
 	components: {
 		MuiButton: {
-			// defaultProps: {
-			// 	disableFocusRipple: true,
-			// },
+			defaultProps: {
+				disableFocusRipple: true,
+			},
 			styleOverrides: {
 				root: {},
 				outlined: {
@@ -162,8 +162,11 @@ export let lightTheme = createTheme({
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
 					},
-					"&:focus": {
+					"&.Mui-focusVisible": {
+						backgroundColor: 'transparent',
+						borderColor: black,
 						border: ".5em solid black",
+						color: black,
 					},
 					h3: {
 						position:"relative",
@@ -180,7 +183,7 @@ export let lightTheme = createTheme({
 						color: buttonLightT_hover,
 					},
 					"&.Mui-focusVisible": {
-						backgroundColor: white,
+						backgroundColor: 'transparent',
 						borderColor: black,
 						border: ".5em solid black",
 						color: black,
@@ -195,10 +198,10 @@ export let lightTheme = createTheme({
 			},
 		},
 		MuiIconButton: {
-			// defaultProps: {
-			// 	disableRipple: true,
-			// 	disableFocusRipple: true,
-			// },
+			defaultProps: {
+				disableRipple: true,
+				disableFocusRipple: true,
+			},
 			styleOverrides: {
 				root: {
 					"&:hover": {
@@ -218,19 +221,40 @@ export let lightTheme = createTheme({
 		},
 		MuiListItemButton: {
 			styleOverrides: {
-				// defaultProps: {
-				// 	disableFocusRipple: true,
-				// },
+				defaultProps: {
+					disableFocusRipple: true,
+				},
 				root: {
+					"&.Mui-focusVisible": {
+						backgroundColor: 'transparent',
+						border: ".3em solid black",
+						borderRadius: 50,
+						color: black,
+					},
+					
 					justifyContent: "flex-start",
-
 					"&:hover": {
 						backgroundColor: "transparent",
 					},
 				},
 			},
 		},
-
+		MuiListItemText: {
+			styleOverrides: {
+					position:"relative",
+					top: "0.1em",
+					alignContent: "center",
+			},
+		},
+		MuiListItemIcon: {
+			styleOverrides: {
+				root: {
+					position:"relative",
+					top: "0.1em",
+					alignContent: "center",
+				},
+			},
+		},
 		MuiCssBaseline: {
 			styleOverrides: {
 				body: {
@@ -260,11 +284,13 @@ export let darkTheme = createTheme({
 	},
 	components: {
 		MuiButton: {
+			defaultProps: {
+				disableRipple: true,
+				disableFocusRipple: true,
+			},
 			styleOverrides: {
-				// defaultProps: {
-				// 	disableFocusRipple: true,
-				// },
-				root: {},
+				root: {
+				},
 				outlined: {
 					backgroundColor: "transparent",
 					color: white,
@@ -291,13 +317,17 @@ export let darkTheme = createTheme({
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
 					},
-
-					//need to work on focus states
-					"&:focus": {
-						backgroundColor: white,
-						borderColor: black,
-						border: 5,
-						color: black,
+					"&.Mui-focusVisible": {
+						backgroundColor: 'transparent',
+						border: ".3em solid white",
+						h3: {
+							color: white,
+						},
+						'&:hover': {
+							h3: {
+								color: black,
+							},
+						},
 					},
 					h3: {
 						color: black,
@@ -310,27 +340,45 @@ export let darkTheme = createTheme({
 		},
 		MuiListItemButton: {
 			styleOverrides: {
-				// defaultProps: {
-				// 	disableFocusRipple: true,
-				// },
+				defaultProps: {
+					disableFocusRipple: true,
+				},
 				root: {
-					// backgroundColor : buttonLightBG,
-					// color: buttonLightT,
-					// border:0,
+					"&.Mui-focusVisible": {
+						backgroundColor: 'transparent',
+						border: ".3em solid white",
+						borderRadius: 50,
+						color: white,
+					},
+					
 					justifyContent: "flex-start",
 					"&:hover": {
 						backgroundColor: "transparent",
-						// color: toggleButtonLightT_hover,
-						// borderColor: toggleButtonLightBG_hover,
 					},
 				},
 			},
 		},
+		MuiListItemText: {
+			styleOverrides: {
+					position:"relative",
+					top: "0.1em",
+					alignContent: "center",
+			},
+		},
+		MuiListItemIcon: {
+			styleOverrides: {
+				root: {
+					position:"relative",
+					top: "0.1em",
+					alignContent: "center",
+				},
+			},
+		},
 		MuiIconButton: {
-			// defaultProps: {
-			// 	disableRipple: true,
-			// 	disableFocusRipple: true,
-			// },
+			defaultProps: {
+				disableRipple: true,
+				disableFocusRipple: true,
+			},
 			styleOverrides: {
 				root: {
 					
