@@ -24,7 +24,6 @@ export default function LandingLayout({ children, imgSrc }) {
             <Grid item md={6} sx={img_container} className={styles.landing_right_container}>
                 <Image src={imgSrc} alt="" />
             </Grid>
-
             <Grid item md={6} display={'block'}>
                 <Typography variant='h1'>
                   <nobr>Varied fonts for</nobr> <br /> varied vision.
@@ -39,9 +38,9 @@ export default function LandingLayout({ children, imgSrc }) {
                     border: 0,
                     borderRadius: 10,
                   }}>
-                  <Typography variant="h3">
-                    Install
-                  </Typography>
+                    <Typography variant="h3">
+                      Install
+                    </Typography>
                 </Button>
             </Grid>
           </Grid>

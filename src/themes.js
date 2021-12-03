@@ -147,6 +147,9 @@ export let lightTheme = createTheme({
 
 	components: {
 		MuiButton: {
+			// defaultProps: {
+			// 	disableFocusRipple: true,
+			// },
 			styleOverrides: {
 				root: {},
 				outlined: {
@@ -176,14 +179,13 @@ export let lightTheme = createTheme({
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
 					},
-
-					//need to work on focus states
-					"&:focus": {
+					"&.Mui-focusVisible": {
 						backgroundColor: white,
 						borderColor: black,
-						border: 5,
+						border: ".5em solid black",
 						color: black,
 					},
+
 					h3: {
 					position:"relative",
 					top: "0.1em",
@@ -193,9 +195,10 @@ export let lightTheme = createTheme({
 			},
 		},
 		MuiIconButton: {
-			defaultProps: {
-				disableRipple: true,
-			},
+			// defaultProps: {
+			// 	disableRipple: true,
+			// 	disableFocusRipple: true,
+			// },
 			styleOverrides: {
 				root: {
 					"&:hover": {
@@ -215,6 +218,9 @@ export let lightTheme = createTheme({
 		},
 		MuiListItemButton: {
 			styleOverrides: {
+				// defaultProps: {
+				// 	disableFocusRipple: true,
+				// },
 				root: {
 					justifyContent: "flex-start",
 
@@ -255,6 +261,9 @@ export let darkTheme = createTheme({
 	components: {
 		MuiButton: {
 			styleOverrides: {
+				// defaultProps: {
+				// 	disableFocusRipple: true,
+				// },
 				root: {},
 				outlined: {
 					backgroundColor: "transparent",
@@ -301,6 +310,9 @@ export let darkTheme = createTheme({
 		},
 		MuiListItemButton: {
 			styleOverrides: {
+				// defaultProps: {
+				// 	disableFocusRipple: true,
+				// },
 				root: {
 					// backgroundColor : buttonLightBG,
 					// color: buttonLightT,
@@ -315,9 +327,10 @@ export let darkTheme = createTheme({
 			},
 		},
 		MuiIconButton: {
-			defaultProps: {
-				disableRipple: true,
-			},
+			// defaultProps: {
+			// 	disableRipple: true,
+			// 	disableFocusRipple: true,
+			// },
 			styleOverrides: {
 				root: {
 					

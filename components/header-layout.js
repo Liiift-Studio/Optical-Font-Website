@@ -27,10 +27,8 @@ import { dm_icon, header_container, logo_container, logo_container_mobile } from
 
 
 export default function HeaderLayout({lightSwitch, children }) {
-
+    lightSwitch = lightSwitch || true;
     const [darkMode, setDarkMode] = useState(false);
-    
-
     function changeDarkMode(){
         setDarkMode(!darkMode);
     }
@@ -39,8 +37,6 @@ export default function HeaderLayout({lightSwitch, children }) {
         var x =(darkMode ? responsiveFontSizes(darkTheme) : responsiveFontSizes(lightTheme));
         return x;
     }
-
-
     return(
         <>
                 <ThemeProvider theme={chooseTheme()}>
@@ -57,7 +53,7 @@ export default function HeaderLayout({lightSwitch, children }) {
                                 </IconButton>
                             </Grid>
                             <Grid item xs={6} display={{xs:'flex', sm:'none'}}>
-                                <IconButton justifyContent="flex-end!important"
+                                <IconButton
                                 sx={logo_container_mobile} >
                                     <Image align={'right'}  src={darkMode? cursorDark:cursor}  
                                     />
