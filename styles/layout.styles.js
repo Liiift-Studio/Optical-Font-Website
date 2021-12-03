@@ -31,6 +31,13 @@ export const logo_container={
     height:{lg:'9em',md:'9em',sm:'9em',xs:'12em'},
     width:{lg:'9em',md:'9em',sm:'9em',xs:'12em'}
 }
+export const logo_container_mobile={
+    justifyContent:'flex-end',
+    pb:{xs:'3em'},
+    position:'relative',
+    height:'100%',
+    width:'100%'
+}
 
 //Landing - this could be condensed into just 1 container function & 1 img container
 // 
@@ -56,7 +63,6 @@ export const landing_container_tablet = {
 }
 
 export const img_container ={
-    display:"flex",
     // pt:5,
     // pb:15,
     // pl:10,
@@ -65,7 +71,6 @@ export const img_container ={
     alignItems:"start",
     justifyContent:"center",
     // maxWidth:'75%',
-    minWidth:'100%'
 
 }
 
