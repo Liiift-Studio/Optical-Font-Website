@@ -19,28 +19,15 @@ export default function LandingLayout({ children, imgSrc }) {
 
       {/* DESKTOP */}
       <Grid container display={{ xs: 'none', md: 'flex' }}>
-        <Grid container item
-          sx={landing_container}
-        >
-          <Grid container item
-            sx={{
-              display: "flex",
-            }}>
-            <Grid container item md={7} className={styles.landing_right_container}>
-              <Grid item sx={img_container} justifyContent={'center'}>
+        <Grid container spacing={10}
+          sx={landing_container}>
+            <Grid item md={6} sx={img_container} className={styles.landing_right_container}>
                 <Image src={imgSrc} alt="" />
-              </Grid >
-
-  
             </Grid>
-
-            <Grid container item md={5}>
-              <Grid height={'40%'} item>
+            <Grid item md={6} display={'block'}>
                 <Typography variant='h1'>
                   <nobr>Varied fonts for</nobr> <br /> varied vision.
                 </Typography>
-              </Grid>
-              <Grid item>
                 <Button
                   variant="string"
                   sx={{
@@ -50,16 +37,13 @@ export default function LandingLayout({ children, imgSrc }) {
                     // py:1,
                     border: 0,
                     borderRadius: 10,
-                  }}
-                >
-                  <Typography variant="h3">
-                    Install
-                  </Typography>
+                  }}>
+                    <Typography variant="h3">
+                      Install
+                    </Typography>
                 </Button>
-              </Grid>
             </Grid>
           </Grid>
-        </Grid>
       </Grid>
 
       {/* MOBILE */}

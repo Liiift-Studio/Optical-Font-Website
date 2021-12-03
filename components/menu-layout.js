@@ -19,85 +19,65 @@ export default function MenusLayout({children,darkMode }) {
 
 return (
     <>
-
-
-
-    <Grid container item sm={12}  
-    
-    sx={body_container}>
-            <Grid item container sm={4} 
-            
-            className={styles.menuButtons_container} 
-                display={{xs:'none', md:'flex'}}
-                
-
-                >
-                <List >
+    <Grid container item sm={12} sx={body_container}>
+            <Grid item container sm={4} className={styles.menuButtons_container} display={{xs:'none', md:'flex'}}>
+                <List>
                     <ListItem  disablePadding
                     className={styles.a}
                     component="a" 
                     href="#FLV" 
                     // onClick={()=>{setToggle(FLV)}}
                     >
-                        <ListItemButton   variant ="string"> 
+                        <ListItemButton variant ="string"> 
                             {toggleValue === FLV ? 
                                 <ListItemIcon >
                                     <Box sx={circle}/>
                                 </ListItemIcon>
                                 : <></>}
-
                                 <ListItemText  inset={toggleValue !== FLV}>
                                     <Typography variant ="h4">
                                         {flv}
                                     </Typography>
                                 </ListItemText>
                             </ListItemButton>
-
                     </ListItem>
 
-                    
-
-                    
                     <ListItem disablePadding 
                         className={styles.a}
                         component="a" 
                         href="#P"
                         // onClick={()=>{setToggle(P)}}
                         >
-                        <ListItemButton >
+                        <ListItemButton>
                             {toggleValue === P ? 
                                 <ListItemIcon >
                                     <Box sx={circle}/>
                                 </ListItemIcon>
                             : <></>}
-                            <ListItemText  inset={toggleValue !== P} >
+                            <ListItemText inset={toggleValue !== P} >
                                 <Typography variant ="h4">  
                                     {p}
                                 </Typography>
                             </ListItemText>
                         </ListItemButton>
-
                     </ListItem>
 
                     <ListItem disablePadding 
                         className={styles.a}
                         component="a" 
-                        href="#UG"
-                        >
+                        href="#UG">
                         <ListItemButton >
                             {toggleValue === UG ? 
                                 <ListItemIcon >
                                     <Box sx={circle}/>
                                 </ListItemIcon>
                             : <></>}
-
                             <ListItemText  inset={toggleValue !== UG} >
                                 <Typography variant ="h4">  
                                 {ug}
                                 </Typography>
                             </ListItemText>
                         </ListItemButton>
-
                     </ListItem>
 
 {/*                     
@@ -149,32 +129,20 @@ return (
 
         {/* COPY */}
             <Grid item container md={8} alignItems="center"   
-                sx={copy_container}
-            >
-                <Grid item container pt={2.3}   >
-
-                
-                <Waypoint 
-                  topOffset="35%"
-                  bottomOffset="55%"
-                onEnter={()=>setToggle(FLV)}
-                >
+                sx={copy_container}>
+                <Grid item container pt={2.3}>
+                    <Waypoint 
+                        topOffset="35%"
+                        bottomOffset="55%"
+                        onEnter={()=>setToggle(FLV)}>
                     <section id="FLV">
-                        <Grid item container
-                            sx={{
-                                mb:SECTION_SPACING,
-                            }}
-                        >
-                            <Grid item container
-                                sx={header}
-                            >
-                            <Typography variant ='h4'> 
-                                {flv}
-                            </Typography>
+                        <Grid item container sx={{mb:SECTION_SPACING,}}>
+                            <Grid item container sx={header}>
+                                <Typography variant ='h4'> 
+                                    {flv}
+                                </Typography>
                             </Grid>
-                            <Grid item container
-                                sx={copy}
-                            >
+                            <Grid item container sx={copy}>
                                 <Typography variant='body' display ="block">
                                         {/* {flvCopy} */}
                                         <FlvCopy/>
@@ -182,45 +150,32 @@ return (
                             </Grid>
                         </Grid>
                     </section>
-                
                 </Waypoint>
 
-                
-                
                 <Waypoint 
                     topOffset="35%"
                     bottomOffset="55%"
                     onEnter={()=>setToggle(P)}>
-                <section id="P" >
-                    <Grid item container
-                        sx={{
-                            mb:SECTION_SPACING,
-                        }}
-                    >
-                    <Grid item container
-                    sx={header}
-                    >
-
-                        <Typography variant ='h4' >
-                                {p}
-                        </Typography>
-                    </Grid>
-                    <Grid item container
-                    sx={copy}>
-                        
-                        <Typography variant='body'>
-                                <ProjectCopy/>
-                        </Typography>
-                    </Grid>
-                    </Grid>
-                </section>
+                    <section id="P" >
+                        <Grid item container sx={{mb:SECTION_SPACING,}}>
+                            <Grid item container sx={header}>
+                                <Typography variant ='h4' >
+                                        {p}
+                                </Typography>
+                            </Grid>
+                            <Grid item container sx={copy}>
+                                <Typography variant='body'>
+                                        <ProjectCopy/>
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                    </section>
                 </Waypoint>
 
                 <Waypoint 
                     topOffset="35%"
                     bottomOffset="55%"
                     onEnter={()=>setToggle(UG)}>
-
                     <section id="UG" >
                         <Grid item container
                             sx={{
