@@ -32,14 +32,13 @@ const h1 = {
 	fontSize: "6rem",
 	fontWeight: 600,
 	lineHeight: 1.215,
-	letterSpacing: "-.1rem",
 	fontFamily: "Optical",
 };
 
 const h2 = {
-	fontSize: "5.7rem",
-	fontWeight: 500,
-	letterSpacing: "-.4rem",
+	fontSize: "1rem",
+	fontWeight: 50,
+	letterSpacing: "0.02em",
 	fontFamily: "Optical",
 };
 
@@ -97,26 +96,26 @@ parentTheme.typography.footer = {
 };
 
 parentTheme.typography.h1 = {
-	fontSize: "4vw",
+	color: "white",
+	fontSize: "3vw",
 	fontWeight: 600,
 	lineHeight: 1.215,
-	letterSpacing: "-.1rem",
+	letterSpacing: ".1rem",
 	fontFamily: "Optical",
 
-	[parentTheme.breakpoints.down("lg")]: {
-		fontSize: "5vw",
-	},
+	// [parentTheme.breakpoints.down("lg")]: {
+	// 	fontSize: "5vw",
+	// },
 
-	[parentTheme.breakpoints.down("md")]: {
-		textAlign: "center",
-		fontSize: "8vw",
-	},
+	// [parentTheme.breakpoints.down("md")]: {
+	// 	fontSize: "5vw",
+	// },
 
-	// mobile
-	[parentTheme.breakpoints.down("sm")]: {
-		textAlign: "center",
-		fontSize: "10vw",
-	},
+	// // mobile
+	// [parentTheme.breakpoints.down("xs")]: {
+	// 	textAlign: "center",
+	// 	fontSize: "10vw",
+	// },
 };
 
 export let lightTheme = createTheme({

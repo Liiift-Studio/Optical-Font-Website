@@ -44,10 +44,8 @@ export const logo_container_mobile={
 
 export const landing_container={
     // pt: '17vh',
-    px:{md:'6vw',lg:'9vw'},
+    px:{xs:'6vw',sm:'4vw', md:'6vw',lg:'9vw'},
     // bgcolor:'blue',
-    alignItems:'center',
-    height:'85vh',
 }
 export const landing_container_mobile = {
     mt: 8,

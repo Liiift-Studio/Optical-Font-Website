@@ -28,95 +28,11 @@ import { dm_icon, header_container, logo_container, logo_container_mobile } from
 
 
 
-export default function Home({lightSwitch, children }) {
-  lightSwitch = lightSwitch || true;
-  const [darkMode, setDarkMode] = useState(false);
-
-  function changeDarkMode(){
-      setDarkMode(!darkMode);
-  }
-
-  function chooseTheme(){
-    var x =(darkMode ? responsiveFontSizes(darkTheme) : responsiveFontSizes(lightTheme));
-    return x;
-  }
-
+export default function Home({}) {
 
     return(
         <>
-            <ThemeProvider theme={chooseTheme()}>
-              <CssBaseline/>
-              <ThemeProvider theme={chooseTheme()}>
-                    {/* <Paper elevation={0} className={styles.paper_container}> */}
-                    <CssBaseline/>
-                    <Grid container 
-                        sx ={header_container}>
-                        <Grid item container direction ="row">
-                            <Grid item xs={6} display={{xs:'flex', sm:'none'}}>
-                                <IconButton href="/"
-                                sx={logo_container_mobile} >
-                                    <Image  src={darkMode? logoTextDark:logoText}  
-                                    />
-                                </IconButton>
-                            </Grid>
-                            <Grid item xs={6} display={{xs:'flex', sm:'none'}}>
-                                <IconButton
-                                sx={logo_container_mobile} >
-                                    <Image align={'right'}  src={darkMode? cursorDark:cursor}  
-                                    />
-                                </IconButton>
-                            </Grid>
-                            <Grid container item display={{xs:'none', sm:'flex'}} xs={12} sm={6} md={6} justifyContent={{xs:'center', sm:'center', md:'flex-start'}}>
-                                    <Grid container item xs={8} md={4} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
-                                        <IconButton href="/"
-                                        sx={logo_container} >
-                                            <Image  src={darkMode? logoDark:logo}  
-                                                layout='fill'
-                                            />
-                                        </IconButton>
-                                    </Grid>
-                            </Grid>
-                            <Grid container item  display={{xs:'none', sm:'none', md:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
-                                <Button 
-                                    variant="outlined"
-                                    href="#menu"
-                                    sx={{
-                                        paddingX: 2,
-                                        fontWeight:'medium',
-                                    }}
-                                >
-                                    <Typography variant='h4' sx=
-                                        {{position:'relative',
-                                        top: '.1rem',}}
-                                        alt="About">
-                                        About</Typography>
-                                </Button>
-                            </Grid>
-                            <Grid container item  display={{xs:'none', sm:'flex'}} xs={2} sm={6} md={1} justifyContent="flex-end" alignItems="center">
-                                {( lightSwitch ) ? (
-                                // <Switch
-                                //     checked={darkMode}
-                                //     onChange={changeDarkMode}
-                                //     />
-                                <IconButton
-                                    onClick={changeDarkMode}
-                                    >
-                                        {(darkMode ? <Image src={lightIcon} alt="Light Mode"
-                                                       sx={dm_icon}/> :
-                                                     <Image src={darkIcon} alt="Dark Mode"
-                                                     sx={dm_icon}
-                                                     />)}
-                                </IconButton>
-                                ) : (<></>)}
-                            </Grid>
-                        </Grid>
-                    </Grid>
-            </ThemeProvider>
-              <LandingLayout imgSrc = {darkMode ? imgDark : imgLight}/>
-              <MenusLayout darkMode={darkMode} />
-              <FooterLayout/>
-              {children}
-            </ThemeProvider>
+              <LandingLayout/>
         </>
         )
 }
