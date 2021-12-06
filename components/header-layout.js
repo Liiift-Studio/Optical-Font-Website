@@ -2,7 +2,7 @@ import styles from '../styles/layout.module.css'
 import React, { useEffect, useState } from "react"
 import Image from 'next/image'
 
-import {Icon,IconButton, Grid, Box, CssBaseline, Button, Typography} from '@mui/material/'
+import {Icon,IconButton, Grid, Box, CssBaseline, Button, Typography, SvgIcon} from '@mui/material/'
 import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
@@ -93,9 +93,9 @@ export default function HeaderLayout({lightSwitch, children }) {
                                 <IconButton
                                     onClick={changeDarkMode}
                                     >
-                                        {(darkMode ? <Image src={lightIcon} alt="Light Mode"
+                                        {(darkMode ? <SvgIcon src={lightIcon} alt="Light Mode"
                                                        sx={dm_icon}/> :
-                                                     <Image src={darkIcon} alt="Dark Mode"
+                                                     <SvgIcon src={darkIcon} alt="Dark Mode"
                                                      sx={dm_icon}
                                                      />)}
                                 </IconButton>

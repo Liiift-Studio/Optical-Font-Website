@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Typography, Button, Grid, Box } from '@mui/material'
 import styles from '../styles/layout.module.css'
-import dials from '../public/images/opt_light.png'
 import { shadows } from '@mui/system';
 import { imgSource, source } from '../styles/utils.module.constants';
 import { useEffect } from 'react';
@@ -13,10 +12,9 @@ import { img_container_mobile, img_container_tablet, landing_container_mobile, l
 export default function LandingLayout({ children, imgSrc }) {
 
   // const [imgSource,setSource] = useState(false);
-
   return (
     <>
-
+      
       {/* DESKTOP */}
       <Grid container display={{ xs: 'none', md: 'flex' }}>
         <Grid container spacing={10}
