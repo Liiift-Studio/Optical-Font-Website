@@ -95,21 +95,24 @@ parentTheme.typography.footer = {
 		textAlign: "center",
 	},
 };
-
+parentTheme.typography.h3 = {
+	fontWeight: 100,
+	fontFamily: "Optical",
+	fontSize: '1.5rem',
+};
 parentTheme.typography.h4 = {
 	fontWeight: 600,
 	fontFamily: "Optical",
-	fontSize: '1.625rem',
+	fontSize: '1.4rem',
 };
 parentTheme.typography.h1 = {
-	fontSize: "4vw",
+	fontSize: "3vw",
 	fontWeight: 600,
 	lineHeight: 1.215,
-	letterSpacing: "-.1rem",
 	fontFamily: "Optical",
 
 	[parentTheme.breakpoints.down("lg")]: {
-		fontSize: "5vw",
+		fontSize: "4vw",
 	},
 
 	[parentTheme.breakpoints.down("md")]: {
@@ -187,7 +190,7 @@ export let lightTheme = createTheme({
 				stringPrimary: {
 					backgroundColor: black,
 					color: buttonLightT,
-					border: ".3em solid black",
+					boxShadow:'black 0px 0px 0px 3px',
 					"&:hover": {
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
@@ -319,19 +322,18 @@ export let darkTheme = createTheme({
 				root: {
 				},
 				outlined: {
+					width: "152px",
+					height: "53px",
 					backgroundColor: "transparent",
 					color: white,
 					border: ' none',
-					// border: ".3em solid white",
 					boxShadow:'white 0px 0px 0px 3px',
 					borderRadius: 50,
-					maxWidth: '152px',
 					"&:hover": {
 						backgroundColor: buttonDarkBG_hover,
 						color: buttonDarkT_hover,
 						boxShadow:'yellow 0px 0px 0px 3px',
 						border:'none',
-						// border: ".3em solid yellow",
 					},
 					"&:focus": {
 						border: ".5em solid black",
@@ -344,6 +346,7 @@ export let darkTheme = createTheme({
 				},
 				string: {
 					backgroundColor: white,
+					boxShadow:'white 0px 0px 0px 3px',
 					color: black,
 					"&:hover": {
 						backgroundColor: buttonLightBG_hover,

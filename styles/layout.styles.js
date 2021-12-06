@@ -3,9 +3,10 @@ import { flexbox } from "@mui/system"
 //Header Bar
 
 export const header_container={
-    height: '15vh',
+    height: '209px',
     px:{xs:'6vw',lg:'9vw'},
     verticalAlign: 'bottom',
+    alignItems: 'flex-end',
 }
 export const dm_icon ={
     display:'flex',
@@ -37,11 +38,10 @@ export const logo_container_mobile={
 // 
 
 export const landing_container={
-    // pt: '17vh',
     px:{md:'6vw',lg:'9vw'},
-    // bgcolor:'blue',
     alignItems:'center',
     height:'85vh',
+    justifyContent:'center',
 }
 export const landing_container_mobile = {
     mt: 8,
@@ -57,15 +57,12 @@ export const landing_container_tablet = {
 }
 
 export const img_container ={
-    // pt:5,
-    // pb:15,
-    // pl:10,
-    // pl:'10vw',
-    // bgcolor:"green",
     alignItems:"start",
     justifyContent:"center",
-    // maxWidth:'75%',
-
+    minWidth:'auto',
+    minHeight:'auto',
+    maxHeight:'auto',
+    maxWidth:'415px !important',
 }
 
 export const img_container_mobile ={

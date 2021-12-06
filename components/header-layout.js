@@ -42,9 +42,8 @@ export default function HeaderLayout({lightSwitch, children }) {
                 <ThemeProvider theme={chooseTheme()}>
                     {/* <Paper elevation={0} className={styles.paper_container}> */}
                     <CssBaseline/>
-                    <Grid container 
-                        sx ={header_container}>
-                        <Grid item container direction ="row">
+                    <Grid container sx={header_container}>
+                        <Grid item container mt={4} direction ="row">
                             <Grid item xs={6} display={{xs:'flex', sm:'none'}}>
                                 <IconButton href="/"
                                 sx={logo_container_mobile} >

@@ -16,27 +16,24 @@ export default function LandingLayout({ children, imgSrc }) {
     <>
       
       {/* DESKTOP */}
-      <Grid container display={{ xs: 'none', md: 'flex' }}>
-        <Grid container spacing={10}
-          sx={landing_container}>
-            <Grid item md={6} sx={img_container} className={styles.landing_right_container}>
+      <Grid container display={{xs: 'none', md: 'flex'}}>
+        <Grid container sx={landing_container}>
+            <Grid item md={6} sx={img_container}  className={styles.landing_right_container}>
                 <Image src={imgSrc} alt="" />
             </Grid>
-            <Grid item md={6} display={'block'}>
+            <Grid item md={6} pl={10} display={'block'}>
                 <Typography variant='h1'>
                   <nobr>Varied fonts for</nobr> <br /> varied vision.
                 </Typography>
-                <Button
-                  variant="string"
+                <Button variant="string"
                   sx={{
-                    my: 4,
-                    px: 4,
-                    py: 1.25,
-                    // py:1,
+                    my: 1,
+                    px: 5,
+                    py: 1.5,
                     border: 0,
                     borderRadius: 10,
-                  }}>
-                    <Typography variant="h3">
+                    }}>
+                    <Typography sx={{position:'relative', top: '.1rem',}} variant="h3" alt="install">
                       Install
                     </Typography>
                 </Button>
@@ -44,8 +41,67 @@ export default function LandingLayout({ children, imgSrc }) {
           </Grid>
       </Grid>
 
-      {/* MOBILE */}
+      {/* TABLET */}
+      <Grid container display={{ sm: 'flex', xs: 'none', md: 'none' }} >
+        <Grid container item sx={landing_container_tablet} >
 
+          <Grid container item xs={12} justifyContent="center" className={styles.landing_right_container} >
+            <Grid item container sx={img_container_tablet}>
+              <Image src={imgSrc} alt="" />
+            </Grid>
+          </Grid>
+
+          <Grid container item xs={12}
+            sx={{
+              pb: 8,
+              justifyContent: 'center',
+            }}>
+            <Typography variant='h1'
+              sx={{
+                fontSize: '200vw',
+                textAlign: "center",
+              }}>
+              Varied fonts for<br /> varied vision.
+            </Typography>
+          </Grid>
+
+          <Grid container xs={12} align={'center'} px={5} >
+            <Grid item sm={6}>
+              <Button
+                variant="string"
+                sx={{
+                  my: 1,
+                  px: 5,
+                  py: 1.5,
+                  border: 0,
+                  borderRadius: 10,
+                }}>
+                <Typography variant="h3">
+                  Install
+                </Typography>
+              </Button>
+            </Grid>
+            <Grid item sm={6}>
+              <Button
+                variant="outlined"
+                sx={{
+                  my: 1,
+                  px: 5,
+                  py: 1.5,
+                  border: 0,
+                  borderRadius: 10,
+                }}
+              >
+                <Typography variant="h3">
+                  About
+                </Typography>
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      {/* MOBILE */}
       <Grid container display={{ xs: 'flex', sm: 'none', md: 'none' }} >
         <Grid container item sx={landing_container_mobile}>
           <Grid container item xs={12} justifyContent="center" className={styles.landing_right_container} >
@@ -60,8 +116,7 @@ export default function LandingLayout({ children, imgSrc }) {
             sx={{
               pb: 5,
               justifyContent: 'center',
-
-            }} >
+            }}>
             <Typography variant='h1'
               sx={{
                 // fontSize: '1vw',
@@ -90,75 +145,6 @@ export default function LandingLayout({ children, imgSrc }) {
                 }}
               >
                 <Typography variant="h3">About</Typography>
-              </Button>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
-
-
-
-
-      {/* TABLET */}
-
-      <Grid container display={{ sm: 'flex', xs: 'none', md: 'none' }} >
-        <Grid container item sx={landing_container_tablet} >
-
-          <Grid container item xs={12} justifyContent="center" className={styles.landing_right_container} >
-            <Grid item container
-              sx={img_container_tablet}
-            >
-              <Image src={imgSrc} alt="" />
-            </Grid>
-          </Grid>
-          <Grid container item xs={12}
-            sx={{
-              // pt:4,
-              pb: 8,
-              justifyContent: 'center',
-
-            }} >
-            <Typography variant='h1'
-              sx={{
-                fontSize: '200vw',
-                textAlign: "center",
-              }}>
-              Varied fonts for<br /> varied vision.
-            </Typography>
-          </Grid>
-          <Grid container xs={12} align={'center'} px={5} >
-            <Grid item sm={6}>
-              <Button
-                variant="string"
-                sx={{
-                  // padding:1,
-                  // paddingRight:2,
-                  my: 5,
-                  px: "20%",
-                  // pt:1.5,
-                  borderRadius: 11,
-                }}
-              >
-                <Typography variant="h3">
-                  Install
-                </Typography>
-              </Button>
-            </Grid>
-            <Grid item sm={6}>
-              <Button
-                variant="outlined"
-                sx={{
-                  // padding:1,
-                  // paddingRight:2,
-                  my: 5,
-                  px: "20%",
-                  // pt:1.5,
-                  borderRadius: 11,
-                }}
-              >
-                <Typography variant="h3">
-                  About
-                </Typography>
               </Button>
             </Grid>
           </Grid>
