@@ -19,7 +19,7 @@ export default function LandingLayout({ children, imgSrc }) {
       <Grid container display={{xs: 'none', sm:'none', md: 'flex'}}>
         <Grid container sx={landing_container}>
             <Grid item md={6} sx={img_container}  className={styles.landing_right_container}>
-                <Image src={imgSrc} alt="" />
+                <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
             </Grid>
             <Grid item md={6} pl={10} display={'block'}>
                 <Typography variant='h1'>
@@ -27,7 +27,7 @@ export default function LandingLayout({ children, imgSrc }) {
                 </Typography>
                 <Button variant="string"
                   sx={{
-                    my: 1,
+                    my: 2,
                     border: 0,
                     borderRadius: 10,
                     width: "191px",
@@ -47,7 +47,7 @@ export default function LandingLayout({ children, imgSrc }) {
 
           <Grid container item sm={12} justifyContent="center" className={styles.landing_right_container} >
             <Grid item container sx={img_container_tablet}>
-              <Image src={imgSrc} alt=""/>
+              <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. "/>
             </Grid>
           </Grid>
 
@@ -63,7 +63,7 @@ export default function LandingLayout({ children, imgSrc }) {
                 fontSize: '100vw',
                 textAlign: "center",
               }}>
-              Varied fonts for<br /> varied vision.
+              Varied&nbsp;fonts&nbsp;for<br /> varied vision.
             </Typography>
           </Grid>
 
@@ -107,12 +107,12 @@ export default function LandingLayout({ children, imgSrc }) {
       <Grid container display={{ xs: 'flex', sm: 'none', md: 'none' }}>
         <Grid container item sx={landing_container_mobile}>
           <Grid item xs={12} sx={img_container_mobile} className={styles.landing_right_container} >
-              <Image src={imgSrc} alt="" />
+              <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
           </Grid>
 
           <Grid item xs={12}
             sx={{
-              pb: 5,
+              pb: 10,
               minWidth: '326px',
               maxWidth: '426px',
             }}>

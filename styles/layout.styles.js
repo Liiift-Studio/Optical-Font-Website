@@ -6,7 +6,6 @@ export const header_container={
     height: {sm:'100px', md:'200px'},
     px:{xs:'6vw', lg:'9vw'},
     verticalAlign: 'bottom',
-    alignItems: 'flex-end',
 }
 export const dm_icon ={
     display:'flex',
@@ -24,9 +23,7 @@ export const logo_container={
     borderRadius: 2,
 }
 export const logo_container_mobile={
-    justifyContent:'flex-end',
-    pb:{xs:'3em'},
-    position:'relative',
+    pb:'3em',
     height:'100%',
     width:'100%'
 }
@@ -60,15 +57,14 @@ export const img_container ={
     minWidth:'auto',
     minHeight:'auto',
     maxHeight:'auto',
-    maxWidth:'415px !important',
+    maxWidth:'515px !important',
 }
 
 export const img_container_mobile ={
     pt:2,
     pb:2,
-    px:5,
-    width:'326px!important',
-    maxWidth:'426px !important',
+    minWidth:'326px!important',
+    maxWidth:'326px !important',
 }
 
 export const img_container_tablet ={

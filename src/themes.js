@@ -15,7 +15,7 @@ const buttonDarkT_hover = black;
 export const buttonDarkBG = "#FCFF55";
 const buttonDarkBG_hover = "#FCFF55";
 
-const buttonLightT = white;
+const buttonLightT = white; 
 const buttonLightT_hover = yellow;
 const buttonLightBG = white;
 const buttonLightBG_hover = black;
@@ -106,18 +106,18 @@ parentTheme.typography.h4 = {
 	fontSize: '1.4rem',
 };
 parentTheme.typography.h1 = {
-	fontSize: "3vw",
+	fontSize: "4vw",
 	fontWeight: 600,
 	lineHeight: 1.215,
 	fontFamily: "Optical",
 
 	[parentTheme.breakpoints.down("lg")]: {
-		fontSize: "4vw",
+		fontSize: "5vw",
 	},
 
 	[parentTheme.breakpoints.down("md")]: {
 		textAlign: "center",
-		fontSize: "8vw",
+		fontSize: "6vw",
 	},
 
 	// mobile
@@ -284,15 +284,40 @@ export let lightTheme = createTheme({
 				},
 			},
 		},
-		MuiSvgIcon: {
+		MuiIconButton: {
+			defaultProps: {
+				disableRipple: true,
+				disableFocusRipple: true,
+			},
 			styleOverrides: {
 				root: {
-					height: "1.5em",
-					width: "1.5em",
-					maxWidth: "45px",
-					MaxHeight: "45px",
-				}
+					color: black,
+					"&:hover": {
+						backgroundColor: "transparent",
+					},
+					svg: {
+						borderRadius:50,
+						"&:hover": {
+							stroke: 'black',
+							fill: landingBlue,
+						},
+					},
+					"&.Mui-focusVisible": {
+						backgroundColor: "transparent",
+						border: '.2em solid black',
+					},
+				},
 			},
+		},
+		MuiOutlinedInput: {
+			disabled: true,
+			styleOverrides: {
+				root: {
+					backgroundColor: "transparent",
+					border: "none",
+					outline: "none",
+				}
+			}
 		},
 	},
 });

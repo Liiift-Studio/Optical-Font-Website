@@ -8,8 +8,8 @@ import { flv,ug,p,a,pr,flvCopy,ugCopy,pCopy,aCopy,prCopy } from "../styles/utils
 import { Waypoint } from 'react-waypoint';
 import { body_container, circle, copy, copy_container, header, img_container_ext } from "../styles/layout.styles";
 
-import img_ext from '../public/images/Extension_Light.png'
-import img_menu  from '../public/images/Extension_Light_Menu.png'
+import img_ext from '../public/images/Extension_Light.svg'
+import img_menu  from '../public/images/Extension_Light_Menu.svg'
 
 
 
@@ -148,7 +148,7 @@ return (
                 <Grid item container sx={{mb:SECTION_SPACING,}}>
                         <Grid item container className={styles.landing_right_container} sx={copy_container}>
                             <Grid item sx={img_container_ext}>
-                                <Image  src={img_ext}  alt="" />
+                                <Image  src={img_ext}  alt="Web extension including controls of font legibility including boldness, spacing, letter differentiation and other options. " />
                             </Grid>
                         </Grid>
                     </Grid>
@@ -198,7 +198,7 @@ return (
             <Grid item container sx={{mb:SECTION_SPACING,}}>
                 <Grid item container sx={copy_container}>
                     <Grid item sx={img_container_ext}>
-                        <Image  src={img_menu}  alt="" />
+                        <Image  src={img_menu}  alt="Web extension’s menu buttons for dark mode, use guide, and feedback." />
                     </Grid>
                 </Grid>
             </Grid>

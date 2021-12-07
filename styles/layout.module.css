@@ -10,7 +10,7 @@
   /* margin-right:2vw; */
 }
 
-.a:hover {
+.a:hover { 
   color: inherit;
   text-decoration: inherit;
 }
@@ -24,7 +24,16 @@
   color: inherit;
   text-decoration: inherit;
 }
-
+.aFooter:focus {
+  outline: none;
+}
+.aFooter:focus-visible {
+  padding: .1em .2em;
+  border-radius: 5px;
+  border-color:white;
+  border-style: solid;
+  border-width: 4px;
+}
 .is_current {
   font-size: 5vw;
 }
