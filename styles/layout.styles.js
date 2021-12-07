@@ -3,8 +3,8 @@ import { flexbox } from "@mui/system"
 //Header Bar
 
 export const header_container={
-    height: '209px',
-    px:{xs:'6vw',lg:'9vw'},
+    height: {sm:'100px', md:'200px'},
+    px:{xs:'6vw', lg:'9vw'},
     verticalAlign: 'bottom',
     alignItems: 'flex-end',
 }
@@ -16,12 +16,9 @@ export const logo_container={
     p: 2,
     position:'relative',
     fontSize:{lg:'1.2rem',md:'1.1rem',sm:'1rem',xs:'.75rem'},
-    // height:{lg:'9em',md:'9em',sm:'9em',xs:'12em'},
     height: '100%',
     width: '100%',
     justifyContent: 'flex-start',
-    // maxWidth: '230px',
-    // maxHeight: '55px',
     width: 'auto',
     height: 'auto',
     borderRadius: 2,
@@ -45,15 +42,16 @@ export const landing_container={
 }
 export const landing_container_mobile = {
     mt: 8,
-    // height:'85vh',
-    alignContent:'flex-start',
+    alignContent:'center',
+    justifyContent:'center',
 }
 
 export const landing_container_tablet = {
-    // pt:10,
     mt:5,
     height:'85vh',
+    maxWidth:'426px !important',
     alignContent:'center',
+    justifyContent:'center',
 }
 
 export const img_container ={
@@ -66,42 +64,23 @@ export const img_container ={
 }
 
 export const img_container_mobile ={
-        pt:5,
-        pb:2,
-        px:5,
-
-        maxWidth:'75%',
-        minWidth:'17em'
-
+    pt:2,
+    pb:2,
+    px:5,
+    width:'326px!important',
+    maxWidth:'426px !important',
 }
 
 export const img_container_tablet ={
-    
-    pt:3,
-    pb:5,
-    px:5,
-
-    maxWidth:'55%',
-    minWidth:'50%'
-
+    width:'426px !important',
 }
 
 //COPY (menu)
 export const img_container_ext={
     display:"flex",
-    // my:50,
-    // pr:'6vw',
     alignItems:"start",
     justifyContent:"center",
-    // minWidth:'100%',
-    // minWidth: {xs:"750px", lg:"900px"},
     maxWidth:{xs:'40%',lg:'40%',xl:'40%'},
-    // minWidth:{xs:'40%',lg:'50%',xl:'40%'},
-
-
-
-    // maxHeight:'50%'
-    
 }
 export const body_container={
     px:{xs:'1vw',lg:'4vw'},

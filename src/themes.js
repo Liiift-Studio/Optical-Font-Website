@@ -164,8 +164,8 @@ export let lightTheme = createTheme({
 			styleOverrides: {
 				root: {},
 				outlined: {
-					width: "152px",
-					height: "53px",
+					width: {xs:"156px", md:"152px"},
+					height: {xs:"53px", md:"53px"},
 					backgroundColor: "transparent",
 					color: black,
 					border: "none",
@@ -188,6 +188,8 @@ export let lightTheme = createTheme({
 					},
 				},
 				stringPrimary: {
+					width: {xs:"156px", md:"191px"},
+					height: {xs:"53px", md:"63px"},
 					backgroundColor: black,
 					color: buttonLightT,
 					boxShadow:'black 0px 0px 0px 3px',
@@ -322,8 +324,8 @@ export let darkTheme = createTheme({
 				root: {
 				},
 				outlined: {
-					width: "152px",
-					height: "53px",
+					Width: {xs:"156px",sm:"152px"},
+					Height: {xs:"53px", sm:"53px"},
 					backgroundColor: "transparent",
 					color: white,
 					border: ' none',
@@ -345,6 +347,8 @@ export let darkTheme = createTheme({
 					},
 				},
 				string: {
+					Width: {xs:"156px", sm:"191px"},
+					Height: {xs:"53px", sm:"63px"},
 					backgroundColor: white,
 					boxShadow:'white 0px 0px 0px 3px',
 					color: black,

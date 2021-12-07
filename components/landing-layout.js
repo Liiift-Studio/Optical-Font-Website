@@ -16,7 +16,7 @@ export default function LandingLayout({ children, imgSrc }) {
     <>
       
       {/* DESKTOP */}
-      <Grid container display={{xs: 'none', md: 'flex'}}>
+      <Grid container display={{xs: 'none', sm:'none', md: 'flex'}}>
         <Grid container sx={landing_container}>
             <Grid item md={6} sx={img_container}  className={styles.landing_right_container}>
                 <Image src={imgSrc} alt="" />
@@ -28,10 +28,10 @@ export default function LandingLayout({ children, imgSrc }) {
                 <Button variant="string"
                   sx={{
                     my: 1,
-                    px: 5,
-                    py: 1.5,
                     border: 0,
                     borderRadius: 10,
+                    width: "191px",
+					          height: "63px",
                     }}>
                     <Typography sx={{position:'relative', top: '.1rem',}} variant="h3" alt="install">
                       Install
@@ -42,56 +42,58 @@ export default function LandingLayout({ children, imgSrc }) {
       </Grid>
 
       {/* TABLET */}
-      <Grid container display={{ sm: 'flex', xs: 'none', md: 'none' }} >
+      <Grid container justifyContent={'center'} display={{ sm: 'flex', xs: 'none', md: 'none' }} >
         <Grid container item sx={landing_container_tablet} >
 
-          <Grid container item xs={12} justifyContent="center" className={styles.landing_right_container} >
+          <Grid container item sm={12} justifyContent="center" className={styles.landing_right_container} >
             <Grid item container sx={img_container_tablet}>
-              <Image src={imgSrc} alt="" />
+              <Image src={imgSrc} alt=""/>
             </Grid>
           </Grid>
 
-          <Grid container item xs={12}
+          <Grid container item sm={12}
             sx={{
               pb: 8,
+              pt: 4,
+              maxWidth: '426px',
               justifyContent: 'center',
             }}>
             <Typography variant='h1'
               sx={{
-                fontSize: '200vw',
+                fontSize: '100vw',
                 textAlign: "center",
               }}>
               Varied fonts for<br /> varied vision.
             </Typography>
           </Grid>
 
-          <Grid container xs={12} align={'center'} px={5} >
+          <Grid container sm={12} align={'center'} spacing={2}maxWidth={'426px'}>
             <Grid item sm={6}>
               <Button
                 variant="string"
                 sx={{
                   my: 1,
-                  px: 5,
-                  py: 1.5,
                   border: 0,
                   borderRadius: 10,
+                  width: "156px",
+                  height: "53px",
                 }}>
                 <Typography variant="h3">
                   Install
                 </Typography>
               </Button>
             </Grid>
+
             <Grid item sm={6}>
               <Button
                 variant="outlined"
                 sx={{
                   my: 1,
-                  px: 5,
-                  py: 1.5,
                   border: 0,
                   borderRadius: 10,
-                }}
-              >
+                  width: "156px",
+                  height: "53px",
+                }}>
                 <Typography variant="h3">
                   About
                 </Typography>
@@ -102,49 +104,54 @@ export default function LandingLayout({ children, imgSrc }) {
       </Grid>
 
       {/* MOBILE */}
-      <Grid container display={{ xs: 'flex', sm: 'none', md: 'none' }} >
+      <Grid container display={{ xs: 'flex', sm: 'none', md: 'none' }}>
         <Grid container item sx={landing_container_mobile}>
-          <Grid container item xs={12} justifyContent="center" className={styles.landing_right_container} >
-            <Grid item container
-              sx={img_container_mobile}
-            >
+          <Grid item xs={12} sx={img_container_mobile} className={styles.landing_right_container} >
               <Image src={imgSrc} alt="" />
-            </Grid>
           </Grid>
 
-          <Grid container item xs={12}
+          <Grid item xs={12}
             sx={{
               pb: 5,
-              justifyContent: 'center',
+              minWidth: '326px',
+              maxWidth: '426px',
             }}>
             <Typography variant='h1'
-              sx={{
-                // fontSize: '1vw',
+              sx={{               
                 textAlign: "center",
-              }}>Varied fonts for <br/> varied vision.</Typography>
+              }}>Varied&nbsp;fonts&nbsp;for <br/> varied vision.</Typography>
           </Grid>
 
-          <Grid container justifyContent="space-evenly" px={1} >
-            <Grid item xs={12} align={'center'}>
-              <Button display={'inline-block'} variant="string"
+          <Grid container sm={12} pb={10} align={'center'} justifyContent={'space-around'} maxWidth={'426px'}>
+            <Grid item sm={6}>
+              <Button
+                variant="string"
                 sx={{
-                  my: 5,
-                  px: '10%',
-                  mx: 1,
-                  borderRadius: 11,
-                }}
-              >
-                <Typography variant="h3">Install</Typography>
+                  my: 1,
+                  border: 0,
+                  borderRadius: 10,
+                  width: "156px",
+                  height: "53px",
+                }}>
+                <Typography variant="h3">
+                  Install
+                </Typography>
               </Button>
-              <Button display={'inline-block'}  variant="outlined"
+            </Grid>
+
+            <Grid item sm={6}>
+              <Button
+                variant="outlined"
                 sx={{
-                  my: 5,
-                  px: '10%',
-                  mx: 1,
-                  borderRadius: 11,
-                }}
-              >
-                <Typography variant="h3">About</Typography>
+                  my: 1,
+                  border: 0,
+                  borderRadius: 10,
+                  width: "156px",
+                  height: "53px",
+                }}>
+                <Typography variant="h3">
+                  About
+                </Typography>
               </Button>
             </Grid>
           </Grid>

@@ -48,7 +48,7 @@ export default function Home({lightSwitch, children }) {
               <CssBaseline/>
                     {/* <Paper elevation={0} className={styles.paper_container}> */}
                     <CssBaseline/>
-                    {/* Mobil Logo */}
+                    {/* Mobile Logo */}
                     <Grid container sx={header_container}>
                         <Grid item container direction ="row">
                             <Grid item xs={6} display={{xs:'flex', sm:'none'}}>
@@ -81,11 +81,11 @@ export default function Home({lightSwitch, children }) {
                                     // tabIndex={2}
                                     href="#FLV"
                                     sx={{
-                                        px: 1,
-                                        py:1,
-                                        fontWeight:'medium',
-                                    }}
-                                >
+                                        width: "152px",
+                                        height: "53px",
+                                        // px: 4,
+                                        // py:1,
+                                    }}>
                                     <Typography variant='h3' sx=
                                         {{position:'relative',
                                         top: '.1rem',}}
