@@ -42,17 +42,13 @@ export default function Home({lightSwitch, children }) {
         <>
             <ThemeProvider theme={chooseTheme()}>
               <CssBaseline/>
-              <Grid container 
-                sx ={header_container}
-                >
+              <Grid container sx={header_container}>
                 <Grid item container direction ="row" >
                   <Grid container item  xs={8} sm={6} md={6} justifyContent={{xs:'center', sm:'center', md:'flex-start'}}>
                     <Grid container item xs={8} md={4} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
                         <IconButton href="/"
                         sx={logo_container} >
-                            <Image  src={darkMode? logoDark:logo}  
-                                layout='fill'
-                            />
+                            <Image  src={darkMode? logoDark:logo}/>
                         </IconButton>
                     </Grid>
                   </Grid>
