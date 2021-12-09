@@ -3,9 +3,10 @@ import { flexbox } from "@mui/system"
 //Header Bar
 
 export const header_container={
-    height: {sm:'100px', md:'200px'},
+    height: {xs:'100px',sm:'200px'},
     px:{xs:'6vw', lg:'9vw'},
     verticalAlign: 'bottom',
+    alignItems: 'flex-end',
 }
 export const dm_icon ={
     display:'flex',
@@ -106,6 +107,21 @@ export const copy ={
 }
 
 export const circle ={
+    alignContent:"center",
+    bgcolor:'text.main',
+    // bgcolor:'white',
+    color:'text.main',
+    width :'.7em',
+    height:'.7em',
+    borderRadius:"50%",
+    pt:.3,
+    mb:.75,
+    "&:hover": {
+        display:"flex",
+    },
+}
+export const circleH ={
+    display:"none",
     alignContent:"center",
     bgcolor:'text.main',
     // bgcolor:'white',

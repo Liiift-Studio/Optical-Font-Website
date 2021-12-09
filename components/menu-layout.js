@@ -6,7 +6,7 @@ import {About,FLV,UG,P,A,PR, FlvCopy, UgCopy, ProjectCopy, loe, LevelOfEnhanceme
 import CircleIcon from '@mui/icons-material/Circle';
 import { flv,ug,p,a,pr,flvCopy,ugCopy,pCopy,aCopy,prCopy } from "../styles/utils.module.constants";
 import { Waypoint } from 'react-waypoint';
-import { body_container, circle, copy, copy_container, header, img_container_ext } from "../styles/layout.styles";
+import { body_container, circleH, circle, copy, copy_container, header, img_container_ext } from "../styles/layout.styles";
 
 import img_ext from '../public/images/Extension_Light.svg'
 import img_menu  from '../public/images/Extension_Light_Menu.svg'
@@ -22,31 +22,23 @@ return (
     <Grid container item sm={12} sx={body_container}>
             <Grid item container sm={4} className={styles.menuButtons_container} display={{xs:'none', md:'flex'}}>
                 <List>
-                    <ListItem  disablePadding
-                    className={styles.a}
-                    component="a" 
-                    // onClick={()=>{setToggle(FLV)}}
-                    >
-                        <ListItemButton  href="#FLV" variant ="string"> 
+                    {/* <ListItem href="#FLV" disablePadding className={styles.a} component="a"> */}
+                        <ListItemButton href="#FLV" disablePadding  variant="string"> 
                             {toggleValue === FLV ? 
-                                <ListItemIcon >
-                                    <Box sx={circle}/>
-                                </ListItemIcon>
-                                : <></>}
-                                <ListItemText  inset={toggleValue !== FLV}>
-                                    <Typography variant ="h4">
-                                        {flv}
-                                    </Typography>
-                                </ListItemText>
-                            </ListItemButton>
-                    </ListItem>
+                            <ListItemIcon >
+                                <Box sx={circle}/>
+                            </ListItemIcon>
+                            : <></>}
+                            <ListItemText className={styles.a} inset={toggleValue !== FLV}>
+                                <Typography variant ="h4">
+                                    {flv}
+                                </Typography>
+                            </ListItemText>
+                        </ListItemButton>
+                    {/* </ListItem> */}
 
-                    <ListItem disablePadding 
-                        className={styles.a}
-                        component="a" 
-                        // onClick={()=>{setToggle(P)}}
-                        >
-                        <ListItemButton  href="#P">
+                    {/* <ListItem href="#P" disablePadding className={styles.a} component="a"> */}
+                        <ListItemButton href="#P" disablePadding className={styles.a} component="a">
                             {toggleValue === P ? 
                                 <ListItemIcon >
                                     <Box sx={circle}/>
@@ -58,24 +50,22 @@ return (
                                 </Typography>
                             </ListItemText>
                         </ListItemButton>
-                    </ListItem>
+                    {/* </ListItem> */}
 
-                    <ListItem disablePadding 
-                        className={styles.a}
-                        component="a">
-                        <ListItemButton href="#UG">
+                    {/* <ListItem href="#UG" disablePadding className={styles.a} component="a"> */}
+                        <ListItemButton href="#UG" disablePadding className={styles.a} component="a">
                             {toggleValue === UG ? 
                                 <ListItemIcon>
                                     <Box sx={circle}/>
                                 </ListItemIcon>
                             : <></>}
                             <ListItemText  inset={toggleValue !== UG} >
-                                    <Typography variant ="h4">  
-                                    {ug}
-                                    </Typography>
+                                <Typography variant ="h4">  
+                                {ug}
+                                </Typography>
                             </ListItemText>
                         </ListItemButton>
-                    </ListItem>
+                    {/* </ListItem> */}
                 </List>
             </Grid>
             

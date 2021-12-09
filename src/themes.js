@@ -247,23 +247,35 @@ export let lightTheme = createTheme({
 			styleOverrides: {
 				root: {
 					"&.Mui-focusVisible": {
-						backgroundColor: 'transparent',
 						border: ".3em solid black",
 						borderRadius: 50,
 						color: black,
+						px: 1,
+						py: 1,
+						backgroundColor: 'transparent',
+					},
+					"&:hover": {
+						alignContent:"center",
+						backgroundColor:'black',
+						// bgcolor:'white',
+						color:'text.main',
+						width :'.7em',
+						height:'.7em',
+						borderRadius:'100',
+						pt:.3,
+						mb:.75,
 					},
 					justifyContent: "flex-start",
-					"&:hover": {
-						backgroundColor: "transparent",
-					},
 				},
 			},
 		},
 		MuiListItemText: {
 			styleOverrides: {
+				root:{
 					position:"relative",
 					top: "0.1em",
 					alignContent: "center",
+				},
 			},
 		},
 		MuiListItemIcon: {
@@ -380,10 +392,11 @@ export let darkTheme = createTheme({
 					"&:hover": {
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
+						boxShadow:'yellow 0px 0px 0px 3px',
 					},
 					"&.Mui-focusVisible": {
 						backgroundColor: 'transparent',
-						border: ".3em solid white",
+						boxShadow:'white 0px 0px 0px 3px',
 						h3: {
 							color: white,
 						},
@@ -400,6 +413,19 @@ export let darkTheme = createTheme({
 						alignContent: "center",
 					},
 				},
+				text: {
+					'&:hover': {
+						alignContent:"center",
+						bgcolor:'text.main',
+						// bgcolor:'white',
+						color:'text.main',
+						width :'.7em',
+						height:'.7em',
+						borderRadius:"50%",
+						pt:.3,
+						mb:.75,
+					}
+				}
 			},
 		},
 		MuiListItemButton: {
