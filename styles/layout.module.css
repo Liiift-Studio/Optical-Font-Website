@@ -7,14 +7,29 @@
   color: inherit;
   text-decoration: inherit; /* no underline */
 }
+.circle{
+  display: none;
+} 
 
+[aria-pressed="true"] .circle,
+[href='FLV'] .circle,
+[href='P'] .circle,
+[href='UG'] .circle{
+  display: flex;
+}
 .a:hover { 
   color: inherit;
   text-decoration: inherit;
 }
+.a:hover .circle,
+.a:hover ~ .circle{
+  display: flex;
+}
+
 .aFooter {
   color: inherit;
   text-decoration: inherit;
+  line-height: 165%;
   /* margin-right:2vw; */
 }
 

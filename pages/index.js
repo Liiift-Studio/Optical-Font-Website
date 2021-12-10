@@ -70,17 +70,10 @@ export default function Home({lightSwitch, children }) {
                         </IconButton>
                     </Grid>
                     <Grid container item  display={{xs:'none', sm:'none', md:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
-                        <Button 
-                            variant="outlined"
-                            href="#FLV"
-                            sx={{
-                                width: "152px",
-                                height: "53px",
-                            }}>
-                            <Typography variant='h3' sx=
+                        <Button variant="outlined" href="#FLV">
+                            <Typography variant='h3' alt="About" sx=
                                 {{position:'relative',
-                                top: '.1rem',}}
-                                alt="About">
+                                top: '.1rem',}}>
                                 About</Typography>
                         </Button>
                     </Grid>

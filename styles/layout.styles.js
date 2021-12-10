@@ -116,9 +116,6 @@ export const circle ={
     borderRadius:"50%",
     pt:.3,
     mb:.75,
-    "&:hover": {
-        display:"flex",
-    },
 }
 export const circleH ={
     display:"none",

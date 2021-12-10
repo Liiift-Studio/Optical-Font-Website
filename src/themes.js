@@ -10,7 +10,7 @@ const buttonText = "#111111";
 const buttonBackDark = "#FCFF55";
 const white = "#FFFFFF";
 
-export const yellow = "#FCFF55";
+export const yellow = "#FAFB45";
 const buttonDarkT_hover = black;
 export const buttonDarkBG = "#FCFF55";
 const buttonDarkBG_hover = "#FCFF55";
@@ -54,7 +54,6 @@ const h4 = {
 	fontFamily: "Optical",
 	fontSize: "1.25rem",
 	fontWeight: 600,
-	letterSpacing: ".1rem",
 };
 
 
@@ -96,7 +95,7 @@ parentTheme.typography.footer = {
 	},
 };
 parentTheme.typography.h3 = {
-	fontWeight: 100,
+	fontWeight: 120,
 	fontFamily: "Optical",
 	fontSize: '1.5rem',
 };
@@ -104,6 +103,7 @@ parentTheme.typography.h4 = {
 	fontWeight: 600,
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
+	letterSpacing: '.24em',
 };
 parentTheme.typography.h1 = {
 	fontSize: "4vw",
@@ -156,6 +156,10 @@ export let lightTheme = createTheme({
 	},
 
 	components: {
+		MuiButtonBase: {
+			disableFocusRipple: true,
+			disableRipple: true,
+		},
 		MuiButton: {
 			defaultProps: {
 				disableFocusRipple: true,
@@ -168,18 +172,19 @@ export let lightTheme = createTheme({
 					height: {xs:"53px", md:"53px"},
 					backgroundColor: "transparent",
 					color: black,
-					border: "none",
-					boxShadow:'black 0px 0px 0px 3px',
+					border: "black solid 4px",
+					// boxShadow:'black 0px 0px 0px 4px',
 					borderRadius: 50,
 					"&:hover": {
+						border: "black solid 4px",
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
 					},
 					"&.Mui-focusVisible": {
-						backgroundColor: 'transparent',
-						borderColor: black,
+						border: '7px solid white',
 						boxShadow:'black 0px 0px 0px 8px',
-						color: black,
+						color: yellow,
+						backgroundColor: black,
 					},
 					h3: {
 						position:"relative",
@@ -198,11 +203,10 @@ export let lightTheme = createTheme({
 						color: buttonLightT_hover,
 					},
 					"&.Mui-focusVisible": {
-						backgroundColor: 'transparent',
-						borderColor: black,
+						border: '7px solid white',
 						boxShadow:'black 0px 0px 0px 8px',
-						// border: ".5em solid black",
-						color: black,
+						color: yellow,
+						backgroundColor: black,
 					},
 
 					h3: {
@@ -213,32 +217,32 @@ export let lightTheme = createTheme({
 				},
 			},
 		},
-		MuiIconButton: {
-			defaultProps: {
-				disableRipple: true,
-				disableFocusRipple: true,
-			},
-			styleOverrides: {
-				root: {
-					"&:hover": {
-						backgroundColor: 'transparent',
-					},
-					svg: {
-						borderRadius: 50,
-						color: black,
-						"&:hover": {
-							stroke: 'black',
-							fill: landingBlue,
-						},
-					},
-					"&.Mui-focusVisible": {
-						backgroundColor: "transparent",
-						border:'none',
-						boxShadow:'black 0px 0px 0px 3px',
-					},
-				},	
-			},
-		},
+		// MuiIconButton: {
+		// 	defaultProps: {
+		// 		disableRipple: true,
+		// 		disableFocusRipple: true,
+		// 	},
+		// 	styleOverrides: {
+		// 		root: {
+		// 			"&:hover": {
+		// 				backgroundColor: 'transparent',
+		// 			},
+		// 			svg: {
+		// 				borderRadius: 50,
+		// 				color: black,
+		// 				"&:hover": {
+		// 					stroke: 'black',
+		// 					fill: landingBlue,
+		// 				},
+		// 			},
+		// 			"&.Mui-focusVisible": {
+		// 				backgroundColor: "transparent",
+		// 				border:'none',
+		// 				boxShadow:'black 0px 0px 0px 7.5px',
+		// 			},
+		// 		},	
+		// 	},
+		// },
 		MuiListItemButton: {
 			defaultProps: {
 				disableFocusRipple: true,
@@ -246,26 +250,16 @@ export let lightTheme = createTheme({
 			},
 			styleOverrides: {
 				root: {
+					justifyContent: "flex-start",
 					"&.Mui-focusVisible": {
-						border: ".3em solid black",
+						boxShadow:'black 0px 0px 0px 4px',
 						borderRadius: 50,
-						color: black,
-						px: 1,
-						py: 1,
 						backgroundColor: 'transparent',
+						color: black,
 					},
 					"&:hover": {
-						alignContent:"center",
-						backgroundColor:'black',
-						// bgcolor:'white',
-						color:'text.main',
-						width :'.7em',
-						height:'.7em',
-						borderRadius:'100',
-						pt:.3,
-						mb:.75,
+						backgroundColor: 'transparent',
 					},
-					justifyContent: "flex-start",
 				},
 			},
 		},
@@ -308,15 +302,22 @@ export let lightTheme = createTheme({
 						backgroundColor: "transparent",
 					},
 					svg: {
+						top: "0.1em",
 						borderRadius:50,
 						"&:hover": {
 							stroke: 'black',
-							fill: landingBlue,
+							strokeWidth: '5px',
+							fill: yellow,
 						},
 					},
 					"&.Mui-focusVisible": {
 						backgroundColor: "transparent",
-						border: '.2em solid black',
+						boxShadow:'black 0px 0px 0px 8px', 
+						svg: {
+							stroke: 'black',
+							strokeWidth: '5px',
+							fill: yellow,
+						},
 					},
 				},
 			},
@@ -330,6 +331,32 @@ export let lightTheme = createTheme({
 					outline: "none",
 				}
 			}
+		},
+		MuiToggleButton:{
+			styleOverrides: {
+				root: {
+					border: "none",
+					'&.Mui-selected': {
+						backgroundColor: "transparent",
+						'&:hover': {
+							backgroundColor: "transparent",
+						},
+					},
+					'&:hover': {
+						backgroundColor: "transparent",
+						color: black,
+					},
+					"&.Mui-focusVisible": {
+						'.MuiTypography-root': {
+							padding: '0.5em',
+							boxShadow:'black 0px 0px 0px 4px',
+							borderRadius: 100,
+							backgroundColor: 'transparent',
+							color: black,
+						},
+					},
+				},
+			},
 		},
 	},
 });
@@ -361,12 +388,12 @@ export let darkTheme = createTheme({
 				root: {
 				},
 				outlined: {
-					Width: {xs:"156px",sm:"152px"},
+					Width: {xs:"156px",sm:"152px" },
 					Height: {xs:"53px", sm:"53px"},
 					backgroundColor: "transparent",
 					color: white,
 					border: ' none',
-					boxShadow:'white 0px 0px 0px 3px',
+					boxShadow:'white 0px 0px 0px 4px',
 					borderRadius: 50,
 					"&:hover": {
 						backgroundColor: buttonDarkBG_hover,
@@ -375,7 +402,10 @@ export let darkTheme = createTheme({
 						border:'none',
 					},
 					"&:focus": {
-						border: ".5em solid black",
+						border: '7px solid black',
+						boxShadow:'yellow 0px 0px 0px 8px',
+						backgroundColor: yellow,
+						color: black,
 					},
 					h3: {
 						position:"relative",
@@ -395,11 +425,10 @@ export let darkTheme = createTheme({
 						boxShadow:'yellow 0px 0px 0px 3px',
 					},
 					"&.Mui-focusVisible": {
-						backgroundColor: 'transparent',
-						boxShadow:'white 0px 0px 0px 3px',
-						h3: {
-							color: white,
-						},
+						border: '7px solid black',
+						boxShadow:'yellow 0px 0px 0px 8px',
+						backgroundColor: yellow,
+						color: black,
 						'&:hover': {
 							h3: {
 								color: black,
@@ -434,14 +463,13 @@ export let darkTheme = createTheme({
 					disableFocusRipple: true,
 				},
 				root: {
+					justifyContent: "flex-start",
 					"&.Mui-focusVisible": {
 						backgroundColor: 'transparent',
-						border: ".3em solid white",
+						boxShadow:'white 0px 0px 0px 4px',
 						borderRadius: 50,
 						color: white,
 					},
-					
-					justifyContent: "flex-start",
 					"&:hover": {
 						backgroundColor: "transparent",
 					},
@@ -479,19 +507,26 @@ export let darkTheme = createTheme({
 						borderRadius: 5,
 					},
 					svg: {
+						top: "0.1em",
 						borderRadius:50,
 						"&:hover": {
-							stroke: 'black',
-							fill: landingBlue,
+							stroke: 'transparent',
+							fill: white,
 						},
 					},
 					"&.Mui-focusVisible": {
 						backgroundColor: "transparent",
-						border: '.2em solid white',
+						boxShadow:'white 0px 0px 0px 7px', 
+						svg: {
+							stroke: 'transparent',
+							fill: white,
+						},
+
 					},
 				},
 			},
 		},
+	
 	},
 });
 darkTheme = createTheme(darkTheme, {

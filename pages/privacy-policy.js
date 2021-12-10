@@ -56,11 +56,6 @@ export default function Home({lightSwitch, children }) {
                       <Button 
                           variant="outlined"
                           href="/"
-                          sx={{
-                              
-                              paddingX: 2,
-                              fontWeight:'medium',
-                          }}
                       >
                           <Typography variant='h4' sx=
                               {{position:'relative',
@@ -69,7 +64,7 @@ export default function Home({lightSwitch, children }) {
                               home</Typography>
                       </Button>
                   </Grid>
-                  <Grid container item  display={{xs:'none', sm:'flex'}} sm={2} md={1} justifyContent="flex-end" alignItems="center">
+                  {/* <Grid container item  display={{xs:'none', sm:'flex'}} sm={2} md={1} justifyContent="flex-end" alignItems="center">
                       {( lightSwitch ) ? (
                       <IconButton
                           onClick={changeDarkMode}
@@ -81,7 +76,7 @@ export default function Home({lightSwitch, children }) {
                                             />)}
                       </IconButton>
                       ) : (<></>)}
-                  </Grid>
+                  </Grid> */}
                 </Grid>
               </Grid>
               <Grid container item sm={12} sx={body_container}>

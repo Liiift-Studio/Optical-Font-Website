@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from "react"
-import {List,ListItem,ListItemText, ListItemIcon,ListItemButton,Typography ,ToggleButton,Button, Grid, Paper, colors, Box, ToggleButtonGroup} from '@mui/material'
+import {Tabs, Tab, List,ListItem,ListItemText, ListItemIcon,ListItemButton,Typography ,ToggleButton,Button, Grid, Paper, colors, Box, ToggleButtonGroup} from '@mui/material'
 import styles from '../styles/layout.module.css'
 import {About,FLV,UG,P,A,PR, FlvCopy, UgCopy, ProjectCopy, loe, LevelOfEnhancementCopy, c, ControlsCopy, m, MenuCopy} from '../styles/utils.module.constants'
 import CircleIcon from '@mui/icons-material/Circle';
@@ -11,62 +11,85 @@ import { body_container, circleH, circle, copy, copy_container, header, img_cont
 import img_ext from '../public/images/Extension_Light.svg'
 import img_menu  from '../public/images/Extension_Light_Menu.svg'
 
-
+function LinkTab(props) {
+  return (
+    <Tab
+      component="a"
+      onClick={event => event.preventDefault()}
+    //   {...props}
+    />
+  );
+}
 
 export default function MenusLayout({children,darkMode }) {
     const [toggleValue, setToggle]= useState(FLV);
     const SECTION_SPACING = 10;
+    const [id, setId] = useState(FLV);
+    const [alignment, setAlignment] = React.useState('web');
 
+    const handleChange = (event, newAlignment) => {
+      setAlignment(newAlignment);
+    };
 return (
     <>
     <Grid container item sm={12} sx={body_container}>
             <Grid item container sm={4} className={styles.menuButtons_container} display={{xs:'none', md:'flex'}}>
-                <List>
-                    {/* <ListItem href="#FLV" disablePadding className={styles.a} component="a"> */}
-                        <ListItemButton href="#FLV" disablePadding  variant="string"> 
-                            {toggleValue === FLV ? 
+                <ToggleButtonGroup
+                    orientation="vertical"
+                    value={alignment}
+                    onChange={handleChange}
+                    exclusive
+                >
+                    {/* <ListItem href="#FLV" value='FLV' disablePadding className={styles.a} component="a"> */}
+                        <ToggleButton href="#FLV" value='FLV' disablePadding  disableRipple disableFocusRipple className={styles.a} component="a"> 
+                            {/* {toggleValue === FLV ? 
                             <ListItemIcon >
-                                <Box sx={circle}/>
                             </ListItemIcon>
-                            : <></>}
-                            <ListItemText className={styles.a} inset={toggleValue !== FLV}>
-                                <Typography variant ="h4">
+                            : <></>} */}
+                            {/* <ListItemText inset={toggleValue !== FLV}> */}
+                            <Box className={styles.circle} sx={circle}/>
+                            <ListItemText inset={circle}>
+                                <Typography variant="h4">
                                     {flv}
                                 </Typography>
                             </ListItemText>
-                        </ListItemButton>
+                        </ToggleButton>
                     {/* </ListItem> */}
 
                     {/* <ListItem href="#P" disablePadding className={styles.a} component="a"> */}
-                        <ListItemButton href="#P" disablePadding className={styles.a} component="a">
-                            {toggleValue === P ? 
+                        <ToggleButton href="#P" value='P' disablePadding disableRipple disableFocusRipple className={styles.a} component="a">
+                            {/* {toggleValue === P ? 
                                 <ListItemIcon >
                                     <Box sx={circle}/>
                                 </ListItemIcon>
-                            : <></>}
-                            <ListItemText inset={toggleValue !== P} >
+                            : <></>} */}
+                             <Box className={styles.circle} sx={circle}/>
+                            {/* <ListItemText inset={toggleValue !== P} > */}
+                            <ListItemText inset={circle}>
                                 <Typography variant ="h4">  
                                     {p}
                                 </Typography>
                             </ListItemText>
-                        </ListItemButton>
+                        </ToggleButton>
                     {/* </ListItem> */}
 
                     {/* <ListItem href="#UG" disablePadding className={styles.a} component="a"> */}
-                        <ListItemButton href="#UG" disablePadding className={styles.a} component="a">
-                            {toggleValue === UG ? 
+                        <ToggleButton href="#UG" value='UG' disableFocusRipple disableRipple disablePadding className={styles.a} component="a">
+                            {/* {toggleValue === UG ? 
                                 <ListItemIcon>
                                     <Box sx={circle}/>
                                 </ListItemIcon>
-                            : <></>}
-                            <ListItemText  inset={toggleValue !== UG} >
+                            : <></>} */}
+                            <Box className={styles.circle} sx={circle}/>
+                            {/* <ListItemText  inset={toggleValue !== UG} > */}
+                            <ListItemText inset={circle}>
                                 <Typography variant ="h4">  
                                 {ug}
                                 </Typography>
                             </ListItemText>
-                        </ListItemButton>
+                        </ToggleButton>
                     {/* </ListItem> */}
-                </List>
+                </ToggleButtonGroup>
             </Grid>
             
         {/* COPY */}
@@ -76,6 +99,8 @@ return (
                     <Waypoint 
                         topOffset="35%"
                         bottomOffset="55%"
+                        id={id}
+                        onEnter={()=>setId(UG)}
                         onEnter={()=>setToggle(FLV)}>
                     <section id="FLV">
                         <Grid item container sx={{mb:SECTION_SPACING,}}>
@@ -86,7 +111,6 @@ return (
                             </Grid>
                             <Grid item container sx={copy}>
                                 <Typography variant='body' display ="block">
-                                        {/* {flvCopy} */}
                                         <FlvCopy/>
                                 </Typography>
                             </Grid>
@@ -135,7 +159,7 @@ return (
                     </section>
                 </Waypoint>
 
-                <Grid item container sx={{mb:SECTION_SPACING,}}>
+                <Grid item container id="UG" sx={{mb:SECTION_SPACING,}}>
                         <Grid item container className={styles.landing_right_container} sx={copy_container}>
                             <Grid item sx={img_container_ext}>
                                 <Image  src={img_ext}  alt="Web extension including controls of font legibility including boldness, spacing, letter differentiation and other options. " />
@@ -186,7 +210,7 @@ return (
             </Grid>
 
             <Grid item container sx={{mb:SECTION_SPACING,}}>
-                <Grid item container sx={copy_container}>
+                <Grid item container className={styles.landing_right_container} sx={copy_container}>
                     <Grid item sx={img_container_ext}>
                         <Image  src={img_menu}  alt="Web extension’s menu buttons for dark mode, use guide, and feedback." />
                     </Grid>
