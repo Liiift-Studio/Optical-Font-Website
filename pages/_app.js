@@ -3,13 +3,15 @@ import React, { useState, Component } from "react";
 // import styled, { ThemeProvider} from "styled-components";
 import Head from "next/head";
 import HeaderLayout from "../components/header-layout";
-
+import {Helmet} from "react-helmet";
 export const siteTitle = "Optical Font Website";
 import { CssBaseline } from "@mui/material";
+import { Language } from "@mui/icons-material";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Helmet htmlAttributes={{ lang : 'eng' }}/>
       <Head>
         <title>Optical Font</title>
         <meta name="description" content="Optical Font" />

@@ -49,7 +49,7 @@ return (
                             {/* <ListItemText inset={toggleValue !== FLV}> */}
                             <Box className={styles.circle} sx={circle}/>
                             <ListItemText inset={circle}>
-                                <Typography variant="h4">
+                                <Typography variant="h3">
                                     {flv}
                                 </Typography>
                             </ListItemText>
@@ -66,7 +66,7 @@ return (
                              <Box className={styles.circle} sx={circle}/>
                             {/* <ListItemText inset={toggleValue !== P} > */}
                             <ListItemText inset={circle}>
-                                <Typography variant ="h4">  
+                                <Typography variant ="h3">  
                                     {p}
                                 </Typography>
                             </ListItemText>
@@ -83,7 +83,7 @@ return (
                             <Box className={styles.circle} sx={circle}/>
                             {/* <ListItemText  inset={toggleValue !== UG} > */}
                             <ListItemText inset={circle}>
-                                <Typography variant ="h4">  
+                                <Typography variant ="h3">  
                                 {ug}
                                 </Typography>
                             </ListItemText>
@@ -105,7 +105,7 @@ return (
                     <section id="FLV">
                         <Grid item container sx={{mb:SECTION_SPACING,}}>
                             <Grid item container sx={header}>
-                                <Typography variant ='h4'> 
+                                <Typography variant ='h3'> 
                                     {flv}
                                 </Typography>
                             </Grid>
@@ -125,7 +125,7 @@ return (
                     <section id="P" >
                         <Grid item container sx={{mb:SECTION_SPACING,}}>
                             <Grid item container sx={header}>
-                                <Typography variant ='h4' >
+                                <Typography variant ='h3' >
                                         {p}
                                 </Typography>
                             </Grid>
@@ -146,7 +146,7 @@ return (
                         <Grid item container sx={{mb:SECTION_SPACING,}}>
                             <Grid item container
                                 sx={header}>
-                                <Typography variant ='h4'>
+                                <Typography variant ='h3'>
                                     {ug}
                                 </Typography>
                             </Grid>
@@ -169,7 +169,7 @@ return (
 
                 <Grid item container sx={{mb:SECTION_SPACING,}}>
                     <Grid item container sx={header}>
-                        <Typography variant ='h4'>
+                        <Typography variant ='h3'>
                             {loe}
                         </Typography>
                     </Grid>
@@ -183,7 +183,7 @@ return (
 
             <Grid item container sx={{mb:SECTION_SPACING,}}>
                 <Grid item container sx={header}>
-                    <Typography variant ='h4'>
+                    <Typography variant ='h3'>
                         {c}
                     </Typography>
                 </Grid>
@@ -198,7 +198,7 @@ return (
 
             <Grid item container sx={{mb:SECTION_SPACING,}}>
                 <Grid item container sx={header}>
-                    <Typography variant ='h4'>
+                    <Typography variant ='h3'>
                         {m}
                     </Typography>
                 </Grid>

@@ -37,20 +37,13 @@ const h1 = {
 };
 
 const h2 = {
-	fontSize: "5.7rem",
-	fontWeight: 500,
-	letterSpacing: "-.4rem",
-	fontFamily: "Optical",
-};
-
-const h3 = {
 	fontSize: "3rem",
 	fontWeight: 550,
 	fontFamily: "Optical",
 };
 
 // toggle buttons & menu titles
-const h4 = {
+const h3 = {
 	fontFamily: "Optical",
 	fontSize: "1.25rem",
 	fontWeight: 600,
@@ -70,8 +63,8 @@ let parentTheme = createTheme({
 	typography: {
 		h1: h1,
 		h2: h2,
+		h2: h2,
 		h3: h3,
-		h4: h4,
 		footer: footer,
 	},
 });
@@ -94,12 +87,12 @@ parentTheme.typography.footer = {
 		textAlign: "center",
 	},
 };
-parentTheme.typography.h3 = {
+parentTheme.typography.h2 = {
 	fontWeight: 120,
 	fontFamily: "Optical",
 	fontSize: '1.5rem',
 };
-parentTheme.typography.h4 = {
+parentTheme.typography.h3 = {
 	fontWeight: 600,
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
@@ -186,7 +179,7 @@ export let lightTheme = createTheme({
 						color: yellow,
 						backgroundColor: black,
 					},
-					h3: {
+					h2: {
 						position:"relative",
 						top: "0.1em",
 						alignContent: "center",
@@ -209,7 +202,7 @@ export let lightTheme = createTheme({
 						backgroundColor: black,
 					},
 
-					h3: {
+					h2: {
 					position:"relative",
 					top: "0.1em",
 					alignContent: "center",
@@ -407,7 +400,7 @@ export let darkTheme = createTheme({
 						backgroundColor: yellow,
 						color: black,
 					},
-					h3: {
+					h2: {
 						position:"relative",
 						top: "0.1em",
 						alignContent: "center",
@@ -430,12 +423,12 @@ export let darkTheme = createTheme({
 						backgroundColor: yellow,
 						color: black,
 						'&:hover': {
-							h3: {
+							h2: {
 								color: black,
 							},
 						},
 					},
-					h3: {
+					h2: {
 						color: black,
 						position:"relative",
 						top: "0.1em",

@@ -13,7 +13,7 @@ export default function FooterLayout({ children }) {
       <Grid container sx={footer_container} spacing={4}>
 
         <Grid item xs={12} lg={4} pb={5} >
-          <Typography pb={2} variant="h4">Partners</Typography>
+          <Typography pb={2} variant="h3">Partners</Typography>
           <Typography variant="body1">                  
             <a rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" className={styles.aFooter}>The Accessible Technology Program</a>   
           </Typography>
@@ -35,7 +35,7 @@ export default function FooterLayout({ children }) {
         </Grid>
 
         <Grid item xs={12} lg={8} pb={5}>
-          <Typography pb={2} variant="h4">Site Map</Typography>
+          <Typography pb={2} variant="h3">Site Map</Typography>
 
           <Grid container spacing={4}>
             <Grid item xs={12} lg={6} >

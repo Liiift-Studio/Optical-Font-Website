@@ -57,7 +57,7 @@ export default function Home({lightSwitch, children }) {
                           variant="outlined"
                           href="/"
                       >
-                          <Typography variant='h4' sx=
+                          <Typography variant='h3' sx=
                               {{position:'relative',
                               top: '.1rem',}}
                               alt="About">
@@ -95,7 +95,7 @@ export default function Home({lightSwitch, children }) {
                                   </ListItemIcon>
                                   <ListItemText>
                                   {/* inset={toggleValue !== PRIVACY} */}
-                                      <Typography variant ="h4" sx={{textTransform:'uppercase'}}>
+                                      <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
                                         Privacy Policy
                                       </Typography>
                                   </ListItemText>
@@ -116,7 +116,7 @@ export default function Home({lightSwitch, children }) {
                         <section id="privacy">
                             <Grid item container sx={{mb:SECTION_SPACING,}}>
                                 <Grid item container sx={header}>
-                                    <Typography variant ='h4'sx={{textTransform:'uppercase'}}> 
+                                    <Typography variant ='h3'sx={{textTransform:'uppercase'}}> 
                                       Privacy Policy
                                     </Typography>
                                 </Grid>

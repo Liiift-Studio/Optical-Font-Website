@@ -44,60 +44,42 @@ export default function HeaderLayout({lightSwitch, children }) {
                     <CssBaseline/>
                     <Grid container sx={header_container}>
                         <Grid item container mt={4} direction ="row">
+                            {/* Mobile */}
                             <Grid item xs={6} display={{xs:'flex', sm:'none'}}>
-                                <IconButton href="/"
-                                sx={logo_container_mobile} >
-                                    <Image  src={darkMode? logoTextDark:logoText}  
-                                    />
+                                <IconButton href="/" aria-labelledby='logo'
+                                sx={logo_container_mobile}>
+                                    <Image id='logo' src={darkMode? logoTextDark:logoText} alt='Optical project logo' />
                                 </IconButton>
                             </Grid>
                             <Grid item xs={6} display={{xs:'flex', sm:'none'}}>
-                                <IconButton
+                                <IconButton aria-labelledby='cursor'
                                 sx={logo_container_mobile} >
-                                    <Image align={'right'}  src={darkMode? cursorDark:cursor}  
-                                    />
+                                    <Image id='cursor' align={'right'}  src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.' />
                                 </IconButton>
                             </Grid>
+                            {/* Desktop */}
                             <Grid container item display={{xs:'none', sm:'flex'}} xs={12} sm={6} md={6} justifyContent={{xs:'center', sm:'center', md:'flex-start'}}>
                                     <Grid container item xs={8} md={4} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
-                                        <IconButton href="/"
-                                        sx={logo_container} >
-                                            <Image  src={darkMode? logoDark:logo}  
-                                                layout='fill'
-                                            />
+                                        <IconButton href="/" aria-labelledby="logo"
+                                        sx={logo_container}>
+                                            <Image id='logo' alt='Optical project logo including an icon based on the text input cursor symbol.' src={darkMode? logoDark:logo}  layout='fill'/>
                                         </IconButton>
                                     </Grid>
                             </Grid>
                             <Grid container item  display={{xs:'none', sm:'none', md:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
-                                <Button 
-                                    variant="outlined"
-                                    href="#FLV"
-                                    sx={{
-                                        paddingX: 2,
-                                        fontWeight:'medium',
-                                    }}>
-                                    <Typography variant='h4' sx=
-                                        {{position:'relative',
-                                        top: '.1rem',}}
-                                        alt="About">
-                                        About</Typography>
+                                <Button aria-labelledby='About' variant="outlined" href="#FLV" sx={{paddingX: 2,fontWeight:'medium',}}>
+                                    <Typography variant='h2' sx={{position:'relative',top: '.1rem',}} id="About">About</Typography>
                                 </Button>
                             </Grid>
                             <Grid container item  display={{xs:'none', sm:'flex'}} xs={2} sm={6} md={1} justifyContent="flex-end" alignItems="center">
                                 {( lightSwitch ) ? (
-                                // <Switch
-                                //     checked={darkMode}
-                                //     onChange={changeDarkMode}
-                                //     />
-                                <IconButton
-                                    onClick={changeDarkMode}
-                                    >
-                                        {(darkMode ? <SvgIcon src={lightIcon} alt="Light Mode"
-                                                       sx={dm_icon}/> :
-                                                     <SvgIcon src={darkIcon} alt="Dark Mode"
-                                                     sx={dm_icon}
-                                                     />)}
-                                </IconButton>
+                                    <IconButton aria-labelledby='mode' onClick={changeDarkMode}>
+                                        {(darkMode ? 
+                                            <SvgIcon id='mode' src={lightIcon} alt="Light Mode"sx={dm_icon}/>
+                                        :
+                                            <SvgIcon id='mode' src={darkIcon} alt="Dark Mode"sx={dm_icon}/>
+                                        )}
+                                    </IconButton>
                                 ) : (<></>)}
                             </Grid>
                         </Grid>

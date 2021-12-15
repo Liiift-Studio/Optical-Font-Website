@@ -33,7 +33,7 @@ export default function LandingLayout({ children, imgSrc }) {
                     width: "191px",
 					          height: "63px",
                     }}>
-                    <Typography sx={{position:'relative', top: '.1rem',}} variant="h3" alt="install">
+                    <Typography sx={{position:'relative', top: '.1rem',}} variant="h2" alt="install">
                       Install
                     </Typography>
                 </Button>
@@ -78,7 +78,7 @@ export default function LandingLayout({ children, imgSrc }) {
                   width: "156px",
                   height: "53px",
                 }}>
-                <Typography variant="h3">
+                <Typography variant="h2">
                   Install
                 </Typography>
               </Button>
@@ -94,7 +94,7 @@ export default function LandingLayout({ children, imgSrc }) {
                   width: "156px",
                   height: "53px",
                 }}>
-                <Typography variant="h3">
+                <Typography variant="h2">
                   About
                 </Typography>
               </Button>
@@ -133,7 +133,7 @@ export default function LandingLayout({ children, imgSrc }) {
                   width: "156px",
                   height: "53px",
                 }}>
-                <Typography variant="h3">
+                <Typography variant="h2">
                   Install
                 </Typography>
               </Button>
@@ -149,7 +149,7 @@ export default function LandingLayout({ children, imgSrc }) {
                   width: "156px",
                   height: "53px",
                 }}>
-                <Typography variant="h3">
+                <Typography variant="h2">
                   About
                 </Typography>
               </Button>
