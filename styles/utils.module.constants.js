@@ -98,8 +98,7 @@ export function ControlsCopy() {
       sx={{
         right: "4rem",
         top: -15,
-      }}
-    >
+      }}>
       <ListItem sx={listItems}>
         <ListItemIcon>
           <Box sx={circle2} />

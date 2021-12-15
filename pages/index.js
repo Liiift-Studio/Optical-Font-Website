@@ -94,12 +94,12 @@ export default function Home({lightSwitch, children }) {
                         ) : (<></>)}
                     </Grid>
                 </Grid>
-            </Grid>
+            </Grid> 
             <LandingLayout imgSrc={darkMode ? imgDark : imgLight}/>
             <MenusLayout darkMode={darkMode} />
             <FooterLayout/>
             {children}
-        </ThemeProvider>
+        </ThemeProvider>        
         </>
         )
 }

@@ -13,7 +13,7 @@ body {
 * {
   box-sizing: border-box;
 }
-
+ 
 @font-face{
   font-family:"Optical";
   src:url("/fonts/Optical9VF.woff2"),

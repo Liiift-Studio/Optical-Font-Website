@@ -526,6 +526,32 @@ export let darkTheme = createTheme({
 				},
 			},
 		},
+		MuiToggleButton:{
+			styleOverrides: {
+				root: {
+					border: "none",
+					'&.Mui-selected': {
+						backgroundColor: "transparent",
+						'&:hover': {
+							backgroundColor: "transparent",
+						},
+					},
+					'&:hover': {
+						backgroundColor: "transparent",
+						color: black,
+					},
+					"&.Mui-focusVisible": {
+						'.MuiTypography-root': {
+							padding: '0.5em',
+							boxShadow:'white 0px 0px 0px 4px',
+							borderRadius: 100,
+							backgroundColor: 'transparent',
+							color: white,
+						},
+					},
+				},
+			},
+		},
 	
 	},
 });
