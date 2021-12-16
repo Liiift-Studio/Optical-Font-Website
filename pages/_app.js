@@ -11,7 +11,7 @@ import { Language } from "@mui/icons-material";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Helmet htmlAttributes={{ lang : 'eng' }}/>
+      <Helmet htmlAttributes={{ lang : 'en' }}/>
       <Head>
         <title>Optical Font</title>
         <meta name="description" content="Optical Font" />
