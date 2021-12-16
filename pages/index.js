@@ -52,8 +52,8 @@ export default function Home({lightSwitch, children }) {
                     {/* Mobile Logo */}
 
                     <Grid item xs={6} pt={5}  pr={1} display={{xs:'flex', sm:'none'}}>
-                        <IconButton href="/" aria-labelledby='logo' justifyContent='flex-start' align={'left'}>
-                            <Image id='logo' src={darkMode? logoTextDark:logoText} alt='Optical project logo'/>
+                        <IconButton href="/" aria-labelledby='logotxt' justifyContent='flex-start' align={'left'}>
+                            <Image id='logotxt' src={darkMode? logoTextDark:logoText} alt='Optical project logo'/>
                         </IconButton>
                     </Grid>
                     <Grid item xs={6} pt={5} justifyContent='flex-end' display={{xs:'flex', sm:'none'}}>
