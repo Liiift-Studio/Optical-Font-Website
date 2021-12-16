@@ -210,32 +210,6 @@ export let lightTheme = createTheme({
 				},
 			},
 		},
-		// MuiIconButton: {
-		// 	defaultProps: {
-		// 		disableRipple: true,
-		// 		disableFocusRipple: true,
-		// 	},
-		// 	styleOverrides: {
-		// 		root: {
-		// 			"&:hover": {
-		// 				backgroundColor: 'transparent',
-		// 			},
-		// 			svg: {
-		// 				borderRadius: 50,
-		// 				color: black,
-		// 				"&:hover": {
-		// 					stroke: 'black',
-		// 					fill: landingBlue,
-		// 				},
-		// 			},
-		// 			"&.Mui-focusVisible": {
-		// 				backgroundColor: "transparent",
-		// 				border:'none',
-		// 				boxShadow:'black 0px 0px 0px 7.5px',
-		// 			},
-		// 		},	
-		// 	},
-		// },
 		MuiListItemButton: {
 			defaultProps: {
 				disableFocusRipple: true,
@@ -328,6 +302,7 @@ export let lightTheme = createTheme({
 		MuiToggleButton:{
 			styleOverrides: {
 				root: {
+					color: black,
 					border: "none",
 					'&.Mui-selected': {
 						backgroundColor: "transparent",
@@ -531,7 +506,7 @@ export let darkTheme = createTheme({
 					},
 					'&:hover': {
 						backgroundColor: "transparent",
-						color: black,
+						color: white,
 					},
 					"&.Mui-focusVisible": {
 						'.MuiTypography-root': {
