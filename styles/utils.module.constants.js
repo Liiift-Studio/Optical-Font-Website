@@ -9,11 +9,21 @@ export const ug = "USE GUIDE";
 export const p = "PROJECT";
 export const a = "ACCESSIBILITY";
 export const pr = "PRIVACY";
+export const INST = "INSTALL";
 
 export const loe = "Level of Enhancement";
 export const c = "Controls";
 export const m = "Menu";
 
+export function InstallCopy() {
+  return (
+    <>
+    <Typography variant="body1">
+      Please open this website on your desktop to install Optical.
+      </Typography>
+    </>
+  );
+}
 export function FlvCopy() {
   return (
     <>
@@ -84,7 +94,7 @@ export function LevelOfEnhancementCopy() {
     <>
     <Typography variant="body1">
       Level 1 is designed for mild low vision. Level 5 is designed for more
-      advanced low vision. Levels 2,3, and 4 are in between. These levels make
+      advanced low vision. Levels 2, 3, and 4 are in between. These levels make
       larger changes to the font’s legibility. The controls below make smaller
       fine tuning adjustments.
       </Typography>
@@ -178,7 +188,7 @@ export function MenuCopy() {
         </ListItemIcon>
         <ListItemText>
           <Typography variant="body1">
-            Feedback: Send us any feedback you have.
+            Feedback: Send us any feedback you have. (Currently Inactive)
           </Typography>
         </ListItemText>
       </ListItem>
@@ -203,15 +213,6 @@ export function MenuCopy() {
             Soon we’ll have a download button to download your font to use
             offline.
           </Typography>
-        </ListItemText>
-      </ListItem>
-
-      <ListItem sx={listItems}>
-        <ListItemIcon>
-          <Box sx={circle2} />
-        </ListItemIcon>
-        <ListItemText>
-          <Typography variant="body1">Reset: reset your settings.</Typography>
         </ListItemText>
       </ListItem>
     </List>

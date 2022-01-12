@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React, { useEffect, useState } from "react"
 import {Tabs, Tab, List,ListItem,ListItemText, ListItemIcon,ListItemButton,Typography ,ToggleButton,Button, Grid, Paper, colors, Box, ToggleButtonGroup} from '@mui/material'
 import styles from '../styles/layout.module.css'
-import {About,FLV,UG,P,A,PR, FlvCopy, UgCopy, ProjectCopy, loe, LevelOfEnhancementCopy, c, ControlsCopy, m, MenuCopy} from '../styles/utils.module.constants'
+import {About,INST, FLV,UG,P,A,PR,InstallCopy, FlvCopy, UgCopy, ProjectCopy, loe, LevelOfEnhancementCopy, c, ControlsCopy, m, MenuCopy} from '../styles/utils.module.constants'
 import CircleIcon from '@mui/icons-material/Circle';
 import { flv,ug,p,a,pr,flvCopy,ugCopy,pCopy,aCopy,prCopy } from "../styles/utils.module.constants";
 import { Waypoint } from 'react-waypoint';
@@ -96,11 +96,29 @@ return (
             <Grid item container md={8} alignItems="center"   
                 sx={copy_container}>
                 <Grid item container pt={2.3}>
+                <Waypoint 
+                        topOffset="35%"
+                        bottomOffset="55%"
+                        id={id}>
+                    <section id="install">
+                        <Grid item container sx={{mb:SECTION_SPACING,}}>
+                            <Grid item container sx={header}>
+                                <Typography variant ='h3'> 
+                                    {INST}
+                                </Typography>
+                            </Grid>
+                            <Grid item container sx={copy}>
+                                <Typography variant='body' display ="block">
+                                        <InstallCopy/>
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                    </section>
+                </Waypoint>
                     <Waypoint 
                         topOffset="35%"
                         bottomOffset="55%"
                         id={id}
-                        onEnter={()=>setId(UG)}
                         onEnter={()=>setToggle(FLV)}>
                     <section id="FLV">
                         <Grid item container sx={{mb:SECTION_SPACING,}}>
@@ -142,8 +160,9 @@ return (
                     topOffset="35%"
                     bottomOffset="55%"
                     onEnter={()=>setToggle(UG)}>
-                    <section id="UG" >
-                        <Grid item container sx={{mb:SECTION_SPACING,}}>
+                    <section id="UG" 
+                    sx={{display: {xs:'none', sm:'flex'},}}>
+                        <Grid item container sx={{display: {xs:'none', sm:'flex'}, mb:SECTION_SPACING,}}>
                             <Grid item container
                                 sx={header}>
                                 <Typography variant ='h3'>
@@ -159,7 +178,7 @@ return (
                     </section>
                 </Waypoint>
 
-                <Grid item container id="UG" sx={{mb:SECTION_SPACING,}}>
+                <Grid item container id="UG" sx={{display: {xs:'none', sm:'flex'}, mb:SECTION_SPACING,}}>
                         <Grid item container className={styles.landing_right_container} sx={copy_container}>
                             <Grid item sx={img_container_ext}>
                                 <Image  src={img_ext}  alt="Web extension including controls of font legibility including boldness, spacing, letter differentiation and other options. " />
@@ -167,7 +186,7 @@ return (
                         </Grid>
                     </Grid>
 
-                <Grid item container sx={{mb:SECTION_SPACING,}}>
+                <Grid item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
                     <Grid item container sx={header}>
                         <Typography variant ='h3'>
                             {loe}
@@ -181,7 +200,7 @@ return (
                     </Grid>
                 </Grid>
 
-            <Grid item container sx={{mb:SECTION_SPACING,}}>
+            <Grid item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
                 <Grid item container sx={header}>
                     <Typography variant ='h3'>
                         {c}
@@ -196,7 +215,7 @@ return (
                 </Grid>
             </Grid>
 
-            <Grid item container sx={{mb:SECTION_SPACING,}}>
+            <Grid item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
                 <Grid item container sx={header}>
                     <Typography variant ='h3'>
                         {m}
@@ -209,7 +228,7 @@ return (
                 </Grid>
             </Grid>
 
-            <Grid item container sx={{mb:SECTION_SPACING,}}>
+            <Grid item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
                 <Grid item container className={styles.landing_right_container} sx={copy_container}>
                     <Grid item sx={img_container_ext}>
                         <Image  src={img_menu}  alt="Web extension’s menu buttons for dark mode, use guide, and feedback." />

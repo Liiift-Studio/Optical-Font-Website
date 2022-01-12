@@ -69,7 +69,7 @@ export default function Home({lightSwitch, children }) {
                             <Image id='logo' src={darkMode? logoDark:logo} sx={{maxWidth:'230px',maxHeight:'55px'}} alt='Optical project logo including an icon based on the text input cursor symbol.'/>
                         </IconButton>
                     </Grid>
-                    <Grid container item  display={{xs:'none', sm:'none', md:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
+                    <Grid container item  pr={2} display={{xs:'none', sm:'none', md:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
                         <Button aria-labelledby='About' variant="outlined" href="#FLV">
                             <Typography id='About' variant='h2' alt="About" sx={{position:'relative',top: '.1rem',}}>About</Typography>
                         </Button>
@@ -94,7 +94,7 @@ export default function Home({lightSwitch, children }) {
             </Grid> 
             <LandingLayout imgSrc={darkMode ? imgDark : imgLight}/>
             <MenusLayout darkMode={darkMode} />
-            <FooterLayout/>
+            <FooterLayout />
             {children}
         </ThemeProvider>        
         </>

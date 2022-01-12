@@ -94,7 +94,8 @@ export const copy_container ={
 
 export const header ={
     display:"flex",
-    justifyContent:{md:"start",sm:"center",xs:"center"},
+    justifyContent:{md:"start",sm:"start",xs:"start"},
+    px:{md:0,sm:4,xs:2},
     pb:"2.5em"
 }
 export const copy ={
@@ -173,7 +174,7 @@ export const menuButtons_container={
 
 //FOOTER
 export const footer_container={
-    
+    display:{xs:'none',sm:'flex'},
     bgcolor:"background.footer",
     pt:'8vh',
     pb:'3vh',

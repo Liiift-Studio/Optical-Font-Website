@@ -25,7 +25,7 @@ export default function LandingLayout({ children, imgSrc }) {
                 <Typography variant='h1'>
                   <nobr>Varied fonts for</nobr> <br /> varied vision.
                 </Typography>
-                <Button variant="string"
+                <Button variant="string" href=""
                   sx={{
                     my: 2,
                     border: 0,
@@ -70,6 +70,7 @@ export default function LandingLayout({ children, imgSrc }) {
           <Grid container sm={12} align={'center'} spacing={2}maxWidth={'426px'}>
             <Grid item sm={6}>
               <Button
+                href=""
                 variant="string"
                 sx={{
                   my: 1,
@@ -86,10 +87,10 @@ export default function LandingLayout({ children, imgSrc }) {
 
             <Grid item sm={6}>
               <Button
+                href="#FLV"
                 variant="outlined"
                 sx={{
                   my: 1,
-                  border: 0,
                   borderRadius: 10,
                   width: "156px",
                   height: "53px",
@@ -125,6 +126,7 @@ export default function LandingLayout({ children, imgSrc }) {
           <Grid container sm={12} pb={10} align={'center'} justifyContent={'space-around'} maxWidth={'426px'}>
             <Grid item sm={6}>
               <Button
+                href=""
                 variant="string"
                 sx={{
                   my: 1,
@@ -141,10 +143,10 @@ export default function LandingLayout({ children, imgSrc }) {
 
             <Grid item sm={6}>
               <Button
+                href="#FLV"
                 variant="outlined"
                 sx={{
                   my: 1,
-                  border: 0,
                   borderRadius: 10,
                   width: "156px",
                   height: "53px",

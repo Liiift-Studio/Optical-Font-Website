@@ -165,11 +165,11 @@ export let lightTheme = createTheme({
 					height: {xs:"53px", md:"53px"},
 					backgroundColor: "transparent",
 					color: black,
-					border: "black solid 4px",
-					// boxShadow:'black 0px 0px 0px 4px',
+					// border: "black solid 4px",
+					boxShadow:'black 0px 0px 0px 4px',
 					borderRadius: 50,
 					"&:hover": {
-						border: "black solid 4px",
+						// border: "black solid 4px",
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
 					},
@@ -190,7 +190,7 @@ export let lightTheme = createTheme({
 					height: {xs:"53px", md:"63px"},
 					backgroundColor: black,
 					color: buttonLightT,
-					boxShadow:'black 0px 0px 0px 3px',
+					boxShadow:'black 0px 0px 0px 4px',
 					"&:hover": {
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
