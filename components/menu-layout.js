@@ -186,7 +186,7 @@ return (
                         </Grid>
                     </Grid>
 
-                <Grid item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
+                <Grid id='LOE' item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
                     <Grid item container sx={header}>
                         <Typography variant ='h3'>
                             {loe}
@@ -200,7 +200,7 @@ return (
                     </Grid>
                 </Grid>
 
-            <Grid item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
+            <Grid id="Controls" item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
                 <Grid item container sx={header}>
                     <Typography variant ='h3'>
                         {c}
