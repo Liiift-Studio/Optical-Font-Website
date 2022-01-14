@@ -96,7 +96,8 @@ export const header ={
     display:"flex",
     justifyContent:{md:"start",sm:"start",xs:"start"},
     px:{md:0,sm:4,xs:2},
-    pb:"2.5em"
+    pt:"2rem",
+    pb:"2rem"
 }
 export const copy ={
     // diplay"flex

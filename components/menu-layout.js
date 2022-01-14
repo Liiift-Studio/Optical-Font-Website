@@ -23,7 +23,7 @@ function LinkTab(props) {
 
 export default function MenusLayout({children,darkMode }) {
     const [toggleValue, setToggle]= useState(FLV);
-    const SECTION_SPACING = 10;
+    const SECTION_SPACING = '2rem';
     const [id, setId] = useState(FLV);
     const [alignment, setAlignment] = React.useState('web');
 
@@ -96,12 +96,12 @@ return (
             <Grid item container md={8} alignItems="center"   
                 sx={copy_container}>
                 <Grid item container pt={2.3}>
-                <Waypoint 
+                <Waypoint display={{xs:'flex', sm:'none'}} 
                         topOffset="35%"
                         bottomOffset="55%"
                         id={id}>
                     <section id="install">
-                        <Grid item container sx={{mb:SECTION_SPACING,}}>
+                        <Grid item container display={{xs:'flex', sm:'none'}} sx={{mb:SECTION_SPACING,}}>
                             <Grid item container sx={header}>
                                 <Typography variant ='h3'> 
                                     {INST}
@@ -162,7 +162,7 @@ return (
                     onEnter={()=>setToggle(UG)}>
                     <section id="UG" 
                     sx={{display: {xs:'none', sm:'flex'},}}>
-                        <Grid item container sx={{display: {xs:'none', sm:'flex'}, mb:SECTION_SPACING,}}>
+                        <Grid item container sx={{display: {xs:'none', sm:'flex'}, pb:SECTION_SPACING,}}>
                             <Grid item container
                                 sx={header}>
                                 <Typography variant ='h3'>
@@ -228,7 +228,7 @@ return (
                 </Grid>
             </Grid>
 
-            <Grid item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
+            <Grid item container sx={{display: {xs:'none', sm:'flex'}, pb:SECTION_SPACING, mb:10}}>
                 <Grid item container className={styles.landing_right_container} sx={copy_container}>
                     <Grid item sx={img_container_ext}>
                         <Image  src={img_menu}  alt="Web extension’s menu buttons for dark mode, use guide, and feedback." />

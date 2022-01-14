@@ -165,11 +165,11 @@ export let lightTheme = createTheme({
 					height: {xs:"53px", md:"53px"},
 					backgroundColor: "transparent",
 					color: black,
-					// border: "black solid 4px",
+					border: "none",
 					boxShadow:'black 0px 0px 0px 4px',
 					borderRadius: 50,
 					"&:hover": {
-						// border: "black solid 4px",
+						border: "none",
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
 					},
