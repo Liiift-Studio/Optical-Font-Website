@@ -24,6 +24,7 @@ function LinkTab(props) {
 export default function MenusLayout({children,darkMode }) {
     const [toggleValue, setToggle]= useState(FLV);
     const SECTION_SPACING = '2rem';
+    const SECTION_SPACING_BOTTOM = '0.5rem';
     const [id, setId] = useState(FLV);
     const [alignment, setAlignment] = React.useState('web');
 
@@ -40,8 +41,8 @@ return (
                     onChange={handleChange}
                     exclusive
                 >
-                    {/* <ListItem href="#FLV" value='FLV' disablePadding className={styles.a} component="a"> */}
-                        <ToggleButton href="#FLV" value='FLV' disablePadding  disableRipple disableFocusRipple className={styles.a} component="a"> 
+                    {/* <ListItem href="#FLV" value='FLV' className={styles.a} component="a"> */}
+                        <ToggleButton href="#FLV" value='FLV'  disableRipple disableFocusRipple className={styles.a} component="a"> 
                             {/* {toggleValue === FLV ? 
                             <ListItemIcon >
                             </ListItemIcon>
@@ -56,8 +57,8 @@ return (
                         </ToggleButton>
                     {/* </ListItem> */}
 
-                    {/* <ListItem href="#P" disablePadding className={styles.a} component="a"> */}
-                        <ToggleButton href="#P" value='P' disablePadding disableRipple disableFocusRipple className={styles.a} component="a">
+                    {/* <ListItem href="#P" className={styles.a} component="a"> */}
+                        <ToggleButton href="#P" value='P' disableRipple disableFocusRipple className={styles.a} component="a">
                             {/* {toggleValue === P ? 
                                 <ListItemIcon >
                                     <Box sx={circle}/>
@@ -73,8 +74,8 @@ return (
                         </ToggleButton>
                     {/* </ListItem> */}
 
-                    {/* <ListItem href="#UG" disablePadding className={styles.a} component="a"> */}
-                        <ToggleButton href="#UG" value='UG' disableFocusRipple disableRipple disablePadding className={styles.a} component="a">
+                    {/* <ListItem href="#UG" className={styles.a} component="a"> */}
+                        <ToggleButton href="#UG" value='UG' disableFocusRipple disableRipple className={styles.a} component="a">
                             {/* {toggleValue === UG ? 
                                 <ListItemIcon>
                                     <Box sx={circle}/>
@@ -101,7 +102,7 @@ return (
                         bottomOffset="55%"
                         id={id}>
                     <section id="install">
-                        <Grid item container display={{xs:'flex', sm:'none'}} sx={{mb:SECTION_SPACING,}}>
+                        <Grid item container display={{xs:'flex', sm:'none'}} sx={{mb:SECTION_SPACING_BOTTOM}}>
                             <Grid item container sx={header}>
                                 <Typography variant ='h3'> 
                                     {INST}
@@ -120,8 +121,8 @@ return (
                         bottomOffset="55%"
                         id={id}
                         onEnter={()=>setToggle(FLV)}>
-                    <section id="FLV">
-                        <Grid item container sx={{mb:SECTION_SPACING,}}>
+                    <section id="FLV" style={{marginTop: "-3.5rem"}}>
+                        <Grid item container sx={{mb:SECTION_SPACING_BOTTOM}}>
                             <Grid item container sx={header}>
                                 <Typography variant ='h3'> 
                                     {flv}
@@ -141,7 +142,7 @@ return (
                     bottomOffset="55%"
                     onEnter={()=>setToggle(P)}>
                     <section id="P" >
-                        <Grid item container sx={{mb:SECTION_SPACING,}}>
+                        <Grid item container sx={{mb:SECTION_SPACING_BOTTOM}}>
                             <Grid item container sx={header}>
                                 <Typography variant ='h3' >
                                         {p}
@@ -160,8 +161,7 @@ return (
                     topOffset="35%"
                     bottomOffset="55%"
                     onEnter={()=>setToggle(UG)}>
-                    <section id="UG" 
-                    sx={{display: {xs:'none', sm:'flex'},}}>
+                    <section id="UG" sx={{display: {xs:'none', sm:'flex'},}}>
                         <Grid item container sx={{display: {xs:'none', sm:'flex'}, pb:SECTION_SPACING,}}>
                             <Grid item container
                                 sx={header}>
@@ -178,7 +178,7 @@ return (
                     </section>
                 </Waypoint>
 
-                <Grid item container id="UG" sx={{display: {xs:'none', sm:'flex'}, mb:SECTION_SPACING,}}>
+                <Grid item container sx={{display: {xs:'none', sm:'flex'}, mt:SECTION_SPACING, mb:SECTION_SPACING}}>
                         <Grid item container className={styles.landing_right_container} sx={copy_container}>
                             <Grid item sx={img_container_ext}>
                                 <Image  src={img_ext}  alt="Web extension including controls of font legibility including boldness, spacing, letter differentiation and other options. " />
@@ -186,9 +186,9 @@ return (
                         </Grid>
                     </Grid>
 
-                <Grid id='LOE' item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
+                <Grid id='LOE' item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING_BOTTOM}}>
                     <Grid item container sx={header}>
-                        <Typography variant ='h3'>
+                        <Typography variant ='h4'>
                             {loe}
                         </Typography>
                     </Grid>
@@ -200,9 +200,9 @@ return (
                     </Grid>
                 </Grid>
 
-            <Grid id="Controls" item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
+            <Grid id="Controls" item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING_BOTTOM}}>
                 <Grid item container sx={header}>
-                    <Typography variant ='h3'>
+                    <Typography variant ='h4'>
                         {c}
                     </Typography>
                 </Grid>
@@ -215,9 +215,9 @@ return (
                 </Grid>
             </Grid>
 
-            <Grid item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING,}}>
+            <Grid item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING_BOTTOM}}>
                 <Grid item container sx={header}>
-                    <Typography variant ='h3'>
+                    <Typography variant ='h4'>
                         {m}
                     </Typography>
                 </Grid>
@@ -228,7 +228,7 @@ return (
                 </Grid>
             </Grid>
 
-            <Grid item container sx={{display: {xs:'none', sm:'flex'}, pb:SECTION_SPACING, mb:10}}>
+            <Grid item container sx={{display: {xs:'none', sm:'flex'}, pb:SECTION_SPACING, mt:SECTION_SPACING, mb:10}}>
                 <Grid item container className={styles.landing_right_container} sx={copy_container}>
                     <Grid item sx={img_container_ext}>
                         <Image  src={img_menu}  alt="Web extension’s menu buttons for dark mode, use guide, and feedback." />

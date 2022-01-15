@@ -6,8 +6,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   height: 100%;
+}
+
+html.loaded{
+  scroll-behavior: smooth;
 }
 
 * {
@@ -21,4 +25,10 @@ body {
   font-weight:100 1000;
   font-stretch: 25% 151%;
   font-dsplay:swap;
+}
+
+div[class^="layout_circle__"], div[class*=" layout_circle__"] {
+  position: absolute;
+  left: 2rem;
+  top: 1.2rem;
 }
