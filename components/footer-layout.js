@@ -46,13 +46,13 @@ export default function FooterLayout({ children }) {
                 <Link href="#FLV"><a className={styles.aFooter}>About</a></Link>
               </Typography>
               <Typography variant="body1">
-                <Link href="/"><a className={styles.aFooter}>Download Extension</a></Link>
+                <Link href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"><a className={styles.aFooter}>Download Extension</a></Link>
               </Typography>
               <Typography variant="body1">
                 <Link href="/privacy-policy"><a className={styles.aFooter}>Privacy Policy</a></Link>
               </Typography>
               <Typography variant="body1">
-                <Link href="/terms"><a className={styles.aFooter}>Terms</a></Link>
+                <Link href="/privacy-policy#terms"><a className={styles.aFooter}>Terms</a></Link>
               </Typography>
             </Grid>
 
@@ -61,7 +61,7 @@ export default function FooterLayout({ children }) {
                 <a className={styles.aFooter} href="#FLV">Intro</a>
               </Typography>
               <Typography variant="body1">
-              <a className={styles.aFooter} href="#P">Projects</a>
+              <a className={styles.aFooter} href="#P">Project</a>
               </Typography>
               <Typography variant="body1">
                 <a className={styles.aFooter} href="#UG">Use Guide</a>
