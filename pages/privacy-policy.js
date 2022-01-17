@@ -28,7 +28,8 @@ import { flv,ug,p,a,pr,flvCopy,ugCopy,pCopy,aCopy,prCopy } from "../styles/utils
 export default function Home({lightSwitch, children }) {
   lightSwitch = lightSwitch || true;
   const [toggleValue, setToggle]= useState(FLV);
-  const SECTION_SPACING = 10;
+  const SECTION_SPACING = '2rem';
+  const SECTION_SPACING_BOTTOM = '0.5rem';
   const [darkMode, setDarkMode] = useState(false);
   function changeDarkMode(){
       setDarkMode(!darkMode);
@@ -83,12 +84,7 @@ export default function Home({lightSwitch, children }) {
               <Grid container item sm={12} sx={body_container}>
                 <Grid item container sm={4} className={styles.menuButtons_container} display={{xs:'none', md:'flex'}}>
                   <List>
-                      <ListItem  disablePadding
-                      className={styles.a}
-                      component="a" 
-                      href="#privacy" 
-                      // onClick={()=>{setToggle(FLV)}}
-                      >
+                  <ListItem className={styles.a} component="a" href="#Privacy"  >
                           <ListItemButton variant ="string"> 
                               {/* {toggleValue === PRIVACY ?  */}
                                   <ListItemIcon >
@@ -134,7 +130,7 @@ export default function Home({lightSwitch, children }) {
                           // onEnter={()=>setToggle(PRIVACY)}
                           >
                         <section id="privacy">
-                            <Grid item container sx={{mb:SECTION_SPACING,}}>
+                          <Grid item container sx={{mb:SECTION_SPACING_BOTTOM}}>
                                 <Grid item container sx={header}>
                                     <Typography variant ='h2'sx={{textTransform:'uppercase'}}> 
                                       Privacy Policy

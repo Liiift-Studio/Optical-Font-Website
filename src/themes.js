@@ -48,6 +48,11 @@ const h3 = {
 	fontSize: "1.25rem",
 	fontWeight: 600,
 };
+const h4 = {
+	fontFamily: "Optical",
+	fontSize: "1.25rem",
+	fontWeight: 600,
+};
 
 
 const footer = {
@@ -65,6 +70,7 @@ let parentTheme = createTheme({
 		h2: h2,
 		h2: h2,
 		h3: h3,
+		h4: h4,
 		footer: footer,
 	},
 });
@@ -97,6 +103,12 @@ parentTheme.typography.h3 = {
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
 	letterSpacing: '.24em',
+	textTransform: 'uppercase',
+};
+parentTheme.typography.h4 = {
+	fontWeight: 600,
+	fontFamily: "Optical",
+	fontSize: '1.4rem',
 };
 parentTheme.typography.h1 = {
 	fontSize: "4vw",

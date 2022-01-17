@@ -17,10 +17,10 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Optical Font" />
         <meta name="og:title" content={siteTitle} />
         <link rel="shortcut icon" href="../public/images/favicon.ico" />
-        <link rel="preload" href="/fonts/Optical-Regular.woff2" as="font" crossOrigin="" />
+        {/* <link rel="preload" href="/fonts/Optical-Regular.woff2" as="font" crossOrigin="" />
         <link rel="preload" href="/fonts/Optical-Light.woff2" as="font" crossOrigin="" />
         <link rel="preload" href="/fonts/Optical-Medium.woff2" as="font" crossOrigin="" />
-        <link rel="preload" href="/fonts/Optical-Bold.woff2" as="font" crossOrigin="" />
+        <link rel="preload" href="/fonts/Optical-Bold.woff2" as="font" crossOrigin="" /> */}
       </Head>
 
       <Component {...pageProps} />
