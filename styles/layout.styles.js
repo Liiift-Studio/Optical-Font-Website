@@ -91,7 +91,6 @@ export const copy_container ={
     justifyContent: 'center',
     
 }
-
 export const header ={
     display:"flex",
     justifyContent:{md:"start",sm:"start",xs:"start"},
@@ -104,10 +103,7 @@ export const copy ={
     justifyContent:{md:"start",sm:"center",xs:"center"},
     px:{md:0,sm:4,xs:2},
     maxWidth: {xs:"750px", lg:"900px"}
-
-
 }
-
 export const circle ={
     alignContent:"center",
     bgcolor:'text.main',
