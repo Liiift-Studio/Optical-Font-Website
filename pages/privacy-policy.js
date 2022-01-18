@@ -2,7 +2,7 @@ import styles from '../styles/layout.module.css'
 import React, { useEffect, useState } from "react"
 import Image from 'next/image'
 
-import {ToggleButton, Icon,IconButton, Grid, Box, CssBaseline, Button, Typography, List, ListItem, ListItemButton, ListItemText, ListItemIcon} from '@mui/material/'
+import {ToggleButton,ToggleButtonGroup, Icon,IconButton, Grid, Box, CssBaseline, Button, Typography, List, ListItem, ListItemButton, ListItemText, ListItemIcon} from '@mui/material/'
 import { Waypoint } from 'react-waypoint';
 import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
 import Brightness3Icon from '@mui/icons-material/Brightness3';
@@ -39,6 +39,10 @@ export default function Home({lightSwitch, children }) {
       var x =(darkMode ? responsiveFontSizes(darkTheme) : responsiveFontSizes(lightTheme));
       return x;
   }
+  const [alignment, setAlignment] = React.useState('web');
+  const handleChange = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
     return(
         <>
             <ThemeProvider theme={chooseTheme()}>
@@ -83,41 +87,37 @@ export default function Home({lightSwitch, children }) {
               </Grid>
               <Grid container item sm={12} sx={body_container}>
                 <Grid item container sm={4} className={styles.menuButtons_container} display={{xs:'none', md:'flex'}}>
-                  <List>
-                  <ListItem className={styles.a} component="a" href="#Privacy"  >
-                          <ListItemButton variant ="string"> 
-                              {/* {toggleValue === PRIVACY ?  */}
-                                  <ListItemIcon >
-                                      <Box sx={circle}/>
-                                  </ListItemIcon>
-                                  <ListItemText>
-                                  {/* inset={toggleValue !== PRIVACY} */}
-                                      <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
-                                        Privacy Policy
-                                      </Typography>
-                                  </ListItemText>
-                              </ListItemButton>
-                      </ListItem>
-                      <ListItem  disablePadding
-                      className={styles.a}
-                      component="a" 
-                      href="#terms" 
-                      // onClick={()=>{setToggle(FLV)}}
-                      >
-                          <ListItemButton variant ="string"> 
-                              {/* {toggleValue === PRIVACY ?  */}
-                                  {/* <ListItemIcon >
-                                      <Box sx={circle}/>
-                                  </ListItemIcon> */}
-                                  <ListItemText>
-                                  {/* inset={toggleValue !== PRIVACY} */}
-                                      <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
-                                        Terms
-                                      </Typography>
-                                  </ListItemText>
-                              </ListItemButton>
-                      </ListItem>
-                    </List>
+                  <ToggleButtonGroup
+                  orientation="vertical"
+                  value={alignment}
+                  onChange={handleChange}
+                  exclusive>
+                    <ToggleButton href="#privacy" value='privacy'  disableRipple disableFocusRipple className={styles.a} component="a"> 
+                      {/* {toggleValue === PRIVACY ?  */}
+                      <Box className={styles.circle} sx={circle}/>
+                          <ListItemText inset={circle}>
+                          {/* inset={toggleValue !== PRIVACY} */}
+                              <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
+                                Privacy Policy
+                              </Typography>
+                          </ListItemText>
+                      </ToggleButton>
+                        <ToggleButton href="#terms" value='terms'  disableRipple disableFocusRipple className={styles.a} component="a"
+                        // onClick={()=>{setToggle(FLV)}}
+                        >
+                            {/* {toggleValue === PRIVACY ?  */}
+                            {/* <ListItemIcon >
+                                <Box sx={circle}/>
+                            </ListItemIcon> */}
+                            <Box className={styles.circle} sx={circle}/>
+                            <ListItemText inset={circle}>
+                            {/* inset={toggleValue !== PRIVACY} */}
+                                <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
+                                  Terms
+                                </Typography>
+                            </ListItemText>
+                        </ToggleButton>
+                      </ToggleButtonGroup>
                   </Grid>
                 
           {/* Copy */}
