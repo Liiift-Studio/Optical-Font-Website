@@ -25,7 +25,8 @@ export default function LandingLayout({ children, imgSrc }) {
                 <Typography variant='h1'>
                   <nobr>Varied fonts for</nobr> <br /> varied vision.
                 </Typography>
-                <Button variant="string" href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
+                {/* https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad */}
+                <Button variant="string" href=""
                   sx={{
                     my: 2,
                     border: 0,
@@ -33,6 +34,7 @@ export default function LandingLayout({ children, imgSrc }) {
                     width: "191px",
 					          height: "63px",
                     }}>
+
                     <Typography sx={{position:'relative', top: '.1rem',}} variant="h2" alt="install">
                       Install
                     </Typography>
@@ -70,7 +72,7 @@ export default function LandingLayout({ children, imgSrc }) {
           <Grid container sm={12} align={'center'} spacing={2}maxWidth={'426px'}>
             <Grid item sm={6}>
               <Button
-                href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
+                href=""
                 variant="string"
                 sx={{
                   my: 1,
@@ -126,7 +128,7 @@ export default function LandingLayout({ children, imgSrc }) {
           <Grid container sm={12} pb={10} align={'center'} justifyContent={'space-around'} maxWidth={'426px'}>
             <Grid item sm={6}>
               <Button
-                href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
+                href=""
                 variant="string"
                 sx={{
                   my: 1,
