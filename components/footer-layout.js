@@ -7,7 +7,9 @@ import Link from "next/link";
 import { bgcolor } from "@mui/system";
 import { footer_container, footer_container_mobile, footer_container_tablet, } from "../styles/layout.styles";
 
-export default function FooterLayout({ children }) {
+export default function FooterLayout({darkMode, children }) {
+
+
   return (
     <>
       <Grid container sx={footer_container} spacing={4}>
@@ -49,10 +51,29 @@ export default function FooterLayout({ children }) {
                 <Link href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"><a className={styles.aFooter}>Download Extension</a></Link>
               </Typography>
               <Typography variant="body1">
-                <Link href="/privacy-policy"><a className={styles.aFooter}>Privacy Policy</a></Link>
+                <Link href={{
+                  pathname:"/process/",
+                  query:{darkMode:darkMode},
+                  }}><a className={styles.aFooter}>Process</a></Link>
               </Typography>
               <Typography variant="body1">
-                <Link href="/privacy-policy#terms"><a className={styles.aFooter}>Terms</a></Link>
+                <Link href={{
+                  pathname:"/faq/",
+                  query:{darkMode:darkMode},
+                  }}><a className={styles.aFooter}>FAQ</a></Link>
+              </Typography>
+              <Typography variant="body1">
+                <Link href={{
+                  pathname:"/privacy-policy/",
+                  query:{darkMode:darkMode},
+                  }}><a className={styles.aFooter}>Privacy Policy</a></Link>
+              </Typography>
+              <Typography variant="body1">
+                <Link href={{
+                  pathname:"/privacy-policy/",
+                  query:{darkMode:darkMode},
+                  hash:'terms'
+                 }} ><a className={styles.aFooter}>Terms</a></Link>
               </Typography>
             </Grid>
 

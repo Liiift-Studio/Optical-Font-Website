@@ -26,65 +26,53 @@ import { dm_icon, header_container, logo_container, logo_container_mobile } from
 
 
 
-export default function HeaderLayout({lightSwitch, children }) {
-    lightSwitch = lightSwitch || true;
-    const [darkMode, setDarkMode] = useState(false);
-    function changeDarkMode(){
-        setDarkMode(!darkMode);
-    }
+export default function HeaderLayout({darkMode, changeDarkMode, children }) {
 
-    function chooseTheme(){
-        var x =(darkMode ? responsiveFontSizes(darkTheme) : responsiveFontSizes(lightTheme));
-        return x;
-    }
     return(
         <>
-                <ThemeProvider theme={chooseTheme()}>
-                    {/* <Paper elevation={0} className={styles.paper_container}> */}
-                    <CssBaseline/>
-                    <Grid container sx={header_container}>
-                        <Grid item container mt={4} direction ="row">
-                            {/* Mobile */}
-                            <Grid item xs={6} display={{xs:'flex', sm:'none'}}>
-                                <IconButton href="/" aria-labelledby='logo'
-                                sx={logo_container_mobile}>
-                                    <Image id='logo' src={darkMode? logoTextDark:logoText} alt='Optical project logo' />
-                                </IconButton>
-                            </Grid>
-                            <Grid item xs={6} display={{xs:'flex', sm:'none'}}>
-                                <IconButton aria-labelledby='cursor'
-                                sx={logo_container_mobile} >
-                                    <Image id='cursor' align={'right'}  src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.' />
-                                </IconButton>
-                            </Grid>
-                            {/* Desktop */}
-                            <Grid container item display={{xs:'none', sm:'flex'}} xs={12} sm={6} md={6} justifyContent={{xs:'center', sm:'center', md:'flex-start'}}>
-                                    <Grid container item xs={8} md={4} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
-                                        <IconButton href="/" aria-labelledby="logo"
-                                        sx={logo_container}>
-                                            <Image id='logo' alt='Optical project logo including an icon based on the text input cursor symbol.' src={darkMode? logoDark:logo}  layout='fill'/>
-                                        </IconButton>
-                                    </Grid>
-                            </Grid>
-                            <Grid container item  display={{xs:'none', sm:'none', md:'flex'}} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
-                                <Button aria-labelledby='About' variant="outlined" href="#FLV" sx={{paddingX: 2,fontWeight:'medium',}}>
-                                    <Typography variant='h2' sx={{position:'relative',top: '.1rem',}} id="About">About</Typography>
+                <Grid container sx={header_container}>
+                    <Grid item container direction="row">
+
+                        {/* Mobile Logo */}
+
+                        <Grid item xs={6} pt={5}  pr={1} display={{xs:'flex', sm:'none'}}>
+                            <IconButton href="/" aria-labelledby='logotxt' justifyContent='flex-start' align={'left'}>
+                                <Image id='logotxt' src={darkMode? logoTextDark:logoText} alt='Optical project logo'/>
+                            </IconButton>
+                        </Grid>
+                        <Grid item xs={6} pt={5} justifyContent='flex-end' display={{xs:'flex', sm:'none'}}>
+                            <IconButton aria-labelledby='cusor'>
+                                <Image id='cursor' src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.'/>
+                            </IconButton>
+                        </Grid>
+
+                        {/* Desktop */}
+
+                        <Grid container item display={{xs:'none', sm:'flex'}} xs={12} sm={6} md={6} alignContent={'center'}>
+                            <IconButton aria-labelledby='logo' href="/" sx={logo_container} >
+                                <Image id='logo' src={darkMode? logoDark:logo} sx={{maxWidth:'230px',maxHeight:'55px'}} alt='Optical project logo including an icon based on the text input cursor symbol.'/>
+                            </IconButton>
+                        </Grid>
+                        <Grid container item sm={6} md={6} sx={{display:'flex',justifyContent:'end'}}>
+                            <Grid container item xs={'auto'}  display={{xs:'none', sm:'none', md:'flex'}} sx={{alignItems:'center',mr:2}}>
+                                <Button aria-labelledby='About' variant="outlined" href="#FLV">
+                                        <Typography id='About' variant='h2' alt="About" sx={{position:'relative',top: '.1rem',}}>About</Typography>
                                 </Button>
                             </Grid>
-                            <Grid container item  display={{xs:'none', sm:'flex'}} xs={2} sm={6} md={1} justifyContent="flex-end" alignItems="center">
-                                {( lightSwitch ) ? (
-                                    <IconButton aria-labelledby='mode' onClick={changeDarkMode}>
+                            <Grid container item xs={'auto'}>
+                                <Grid container item xs={'auto'}  display={{xs:'none', sm:'flex'}} sx={{alignItems:'center',mr:2}}>
+                                    <Button aria-labelledby='mode' variant ="outlined" onClick={changeDarkMode}>
                                         {(darkMode ? 
-                                            <SvgIcon id='mode' src={lightIcon} alt="Light Mode"sx={dm_icon}/>
+                                            <Typography id='About' variant='h2' alt="LightMode" sx={{position:'relative',top: '.1rem',}}>Light&nbsp;Mode</Typography>
                                         :
-                                            <SvgIcon id='mode' src={darkIcon} alt="Dark Mode"sx={dm_icon}/>
+                                            <Typography id='About' variant='h2' alt="DarkMode" sx={{position:'relative',top: '.1rem',}}>Dark&nbsp;Mode</Typography>
                                         )}
-                                    </IconButton>
-                                ) : (<></>)}
+                                    </Button>
+                                </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
-            </ThemeProvider>
+                </Grid>
         </>
         )
 }

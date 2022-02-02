@@ -4,6 +4,7 @@ import { flexbox } from "@mui/system"
 
 export const header_container={
     height: {xs:'100px',sm:'200px'},
+    // pt:{xs:'50px',sm:'100px'},
     px:{xs:'6vw', lg:'9vw'},
     verticalAlign: 'bottom',
     alignItems: 'flex-end',
@@ -35,7 +36,7 @@ export const logo_container_mobile={
 export const landing_container={
     px:{md:'6vw',lg:'9vw'},
     alignItems:'center',
-    height:'85vh',
+    minHeight:'85vh',
     justifyContent:'center',
 }
 export const landing_container_mobile = {
@@ -46,7 +47,7 @@ export const landing_container_mobile = {
 
 export const landing_container_tablet = {
     mt:5,
-    height:'85vh',
+    minHeight:'85vh',
     maxWidth:'426px !important',
     alignContent:'center',
     justifyContent:'center',

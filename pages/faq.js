@@ -6,25 +6,13 @@ import Link from "next/link";
 import {ToggleButton,ToggleButtonGroup, Icon,IconButton, Grid, Box, CssBaseline, Button, Typography, List, ListItem, ListItemButton, ListItemText, ListItemIcon} from '@mui/material/'
 import { Waypoint } from 'react-waypoint';
 import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
-import Brightness3Icon from '@mui/icons-material/Brightness3';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
 import {buttonDarkT, darkTheme, lightTheme} from '../src/themes'
 import logo from '../public/images/logo.svg'
 import logoDark from '../public/images/logoDark.svg'
-import {ReactComponent as Logo} from '../public/images/moon.svg'
-import lightIcon from '../public/images/sun.svg'
-import darkIcon from '../public/images/moon.svg'
 
-import imgLight from '../public/images/Optical_3D.png'
-import imgDark from '../public/images/Optical_3D.png'
-
-import HeaderLayout from '../components/header-layout'
-import LandingLayout from '/components/landing-layout'
-import MenusLayout from '../components/menu-layout'
 import FooterLayout from '../components/footer-layout'
 import {dm_icon, header_container,logo_container, body_container, circle, copy, copy_container, header, img_container_ext } from "../styles/layout.styles";
 import {About,FLV,UG,P,A,PR, FlvCopy, UgCopy, ProjectCopy, loe, LevelOfEnhancementCopy, c, ControlsCopy, m, MenuCopy} from '../styles/utils.module.constants'
-import { flv,ug,p,a,pr,flvCopy,ugCopy,pCopy,aCopy,prCopy } from "../styles/utils.module.constants";
 
 import { useRouter } from 'next/router'
 
@@ -41,6 +29,10 @@ export default function Home({ children}) {
   const [toggleValue, setToggle]= useState(FLV);
   const SECTION_SPACING = '2rem';
   const SECTION_SPACING_BOTTOM = '0.5rem';
+  
+  // function changeDarkMode(){
+  //     setDarkMode(!darkMode);
+  // }
 
   function chooseTheme(){
       var x =(darkMode ? responsiveFontSizes(darkTheme) : responsiveFontSizes(lightTheme));
@@ -50,6 +42,7 @@ export default function Home({ children}) {
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
   };
+  console.log("darkMOde: ",darkMode);
     return(
         <>
             <ThemeProvider theme={chooseTheme()}>
@@ -101,31 +94,17 @@ export default function Home({ children}) {
                   value={alignment}
                   onChange={handleChange}
                   exclusive>
-                    <ToggleButton href="#privacy" value='privacy'  disableRipple disableFocusRipple className={styles.a} component="a"> 
+                    <ToggleButton href="#faq" value='faq'  disableRipple disableFocusRipple className={styles.a} component="a"> 
                       {/* {toggleValue === PRIVACY ?  */}
                       <Box className={styles.circle} sx={circle}/>
                           <ListItemText inset={circle}>
                           {/* inset={toggleValue !== PRIVACY} */}
                               <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
-                                Privacy Policy
+                                FAQ
                               </Typography>
                           </ListItemText>
                       </ToggleButton>
-                        <ToggleButton href="#terms" value='terms'  disableRipple disableFocusRipple className={styles.a} component="a"
-                        // onClick={()=>{setToggle(FLV)}}
-                        >
-                            {/* {toggleValue === PRIVACY ?  */}
-                            {/* <ListItemIcon >
-                                <Box sx={circle}/>
-                            </ListItemIcon> */}
-                            <Box className={styles.circle} sx={circle}/>
-                            <ListItemText inset={circle}>
-                            {/* inset={toggleValue !== PRIVACY} */}
-                                <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
-                                  Terms
-                                </Typography>
-                            </ListItemText>
-                        </ToggleButton>
+                        
                       </ToggleButtonGroup>
                   </Grid>
                 
@@ -138,11 +117,11 @@ export default function Home({ children}) {
                           bottomOffset="55%"
                           // onEnter={()=>setToggle(PRIVACY)}
                           >
-                        <section id="privacy">
+                        <section id="faq">
                           <Grid item container sx={{mb:SECTION_SPACING_BOTTOM}}>
                                 <Grid item container sx={header}>
                                     <Typography variant ='h2'sx={{textTransform:'uppercase'}}> 
-                                      Privacy Policy
+                                      Frequently Asked Questions
                                     </Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>

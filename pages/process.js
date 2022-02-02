@@ -101,17 +101,17 @@ export default function Home({ children}) {
                   value={alignment}
                   onChange={handleChange}
                   exclusive>
-                    <ToggleButton href="#privacy" value='privacy'  disableRipple disableFocusRipple className={styles.a} component="a"> 
+                    <ToggleButton href="#intro" value='intro'  disableRipple disableFocusRipple className={styles.a} component="a"> 
                       {/* {toggleValue === PRIVACY ?  */}
                       <Box className={styles.circle} sx={circle}/>
                           <ListItemText inset={circle}>
                           {/* inset={toggleValue !== PRIVACY} */}
                               <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
-                                Privacy Policy
+                                INTRO
                               </Typography>
                           </ListItemText>
                       </ToggleButton>
-                        <ToggleButton href="#terms" value='terms'  disableRipple disableFocusRipple className={styles.a} component="a"
+                        <ToggleButton href="#foundations" value='foundations'  disableRipple disableFocusRipple className={styles.a} component="a"
                         // onClick={()=>{setToggle(FLV)}}
                         >
                             {/* {toggleValue === PRIVACY ?  */}
@@ -122,7 +122,39 @@ export default function Home({ children}) {
                             <ListItemText inset={circle}>
                             {/* inset={toggleValue !== PRIVACY} */}
                                 <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
-                                  Terms
+                                  FOUNDATIONS
+                                </Typography>
+                            </ListItemText>
+                        </ToggleButton>
+
+                        <ToggleButton href="#feedback" value='feedback'  disableRipple disableFocusRipple className={styles.a} component="a"
+                        // onClick={()=>{setToggle(FLV)}}
+                        >
+                            {/* {toggleValue === PRIVACY ?  */}
+                            {/* <ListItemIcon >
+                                <Box sx={circle}/>
+                            </ListItemIcon> */}
+                            <Box className={styles.circle} sx={circle}/>
+                            <ListItemText inset={circle}>
+                            {/* inset={toggleValue !== PRIVACY} */}
+                                <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
+                                  FEEDBACK
+                                </Typography>
+                            </ListItemText>
+                        </ToggleButton>
+
+                        <ToggleButton href="#refinement" value='refinement'  disableRipple disableFocusRipple className={styles.a} component="a"
+                        // onClick={()=>{setToggle(FLV)}}
+                        >
+                            {/* {toggleValue === PRIVACY ?  */}
+                            {/* <ListItemIcon >
+                                <Box sx={circle}/>
+                            </ListItemIcon> */}
+                            <Box className={styles.circle} sx={circle}/>
+                            <ListItemText inset={circle}>
+                            {/* inset={toggleValue !== PRIVACY} */}
+                                <Typography variant ="h3" sx={{textTransform:'uppercase'}}>
+                                  REFINEMENT
                                 </Typography>
                             </ListItemText>
                         </ToggleButton>
