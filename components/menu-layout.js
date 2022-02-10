@@ -1,242 +1,317 @@
-import Image from 'next/image'
-import React, { useEffect, useState } from "react"
-import {Tabs, Tab, List,ListItem,ListItemText, ListItemIcon,ListItemButton,Typography ,ToggleButton,Button, Grid, Paper, colors, Box, ToggleButtonGroup} from '@mui/material'
-import styles from '../styles/layout.module.css'
-import {About,INST, FLV,UG,P,A,PR,InstallCopy, FlvCopy, UgCopy, ProjectCopy, loe, LevelOfEnhancementCopy, c, ControlsCopy, m, MenuCopy} from '../styles/utils.module.constants'
-import CircleIcon from '@mui/icons-material/Circle';
-import { flv,ug,p,a,pr,flvCopy,ugCopy,pCopy,aCopy,prCopy } from "../styles/utils.module.constants";
-import { Waypoint } from 'react-waypoint';
-import { body_container, circleH, circle, copy, copy_container, header, img_container_ext } from "../styles/layout.styles";
+import React, { createRef, useEffect, useState } from "react"
+import {Typography , Grid,  Box,Link} from '@mui/material'
+import {copy, copy_container, header, } from "../styles/layout.styles";
 
-import img_ext from '../public/images/Extension_Light.svg'
-import img_menu  from '../public/images/Extension_Light_Menu.svg'
 
-function LinkTab(props) {
-  return (
-    <Tab
-      component="a"
-      onClick={event => event.preventDefault()}
-    //   {...props}
-    />
-  );
-}
+export default function MenusLayout({children,darkMode,about,footerRef }) {
+    const aboutRef = createRef();
+    const faqRef = createRef();
+    const accessRef = createRef();
+    const feedbackRef = createRef();
+    const privacyRef = createRef();
 
-export default function MenusLayout({children,darkMode }) {
-    const [toggleValue, setToggle]= useState(FLV);
-    const SECTION_SPACING = '2rem';
-    const SECTION_SPACING_BOTTOM = '0.5rem';
-    const [id, setId] = useState(FLV);
-    const [alignment, setAlignment] = React.useState('web');
+    const [section, setSection] = useState(null);
+    const [clickSection, setClickSection] = useState(null);
 
-    const handleChange = (event, newAlignment) => {
-      setAlignment(newAlignment);
+    const clickSet = (section) =>{
+        setClickSection(section);
+        setSection(section);
+    }
+
+    const menuItemStyle = (id) =>{
+        var circle = false;
+        if(id===section){
+            circle = true;
+        }
+        var style = {
+            position:'relative',
+            pb:'1.1rem',
+            ':before': menuCircle(circle),
+            ':hover': {
+                cursor:'pointer',
+            },
+            ':hover:after': {
+                content:"''",
+                position:'absolute',
+                bgcolor:'text.main',
+                transformOrigin:'center center',
+                top:'.35rem',
+                left:'-1.5em',
+                width :'.7em',
+                height:'.7em',
+                borderRadius:"100%",
+                pt:.3,
+                mb:.75, 
+            }
+
+        }
+        return style
     };
+
+    const menuCircle = (state) => {
+        var style = {
+            content:"''",
+            // display:'hidden',
+            opacity: (state ? '1' : '0'),
+            position:'absolute',
+            bgcolor:'text.main',
+            transformOrigin:'center center',
+            top:'.35rem',
+            left:'-1.5em',
+            width :'.7em',
+            height:'.7em',
+            borderRadius:"100%",
+            pt:.3,
+            mb:.75,
+        }
+        return style;
+    };
+    useEffect(()=>{
+        setSection('About');
+    },[about])
+
+    const handleScroll = () =>{
+        try{
+            var sections = [
+                aboutRef.current.getBoundingClientRect().y
+            , faqRef.current.getBoundingClientRect().y
+            , accessRef.current.getBoundingClientRect().y
+            , feedbackRef.current.getBoundingClientRect().y
+            , privacyRef.current.getBoundingClientRect().y
+            , footerRef.current.getBoundingClientRect().y
+            ];
+            var index = null;
+            var smallest = null;
+            for(var i = 0; i<sections.length;i++){
+                if (smallest < 0 &&  sections[i]<200) {smallest = null}
+                if(smallest === null){
+                    smallest = sections[i];
+                    index = i;
+                
+                }
+                if(sections[i] < smallest ){
+                    index= i;
+                    smallest = sections[i];
+                }
+            }
+            if( index === 0){
+                setSection("About");
+                setClickSection("About");
+            }
+            else if( index === 1){
+                setSection("Faq");
+                setClickSection("Faq");
+
+            }
+            else if( index === 2){
+                setSection("Accessibility");
+                setClickSection("Accessibility");
+
+            }
+            else if( index === 3){
+                setSection("Feedback");
+                setClickSection("Feedback");
+            }
+            else if( index === 4){
+                if(clickSection ==="SiteMap"){
+                    setSection("SiteMap");
+                }else{
+                    setSection("Privacy");
+                }
+
+            }
+            else if( index === 5){
+                setSection("SiteMap");
+            }
+        }catch(e){}
+    }
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    },)
+
+
 return (
     <>
-    <Grid container item sm={12} sx={body_container}>
-            <Grid item container sm={4} className={styles.menuButtons_container} display={{xs:'none', md:'flex'}}>
-                <ToggleButtonGroup
-                    orientation="vertical"
-                    value={alignment}
-                    onChange={handleChange}
-                    exclusive
-                >
-                    {/* <ListItem href="#FLV" value='FLV' className={styles.a} component="a"> */}
-                        <ToggleButton href="#FLV" value='FLV'  disableRipple disableFocusRipple className={styles.a} component="a"> 
-                            {/* {toggleValue === FLV ? 
-                            <ListItemIcon >
-                            </ListItemIcon>
-                            : <></>} */}
-                            {/* <ListItemText inset={toggleValue !== FLV}> */}
-                            <Box className={styles.circle} sx={circle}/>
-                            <ListItemText inset={circle}>
-                                <Typography variant="h3">
-                                    {flv}
-                                </Typography>
-                            </ListItemText>
-                        </ToggleButton>
-                    {/* </ListItem> */}
+    <Grid container item sm={12} sx={{
+            position:'relative',
+            px:{xs:'1vw',lg:'4vw'},
+            pt:{sm:8},
+            pb:{sm:12},
+            
+    }}>
+        {/* Menu */}
+        <Grid item container sm={4} display={{xs:'none', md:'flex'}} sx={{
+            pl: '2vw',
+            pt: '0%',
+            top:'5vh',
+            position: '-webkit-sticky',
+            position: 'sticky',
+            justifyContent: 'flex-start',
+            height :'100%',
+            // overflow: 'hidden',
+            width: '100%',
+            mb:'5%',
+            display:{xs:'none', md:'flex'}
+        }}>
+            {/* menu */}
+            <Grid container item onClick={()=>clickSet('Install')} sx={menuItemStyle('Install')}>
+                <Link  href="#Header" color='inherit' underline='none' sx={{width:'100%'}}>
+                    <Typography variant="h3">
+                    INSTALL
+                    </Typography>
+                    </Link>
 
-                    {/* <ListItem href="#P" className={styles.a} component="a"> */}
-                        <ToggleButton href="#P" value='P' disableRipple disableFocusRipple className={styles.a} component="a">
-                            {/* {toggleValue === P ? 
-                                <ListItemIcon >
-                                    <Box sx={circle}/>
-                                </ListItemIcon>
-                            : <></>} */}
-                             <Box className={styles.circle} sx={circle}/>
-                            {/* <ListItemText inset={toggleValue !== P} > */}
-                            <ListItemText inset={circle}>
-                                <Typography variant ="h3">  
-                                    {p}
-                                </Typography>
-                            </ListItemText>
-                        </ToggleButton>
-                    {/* </ListItem> */}
+            </Grid>
+            <Grid container item onClick={()=>clickSet('About')} sx={menuItemStyle('About')}>
+                <Link  href="#About" color='inherit' underline='none' sx={{width:'100%'}}>
+                <Typography variant="h3">
+                    ABOUT
+                </Typography>
+                </Link>
+            </Grid>
+            <Grid container item onClick={()=>clickSet('Faq')} sx={menuItemStyle('Faq')}>
+                    <Link  href="#Faq" color='inherit' underline='none' sx={{width:'100%'}}>
+                <Typography variant="h3">
+                    FAQ
+                </Typography>
+                    </Link>
+            </Grid>
+            <Grid container item onClick={()=>clickSet('Accessibility')} sx={menuItemStyle('Accessibility')}>
+                <Link  href="#Accessibility" color='inherit' underline='none' sx={{width:'100%'}}>
+                <Typography variant="h3">
+                    ACCESSIBILITY
+                </Typography>
+                </Link>
 
-                    {/* <ListItem href="#UG" className={styles.a} component="a"> */}
-                        <ToggleButton href="#UG" value='UG' disableFocusRipple disableRipple className={styles.a} component="a">
-                            {/* {toggleValue === UG ? 
-                                <ListItemIcon>
-                                    <Box sx={circle}/>
-                                </ListItemIcon>
-                            : <></>} */}
-                            <Box className={styles.circle} sx={circle}/>
-                            {/* <ListItemText  inset={toggleValue !== UG} > */}
-                            <ListItemText inset={circle}>
-                                <Typography variant ="h3">  
-                                {ug}
-                                </Typography>
-                            </ListItemText>
-                        </ToggleButton>
-                    {/* </ListItem> */}
-                </ToggleButtonGroup>
+            </Grid>
+            <Grid container item onClick={()=>clickSet('Feedback')} sx={menuItemStyle('Feedback')}>
+                <Link  href="#Feedback" color='inherit' underline='none' sx={{width:'100%'}}>
+                <Typography variant="h3">
+                FEEDBACK
+                </Typography>
+                </Link>
+
+            </Grid>
+            <Grid container item onClick={()=>clickSet('Privacy')} sx={menuItemStyle('Privacy')}>
+                <Link  href="#Privacy" color='inherit' underline='none' sx={{width:'100%'}}>
+                <Typography variant="h3">
+                PRIVACY
+                </Typography>
+                </Link>
+
+            </Grid>
+            <Grid container item onClick={()=>clickSet('SiteMap')} sx={menuItemStyle('SiteMap')}>
+                <Link  href="#Footer" color='inherit' underline='none' sx={{width:'100%'}}>
+                <Typography variant="h3">
+                SITE MAP
+                </Typography>
+                </Link>
+
             </Grid>
             
-        {/* COPY */}
-            <Grid item container md={8} alignItems="center"   
-                sx={copy_container}>
-                <Grid item container pt={2.3}>
-                <Waypoint display={{xs:'flex', sm:'none'}} 
-                        topOffset="35%"
-                        bottomOffset="55%"
-                        id={id}>
-                    <section id="install">
-                        <Grid item container display={{xs:'flex', sm:'none'}} sx={{mb:SECTION_SPACING_BOTTOM}}>
-                            <Grid item container sx={header}>
-                                <Typography variant ='h3'> 
-                                    {INST}
-                                </Typography>
-                            </Grid>
-                            <Grid item container sx={copy}>
-                                <Typography variant='body' display ="block">
-                                        <InstallCopy/>
-                                </Typography>
-                            </Grid>
-                        </Grid>
-                    </section>
-                </Waypoint>
-                    <Waypoint 
-                        topOffset="35%"
-                        bottomOffset="55%"
-                        id={id}
-                        onEnter={()=>setToggle(FLV)}>
-                    <section id="FLV" style={{marginTop: "-3.5rem"}}>
-                        <Grid item container sx={{mb:SECTION_SPACING_BOTTOM}}>
-                            <Grid item container sx={header}>
-                                <Typography variant ='h3'> 
-                                    {flv}
-                                </Typography>
-                            </Grid>
-                            <Grid item container sx={copy}>
-                                <Typography variant='body' display ="block">
-                                        <FlvCopy/>
-                                </Typography>
-                            </Grid>
-                        </Grid>
-                    </section>
-                </Waypoint>
-
-                <Waypoint 
-                    topOffset="35%"
-                    bottomOffset="55%"
-                    onEnter={()=>setToggle(P)}>
-                    <section id="P" >
-                        <Grid item container sx={{mb:SECTION_SPACING_BOTTOM}}>
-                            <Grid item container sx={header}>
-                                <Typography variant ='h3' >
-                                        {p}
-                                </Typography>
-                            </Grid>
-                            <Grid item container sx={copy}>
-                                <Typography variant='body'>
-                                        <ProjectCopy/>
-                                </Typography>
-                            </Grid>
-                        </Grid>
-                    </section>
-                </Waypoint>
-
-                <Waypoint 
-                    topOffset="35%"
-                    bottomOffset="55%"
-                    onEnter={()=>setToggle(UG)}>
-                    <section id="UG" sx={{display: {xs:'none', sm:'flex'},}}>
-                        <Grid item container sx={{display: {xs:'none', sm:'flex'}, pb:SECTION_SPACING,}}>
-                            <Grid item container
-                                sx={header}>
-                                <Typography variant ='h3'>
-                                    {ug}
-                                </Typography>
-                            </Grid>
-                            <Grid item container sx={copy}>
-                                <Typography variant='body'>
-                                      <UgCopy/>
-                                </Typography>
-                            </Grid>
-                        </Grid>
-                    </section>
-                </Waypoint>
-
-                <Grid item container sx={{display: {xs:'none', sm:'flex'}, mt:SECTION_SPACING, mb:SECTION_SPACING}}>
-                        <Grid item container className={styles.landing_right_container} sx={copy_container}>
-                            <Grid item sx={img_container_ext}>
-                                <Image  src={img_ext}  alt="Web extension including controls of font legibility including boldness, spacing, letter differentiation and other options. " />
-                            </Grid>
-                        </Grid>
-                    </Grid>
-
-                <Grid id='LOE' item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING_BOTTOM}}>
-                    <Grid item container sx={header}>
-                        <Typography variant ='h4'>
-                            {loe}
-                        </Typography>
-                    </Grid>
-
-                    <Grid item container sx={ copy}>
-                        <Typography variant='body'>
-                            <LevelOfEnhancementCopy/>
-                        </Typography>
-                    </Grid>
-                </Grid>
-
-            <Grid id="Controls" item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING_BOTTOM}}>
-                <Grid item container sx={header}>
-                    <Typography variant ='h4'>
-                        {c}
-                    </Typography>
-                </Grid>
-
-                <Grid item container sx={copy}>
-                    <Typography variant='body'>
-                        <ControlsCopy/>
-
-                    </Typography>
-                </Grid>
-            </Grid>
-
-            <Grid item container sx={{display: {xs:'none', sm:'flex'},mb:SECTION_SPACING_BOTTOM}}>
-                <Grid item container sx={header}>
-                    <Typography variant ='h4'>
-                        {m}
-                    </Typography>
-                </Grid>
-                <Grid item container sx={copy}>
-                    <Typography variant='body'>
-                        <MenuCopy/>
-                    </Typography>
-                </Grid>
-            </Grid>
-
-            <Grid item container sx={{display: {xs:'none', sm:'flex'}, pb:SECTION_SPACING, mt:SECTION_SPACING, mb:10}}>
-                <Grid item container className={styles.landing_right_container} sx={copy_container}>
-                    <Grid item sx={img_container_ext}>
-                        <Image  src={img_menu}  alt="Web extension’s menu buttons for dark mode, use guide, and feedback." />
-                    </Grid>
-                </Grid>
-            </Grid>
         </Grid>
-    </Grid>
+
+        {/* Copy */}
+        <Grid item container md={8} alignItems="top" sx={{ 
+            pl:'1vw', 
+            pr: {xs:'1vw', md:'7vw',}, 
+            justifyContent: 'center',
+            }}>
+                <Grid item container sx={copy_container}>
+
+                <section id="About" ref={aboutRef}>
+                    <Grid item container sx={header}>
+                        <Typography variant ='h3'> 
+                            ABOUT
+                        </Typography>
+                    </Grid>
+                    <Grid item container sx={copy}>
+                        <Typography variant='body1' display ="block">
+
+                            Optical is a customizeable font and a free web tool for low vision. Install the Google Chrome browser extension, fine tune your font and read the internet in letters set to your legibility needs. It combines recent research into specific legibility goals with modern font software. <Link color="text.link" href={{pathname:"/process/",query:{darkMode:darkMode}}}>Learn more about how we made Optical.</Link>
+                            <br/><br/>
+                            Optical is being developed out of the 
+                            <Link color="text.link" href="https://research.ecuad.ca/healthdesignlab/" target="_blank" rel="noopener">Health Design Lab</Link> at <Link color="text.link"  href="https://www.ecuad.ca/" target="_blank" rel="noopener">Emily Carr University</Link> in partnership with <Link color="text.link" href="https://disabilityalliancebc.org/" target="_blank" rel="noopener">Disability Alliance BC</Link>, <Link color="text.link" rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank">The Accessible Technology Program</Link>, and <Link color="text.link" href="https://shumka.ecuad.ca/" target="_blank" rel="noopener" >the Shumka Centre</Link>.
+                        </Typography>
+                    </Grid>
+                </section>
+                </Grid>
+
+                <Grid item container sx={copy_container}>
+                <section id="Faq" ref={faqRef}>
+                    <Grid item container sx={header}>
+                        <Typography variant ='h3'> 
+                            FAQ
+                        </Typography>
+                    </Grid>
+                    <Grid item container sx={copy}>
+                        <Typography variant='body1' display ="block">
+                            →How do I install Optical?<br/><br/>Click <Link color="text.link" href="#Install"> Install</Link> to go to the Google Chrome Web Store. Click the blue “Add to Chrome” button at the top right. You’ll see a popup that says Optical will be able to read and change data on websites. In the pop up click the “Add Extension” button to the right. Success! You should be all set. There should be another pop up at the top right, and the Optical Icon (a stylized version of the text select cursor resembling a  capital I) next to your browser website address bar. Click the icon button and get started.
+                            <Box sx={{py:'2rem'}}>
+                            <img src="images/FAQ_Install 5.png" width="100%" />
+
+                            </Box>
+                            
+                            →Does Optical work in other browsers or on phones or tablets?<br/><br/>For the time being, Optical works only in Chrome on desktops. 
+                            <br/><br/>→Can I use Optical for my organization or project?<br/><br/>Optical was created for individuals. If you’d like to set up Optical for general use, lets chat. We’ll see what we can do. <Link color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com">Email us.</Link>                        
+                        </Typography>
+                    </Grid>
+                </section>
+                </Grid>
+
+                <Grid item container sx={copy_container}>
+                <section id="Accessibility" ref={accessRef}>
+                    <Grid item container sx={header}>
+                        <Typography variant ='h3'> 
+                        ACCESSIBILITY
+                        </Typography>
+                    </Grid>
+                    <Grid item container sx={copy}>
+                        <Typography variant='body1' display ="block">
+                            Optical was designed, developed, and tested with accessibility in mind. Let us know if we’ve missed something! <Link color='text.link' target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com">Email us.</Link> 
+                        </Typography>
+                        </Grid>
+                </section>
+
+                </Grid>
+
+                <Grid item container sx={copy_container}>
+
+                <section id="Feedback" ref={feedbackRef}>
+                    <Grid item container sx={header}>
+                        <Typography variant ='h3'> 
+                        FEEDBACK / CONTACT
+                        </Typography>
+                    </Grid>
+                    <Grid item container sx={copy}>
+                        <Typography variant='body1' display ="block">
+                        Do you have any feedback on our fonts, extension or site? We’d love to hear from you. <Link color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com">Email Tyler@opticalfont.com </Link>
+                        </Typography>
+                    </Grid>
+                </section>
+
+                </Grid>
+
+                <Grid item container sx={copy_container}>
+
+                <section id="Privacy" ref={privacyRef}>
+                    <Grid item container sx={header}>
+                        <Typography variant ='h3'> 
+                        PRIVACY
+                        </Typography>
+                    </Grid>
+                    <Grid item container sx={copy}>
+                        <Typography variant='body1' display ="block">
+                        Optical collects no data, including cookies or personal information. We rely on feedback and conversations to track Optical’s strengths and opportunities. <Link color="text.link" href={{pathname:"/privacy-policy/", query:{darkMode:darkMode},hash:'terms'}}>Read our full privacy policy.</Link>                  
+                        </Typography>
+                    </Grid>
+                </section>
+                </Grid>
+
+        </Grid>
 </Grid>
         </>
     )

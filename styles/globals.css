@@ -24,7 +24,7 @@ html.loaded{
       url("/fonts/Optical9VF.woff");
   font-weight:100 1000;
   font-stretch: 25% 151%;
-  font-dsplay:swap;
+  font-display:swap;
 }
 
 div[class^="layout_circle__"], div[class*=" layout_circle__"] {

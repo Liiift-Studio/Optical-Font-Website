@@ -1,27 +1,24 @@
 import Image from 'next/image'
 import { Typography, Button, Grid, Box } from '@mui/material'
 import styles from '../styles/layout.module.css'
-import { shadows } from '@mui/system';
-import { imgSource, source } from '../styles/utils.module.constants';
-import { useEffect } from 'react';
 
 import { img_container_mobile, img_container_tablet, landing_container_mobile, landing_container_tablet, landing_container, img_container } from '../styles/layout.styles';
 
 
 
-export default function LandingLayout({ children, imgSrc }) {
+export default function LandingLayout({ children, aboutClick, imgSrc }) {
 
   // const [imgSource,setSource] = useState(false);
   return (
     <>
       
       {/* DESKTOP */}
-      <Grid container display={{xs: 'none', sm:'none', md: 'flex'}}>
-        <Grid container sx={landing_container}>
-            <Grid item md={6} sx={img_container}  className={styles.landing_right_container}>
+      <Grid container item display={{xs: 'none', sm:'none', md: 'flex'}}>
+        <Grid container item sx={landing_container}>
+            <Grid container item md={6} sx={img_container}  className={styles.landing_right_container}>
                 <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
             </Grid>
-            <Grid item md={6} pl={10} display={'block'}>
+            <Grid container item md={6} pl={10} display={'block'}>
                 <Typography variant='h1'>
                   <nobr>Varied fonts for</nobr> <br /> varied vision.
                 </Typography>
@@ -43,7 +40,7 @@ export default function LandingLayout({ children, imgSrc }) {
       </Grid>
 
       {/* TABLET */}
-      <Grid container justifyContent={'center'} display={{ sm: 'flex', xs: 'none', md: 'none' }} >
+      <Grid container item justifyContent={'center'} display={{ sm: 'flex', xs: 'none', md: 'none' }} >
         <Grid container item sx={landing_container_tablet} >
 
           <Grid container item sm={12} justifyContent="center" className={styles.landing_right_container} >
@@ -68,8 +65,8 @@ export default function LandingLayout({ children, imgSrc }) {
             </Typography>
           </Grid>
 
-          <Grid container sm={12} align={'center'} spacing={2}maxWidth={'426px'}>
-            <Grid item sm={6}>
+          <Grid container item sm={12} align={'center'} spacing={2}maxWidth={'426px'}>
+            <Grid container item sm={6}>
               <Button
                 href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
                 variant="string"
@@ -86,10 +83,11 @@ export default function LandingLayout({ children, imgSrc }) {
               </Button>
             </Grid>
 
-            <Grid item sm={6}>
+            <Grid container item sm={6}>
               <Button
-                href="#FLV"
+                href="#About"
                 variant="outlined"
+                onClick={aboutClick}
                 sx={{
                   my: 1,
                   borderRadius: 10,
@@ -124,7 +122,7 @@ export default function LandingLayout({ children, imgSrc }) {
               }}>Varied&nbsp;fonts&nbsp;for <br/> varied vision.</Typography>
           </Grid>
 
-          <Grid container sm={12} pb={10} align={'center'} justifyContent={'space-around'} maxWidth={'426px'}>
+          <Grid container item sm={12} pb={10} align={'center'} justifyContent={'space-around'} maxWidth={'426px'}>
             <Grid item sm={6}>
               <Button
                 href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
@@ -144,8 +142,9 @@ export default function LandingLayout({ children, imgSrc }) {
 
             <Grid item sm={6}>
               <Button
-                href="#FLV"
+                href="#About"
                 variant="outlined"
+                onClick={aboutClick}
                 sx={{
                   my: 1,
                   borderRadius: 10,

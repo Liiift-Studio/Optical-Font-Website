@@ -28,93 +28,47 @@ const button = {
 	fontSize: 30,
 };
 
-const h1 = {
-	fontSize: "6rem",
-	fontWeight: 600,
-	lineHeight: 1.215,
-	letterSpacing: "-.1rem",
-	fontFamily: "Optical",
-};
-
-const h2 = {
-	fontSize: "3rem",
-	fontWeight: 550,
-	fontFamily: "Optical",
-};
-
-// toggle buttons & menu titles
-const h3 = {
-	fontFamily: "Optical",
-	fontSize: "1.25rem",
-	fontWeight: 600,
-};
-const h4 = {
-	fontFamily: "Optical",
-	fontSize: "1.25rem",
-	fontWeight: 600,
-};
 
 
 const footer = {
-	fontSize: ".95rem",
 	fontWeight: 500,
-	letterSpacing: ".025rem",
 	fontFamily: "Optical",
-	textAlign: "start",
-	bgColor: "green",
 };
 
 let parentTheme = createTheme({
-	typography: {
-		h1: h1,
-		h2: h2,
-		h2: h2,
-		h3: h3,
-		h4: h4,
-		footer: footer,
-	},
+
 });
 
 parentTheme = responsiveFontSizes(parentTheme);
 
 parentTheme.typography.body1 = {
-	fontWeight: 100,
+	fontWeight: 110,
 	fontFamily: "Optical",
 	fontSize: 18
 };
 
-parentTheme.typography.footer = {
-	fontSize: ".95rem",
-	fontWeight: 500,
-	letterSpacing: ".025rem",
-	fontFamily: "Optical",
-	textAlign: "start",
-	[parentTheme.breakpoints.down("sm")]: {
-		textAlign: "center",
-	},
-};
 parentTheme.typography.h2 = {
 	fontWeight: 120,
 	fontFamily: "Optical",
 	fontSize: '1.5rem',
 };
 parentTheme.typography.h3 = {
-	fontWeight: 600,
+	fontWeight: 140,
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
 	letterSpacing: '.24em',
 	textTransform: 'uppercase',
 };
 parentTheme.typography.h4 = {
-	fontWeight: 600,
+	fontWeight: 140,
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
 };
 parentTheme.typography.h1 = {
 	fontSize: "4vw",
-	fontWeight: 600,
 	lineHeight: 1.215,
 	fontFamily: "Optical",
+	fontWeight: 140,
 
 	[parentTheme.breakpoints.down("lg")]: {
 		fontSize: "5vw",
@@ -149,6 +103,7 @@ export let lightTheme = createTheme({
 		},
 		text: {
 			main: black,
+			link: '#4A4E58',
 		},
 		background: {
 			about: landingBlue,
@@ -345,11 +300,11 @@ export let lightTheme = createTheme({
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export let darkTheme = createTheme({
 	...parentTheme,
-
 	palette: {
 		mode: "dark",
 		text: {
 			main: white,
+			link:'#C3D0EF',
 		},
 		secondary: {
 			main: buttonText,
@@ -535,6 +490,30 @@ export let darkTheme = createTheme({
 	
 	},
 });
+
+darkTheme.typography.h1 = {
+	...parentTheme.typography.h1,
+	fontWeight: 130,
+};
+
+darkTheme.typography.body1 = {
+	...parentTheme.typography.body1,
+	fontWeight: 100,
+};
+
+darkTheme.typography.h2 = {
+	...parentTheme.typography.h2,
+	fontWeight: 120,
+};
+darkTheme.typography.h3 = {
+	...parentTheme.typography.h2,
+	fontWeight: 130,
+};
+darkTheme.typography.h4 = {
+	...parentTheme.typography.h4,
+	fontWeight: 130,
+};
+
 darkTheme = createTheme(darkTheme, {
 	palette: {
 		mode: "dark",

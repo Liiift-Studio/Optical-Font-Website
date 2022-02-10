@@ -13,8 +13,53 @@ export default function FooterLayout({darkMode, children }) {
   return (
     <>
       <Grid container sx={footer_container} spacing={4}>
-
-        <Grid item xs={12} lg={4} pb={5} >
+        <Grid item xs={6} lg={4} pb={5}>
+          <Typography pb={2} variant="h3">Site Map</Typography>
+          <Grid container spacing={4}>
+            <Grid item xs={12} lg={6} >
+              <Typography variant="body1">
+                <Link href="/"><a className={styles.aFooter}>Home</a></Link>
+              </Typography>
+              <Typography variant="body1">
+                <Link href={{
+                  pathname:'/',
+                  hash:'#About',
+                  query:{darkMode:darkMode}
+                }}><a className={styles.aFooter}>About</a></Link>
+              </Typography>
+              <Typography variant="body1">
+                <Link href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"><a className={styles.aFooter}>Download Extension</a></Link>
+              </Typography>
+              <Typography variant="body1">
+                <Link href={{
+                  pathname:"/process/",
+                  query:{darkMode:darkMode},
+                  }}><a className={styles.aFooter}>Process</a></Link>
+              </Typography>
+              <Typography variant="body1">
+                <Link  href={{
+                  pathname:'/',
+                  hash:'#Faq',
+                  query:{darkMode:darkMode}}}><a className={styles.aFooter}>FAQ</a></Link>
+              </Typography>
+              <Typography variant="body1">
+                <Link href={{
+                  pathname:"/privacy-policy/",
+                  query:{darkMode:darkMode},
+                  }}><a className={styles.aFooter}>Privacy Policy</a></Link>
+              </Typography>
+              <Typography variant="body1">
+                <Link href={{
+                  pathname:"/privacy-policy/",
+                  query:{darkMode:darkMode},
+                  hash:'Terms'
+                 }} ><a className={styles.aFooter}>Terms</a></Link>
+              </Typography>
+            </Grid>
+          </Grid>
+          
+        </Grid>
+        <Grid item xs={6} lg={4} pb={5} >
           <Typography pb={2} variant="h3">Partners</Typography>
           <Typography variant="body1">                  
             <a rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" className={styles.aFooter}>The Accessible Technology Program</a>   
@@ -34,62 +79,6 @@ export default function FooterLayout({darkMode, children }) {
           <Typography variant="body1">   
             <a href="https://www.liiift.studio/" target="_blank" rel="noopener" className={styles.aFooter}>Liiift Studio</a>
           </Typography>
-        </Grid>
-
-        <Grid item xs={12} lg={8} pb={5}>
-          <Typography pb={2} variant="h3">Site Map</Typography>
-
-          <Grid container spacing={4}>
-            <Grid item xs={12} lg={6} >
-              <Typography variant="body1">
-                <Link href="/"><a className={styles.aFooter}>Home</a></Link>
-              </Typography>
-              <Typography variant="body1">
-                <Link href="#FLV"><a className={styles.aFooter}>About</a></Link>
-              </Typography>
-              <Typography variant="body1">
-                <Link href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"><a className={styles.aFooter}>Download Extension</a></Link>
-              </Typography>
-              <Typography variant="body1">
-                <Link href={{
-                  pathname:"/process/",
-                  query:{darkMode:darkMode},
-                  }}><a className={styles.aFooter}>Process</a></Link>
-              </Typography>
-              <Typography variant="body1">
-                <Link href={{
-                  pathname:"/faq/",
-                  query:{darkMode:darkMode},
-                  }}><a className={styles.aFooter}>FAQ</a></Link>
-              </Typography>
-              <Typography variant="body1">
-                <Link href={{
-                  pathname:"/privacy-policy/",
-                  query:{darkMode:darkMode},
-                  }}><a className={styles.aFooter}>Privacy Policy</a></Link>
-              </Typography>
-              <Typography variant="body1">
-                <Link href={{
-                  pathname:"/privacy-policy/",
-                  query:{darkMode:darkMode},
-                  hash:'terms'
-                 }} ><a className={styles.aFooter}>Terms</a></Link>
-              </Typography>
-            </Grid>
-
-            <Grid item xs={12} lg={6} >
-              <Typography variant="body1">
-                <a className={styles.aFooter} href="#FLV">Intro</a>
-              </Typography>
-              <Typography variant="body1">
-              <a className={styles.aFooter} href="#P">Project</a>
-              </Typography>
-              <Typography variant="body1">
-                <a className={styles.aFooter} href="#UG">Use Guide</a>
-              </Typography>
-            </Grid>
-          </Grid>
-          
         </Grid>
 
       </Grid>

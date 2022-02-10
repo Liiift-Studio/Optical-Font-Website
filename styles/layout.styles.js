@@ -86,17 +86,12 @@ export const body_container={
 
 }
 export const copy_container ={
-    // pl: {xs:'6vw', md:'2vw',lg:'10vw'},
-    pl:'1vw',
-    pr: {xs:'1vw', md:'7vw',},
-    justifyContent: 'center',
-    
+    pb:'5rem'
 }
 export const header ={
     display:"flex",
-    justifyContent:{md:"start",sm:"start",xs:"start"},
+    justifyContent:'start',
     px:{md:0,sm:4,xs:2},
-    pt:"3.5rem",
     pb:"2rem"
 }
 export const copy ={
@@ -176,7 +171,7 @@ export const footer_container={
     bgcolor:"background.footer",
     pt:'8vh',
     pb:'3vh',
-    px:{lg:'4vw'},
+    px:'6vw',
     borderColor:"background.footerBorder",
-    textAlign:{xs:'center',lg:'left'},
+    textAlign:{xs:'left',lg:'left'},
 }

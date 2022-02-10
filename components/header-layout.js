@@ -26,7 +26,7 @@ import { dm_icon, header_container, logo_container, logo_container_mobile } from
 
 
 
-export default function HeaderLayout({darkMode, changeDarkMode, children }) {
+export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, children }) {
 
     return(
         <>
@@ -36,11 +36,11 @@ export default function HeaderLayout({darkMode, changeDarkMode, children }) {
                         {/* Mobile Logo */}
 
                         <Grid item xs={6} pt={5}  pr={1} display={{xs:'flex', sm:'none'}}>
-                            <IconButton href="/" aria-labelledby='logotxt' justifyContent='flex-start' align={'left'}>
+                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' align={'left'}>
                                 <Image id='logotxt' src={darkMode? logoTextDark:logoText} alt='Optical project logo'/>
                             </IconButton>
                         </Grid>
-                        <Grid item xs={6} pt={5} justifyContent='flex-end' display={{xs:'flex', sm:'none'}}>
+                        <Grid item xs={6} pt={5} justifycontent='flex-end' display={{xs:'flex', sm:'none'}}>
                             <IconButton aria-labelledby='cusor'>
                                 <Image id='cursor' src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.'/>
                             </IconButton>
@@ -55,17 +55,17 @@ export default function HeaderLayout({darkMode, changeDarkMode, children }) {
                         </Grid>
                         <Grid container item sm={6} md={6} sx={{display:'flex',justifyContent:'end'}}>
                             <Grid container item xs={'auto'}  display={{xs:'none', sm:'none', md:'flex'}} sx={{alignItems:'center',mr:2}}>
-                                <Button aria-labelledby='About' variant="outlined" href="#FLV">
-                                        <Typography id='About' variant='h2' alt="About" sx={{position:'relative',top: '.1rem',}}>About</Typography>
+                                <Button aria-labelledby='About' variant="outlined" href="#About" onClick={aboutClick}>
+                                    <Typography variant='h2' alt="About" sx={{position:'relative',top: '.1rem',}}>About</Typography>
                                 </Button>
                             </Grid>
                             <Grid container item xs={'auto'}>
                                 <Grid container item xs={'auto'}  display={{xs:'none', sm:'flex'}} sx={{alignItems:'center',mr:2}}>
                                     <Button aria-labelledby='mode' variant ="outlined" onClick={changeDarkMode}>
                                         {(darkMode ? 
-                                            <Typography id='About' variant='h2' alt="LightMode" sx={{position:'relative',top: '.1rem',}}>Light&nbsp;Mode</Typography>
+                                            <Typography variant='h2' alt="LightMode" sx={{position:'relative',top: '.1rem',}}>Light&nbsp;Mode</Typography>
                                         :
-                                            <Typography id='About' variant='h2' alt="DarkMode" sx={{position:'relative',top: '.1rem',}}>Dark&nbsp;Mode</Typography>
+                                            <Typography variant='h2' alt="DarkMode" sx={{position:'relative',top: '.1rem',}}>Dark&nbsp;Mode</Typography>
                                         )}
                                     </Button>
                                 </Grid>
