@@ -1,10 +1,9 @@
 import styles from '../styles/layout.module.css'
 import React, { createRef, useEffect, useState } from "react"
 import Image from 'next/image'
-import Link from "next/link";
+import {Link} from '@mui/material'
 
 import {ToggleButton,ToggleButtonGroup, Icon,IconButton, Grid, Box, CssBaseline, Button, Typography, List, ListItem, ListItemButton, ListItemText, ListItemIcon} from '@mui/material/'
-import { Waypoint } from 'react-waypoint';
 import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
 
 import {buttonDarkT, darkTheme, lightTheme} from '../src/themes'
@@ -12,9 +11,11 @@ import logo from '../public/images/logo.svg'
 import logoDark from '../public/images/logoDark.svg'
 
 import FooterLayout from '../components/footer-layout'
-import {dm_icon, header_container,logo_container, body_container, circle, copy, copy_container, header, img_container_ext } from "../styles/layout.styles";
+import {dm_icon, header_container,logo_container, content_container, circle, copy, copy_container, header, img_container_ext, menu_container, focusStyle } from "../styles/layout.styles";
 
 import { useRouter } from 'next/router'
+
+import NextLink from 'next/link'
 
 export default function Home({ children}) {
   // lightSwitch = lightSwitch || true;
@@ -40,53 +41,53 @@ export default function Home({ children}) {
   }
 
   const menuItemStyle = (id) =>{
-      var circle = false;
-      if(id===section){
-          circle = true;
-      }
-      var style = {
-          position:'relative',
-          pb:'1.1rem',
-          ':before': menuCircle(circle),
-          ':hover': {
-              cursor:'pointer',
-          },
-          ':hover:after': {
-              content:"''",
-              position:'absolute',
-              bgcolor:'text.main',
-              transformOrigin:'center center',
-              top:'.35rem',
-              left:'-1.5em',
-              width :'.7em',
-              height:'.7em',
-              borderRadius:"100%",
-              pt:.3,
-              mb:.75, 
-          }
+    var circle = false;
+    if(id===section){
+        circle = true;
+    }
+    var style = {
+        display:'flex',
+        position:'relative',
+        p:0,
+        mb:'1.1rem',
 
-      }
-      return style
-  };
+        '&:before': menuCircle(circle),
+        '&:hover:after': {
+            content:"''",
+            position:'absolute',
+            bgcolor:'text.primary',
+            transformOrigin:'center center',
+            top:'.35rem',
+            left:'-1.5em',
+            width :'.7em',
+            height:'.7em',
+            borderRadius:"100%",
+            pt:.3,
+            mb:.75, 
+        }
 
-  const menuCircle = (state) => {
-      var style = {
-          content:"''",
-          // display:'hidden',
-          opacity: (state ? '1' : '0'),
-          position:'absolute',
-          bgcolor:'text.main',
-          transformOrigin:'center center',
-          top:'.35rem',
-          left:'-1.5em',
-          width :'.7em',
-          height:'.7em',
-          borderRadius:"100%",
-          pt:.3,
-          mb:.75,
-      }
-      return style;
-  };
+    }
+    return style
+};
+
+const menuCircle = (state) => {
+    var style = {
+        content:"''",
+        // display:'hidden',
+        opacity: (state ? '1' : '0'),
+        position:'absolute',
+        bgcolor:'text.primary',
+        transformOrigin:'center center',
+        top:'.35rem',
+        left:'-1.5em',
+        width :'.7em',
+        height:'.7em',
+        borderRadius:"100%",
+        pt:.3,
+        mb:.75,
+    }
+    return style;
+};  
 
   const handleScroll = () =>{
     try{
@@ -140,17 +141,17 @@ useEffect(()=>{
             <ThemeProvider theme={chooseTheme()}>
               <CssBaseline/>
               <Grid container sx={header_container}>
-                <Grid item container direction ="row" >
-                  <Grid container item  xs={8} sm={6} md={6} justifyContent={{xs:'center', sm:'center', md:'flex-start'}}>
+                <Grid item container direction ="row">
+                
+                <Grid container item  xs={8} sm={6}  justifyContent={{xs:'center', sm:'center', md:'flex-start'}}>
                     <Grid container item xs={8} md={4} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
-                        <IconButton href="/"
-                        sx={logo_container} >
+                        <IconButton href="/" sx={logo_container} >
                             <Image  src={darkMode? logoDark:logo}/>
                         </IconButton>
                     </Grid>
                   </Grid>
-                  <Grid container item  display={'flex'} xs={4} sm={4} md={5} justifyContent="flex-end"  alignItems="center" >
-                    <Link href={{
+                  <Grid container item  display={'flex'} xs={4} sm={6} justifyContent="flex-end"  alignItems="center" >
+                    <NextLink href={{
                     pathname:"/",
                     query:{darkMode:darkMode},
                     }}>
@@ -162,71 +163,39 @@ useEffect(()=>{
                               alt="About">
                               home</Typography>
                       </Button>
-                      </Link>
+                      </NextLink>
                   </Grid>
-                  {/* <Grid container item  display={{xs:'none', sm:'flex'}} sm={2} md={1} justifyContent="flex-end" alignItems="center">
-                      {( lightSwitch ) ? (
-                      <IconButton
-                          onClick={changeDarkMode}
-                          >
-                              {(darkMode ? <Image src={lightIcon} alt="Light Mode"
-                                              sx={dm_icon}/> :
-                                            <Image src={darkIcon} alt="Dark Mode"
-                                            sx={dm_icon}
-                                            />)}
-                      </IconButton>
-                      ) : (<></>)}
-                  </Grid> */}
                 </Grid>
               </Grid>
-
-              <Grid container item sm={12} sx={{
-            position:'relative',
-            px:{xs:'1vw',lg:'4vw'},
-            pt:{sm:8},
-            pb:{sm:12},
-            
-    }}>
+    <Grid container item sm={12} sx={content_container}>
         {/* Menu */}
-        <Grid item container sm={4} display={{xs:'none', md:'flex'}} sx={{
-            pl: '2vw',
-            pt: '0%',
-            top:'5vh',
-            position: '-webkit-sticky',
-            position: 'sticky',
-            justifyContent: 'flex-start',
-            height :'100%',
-            // overflow: 'hidden',
-            width: '100%',
-            mb:'5%',
-            display:{xs:'none', md:'flex'}
-        }}>
+        <Grid item container sm={4} display={{xs:'none', md:'flex'}} sx={menu_container}>
             {/* menu */}
-            <Grid container item onClick={()=>clickSet('Privacy Policy')} sx={menuItemStyle('Privacy Policy')}>
-                <Link  href="#Privacy" color='inherit' underline='none' sx={{width:'100%'}}>
-                    <Typography variant="h3">
-                    PRIVACY POLICY
+            <Grid container item onClick={()=>clickSet('Privacy Policy')} sx={menuItemStyle('Privacy Policy')} >
+                <Link  href="#Privacy" color='inherit' underline='none' sx={focusStyle}>
+                    <Typography variant="h3" padding='0'   sx={{display:'flex',alignItems:'center',}}>
+                        PRIVACY&nbsp;POLICY
                     </Typography>
-                    </Link>
+                </Link>
 
             </Grid>
             <Grid container item onClick={()=>clickSet('Data Collection')} sx={menuItemStyle('Data Collection')}>
-                <Link  href="#Data" color='inherit' underline='none' sx={{width:'100%'}}>
-                <Typography variant="h3">
-                  DATA COLLECTION
+                <Link  href="#Data" color='inherit' underline='none' sx={focusStyle} >
+                <Typography variant="h3" padding='0'    sx={{display:'flex',alignItems:'center'}}>
+                  DATA&nbsp;COLLECTION
                 </Typography>
                 </Link>
             </Grid>
             <Grid container item onClick={()=>clickSet('Terms')} sx={menuItemStyle('Terms')}>
-                    <Link  href="#Terms" color='inherit' underline='none' sx={{width:'100%'}}>
-                <Typography variant="h3">
-                    TERMS & CONDITIONS
+                    <Link  href="#Terms" color='inherit' underline='none' sx={focusStyle} >
+                    <Typography variant="h3" padding='0'    sx={{display:'flex',alignItems:'center'}}>
+                    TERMS&nbsp;& CONDITIONS
                 </Typography>
                     </Link>
             </Grid>
             <Grid container item onClick={()=>clickSet('Contact')} sx={menuItemStyle('Contact')}>
-                <Link  href="#Contact" color='inherit' underline='none' sx={{width:'100%'}}>
-                <Typography variant="h3">
+                <Link  href="#Contact" color='inherit' underline='none' sx={focusStyle} >
+                <Typography variant="h3" padding='0'    sx={{display:'flex',alignItems:'center'}}>
                     CONTACT
                 </Typography>
                 </Link>
@@ -237,13 +206,10 @@ useEffect(()=>{
         </Grid>
 
         {/* Copy */}
-        <Grid item container md={8} alignItems="top" sx={{ 
-            pl:'1vw', 
-            pr: {xs:'1vw', md:'7vw',}, 
-            justifyContent: 'center',
-            }}>
-                <Grid item container sx={copy_container}>
-                <section id="Privacy" ref={privacyRef}>
+        <Grid item container md={8} alignItems="top">
+            <Grid item container sx={copy_container} >
+                <Box id="Privacy" ref={privacyRef} tabIndex={0} sx={focusStyle}>
+                {/* <section id="Privacy" ref={privacyRef}> */}
                     <Grid item container sx={header}>
                         <span>
                           <Typography variant ='h3'> 
@@ -254,7 +220,7 @@ useEffect(()=>{
                         </Typography>
                         </span>
                     </Grid>
-                </section>
+                {/* </section> */}
                     <Grid item container sx={copy}>
                         <Typography variant='body1' display ="block">
                           <p>
@@ -269,7 +235,15 @@ useEffect(()=>{
                           <p>
                           We reserve the right, at our discretion, to amend this Privacy Policy at any time without prior individual notice. The date on which this Privacy Policy was last amended is shown at the top of this policy. You are responsible for verifying whether any amendments have been made and therefore we ask that you periodically check the date and review this Privacy Policy for the latest information on our privacy practices. If you object to any amendments, please stop using the Service, otherwise, your continued use will be taken as your consent to such amendments.
                           </p>
-                          <section id="Data" ref={dataRef}>
+                        </Typography>
+                    </Grid>
+                    </Box>
+    
+
+                    <Grid item container sx={copy}>
+                        <Typography variant='body1' display ="block">
+                    <Box id="Data" ref={dataRef} tabIndex={0} sx={focusStyle}>
+                          {/* <section > */}
                           <p>
 
                           1. INFORMATION WE DO NOT COLLECT
@@ -336,8 +310,10 @@ E-mail: tyler@access-font.com
                           <p>
                           If, having shared your concerns with us, you are not satisfied with our answers, you may file a complaint with a privacy regulator, such as the Office of the Privacy Commissioner of Canada by mail at 30 Victoria Street Gatineau, Quebec K1A 1H3 or by calling 1 800 282 1376.
                           </p>
-                          </section>
-                          <section id="Terms" ref ={termsRef}>
+                          {/* </section> */}
+                          </Box>
+                          <Box id="Terms" ref ={termsRef} sx={focusStyle} tabIndex={0}>
+                          {/* <section id="Terms" ref ={termsRef}> */}
                           <p>
                           TERMS AND CONDITIONS
                           </p>
@@ -506,8 +482,11 @@ The laws of the Country, excluding its conflicts of law rules, shall govern this
                           <p>
                           By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service. 
                           </p>
-                          </section>
-                          <section id='Contact' ref={contactRef}>
+                          {/* </section> */}
+                          </Box>
+                          <Box id='Contact' ref={contactRef} sx={focusStyle} tabIndex={0}>
+                    
+                          {/* <section id='Contact' ref={contactRef}> */}
                           <p>
                           Contact Us
                           </p>
@@ -517,8 +496,8 @@ The laws of the Country, excluding its conflicts of law rules, shall govern this
                           <p>
                           By email: Tyler@opticalfont.com
                           </p>
-                          </section>
-
+                          {/* </section> */}
+                            </Box>
                         </Typography>
                     </Grid>
                 </Grid>

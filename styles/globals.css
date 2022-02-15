@@ -32,3 +32,18 @@ div[class^="layout_circle__"], div[class*=" layout_circle__"] {
   left: 2rem;
   top: 1.2rem;
 }
+
+.sectionFocus:focus-visible{
+  padding:1rem;
+  border-radius: 5px;
+  outline: 5px solid black;
+
+}
+.linkFocus:focus-visible{
+  padding:.25rem;
+  margin:.25rem;
+  
+  border-radius: 5px;
+  outline: 5px solid black;
+
+}

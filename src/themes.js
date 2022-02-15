@@ -102,7 +102,7 @@ export let lightTheme = createTheme({
 			main: buttonText,
 		},
 		text: {
-			main: black,
+			primary: black,
 			link: '#4A4E58',
 		},
 		background: {
@@ -140,7 +140,13 @@ export let lightTheme = createTheme({
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
 					},
-					"&.Mui-focusVisible": {
+					// "&:focus": {
+					// 	border: '7px solid white',
+					// 	boxShadow:'black 0px 0px 0px 8px',
+					// 	color: yellow,
+					// 	backgroundColor: black,
+					// },
+					"&.Mui-focusVisible":{
 						border: '7px solid white',
 						boxShadow:'black 0px 0px 0px 8px',
 						color: yellow,
@@ -303,7 +309,7 @@ export let darkTheme = createTheme({
 	palette: {
 		mode: "dark",
 		text: {
-			main: white,
+			primary: white,
 			link:'#C3D0EF',
 		},
 		secondary: {
@@ -323,8 +329,8 @@ export let darkTheme = createTheme({
 				root: {
 				},
 				outlined: {
-					Width: {xs:"156px",sm:"152px" },
-					Height: {xs:"53px", sm:"53px"},
+					width: {xs:"156px",sm:"152px" },
+					height: {xs:"53px", sm:"53px"},
 					backgroundColor: "transparent",
 					color: white,
 					border: ' none',
@@ -336,11 +342,17 @@ export let darkTheme = createTheme({
 						boxShadow:'yellow 0px 0px 0px 3px',
 						border:'none',
 					},
-					"&:focus": {
-						border: '7px solid black',
-						boxShadow:'yellow 0px 0px 0px 8px',
-						backgroundColor: yellow,
-						color: black,
+					// "&:focus": {
+					// 	border: '7px solid black',
+					// 	boxShadow:'yellow 0px 0px 0px 8px',
+					// 	backgroundColor: yellow,
+					// 	color: black,
+					// },
+					"&.Mui-focusVisible":{
+							border: '7px solid black',
+							boxShadow:'yellow 0px 0px 0px 8px',
+							backgroundColor: yellow,
+							color: black,
 					},
 					h2: {
 						position:"relative",

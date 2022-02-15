@@ -5,8 +5,7 @@ import { flexbox } from "@mui/system"
 export const header_container={
     height: {xs:'100px',sm:'200px'},
     // pt:{xs:'50px',sm:'100px'},
-    px:{xs:'6vw', lg:'9vw'},
-    verticalAlign: 'bottom',
+    px:{xs:'12vw',md:'6vw'},
     alignItems: 'flex-end',
 }
 export const dm_icon ={
@@ -14,7 +13,7 @@ export const dm_icon ={
 }
 
 export const logo_container={
-    p: 2,
+    py: 2,
     position:'relative',
     fontSize:{lg:'1.2rem',md:'1.1rem',sm:'1rem',xs:'.75rem'},
     height: '100%',
@@ -80,90 +79,64 @@ export const img_container_ext={
     justifyContent:"center",
     maxWidth:{xs:'40%',lg:'40%',xl:'40%'},
 }
-export const body_container={
-    px:{xs:'1vw',lg:'4vw'},
+export const content_container={
+    position:'relative',
+    px:{xs:'12vw',md:'6vw'},
     pt:{sm:8},
+    pb:{sm:12},
 
 }
+
+
 export const copy_container ={
-    pb:'5rem'
+    pb:'5rem',
+    display:'flex',
+    alignContent:'center',
+    '&:focus-visible':{
+        p:'1rem',
+        mt:'1rem',
+        mb:'4rem',
+        borderRadius:'5px',
+        border: '4px solid',
+        outline:'none'
+    },
 }
 export const header ={
     display:"flex",
     justifyContent:'start',
-    px:{md:0,sm:4,xs:2},
     pb:"2rem"
 }
 export const copy ={
     // diplay"flex
     justifyContent:{md:"start",sm:"center",xs:"center"},
-    px:{md:0,sm:4,xs:2},
     maxWidth: {xs:"750px", lg:"900px"}
 }
-export const circle ={
-    alignContent:"center",
-    bgcolor:'text.main',
-    // bgcolor:'white',
-    color:'text.main',
-    width :'.7em',
-    height:'.7em',
-    borderRadius:"50%",
-    pt:.3,
-    mb:.75,
-}
-export const circleH ={
-    display:"none",
-    alignContent:"center",
-    bgcolor:'text.main',
-    // bgcolor:'white',
-    color:'text.main',
-    width :'.7em',
-    height:'.7em',
-    borderRadius:"50%",
-    pt:.3,
-    mb:.75,
-    "&:hover": {
-        display:"flex",
+export const focusStyle = {
+    '&:focus-visible':{
+        m: '.25rem',
+        p:'.1em .2em',
+        borderRadius:'5px',
+        outline: '4px solid',
     },
 }
 
-export const circle2 ={
-    alignContent:"center",
-    bgcolor:'text.main',
-    // bgcolor:'white',
-    color:'text.main',
-    width :'.3em',
-    height:'.3em',
-    borderRadius:"100%",
-    
-    pt:.3,
-    mb:.75,
-    mt:1.75,
-    ml:{xs:5,sm:4},
-    
-}
 
 export const listItems={
     display:'flex',
     alignItems:'start',
 }
-//left menu
-
-//?? stick not working -> still using css for this rn
-export const menuButtons_container={
-    pl: '2vw',
+export const menu_container={
     pt: '0%',
+    top:'5vh',
     position: '-webkit-sticky',
     position: 'sticky',
     justifyContent: 'flex-start',
     height :'100%',
-    overflow: 'hidden',
+    // overflow: 'hidden',
     width: '100%',
     mb:'5%',
     display:{xs:'none', md:'flex'}
-
 }
-
 
 //FOOTER
 export const footer_container={

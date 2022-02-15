@@ -12,8 +12,8 @@ export default function FooterLayout({darkMode, children }) {
 
   return (
     <>
-      <Grid container sx={footer_container} spacing={4}>
-        <Grid item xs={6} lg={4} pb={5}>
+      <Grid container sx={footer_container} >
+        <Grid item xs={6} md={4} pb={5}>
           <Typography pb={2} variant="h3">Site Map</Typography>
           <Grid container spacing={4}>
             <Grid item xs={12} lg={6} >
@@ -25,10 +25,11 @@ export default function FooterLayout({darkMode, children }) {
                   pathname:'/',
                   hash:'#About',
                   query:{darkMode:darkMode}
+                  
                 }}><a className={styles.aFooter}>About</a></Link>
               </Typography>
               <Typography variant="body1">
-                <Link href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"><a className={styles.aFooter}>Download Extension</a></Link>
+                <Link href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"><a className={styles.aFooter}>Download&nbsp;Extension</a></Link>
               </Typography>
               <Typography variant="body1">
                 <Link href={{
@@ -46,7 +47,7 @@ export default function FooterLayout({darkMode, children }) {
                 <Link href={{
                   pathname:"/privacy-policy/",
                   query:{darkMode:darkMode},
-                  }}><a className={styles.aFooter}>Privacy Policy</a></Link>
+                  }}><a className={styles.aFooter}>Privacy&nbsp;Policy</a></Link>
               </Typography>
               <Typography variant="body1">
                 <Link href={{
@@ -59,25 +60,25 @@ export default function FooterLayout({darkMode, children }) {
           </Grid>
           
         </Grid>
-        <Grid item xs={6} lg={4} pb={5} >
+        <Grid item xs={6} md={8} >
           <Typography pb={2} variant="h3">Partners</Typography>
           <Typography variant="body1">                  
-            <a rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" className={styles.aFooter}>The Accessible Technology Program</a>   
+            <a rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" className={styles.aFooter}>The&nbsp;Accessible&nbsp;Technology&nbsp;Program</a>   
           </Typography>
           <Typography variant="body1">   
-            <a className={styles.aFooter} href="https://disabilityalliancebc.org/" target="_blank" rel="noopener">Disibility Alliance BC</a>   
+            <a className={styles.aFooter} href="https://disabilityalliancebc.org/" target="_blank" rel="noopener">Disibility&nbsp;Alliance&nbsp;BC</a>   
           </Typography>
           <Typography variant="body1">   
-            <a href="https://www.ecuad.ca/" target="_blank" rel="noopener" className={styles.aFooter}>Emily Carr University</a>   
+            <a href="https://www.ecuad.ca/" target="_blank" rel="noopener" className={styles.aFooter}>Emily&nbsp;Carr&nbsp;University</a>   
           </Typography>
           <Typography variant="body1">   
-            <a href="https://research.ecuad.ca/healthdesignlab/" target="_blank" rel="noopener" className={styles.aFooter}>The Health Design Lab at ECU</a>   
+            <a href="https://research.ecuad.ca/healthdesignlab/" target="_blank" rel="noopener" className={styles.aFooter}>The&nbsp;Health&nbsp;Design&nbsp;Lab&nbsp;at&nbsp;ECU</a>   
           </Typography>
           <Typography variant="body1">   
-            <a href="https://shumka.ecuad.ca/" target="_blank" rel="noopener" className={styles.aFooter}>Shumka Centre at ECU</a>   
+            <a href="https://shumka.ecuad.ca/" target="_blank" rel="noopener" className={styles.aFooter}>Shumka&nbsp;Centre&nbsp;at&nbsp;ECU</a>   
           </Typography>
           <Typography variant="body1">   
-            <a href="https://www.liiift.studio/" target="_blank" rel="noopener" className={styles.aFooter}>Liiift Studio</a>
+            <a href="https://www.liiift.studio/" target="_blank" rel="noopener" className={styles.aFooter}>Liiift&nbsp;Studio</a>
           </Typography>
         </Grid>
 
