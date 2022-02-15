@@ -229,7 +229,7 @@ useEffect(()=>{
                     </Grid>
                     </Box>
     
-                    <Box id="Foundations" ref={foundationsRef} tabIndex={0} sx={focusStyle}>
+                    <Box id="Foundations" ref={foundationsRef} tabIndex={0} sx={focusStyle} mt="2rem">
                       <Grid item container sx={header}>
                             <Typography variant ='h3'> 
                             2. RESEARCH FOUNDATIONS
@@ -262,7 +262,7 @@ useEffect(()=>{
                           </Typography>
                         </Grid>
                       </Box>
-                      <Box id="Feedback" ref ={feedbackRef} sx={focusStyle} tabIndex={0}>
+                      <Box id="Feedback" ref ={feedbackRef} sx={focusStyle} tabIndex={0} mt="2rem">
                       <Grid item container sx={header}>
                             <Typography variant ='h3'> 
                             3. FEEDBACK
@@ -271,7 +271,7 @@ useEffect(()=>{
                       <Grid item container sx={copy}>
                           <Typography variant='body1' display ="block">
                           <p>
-                          TERMS AND CONDITIONS
+                          FILLER
                           </p>
                           <p>
                           Last updated: October 28, 2021
@@ -441,7 +441,7 @@ The laws of the Country, excluding its conflicts of law rules, shall govern this
                           </Typography>
                         </Grid>
                       </Box>
-                      <Box id='Refinement' ref={refinementRef} sx={focusStyle} tabIndex={0}>
+                      <Box id='Refinement' ref={refinementRef} sx={focusStyle} tabIndex={0} mt="2rem">
                         <Grid item container sx={header}>
                               <Typography variant ='h3'> 
                               3. REFINEMENT
