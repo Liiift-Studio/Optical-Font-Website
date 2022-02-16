@@ -30,7 +30,6 @@ export const logo_container_mobile={
 }
 
 //Landing - this could be condensed into just 1 container function & 1 img container
-// 
 
 export const landing_container={
     px:{md:'6vw',lg:'9vw'},
@@ -79,14 +78,13 @@ export const img_container_ext={
     justifyContent:"center",
     maxWidth:{xs:'40%',lg:'40%',xl:'40%'},
 }
+
 export const content_container={
     position:'relative',
     px:{xs:'12vw',md:'6vw'},
     pt:{sm:8},
     pb:{sm:12},
-
 }
-
 
 export const copy_container ={
     pb:'5rem',

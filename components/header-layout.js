@@ -46,7 +46,9 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
                                     <Typography variant='h2' alt="About" sx={{position:'relative',top: '.1rem',}}>About</Typography>
                                 </Button>
                             </Grid>
-                            <Grid container item xs={'auto'}>
+                            
+                            {/* dark mode button */}
+                            {/* <Grid container item xs={'auto'}>
                                 <Grid container item xs={'auto'}  display={{xs:'none', sm:'flex'}} sx={{alignItems:'center',mr:2}}>
                                     <Button aria-labelledby='mode' variant ="outlined" onClick={changeDarkMode}>
                                         
@@ -57,9 +59,8 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
                                         )}
                                     </Button>
                                 </Grid>
-                            </Grid>
+                            </Grid> */}
                         </Grid>
-                        {/* <Grid item sm={1}  display={{xs:'none', sm:'flex'}}/> */}
 
                     </Grid>
                 </Grid>

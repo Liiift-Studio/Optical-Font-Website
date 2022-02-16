@@ -48,7 +48,7 @@ parentTheme.typography.body1 = {
 };
 
 parentTheme.typography.h2 = {
-	fontWeight: 120,
+	fontWeight: 130,
 	fontFamily: "Optical",
 	fontSize: '1.5rem',
 };
@@ -153,12 +153,13 @@ export let lightTheme = createTheme({
 						backgroundColor: black,
 					},
 					h2: {
+						...parentTheme.typography.h2,
 						position:"relative",
 						top: "0.1em",
 						alignContent: "center",
 					},
 				},
-				stringPrimary: {
+				string: {
 					width: {xs:"156px", md:"191px"},
 					height: {xs:"53px", md:"63px"},
 					backgroundColor: black,
@@ -176,6 +177,7 @@ export let lightTheme = createTheme({
 					},
 
 					h2: {
+					...parentTheme.typography.h2,
 					position:"relative",
 					top: "0.1em",
 					alignContent: "center",
@@ -183,44 +185,7 @@ export let lightTheme = createTheme({
 				},
 			},
 		},
-		MuiListItemButton: {
-			defaultProps: {
-				disableFocusRipple: true,
-				disableRipple: true,
-			},
-			styleOverrides: {
-				root: {
-					justifyContent: "flex-start",
-					"&.Mui-focusVisible": {
-						boxShadow:'black 0px 0px 0px 4px',
-						borderRadius: 50,
-						backgroundColor: 'transparent',
-						color: black,
-					},
-					"&:hover": {
-						backgroundColor: 'transparent',
-					},
-				},
-			},
-		},
-		MuiListItemText: {
-			styleOverrides: {
-				root:{
-					position:"relative",
-					top: "0.1em",
-					alignContent: "center",
-				},
-			},
-		},
-		MuiListItemIcon: {
-			styleOverrides: {
-				root: {
-					position:"relative",
-					top: "0.1em",
-					alignContent: "center",
-				},
-			},
-		},
+
 		MuiCssBaseline: {
 			styleOverrides: {
 				body: {
@@ -262,43 +227,7 @@ export let lightTheme = createTheme({
 				},
 			},
 		},
-		MuiOutlinedInput: {
-			disabled: true,
-			styleOverrides: {
-				root: {
-					backgroundColor: "transparent",
-					border: "none",
-					outline: "none",
-				}
-			}
-		},
-		MuiToggleButton:{
-			styleOverrides: {
-				root: {
-					color: black,
-					border: "none",
-					'&.Mui-selected': {
-						backgroundColor: "transparent",
-						'&:hover': {
-							backgroundColor: "transparent",
-						},
-					},
-					'&:hover': {
-						backgroundColor: "transparent",
-						color: black,
-					},
-					"&.Mui-focusVisible": {
-						'.MuiTypography-root': {
-							padding: '0.5em',
-							boxShadow:'black 0px 0px 0px 4px',
-							borderRadius: 100,
-							backgroundColor: 'transparent',
-							color: black,
-						},
-					},
-				},
-			},
-		},
+	
 	},
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -354,11 +283,7 @@ export let darkTheme = createTheme({
 							backgroundColor: yellow,
 							color: black,
 					},
-					h2: {
-						position:"relative",
-						top: "0.1em",
-						alignContent: "center",
-					},
+
 				},
 				string: {
 					Width: {xs:"156px", sm:"191px"},
@@ -378,67 +303,25 @@ export let darkTheme = createTheme({
 						color: black,
 						'&:hover': {
 							h2: {
+								...parentTheme.typography.h2,
+								position:"relative",
+								top: "0.1em",
+								alignContent: "center",
 								color: black,
 							},
 						},
 					},
 					h2: {
-						color: black,
+						...parentTheme.typography.h2,
 						position:"relative",
 						top: "0.1em",
 						alignContent: "center",
-					},
-				},
-				text: {
-					'&:hover': {
-						alignContent:"center",
-						bgcolor:'text.main',
-						// bgcolor:'white',
-						color:'text.main',
-						width :'.7em',
-						height:'.7em',
-						borderRadius:"50%",
-						pt:.3,
-						mb:.75,
-					}
-				}
-			},
-		},
-		MuiListItemButton: {
-			styleOverrides: {
-				defaultProps: {
-					disableFocusRipple: true,
-				},
-				root: {
-					justifyContent: "flex-start",
-					"&.Mui-focusVisible": {
-						backgroundColor: 'transparent',
-						boxShadow:'white 0px 0px 0px 4px',
-						borderRadius: 50,
-						color: white,
-					},
-					"&:hover": {
-						backgroundColor: "transparent",
+						color: black,
 					},
 				},
 			},
 		},
-		MuiListItemText: {
-			styleOverrides: {
-					position:"relative",
-					top: "0.1em",
-					alignContent: "center",
-			},
-		},
-		MuiListItemIcon: {
-			styleOverrides: {
-				root: {
-					position:"relative",
-					top: "0.1em",
-					alignContent: "center",
-				},
-			},
-		},
+
 		MuiIconButton: {
 			defaultProps: {
 				disableRipple: true,
@@ -473,32 +356,7 @@ export let darkTheme = createTheme({
 				},
 			},
 		},
-		MuiToggleButton:{
-			styleOverrides: {
-				root: {
-					border: "none",
-					'&.Mui-selected': {
-						backgroundColor: "transparent",
-						'&:hover': {
-							backgroundColor: "transparent",
-						},
-					},
-					'&:hover': {
-						backgroundColor: "transparent",
-						color: white,
-					},
-					"&.Mui-focusVisible": {
-						'.MuiTypography-root': {
-							padding: '0.5em',
-							boxShadow:'white 0px 0px 0px 4px',
-							borderRadius: 100,
-							backgroundColor: 'transparent',
-							color: white,
-						},
-					},
-				},
-			},
-		},
+
 	
 	},
 });
@@ -515,10 +373,11 @@ darkTheme.typography.body1 = {
 
 darkTheme.typography.h2 = {
 	...parentTheme.typography.h2,
+	letterSpacing:'.01rem',
 	fontWeight: 120,
 };
 darkTheme.typography.h3 = {
-	...parentTheme.typography.h2,
+	...parentTheme.typography.h3,
 	fontWeight: 130,
 };
 darkTheme.typography.h4 = {

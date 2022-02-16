@@ -228,7 +228,7 @@ return (
                         <Typography variant='body1' display ="block">
                             →How do I install Optical?<br/><br/>Click <Link color="text.link" href="#Install" sx={focusStyle}> Install</Link> to go to the Google Chrome Web Store. Click the blue “Add to Chrome” button at the top right. You’ll see a popup that says Optical will be able to read and change data on websites. In the pop up click the “Add Extension” button to the right. Success! You should be all set. There should be another pop up at the top right, and the Optical Icon (a stylized version of the text select cursor resembling a  capital I) next to your browser website address bar. Click the icon button and get started.
                             <Box sx={{py:'2rem'}}>
-                            <img src="images/FAQ_Install 5.png" width="100%" />
+                            <img src="images/FAQ_Install.svg" width="100%" />
 
                             </Box>
                             
