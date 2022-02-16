@@ -18,14 +18,15 @@ export default function FooterLayout({darkMode, children }) {
           <Grid container spacing={4}>
             <Grid item xs={12} lg={6} >
               <Typography variant="body1">
-                <Link href="/"><a className={styles.aFooter}>Home</a></Link>
+                <Link href={{
+                  pathname:'/',
+                  query:{darkMode:darkMode}}}><a className={styles.aFooter}>Home</a></Link>
               </Typography>
               <Typography variant="body1">
                 <Link href={{
                   pathname:'/',
                   hash:'#About',
                   query:{darkMode:darkMode}
-                  
                 }}><a className={styles.aFooter}>About</a></Link>
               </Typography>
               <Typography variant="body1">
