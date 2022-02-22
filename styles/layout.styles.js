@@ -9,7 +9,8 @@ export const header_container={
     height:'20vh',
     // pt:{xs:'50px',sm:'100px'},
     px:{xs:margin_xs,md:margin_md},
-    py:8,
+    pt:6,
+    pb:10,
     alignItems: 'flex-end',
 }
 export const dm_icon ={
