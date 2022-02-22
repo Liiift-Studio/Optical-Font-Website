@@ -1,11 +1,15 @@
 import { flexbox } from "@mui/system"
 
+
+const margin_xs='12vw';
+const margin_md='6vw';
 //Header Bar
 
 export const header_container={
-    height: {xs:'100px',sm:'200px'},
+    height:'20vh',
     // pt:{xs:'50px',sm:'100px'},
-    px:{xs:'12vw',md:'6vw'},
+    px:{xs:margin_xs,md:margin_md},
+    py:8,
     alignItems: 'flex-end',
 }
 export const dm_icon ={
@@ -32,21 +36,25 @@ export const logo_container_mobile={
 //Landing - this could be condensed into just 1 container function & 1 img container
 
 export const landing_container={
-    px:{md:'6vw',lg:'9vw'},
+    px:{md:margin_md,},
     alignItems:'center',
-    minHeight:'85vh',
+    minHeight:'55vh',
     justifyContent:'center',
 }
 export const landing_container_mobile = {
-    mt: 8,
+    pt: 8,
+    px:margin_xs,
     alignContent:'center',
     justifyContent:'center',
+    minHeight:'80vh',
 }
 
 export const landing_container_tablet = {
     mt:5,
-    minHeight:'85vh',
-    maxWidth:'426px !important',
+    px:margin_xs,
+
+    minHeight:'80vh',
+    // maxWidth:'426px !important',
     alignContent:'center',
     justifyContent:'center',
 }
@@ -54,6 +62,11 @@ export const landing_container_tablet = {
 export const img_container ={
     alignItems:"start",
     justifyContent:"center",
+    pt:2,
+    pb:2,
+    filter: 'drop-shadow(0 0 5rem grey)',
+    display:'flex',
+
     minWidth:'auto',
     minHeight:'auto',
     maxHeight:'auto',
@@ -63,12 +76,20 @@ export const img_container ={
 export const img_container_mobile ={
     pt:2,
     pb:2,
-    minWidth:'326px!important',
-    maxWidth:'326px !important',
+    filter: 'drop-shadow(0 0 5rem grey)',
+    display:'flex',
+    justifyContent:'center',
+
 }
 
 export const img_container_tablet ={
-    width:'426px !important',
+    pt:2,
+    pb:2,
+    // width:'426px !important',
+    display:'flex',
+    justifyContent:'center',
+    filter: 'drop-shadow(0 0 5rem grey)',
+
 }
 
 //COPY (menu)
@@ -81,13 +102,13 @@ export const img_container_ext={
 
 export const content_container={
     position:'relative',
-    px:{xs:'12vw',md:'6vw'},
+    px:{xs:margin_xs,md:margin_md},
     pt:{sm:8},
     pb:{sm:12},
 }
 
 export const copy_container ={
-    pb:'5rem',
+    pb:'3rem',
     display:'flex',
     alignContent:'center',
     '&:focus-visible':{
@@ -102,7 +123,7 @@ export const copy_container ={
 export const header ={
     display:"flex",
     justifyContent:'start',
-    pb:"2rem"
+    pb:4
 }
 export const copy ={
     // diplay"flex
@@ -142,7 +163,7 @@ export const footer_container={
     bgcolor:"background.footer",
     pt:'8vh',
     pb:'3vh',
-    px:'6vw',
+    px:margin_md,
     borderColor:"background.footerBorder",
     textAlign:{xs:'left',lg:'left'},
 }

@@ -15,20 +15,20 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
       {/* DESKTOP */}
       <Grid container item display={{xs: 'none', sm:'none', md: 'flex'}}>
         <Grid container item sx={landing_container}>
-            <Grid container item md={6} sx={img_container}  className={styles.landing_right_container}>
-                <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+            <Grid container item md={6} sx={img_container}  >
+                <Image src={imgSrc}  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
             </Grid>
             <Grid container item md={6} pl={10} display={'block'}>
                 <Typography variant='h1'>
-                  <nobr>Varied fonts for</nobr> <br /> varied vision.
+                  <nobr>Varied fonts for</nobr> <br /> varied vision
                 </Typography>
                 <Button variant="string" href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
                   sx={{
                     my: 2,
                     border: 0,
                     borderRadius: 10,
-                    width: "191px",
-					          height: "63px",
+                    minWidth: "191px",
+					          minHeight: "63px",
                     }}>
 
                     <Typography sx={{position:'relative', top: '.1rem',}} variant="h2" alt="install">
@@ -40,10 +40,10 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
       </Grid>
 
       {/* TABLET */}
-      <Grid container item justifyContent={'center'} display={{ sm: 'flex', xs: 'none', md: 'none' }} >
+      <Grid container item display={{ sm: 'flex', xs: 'none', md: 'none' }} >
         <Grid container item sx={landing_container_tablet} >
 
-          <Grid container item sm={12} justifyContent="center" className={styles.landing_right_container} >
+          <Grid container item sm={12} justifyContent="center"  >
             <Grid item container sx={img_container_tablet}>
               <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. "/>
             </Grid>
@@ -53,20 +53,15 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
             sx={{
               pb: 8,
               pt: 4,
-              maxWidth: '426px',
               justifyContent: 'center',
             }}>
-            <Typography variant='h1'
-              sx={{
-                fontSize: '100vw',
-                textAlign: "center",
-              }}>
-              Varied&nbsp;fonts&nbsp;for<br /> varied vision.
+            <Typography variant='h1'>
+              Varied&nbsp;fonts&nbsp;for<br /> varied vision
             </Typography>
           </Grid>
 
-          <Grid container item sm={12} align={'center'} spacing={2}maxWidth={'426px'}>
-            <Grid container item sm={6}>
+          <Grid container item sm={12} display='flex' justifyContent='center' spacing={2}>
+            <Grid container item sm={6} sx={{display:'flex', justifyContent:'center'}} >
               <Button
                 href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
                 variant="string"
@@ -74,8 +69,8 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
                   my: 1,
                   border: 0,
                   borderRadius: 10,
-                  width: "156px",
-                  height: "53px",
+                  minWidth: "156px",
+                  minHeight: "53px",
                 }}>
                 <Typography variant="h2">
                   Install
@@ -83,7 +78,7 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
               </Button>
             </Grid>
 
-            <Grid container item sm={6}>
+            <Grid container item sm={6} sx={{display:'flex', justifyContent:'center'}} >
               <Button
                 href="#About"
                 variant="outlined"
@@ -91,8 +86,8 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
                 sx={{
                   my: 1,
                   borderRadius: 10,
-                  width: "156px",
-                  height: "53px",
+                  minWidth: "156px",
+                  minHeight: "53px",
                 }}>
                 <Typography variant="h2">
                   About
@@ -106,12 +101,13 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
       {/* MOBILE */}
       <Grid container display={{ xs: 'flex', sm: 'none', md: 'none' }}>
         <Grid container item sx={landing_container_mobile}>
-          <Grid item xs={12} sx={img_container_mobile} className={styles.landing_right_container} >
+          <Grid item xs={12} sx={img_container_mobile}>
               <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
           </Grid>
 
           <Grid item xs={12}
             sx={{
+
               pb: 10,
               minWidth: '326px',
               maxWidth: '426px',
@@ -119,11 +115,11 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
             <Typography variant='h1'
               sx={{               
                 textAlign: "center",
-              }}>Varied&nbsp;fonts&nbsp;for <br/> varied vision.</Typography>
+              }}>Varied&nbsp;fonts&nbsp;for <br/> varied vision</Typography>
           </Grid>
 
-          <Grid container item sm={12} pb={10} align={'center'} justifyContent={'space-around'} maxWidth={'426px'}>
-            <Grid item sm={6}>
+          <Grid container item xs={12} pb={10} justifyContent='center' spacing={2} >
+            <Grid item sx={{display:'flex', justifyContent:'start'}} >
               <Button
                 href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
                 variant="string"
@@ -131,8 +127,9 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
                   my: 1,
                   border: 0,
                   borderRadius: 10,
-                  width: "156px",
-                  height: "53px",
+                  minWidth: "156px",
+                  maxWidth: "53px",
+                  
                 }}>
                 <Typography variant="h2">
                   Install
@@ -140,7 +137,7 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
               </Button>
             </Grid>
 
-            <Grid item sm={6}>
+            <Grid item sx={{display:'flex', justifyContent:'end'}} >
               <Button
                 href="#About"
                 variant="outlined"
@@ -148,8 +145,9 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
                 sx={{
                   my: 1,
                   borderRadius: 10,
-                  width: "156px",
-                  height: "53px",
+                  width:'100%',
+                  minWidth: "156px",
+                  maxWidth: "53px",
                 }}>
                 <Typography variant="h2">
                   About

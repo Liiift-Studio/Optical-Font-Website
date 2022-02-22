@@ -4,7 +4,7 @@ import { createTheme, styled, responsiveFontSizes } from "@mui/material/styles";
 // import opt_dark from './public/images/opt_dark'
 
 const landingBlue = "#CBDDFF";
-const footerBlue = "#C8D8F6";
+const footerBlue = "#E8EFFC";
 const black = "#111111";
 const buttonText = "#111111";
 const buttonBackDark = "#FCFF55";
@@ -51,6 +51,23 @@ parentTheme.typography.h2 = {
 	fontWeight: 130,
 	fontFamily: "Optical",
 	fontSize: '1.5rem',
+	// fontSize: '1.8vw',
+
+	[parentTheme.breakpoints.down("lg")]: {
+		fontSize: '1.5rem',
+		// fontSize: '4vw',
+
+	},
+
+	[parentTheme.breakpoints.down("md")]: {
+		textAlign: "center",
+		fontSize: '1.5rem',
+	},
+	// mobile
+	[parentTheme.breakpoints.down("sm")]: {
+		textAlign: "center",
+		fontSize: "1.25rem",
+	},
 };
 parentTheme.typography.h3 = {
 	fontWeight: 140,
@@ -128,8 +145,9 @@ export let lightTheme = createTheme({
 			styleOverrides: {
 				root: {},
 				outlined: {
-					width: {xs:"156px", md:"152px"},
-					height: {xs:"53px", md:"53px"},
+					// maxWidth: {xs:"156px", md:"152px"},
+					// maxHeight: {xs:"53px", md:"53px"},
+					// width:'100%',
 					backgroundColor: "transparent",
 					color: black,
 					border: "none",
@@ -160,8 +178,8 @@ export let lightTheme = createTheme({
 					},
 				},
 				string: {
-					width: {xs:"156px", md:"191px"},
-					height: {xs:"53px", md:"63px"},
+					// width: {xs:"90px", md:"191px"},
+					// height: {xs:"53px", md:"63px"},
 					backgroundColor: black,
 					color: buttonLightT,
 					boxShadow:'black 0px 0px 0px 4px',
@@ -258,17 +276,17 @@ export let darkTheme = createTheme({
 				root: {
 				},
 				outlined: {
-					width: {xs:"156px",sm:"152px" },
-					height: {xs:"53px", sm:"53px"},
+					maxWidth: {xs:"156px",sm:"152px" },
+					maxHeight: {xs:"53px", sm:"53px"},
 					backgroundColor: "transparent",
 					color: white,
-					border: ' none',
+					border: 'none',
 					boxShadow:'white 0px 0px 0px 4px',
 					borderRadius: 50,
 					"&:hover": {
-						backgroundColor: buttonDarkBG_hover,
+						backgroundColor: yellow,
 						color: buttonDarkT_hover,
-						boxShadow:'yellow 0px 0px 0px 3px',
+						boxShadow:'#FAFB45 0px 0px 0px 3px',
 						border:'none',
 					},
 					// "&:focus": {
@@ -279,26 +297,40 @@ export let darkTheme = createTheme({
 					// },
 					"&.Mui-focusVisible":{
 							border: '7px solid black',
-							boxShadow:'yellow 0px 0px 0px 8px',
+							boxShadow:'#FAFB45 0px 0px 0px 8px',
 							backgroundColor: yellow,
 							color: black,
+							'&:hover': {
+								h2: {
+									...parentTheme.typography.h2,
+									position:"relative",
+									top: "0.1em",
+									alignContent: "center",
+								},
+							},
+					},
+					h2: {
+						...parentTheme.typography.h2,
+						position:"relative",
+						top: "0.1em",
+						alignContent: "center",
 					},
 
 				},
 				string: {
-					Width: {xs:"156px", sm:"191px"},
-					Height: {xs:"53px", sm:"63px"},
+					maxWidth: {xs:"156px", sm:"191px"},
+					maxHeight: {xs:"53px", sm:"63px"},
 					backgroundColor: white,
 					boxShadow:'white 0px 0px 0px 3px',
 					color: black,
 					"&:hover": {
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
-						boxShadow:'yellow 0px 0px 0px 3px',
+						boxShadow:'#FAFB45 0px 0px 0px 3px',
 					},
 					"&.Mui-focusVisible": {
 						border: '7px solid black',
-						boxShadow:'yellow 0px 0px 0px 8px',
+						boxShadow:'#FAFB45 0px 0px 0px 8px',
 						backgroundColor: yellow,
 						color: black,
 						'&:hover': {

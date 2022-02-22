@@ -5,10 +5,12 @@ import Image from 'next/image'
 import {Icon,IconButton, Grid, Box, CssBaseline, Button, Typography, SvgIcon} from '@mui/material/'
 import logo from '../public/images/logo.svg'
 import logoDark from '../public/images/logoDark.svg'
-import logoText from '../public/images/logo-type.png'
-import logoTextDark from '../public/images/logo-type-white.png'
-import cursor from '../public/images/cursor.png'
-import cursorDark from '../public/images/cursor-white.png'
+import logoText from '../public/images/logoType.svg'
+import logoTextDark from '../public/images/logo-type-white.svg'
+// import cursor from '../public/images/cursor.png'
+// import cursorDark from '../public/images/cursor-white.png'
+import cursor from '../public/images/cursorLight_noBG.svg'
+import cursorDark from '../public/images/cursorDark_noBG.svg'
 
 import { dm_icon, header_container, logo_container, logo_container_mobile } from '../styles/layout.styles'
 
@@ -19,19 +21,20 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
                 <Grid container sx={header_container}>
                     <Grid item container direction="row">
                         {/* Mobile Logo */}
-                        {/* <Grid item xs={1}  display={{xs:'flex', sm:'none'}}/> */}
-                        <Grid item xs={6} pt={5}  pr={1} display={{xs:'flex', sm:'none'}}>
-                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' align={'left'}>
-                                <Image id='logotxt' src={darkMode? logoTextDark:logoText} alt='Optical project logo'/>
-                            </IconButton>
+                        
+                        <Grid container item display={{xs:'flex', sm:'none'}}>
+                            <Grid item xs={6} pt={5} px={0} display='flex' sx={{alignItems:'end'}}>
+                                <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' sx={{p:0, width:'100%',borderRadius:0,}}>
+                                    <Image id='logotxt'  src={darkMode? logoTextDark:logoText} alt='Optical project logo'/>
+                                </IconButton>
+                            </Grid>
+                            <Grid item xs={5}/>
+                            <Grid item xs={1} pt={5} justifyContent='flex-end' display='flex'>
+                                <IconButton aria-labelledby='cursor' sx={{px:0,width:'100%',borderRadius:0}}>
+                                    <Image id='cursor' src={darkMode? cursorDark:cursor}  alt='An icon based on the text input cursor symbol.'/>
+                                </IconButton>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={6} pt={5} justifyContent='flex-end' display={{xs:'flex', sm:'none'}}>
-                            <IconButton aria-labelledby='cusor'>
-                                <Image id='cursor' src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.'/>
-                            </IconButton>
-                        </Grid>
-                        {/* <Grid item xs={1}  display={{xs:'flex', sm:'none'}}/> */}
-
 
                         {/* Desktop */}
                         {/* <Grid item sm={1}  display={{xs:'none', sm:'flex'}}/> */}
@@ -42,7 +45,13 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
                         </Grid>
                         <Grid container item sm={6} sx={{display:'flex',justifyContent:'end'}}>
                             <Grid container item xs={'auto'}  display={{xs:'none', sm:'none', md:'flex'}} sx={{alignItems:'center',mr:2}}>
-                                <Button aria-labelledby='About' variant="outlined" href="#About" onClick={aboutClick}>
+                                <Button aria-labelledby='About' variant="outlined" href="#About" onClick={aboutClick} sx={{
+                                    my: 2,
+                                    border: 0,
+                                    borderRadius: 10,
+                                    minWidth: "155px",
+                                    minHeight: "63px",
+                                }}>
                                     <Typography variant='h2' alt="About" sx={{position:'relative',top: '.1rem',}}>About</Typography>
                                 </Button>
                             </Grid>

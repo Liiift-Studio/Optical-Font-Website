@@ -66,7 +66,7 @@ export default function Home({lightSwitch, children }) {
                 <section id="Install">
                 <LandingLayout imgSrc={darkMode ? imgDark : imgLight} aboutClick={aboutClick}/>
                 </section>
-                <MenusLayout darkMode={darkMode} about={about} footerRef={footerRef} />
+                <MenusLayout darkMode={darkMode} about={about} footerRef={footerRef} changeDarkMode={changeDarkMode} />
                 <section id ="Footer" ref={footerRef}>
                 <FooterLayout darkMode ={darkMode}/>
                 </section>

@@ -1,9 +1,9 @@
 import React, { createRef, useEffect, useState } from "react"
-import {Typography , Grid,  Box,Link} from '@mui/material'
+import {Typography , Grid,  Box,Link, Button} from '@mui/material'
 import {content_container, copy, copy_container, focusStyle, header, menu_container, } from "../styles/layout.styles";
 
 
-export default function MenusLayout({children,darkMode,about,footerRef }) {
+export default function MenusLayout({children,darkMode,about,footerRef,changeDarkMode }) {
     const aboutRef = createRef();
     const faqRef = createRef();
     const accessRef = createRef();
@@ -24,11 +24,16 @@ export default function MenusLayout({children,darkMode,about,footerRef }) {
         if(id===section){
             circle = true;
         }
+        var marg = 3;
+        if(id==='SiteMap'){
+            marg = 4.5;
+        }
         var style = {
             display:'flex',
             position:'relative',
             p:0,
-            mb:'1.1rem',
+            mb:marg,
+            cursor:'pointer',
 
             '&:before': menuCircle(circle),
             '&:hover:after': {
@@ -44,7 +49,6 @@ export default function MenusLayout({children,darkMode,about,footerRef }) {
                 pt:.3,
                 mb:.75, 
             }
-
         }
         return style
     };
@@ -137,6 +141,8 @@ export default function MenusLayout({children,darkMode,about,footerRef }) {
 return (
     <>
     <Grid container item sm={12} sx={content_container}>
+        <Grid item container id="About" position='absolute' sx={{top:'1rem'}}/>
+
         {/* Menu */}
         <Grid item container sm={4} display={{xs:'none', md:'flex'}} sx={menu_container}>
             {/* menu */}
@@ -192,14 +198,23 @@ return (
                 SITE MAP
                 </Typography>
                 </Link>
+            </Grid>
 
+            <Grid container item  onClick={changeDarkMode}  sx={menuItemStyle('Mode')} >
+                    <Box sx={focusStyle} tabIndex={0}>
+                    {(darkMode ? 
+                        <Typography variant='h3' alt="LightMode"  sx={{display:'flex',alignItems:'center'}} >Light&nbsp;Mode</Typography>
+                            :
+                            <Typography variant='h3' alt="DarkMode" sx={{display:'flex',alignItems:'center'}}>Dark&nbsp;Mode</Typography>
+                            )}
+                    </Box>           
             </Grid>
             
         </Grid>
 
         {/* Copy */}
-        <Grid item container md={8} alignItems="top" >
-                <Grid item container id="About" ref={aboutRef} tabIndex={0} sx={copy_container}>
+        <Grid item container md={8}  >
+                <Grid item container ref={aboutRef} tabIndex={0} sx={copy_container}>
                 {/* <section id="About" ref={aboutRef} tabIndex={0} className="sectionFocus" > */}
                     <Grid item container sx={header}>
                         <Typography variant ='h3'> 
@@ -217,7 +232,7 @@ return (
                 {/* </section> */}
                 </Grid>
 
-                <Grid item container  id="Faq" ref={faqRef} tabIndex={0}  sx={copy_container}>
+                <Grid item container  id="Faq"  className="anchor" ref={faqRef} tabIndex={0}  sx={copy_container}>
                 {/* <section id="Faq" ref={faqRef} tabIndex={0} className="sectionFocus"> */}
                     <Grid item container sx={header}>
                         <Typography variant ='h3'> 
@@ -226,20 +241,33 @@ return (
                     </Grid>
                     <Grid item container sx={copy}>
                         <Typography variant='body1' display ="block">
-                            →How do I install Optical?<br/><br/>Click <Link color="text.link" href="#Install" sx={focusStyle}> Install</Link> to go to the Google Chrome Web Store. Click the blue “Add to Chrome” button at the top right. You’ll see a popup that says Optical will be able to read and change data on websites. In the pop up click the “Add Extension” button to the right. Success! You should be all set. There should be another pop up at the top right, and the Optical Icon (a stylized version of the text select cursor resembling a  capital I) next to your browser website address bar. Click the icon button and get started.
-                            <Box sx={{py:'2rem'}}>
-                            <img src="images/FAQ_Install.svg" width="100%" />
-
+                            → How do I install Optical?
+                            <Box sx={{lineHeight:'50%'}}><br/></Box>
+                            Click <Link color="text.link" href="#Install" sx={focusStyle}> Install</Link> to go to the Google Chrome Web Store. Click the blue “Add to Chrome” button at the top right. You’ll see a popup that says Optical will be able to read and change data on websites. In the pop up click the “Add Extension” button to the right. Success! You should be all set. There should be another pop up at the top right, and the Optical Icon (a stylized version of the text select cursor resembling a  capital I) next to your browser website address bar. Click the icon button and get started.
+                            <Box sx={{lineHeight:'50%'}}>
+                                <br/>
+                                <img src="images/FAQ_Install.svg" width="100%" />
                             </Box>
-                            
-                            →Does Optical work in other browsers or on phones or tablets?<br/><br/>For the time being, Optical works only in Chrome on desktops. 
-                            <br/><br/>→Can I use Optical for my organization or project?<br/><br/>Optical was created for individuals. If you’d like to set up Optical for general use, lets chat. We’ll see what we can do. <Link color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email us.</Link>                        
+                            <br/>
+                            → Does Optical work in other browsers or on phones or tablets?
+                            <Box sx={{lineHeight:'50%'}}><br/></Box>
+                            For the time being, Optical works only in Chrome on desktops. 
+                            <br/><br/>
+                            → Optical doesn’t seem to be working on every website. Why?
+                            <Box sx={{lineHeight:'50%'}}><br/></Box>
+
+                            Websites are made in many different ways. We can’t guarentee that Optical will work perfectly in every scenario. Send us an email, let us know which sites aren’t perfect so we can keep tabs on this and hopefully address them in the next version.
+                            <br/><br/>
+
+                            → Can I use Optical for my organization or project?
+                            <Box sx={{lineHeight:'50%'}}><br/></Box>
+                            Optical was created for individuals. If you’d like to set up Optical for general use, lets chat. We’ll see what we can do. <Link color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email us.</Link>                        
                         </Typography>
                     </Grid>
                 {/* </section> */}
                 </Grid>
 
-                <Grid item container id="Accessibility" ref={accessRef} tabIndex={0} sx={copy_container}>
+                <Grid item container id="Accessibility"  className="anchor" ref={accessRef} tabIndex={0} sx={copy_container}>
                 {/* <section id="Accessibility" ref={accessRef} tabIndex={0} className="sectionFocus"> */}
                     <Grid item container sx={header}>
                         <Typography variant ='h3'> 
@@ -255,7 +283,7 @@ return (
 
                 </Grid>
 
-                <Grid item container id="Feedback" ref={feedbackRef} tabIndex={0} sx={copy_container}>
+                <Grid item container id="Feedback"  className="anchor" ref={feedbackRef} tabIndex={0} sx={copy_container}>
 
                 {/* <section id="Feedback" ref={feedbackRef} tabIndex={0}className="sectionFocus"> */}
                     <Grid item container sx={header}>
@@ -272,7 +300,7 @@ return (
 
                 </Grid>
 
-                <Grid item container id='Privacy' tabIndex={0} ref={privacyRef} sx={copy_container}>
+                <Grid item container id='Privacy'  className="anchor" tabIndex={0} ref={privacyRef} sx={copy_container}>
 
                 {/* <section id="Privacy" ref={privacyRef} > */}
                     <Grid item container sx={header}>
