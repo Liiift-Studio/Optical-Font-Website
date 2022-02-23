@@ -30,12 +30,15 @@
   color: inherit;
   text-decoration: inherit;
   line-height: 165%;
+
   /* margin-right:2vw; */
 }
 
 .aFooter:hover {
   color: inherit;
   text-decoration: inherit;
+  border-bottom: 2px solid;
+
 }
 .aFooter:focus {
   outline: none;

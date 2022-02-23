@@ -50,23 +50,24 @@ parentTheme.typography.body1 = {
 parentTheme.typography.h2 = {
 	fontWeight: 130,
 	fontFamily: "Optical",
-	fontSize: '1.5rem',
+	fontSize: '1.4rem',
 	// fontSize: '1.8vw',
 
 	[parentTheme.breakpoints.down("lg")]: {
 		fontSize: '1.5rem',
 		// fontSize: '4vw',
-
 	},
 
 	[parentTheme.breakpoints.down("md")]: {
 		textAlign: "center",
-		fontSize: '1.5rem',
+		fontSize: '1.3rem',
 	},
 	// mobile
 	[parentTheme.breakpoints.down("sm")]: {
 		textAlign: "center",
-		fontSize: "1.25rem",
+		// fontSize: "1.25rem",
+		fontSize: "6vw",
+
 	},
 };
 parentTheme.typography.h3 = {
@@ -151,7 +152,7 @@ export let lightTheme = createTheme({
 					backgroundColor: "transparent",
 					color: black,
 					border: "none",
-					boxShadow:'black 0px 0px 0px 4px',
+					boxShadow:'black 0px 0px 0px 3px',
 					borderRadius: 50,
 					"&:hover": {
 						border: "none",
@@ -182,7 +183,7 @@ export let lightTheme = createTheme({
 					// height: {xs:"53px", md:"63px"},
 					backgroundColor: black,
 					color: buttonLightT,
-					boxShadow:'black 0px 0px 0px 4px',
+					boxShadow:'black 0px 0px 0px 3px',
 					"&:hover": {
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,

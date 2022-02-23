@@ -12,7 +12,7 @@ import logoTextDark from '../public/images/logo-type-white.svg'
 import cursor from '../public/images/cursorLight_noBG.svg'
 import cursorDark from '../public/images/cursorDark_noBG.svg'
 
-import { dm_icon, header_container, logo_container, logo_container_mobile } from '../styles/layout.styles'
+import { dm_icon, header_button, header_container, logo_container, logo_container_mobile } from '../styles/layout.styles'
 
 export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, children }) {
 
@@ -21,16 +21,20 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
                 <Grid container sx={header_container}>
                     <Grid item container direction="row">
                         {/* Mobile Logo */}
-                        
                         <Grid container item display={{xs:'flex', sm:'none'}}>
-                            <Grid item xs={6} pt={5} px={0} display='flex' sx={{alignItems:'end'}}>
+                            <Grid item xs={6}  px={0} display='flex' sx={{alignItems:'end'}}>
                                 <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' sx={{p:0, width:'100%',borderRadius:0,}}>
                                     <Image id='logotxt'  src={darkMode? logoTextDark:logoText} alt='Optical project logo'/>
                                 </IconButton>
                             </Grid>
                             <Grid item xs={5}/>
-                            <Grid item xs={1} pt={5} justifyContent='flex-end' display='flex'>
-                                <IconButton aria-labelledby='cursor' sx={{px:0,width:'100%',borderRadius:0}}>
+                            <Grid item xs={1} justifyContent='flex-end' display='flex'>
+                                <IconButton aria-labelledby='cursor' sx={{
+                                    px:0,
+                                    width:'100%',
+                                    borderRadius:0
+                                    
+                                    }}>
                                     <Image id='cursor' src={darkMode? cursorDark:cursor}  alt='An icon based on the text input cursor symbol.'/>
                                 </IconButton>
                             </Grid>
@@ -38,20 +42,14 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
 
                         {/* Desktop */}
                         {/* <Grid item sm={1}  display={{xs:'none', sm:'flex'}}/> */}
-                        <Grid container item display={{xs:'none', sm:'flex'}} sm={6} alignContent={'center'}>
+                        <Grid container item display={{xs:'none', sm:'flex'}} sm={6} alignContent={'center'} >
                             <IconButton aria-labelledby='logo' href="/" sx={logo_container} >
-                                <Image id='logo' src={darkMode? logoDark:logo} sx={{maxWidth:'230px',maxHeight:'55px'}} alt='Optical project logo including an icon based on the text input cursor symbol.'/>
+                                <Image id='logo' src={darkMode? logoDark:logo}  alt='Optical project logo including an icon based on the text input cursor symbol.'/>
                             </IconButton>
                         </Grid>
-                        <Grid container item sm={6} sx={{display:'flex',justifyContent:'end'}}>
-                            <Grid container item xs={'auto'}  display={{xs:'none', sm:'none', md:'flex'}} sx={{alignItems:'center',mr:2}}>
-                                <Button aria-labelledby='About' variant="outlined" href="#About" onClick={aboutClick} sx={{
-                                    my: 2,
-                                    border: 0,
-                                    borderRadius: 10,
-                                    minWidth: "155px",
-                                    minHeight: "63px",
-                                }}>
+                        <Grid container item sm={6} sx={{display:'flex',justifyContent:'end'}} >
+                            <Grid container item xs={'auto'}  display={{xs:'none', sm:'none', md:'flex'}} sx={{alignItems:'center',mr:2,}}>
+                                <Button aria-labelledby='About' variant="outlined" href="#About" onClick={aboutClick} sx={header_button}>
                                     <Typography variant='h2' alt="About" sx={{position:'relative',top: '.1rem',}}>About</Typography>
                                 </Button>
                             </Grid>

@@ -1,6 +1,9 @@
 import React, { createRef, useEffect, useState } from "react"
-import {Typography , Grid,  Box,Link, Button} from '@mui/material'
+import {Typography , Grid,  Box, Button} from '@mui/material'
 import {content_container, copy, copy_container, focusStyle, header, menu_container, } from "../styles/layout.styles";
+// import {Link as nLink} from "next/link";
+import NextLink from "next/link";
+import { Link as MUILink} from "@mui/material";
 
 
 export default function MenusLayout({children,darkMode,about,footerRef,changeDarkMode }) {
@@ -147,57 +150,57 @@ return (
         <Grid item container sm={4} display={{xs:'none', md:'flex'}} sx={menu_container}>
             {/* menu */}
             <Grid container item  onClick={()=>clickSet('Install')} sx={menuItemStyle('Install')}>
-                <Link  href="#Header" color='inherit' underline='none' sx={focusStyle }>
+                <MUILink  href="#Header" color='inherit' underline='none' sx={focusStyle }>
                     <Typography variant="h3" padding='0'    sx={{display:'flex',alignItems:'center'}}>
                         INSTALL
                     </Typography>
-                    </Link>
+                    </MUILink>
 
             </Grid>
             <Grid container item onClick={()=>clickSet('About')} sx={menuItemStyle('About')}>
-                <Link  href="#About" color='inherit' underline='none' sx={focusStyle}>
+                <MUILink  href="#About" color='inherit' underline='none' sx={focusStyle}>
                 <Typography variant="h3"  sx={{display:'flex',alignItems:'center'}}>
                     ABOUT
                 </Typography>
-                </Link>
+                </MUILink>
             </Grid>
             <Grid container item onClick={()=>clickSet('Faq')} sx={menuItemStyle('Faq')}>
-                    <Link  href="#Faq" color='inherit' underline='none' sx={focusStyle} >
+                    <MUILink  href="#Faq" color='inherit' underline='none' sx={focusStyle} >
                 <Typography variant="h3"  sx={{display:'flex',alignItems:'center'}}>
                     FAQ
                 </Typography>
-                    </Link>
+                    </MUILink>
             </Grid>
             <Grid container item onClick={()=>clickSet('Accessibility')} sx={menuItemStyle('Accessibility')}>
-                <Link  href="#Accessibility" color='inherit' underline='none' sx={focusStyle} >
+                <MUILink  href="#Accessibility" color='inherit' underline='none' sx={focusStyle} >
                 <Typography variant="h3"  sx={{display:'flex',alignItems:'center'}}>
                     ACCESSIBILITY
                 </Typography>
-                </Link>
+                </MUILink>
 
             </Grid>
             <Grid container item onClick={()=>clickSet('Feedback')} sx={menuItemStyle('Feedback')}>
-                <Link  href="#Feedback" color='inherit' underline='none' sx={focusStyle}>
+                <MUILink  href="#Feedback" color='inherit' underline='none' sx={focusStyle}>
                 <Typography variant="h3"  sx={{display:'flex',alignItems:'center'}}>
                 FEEDBACK
                 </Typography>
-                </Link>
+                </MUILink>
 
             </Grid>
             <Grid container item onClick={()=>clickSet('Privacy')} sx={menuItemStyle('Privacy')}>
-                <Link  href="#Privacy" color='inherit' underline='none' sx={focusStyle}>
+                <MUILink  href="#Privacy" color='inherit' underline='none' sx={focusStyle}>
                 <Typography variant="h3"  sx={{display:'flex',alignItems:'center'}}>
                 PRIVACY
                 </Typography>
-                </Link>
+                </MUILink>
 
             </Grid>
             <Grid container item onClick={()=>clickSet('SiteMap')} sx={menuItemStyle('SiteMap')}>
-                <Link  href="#Footer" color='inherit' underline='none' sx={focusStyle}>
+                <MUILink  href="#Footer" color='inherit' underline='none' sx={focusStyle}>
                 <Typography variant="h3"  sx={{display:'flex',alignItems:'center'}}>
                 SITE MAP
                 </Typography>
-                </Link>
+                </MUILink>
             </Grid>
 
             <Grid container item  onClick={changeDarkMode}  sx={menuItemStyle('Mode')} >
@@ -223,10 +226,9 @@ return (
                     </Grid>
                     <Grid item container sx={copy}>
                         <Typography variant='body1' display ="block">
-                            Optical is a customizeable font and a free web tool for low vision. Install the Google Chrome browser extension, fine tune your font and read the internet in letters set to your legibility needs. It combines recent research into specific legibility goals with modern font software. <Link color="text.link" href={{pathname:"/process/",query:{darkMode:darkMode}}} sx={focusStyle}>Learn more about how we made Optical.</Link>
+                            Optical is a customizeable font and a free web tool for low vision. Install the Google Chrome browser extension, fine tune your font and read the internet in letters set to your legibility needs. It combines recent research into specific legibility goals with modern font software. <NextLink href={{pathname:"/process/",query:{darkMode:darkMode}}}><MUILink color="text.link" sx={focusStyle}> Learn more about how we made Optical.</MUILink></NextLink>
                             <br/><br/>
-                            Optical is being developed out of the 
-                            <Link color="text.link" href="https://research.ecuad.ca/healthdesignlab/" target="_blank" rel="noopener" sx={focusStyle}>Health Design Lab</Link> at <Link color="text.link"  href="https://www.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>Emily Carr University</Link> in partnership with <Link color="text.link" href="https://disabilityalliancebc.org/" target="_blank" rel="noopener" sx={focusStyle}>Disability Alliance BC</Link>, <Link color="text.link" rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" sx={focusStyle}>The Accessible Technology Program</Link>, and <Link color="text.link" href="https://shumka.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>the Shumka Centre</Link>.
+                            <span>Optical is being developed out of the <MUILink href="https://research.ecuad.ca/healthdesignlab/" target="_blank" rel="noopener" color="text.link" sx={focusStyle}>Health Design Lab</MUILink> at <MUILink color="text.link"  href="https://www.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>Emily Carr University</MUILink> in partnership with <MUILink color="text.link" href="https://disabilityalliancebc.org/" target="_blank" rel="noopener" sx={focusStyle}>Disability Alliance BC</MUILink>, <MUILink color="text.link" rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" sx={focusStyle}>The Accessible Technology Program</MUILink>, and <MUILink color="text.link" href="https://shumka.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>the Shumka Centre</MUILink>.</span>
                         </Typography>
                     </Grid>
                 {/* </section> */}
@@ -243,7 +245,7 @@ return (
                         <Typography variant='body1' display ="block">
                             → How do I install Optical?
                             <Box sx={{lineHeight:'50%'}}><br/></Box>
-                            Click <Link color="text.link" href="#Install" sx={focusStyle}> Install</Link> to go to the Google Chrome Web Store. Click the blue “Add to Chrome” button at the top right. You’ll see a popup that says Optical will be able to read and change data on websites. In the pop up click the “Add Extension” button to the right. Success! You should be all set. There should be another pop up at the top right, and the Optical Icon (a stylized version of the text select cursor resembling a  capital I) next to your browser website address bar. Click the icon button and get started.
+                            Click <MUILink color="text.link" href="#Install" sx={focusStyle}> Install</MUILink> to go to the Google Chrome Web Store. Click the blue “Add to Chrome” button at the top right. You’ll see a popup that says Optical will be able to read and change data on websites. In the pop up click the “Add Extension” button to the right. Success! You should be all set. There should be another pop up at the top right, and the Optical Icon (a stylized version of the text select cursor resembling a  capital I) next to your browser website address bar. Click the icon button and get started.
                             <Box sx={{lineHeight:'50%'}}>
                                 <br/>
                                 <img src="images/FAQ_Install.svg" width="100%" />
@@ -261,7 +263,7 @@ return (
 
                             → Can I use Optical for my organization or project?
                             <Box sx={{lineHeight:'50%'}}><br/></Box>
-                            Optical was created for individuals. If you’d like to set up Optical for general use, lets chat. We’ll see what we can do. <Link color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email us.</Link>                        
+                            Optical was created for individuals. If you’d like to set up Optical for general use, lets chat. We’ll see what we can do. <MUILink color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email us.</MUILink>                        
                         </Typography>
                     </Grid>
                 {/* </section> */}
@@ -276,7 +278,7 @@ return (
                     </Grid>
                     <Grid item container sx={copy}>
                         <Typography variant='body1' display ="block">
-                            Optical was designed, developed, and tested with accessibility in mind. Let us know if we’ve missed something! <Link color='text.link' target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email us.</Link> 
+                            Optical was designed, developed, and tested with accessibility in mind. Let us know if we’ve missed something! <MUILink color='text.link' target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email us.</MUILink> 
                         </Typography>
                         </Grid>
                 {/* </section> */}
@@ -293,7 +295,7 @@ return (
                     </Grid>
                     <Grid item container sx={copy}>
                         <Typography variant='body1' display ="block">
-                        Do you have any feedback on our fonts, extension or site? We’d love to hear from you. <Link color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email Tyler@opticalfont.com </Link>
+                        Do you have any feedback on our fonts, extension or site? We’d love to hear from you. <MUILink color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email Tyler@opticalfont.com </MUILink>
                         </Typography>
                     </Grid>
                 {/* </section> */}
@@ -310,7 +312,10 @@ return (
                     </Grid>
                     <Grid item container sx={copy}>
                         <Typography variant='body1' display ="block">
-                        Optical collects no data, including cookies or personal information. We rely on feedback and conversations to track Optical’s strengths and opportunities. <Link color="text.link" href={{pathname:"/privacy-policy/", query:{darkMode:darkMode},hash:'terms'}} sx={focusStyle}>Read our full privacy policy.</Link>                  
+                        Optical collects no data, including cookies or personal information. We rely on feedback and conversations to track Optical’s strengths and opportunities. <NextLink 
+                            href={{ pathname:"/privacy-policy/",
+                            query:{darkMode:darkMode},
+                        }}><MUILink color="text.link" sx={focusStyle}>Read our full privacy policy.</MUILink></NextLink>                  
                         </Typography>
                     </Grid>
                 {/* </section> */}

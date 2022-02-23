@@ -11,7 +11,7 @@ import logo from '../public/images/logo.svg'
 import logoDark from '../public/images/logoDark.svg'
 
 import FooterLayout from '../components/footer-layout'
-import {dm_icon, header_container,logo_container, content_container, circle, copy, copy_container, header, img_container_ext, menu_container, focusStyle } from "../styles/layout.styles";
+import {dm_icon, header_container,logo_container, content_container, circle, copy, copy_container, header, img_container_ext, menu_container, focusStyle, header_button } from "../styles/layout.styles";
 
 import { useRouter } from 'next/router'
 
@@ -143,26 +143,33 @@ useEffect(()=>{
               <Grid container sx={header_container}>
                 <Grid item container direction ="row">
                 
-                <Grid container item  xs={8} sm={6}  justifyContent={{xs:'center', sm:'center', md:'flex-start'}}>
-                    <Grid container item xs={8} md={4} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
+                <Grid container item  sm={6}  sx={{justifyContent:'start',}}>
+                    <Grid container item xs={'auto'} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
                         <IconButton href="/" sx={logo_container} >
                             <Image  src={darkMode? logoDark:logo}/>
                         </IconButton>
                     </Grid>
-                  </Grid>
-                  <Grid container item  display={'flex'} xs={4} sm={6} justifyContent="flex-end"  alignItems="center" >
+                </Grid>
+                <Grid container item  display={'flex'} sm={6} sx={{
+                    display:'flex',
+                    justifyContent:{xs:'start',sm:'end'},
+                    my:{xs:2,sm:0},
+                    }}>
                     <NextLink href={{
                     pathname:"/",
                     query:{darkMode:darkMode},
                     }}>
-                      <Button variant="outlined" >
-                          <Typography variant='h2' sx=
-                              {{position:'relative',
-                              top: '.1rem',
-                              px:2}}
-                              alt="About">
-                              home</Typography>
-                      </Button>
+                        <Grid container item xs={'auto'}sx={{alignItems:'center',mr:2,}}>
+                            <Button aria-labelledby='Home' variant="outlined" sx={header_button}>
+                                <Typography variant='h2' sx=
+                                    {{position:'relative',
+                                    top: '.1rem',
+                                    px:2,
+                                    }}
+                                    alt="Home">
+                                    home</Typography>
+                            </Button>
+                        </Grid>
                       </NextLink>
                   </Grid>
                 </Grid>
@@ -174,7 +181,7 @@ useEffect(()=>{
             <Grid container item onClick={()=>clickSet('Privacy Policy')} sx={menuItemStyle('Privacy Policy')} >
                 <Link  href="#Privacy" color='inherit' underline='none' sx={focusStyle}>
                     <Typography variant="h3" padding='0'   sx={{display:'flex',alignItems:'center',}}>
-                        PRIVACY&nbsp;POLICY
+                        PRIVACY POLICY
                     </Typography>
                 </Link>
 
@@ -182,7 +189,7 @@ useEffect(()=>{
             <Grid container item onClick={()=>clickSet('Data Collection')} sx={menuItemStyle('Data Collection')}>
                 <Link  href="#Data" color='inherit' underline='none' sx={focusStyle} >
                 <Typography variant="h3" padding='0'    sx={{display:'flex',alignItems:'center'}}>
-                  DATA&nbsp;COLLECTION
+                  DATA COLLECTION
                 </Typography>
                 </Link>
             </Grid>

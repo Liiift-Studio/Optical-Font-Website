@@ -4,13 +4,21 @@ import { flexbox } from "@mui/system"
 const margin_xs='12vw';
 const margin_md='6vw';
 //Header Bar
+export const header_button={
 
+    border: 0,
+    borderRadius: 10,
+    // maxWidth:'100%',
+    minWidth: "145px",
+    minHeight: "55px",
+}
 export const header_container={
-    height:'20vh',
+    minHeight:'20vh',
+    // bgcolor:'blue',
     // pt:{xs:'50px',sm:'100px'},
     px:{xs:margin_xs,md:margin_md},
     pt:6,
-    pb:10,
+    pb:{xs:0,md:10},
     alignItems: 'flex-end',
 }
 export const dm_icon ={
@@ -18,15 +26,15 @@ export const dm_icon ={
 }
 
 export const logo_container={
-    py: 2,
+    // py: 2,
     position:'relative',
-    fontSize:{lg:'1.2rem',md:'1.1rem',sm:'1rem',xs:'.75rem'},
-    height: '100%',
-    width: '100%',
+    // fontSize:{lg:'1.1rem',md:'1.1rem',sm:'1rem',xs:'.75rem'},
+    // height: '100%',
+    // width: '100%',
     justifyContent: 'flex-start',
-    width: 'auto',
-    height: 'auto',
+    maxHeight: "48px",
     borderRadius: 2,
+
 }
 export const logo_container_mobile={
     pb:'3em',
@@ -132,6 +140,7 @@ export const copy ={
     maxWidth: {xs:"750px", lg:"900px"}
 }
 export const focusStyle = {
+    cursor:'pointer',
     '&:focus-visible':{
         m: '.25rem',
         p:'.1em .2em',

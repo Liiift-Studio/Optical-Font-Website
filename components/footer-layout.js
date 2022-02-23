@@ -8,7 +8,11 @@ import { bgcolor } from "@mui/system";
 import { footer_container, footer_container_mobile, footer_container_tablet, } from "../styles/layout.styles";
 
 export default function FooterLayout({darkMode, children }) {
-
+const hover = {
+  '&:hover':{
+    color:'green',
+  }
+}
 
   return (
     <>
@@ -20,7 +24,7 @@ export default function FooterLayout({darkMode, children }) {
               <Typography variant="body1">
                 <Link href={{
                   pathname:'/',
-                  query:{darkMode:darkMode}}}><a className={styles.aFooter}>Home</a></Link>
+                  query:{darkMode:darkMode}}}><a className={styles.aFooter} >Home</a></Link>
               </Typography>
               <Typography variant="body1">
                 <Link href={{

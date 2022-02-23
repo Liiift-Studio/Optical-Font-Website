@@ -25,10 +25,12 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
                 <Button variant="string" href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
                   sx={{
                     my: 2,
+                    px:5,
+                    py:2,
                     border: 0,
                     borderRadius: 10,
-                    minWidth: "191px",
-					          minHeight: "63px",
+                    minWidth: "145px",
+                    minHeight: "55px",
                     }}>
 
                     <Typography sx={{position:'relative', top: '.1rem',}} variant="h2" alt="install">
@@ -107,7 +109,6 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
 
           <Grid item xs={12}
             sx={{
-
               pb: 10,
               minWidth: '326px',
               maxWidth: '426px',
@@ -118,17 +119,19 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
               }}>Varied&nbsp;fonts&nbsp;for <br/> varied vision</Typography>
           </Grid>
 
-          <Grid container item xs={12} pb={10} justifyContent='center' spacing={2} >
-            <Grid item sx={{display:'flex', justifyContent:'start'}} >
+          <Grid container item xs={12} pb={10} spacing={2}  >
+            <Grid xs={6} item sx={{display:'flex', minWidth:'55px'}} >
               <Button
                 href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
                 variant="string"
                 sx={{
                   my: 1,
+                  px:5,
+                  // mx:10,
                   border: 0,
                   borderRadius: 10,
-                  minWidth: "156px",
-                  maxWidth: "53px",
+                  // minWidth: "146px",
+                  // maxWidth: "53px",
                   
                 }}>
                 <Typography variant="h2">
@@ -137,17 +140,18 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
               </Button>
             </Grid>
 
-            <Grid item sx={{display:'flex', justifyContent:'end'}} >
+            <Grid item xs={6} sx={{display:'flex'}} >
               <Button
                 href="#About"
                 variant="outlined"
                 onClick={aboutClick}
                 sx={{
                   my: 1,
+                  px:5,
                   borderRadius: 10,
-                  width:'100%',
-                  minWidth: "156px",
-                  maxWidth: "53px",
+                  // width:'100%',
+                  // minWidth: "146px",
+                  // maxWidth: "53px",
                 }}>
                 <Typography variant="h2">
                   About
