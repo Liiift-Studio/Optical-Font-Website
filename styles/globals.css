@@ -56,3 +56,6 @@ div[class^="layout_circle__"], div[class*=" layout_circle__"] {
 .MuiTypography-h2{
   letter-spacing: 0.05em;
 }
+#logo{
+  width: 100%;
+}

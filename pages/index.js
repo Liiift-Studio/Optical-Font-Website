@@ -4,8 +4,8 @@ import {Icon,IconButton, Grid, Box, CssBaseline, Button, Typography, SvgIcon} fr
 import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
 import {buttonDarkT, darkTheme, lightTheme} from '../src/themes'
 
-import imgLight from '../public/images/Extension.svg'
-import imgDark from '../public/images/Extension.svg'
+import imgLight from '../public/images/Extension.png'
+import imgDark from '../public/images/Extension.png'
 
 import HeaderLayout from '../components/header-layout'
 import LandingLayout from '/components/landing-layout'
