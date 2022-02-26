@@ -20,8 +20,8 @@ html.loaded{
  
 @font-face{
   font-family:"Optical";
-  src:url("/fonts/Optical9VF.woff2"),
-      url("/fonts/Optical9VF.woff");
+  src:url("/fonts/Optical.woff2"),
+      url("/fonts/Optical.woff");
   font-weight:100 1000;
   font-stretch: 25% 151%;
   font-display:swap;
@@ -52,4 +52,7 @@ div[class^="layout_circle__"], div[class*=" layout_circle__"] {
   position: relative;
   padding-top:2rem;
   display:'hidden';
+}
+.MuiTypography-h2{
+  letter-spacing: 0.05em;
 }
