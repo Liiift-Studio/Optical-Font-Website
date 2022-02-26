@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         <title>Optical Font</title>
         <meta name="description" content="Optical Font" />
         <meta name="og:title" content={siteTitle} />
-        <link rel="shortcut icon" href="../public/images/favicon.ico" />
+        <link rel="shortcut icon" href="../images/favicon.ico" />
         {/* <link rel="preload" href="/fonts/Optical-Regular.woff2" as="font" crossOrigin="" />
         <link rel="preload" href="/fonts/Optical-Light.woff2" as="font" crossOrigin="" />
         <link rel="preload" href="/fonts/Optical-Medium.woff2" as="font" crossOrigin="" />

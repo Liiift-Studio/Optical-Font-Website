@@ -43,7 +43,7 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
                     {/* <Grid item sm={1} display={{xs:'none', sm:'flex'}}/> */}
                     <Grid container item display={{xs:'none', sm:'flex'}} sm={6} alignContent={'center'} >
                         <IconButton aria-labelledby='logo' href="/" sx={logo_container} >
-                            <img id='logo' src={'darkMode'? '/images/logoDark.svg': '/images/logo.svg'} alt='Optical project logo including an icon based on the text input cursor symbol.'/>
+                            <img id='logo' src={darkMode? '/images/logoDark.svg': '/images/logo.svg'} alt='Optical project logo including an icon based on the text input cursor symbol.'/>
                         </IconButton>
                     </Grid>
                     <Grid container item sm={6} sx={{display:'flex',justifyContent:'end'}} >
