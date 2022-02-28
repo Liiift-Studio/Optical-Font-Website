@@ -21,21 +21,28 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
             <Grid container sx={header_container}>
                 <Grid item container direction="row">
                     {/* Mobile Logo */}
-                    <Grid container item display={{xs:'flex', sm:'none'}}>
-                        <Grid item xs={6} px={0} display='flex' sx={{alignItems:'end'}}>
-                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' sx={{p:0, width:'100%',borderRadius:0,}}>
+                    <Grid container item display={{xs:'flex', sm:'none'}} >
+                        
+                        <Grid item xs={6} px={0} display='flex'>
+                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' sx={{width:'100%',px:0,borderRadius:0,alignItems:'end'}}>
                                 <Image id='logotxt' src={darkMode? logoTextDark:logoText} alt='Optical project logo'/>
                             </IconButton>
-                        </Grid>
+                        </Grid>  
                         <Grid item xs={5}/>
                         <Grid item xs={1} justifyContent='flex-end' display='flex'>
-                            <IconButton aria-labelledby='cursor' sx={{
-                                px:0,
-                                width:'100%',
-                                borderRadius:0
-                            }}>
+                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' sx={{width:'100%',px:0,borderRadius:0,alignItems:'start'}}>
                                 <Image id='cursor' src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.'/>
                             </IconButton>
+                            {/* <IconButton aria-labelledby='cursor' sx={{
+                                px:0,
+                                width:'100%',
+                                borderRadius:0,
+                                bgcolor:'red',
+                                alignItems:'end' 
+                            }}>
+                                hi
+                                <Image id='cursor' src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.'/>
+                            </IconButton> */}
                         </Grid>
                     </Grid>
 
