@@ -257,9 +257,9 @@ return (
                                 Websites are made in many different ways. We can’t guarentee that Optical will work perfectly in every scenario. Send us an email, let us know which sites aren’t perfect so we can keep tabs on this and hopefully address them in the next&nbsp;version.
                                 <br/><br/>
 
-                                → Can I use Optical for my organization or project?
+                                {/* → Can I use Optical for my organization or project?
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
-                                Optical was created for individuals. If you’d like to set up Optical for general use, lets chat. We’ll see what we can do. <MUILink color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email&nbsp;us.</MUILink>                        
+                                Optical was created for individuals. If you’d like to set up Optical for general use, lets chat. We’ll see what we can do. <MUILink color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email&nbsp;us.</MUILink>                         */}
                             </Typography>
                         </Grid>
                     {/* </section> */}

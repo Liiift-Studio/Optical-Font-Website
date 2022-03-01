@@ -141,20 +141,31 @@ useEffect(()=>{
             <ThemeProvider theme={chooseTheme()}>
                 <CssBaseline/>
                 <Grid container sx={header_container}>
-                    <Grid item container direction="row">
-                    
-                        <Grid container item  sm={6}  sx={{justifyContent:'start',}}>
-                            <Grid container item xs={'auto'} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
-                                <IconButton href="/" sx={logo_container} >
-                                    <Image  src={darkMode? logoDark:logo}/>
-                                </IconButton>
-                            </Grid>
+                    <Grid item container direction ="row">
+                
+                        <Grid container item xs={12} md={6} alignContent={'center'} >
+                            <IconButton aria-labelledby='logo' href="/" sx={logo_container} >
+                                <img id='logo' src={darkMode? '/images/logoDark.svg': '/images/logo.svg'} alt='Optical project logo including an icon based on the text input cursor symbol.'/>
+                            </IconButton>
                         </Grid>
-                        <Grid container item  display={'flex'} sm={6} sx={{ display:'flex', justifyContent:{xs:'start',sm:'end'}, my:{xs:2,sm:0}, }}>
-                            <NextLink href={{ pathname:"/", query:{darkMode:darkMode}, }}>
+
+
+                        <Grid container item  display={'flex'} xs sx={{
+                            display:'flex',
+                            justifyContent:{xs:'start',md:'end'},
+                            pb:{xs:8,md:0},
+                            pt:{xs:4,md:0},
+  
+                        }}>
+                            <NextLink href={{
+                                pathname:"/",
+                                query:{darkMode:darkMode},
+                            }}>
                                 <Grid container item xs={'auto'}sx={{alignItems:'center',mr:2,}}>
                                     <Button aria-labelledby='Home' variant="outlined" sx={header_button}>
-                                        <Typography variant='h2' sx= {{position:'relative', top: '.1rem', px:2, }} alt="Home">Home</Typography>
+                                        <Typography variant='h2' sx={{position:'relative', p: '.1rem', px:2, }} alt="Home">
+                                            home
+                                        </Typography>
                                     </Button>
                                 </Grid>
                             </NextLink>

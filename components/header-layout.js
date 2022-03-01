@@ -24,14 +24,14 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
                     <Grid container item display={{xs:'flex', sm:'none'}} >
                         
                         <Grid item xs={6} px={0} display='flex'>
-                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' sx={{width:'100%',px:0,borderRadius:0,alignItems:'end'}}>
-                                <Image id='logotxt' src={darkMode? logoTextDark:logoText} alt='Optical project logo'/>
+                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' sx={{width:'100%',minWidth:'120px',px:0,borderRadius:0,alignItems:'end'}}>
+                                <Image id='logotxt' src={darkMode? logoTextDark:logoText} alt='Optical project logo' />
                             </IconButton>
                         </Grid>  
                         <Grid item xs={5}/>
-                        <Grid item xs={1} justifyContent='flex-end' display='flex'>
-                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' sx={{width:'100%',px:0,borderRadius:0,alignItems:'start'}}>
-                                <Image id='cursor' src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.'/>
+                        <Grid item xs={1} justifyContent='flex-end' display='flex' >
+                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start'  sx={{width:'100%', minWidth:'20px',px:0,borderRadius:0,alignItems:'start'}}>
+                                <Image id='cursor' src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.' />
                             </IconButton>
                         </Grid>
                     </Grid>
