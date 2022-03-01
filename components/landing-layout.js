@@ -19,7 +19,11 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
                 <Image src={imgSrc}  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
             </Grid>
             <Grid container item md={6} pl={10} display={'block'}>
-                <Typography variant='h1'>
+                <Typography variant='h1' sx={{
+                      'MozFontFeatureSettings': '"ss50"',
+                      'WebkitFontFeatureSettings':'"ss50"',
+                      fontFeatureSettings:'"ss50"'
+                }}>
                   <nobr>Varied fonts for</nobr> <br /> varied vision
                 </Typography>
                 <Button variant="string" href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
@@ -57,7 +61,11 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
               pt: 4,
               justifyContent: 'center',
             }}>
-            <Typography variant='h1'>
+                <Typography variant='h1' sx={{
+                      'MozFontFeatureSettings': '"ss50"',
+                      'WebkitFontFeatureSettings':'"ss50"',
+                      fontFeatureSettings:'"ss50"'
+                }}>
               Varied&nbsp;fonts&nbsp;for<br /> varied vision
             </Typography>
           </Grid>
@@ -116,6 +124,9 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
             <Typography variant='h1'
               sx={{               
                 textAlign: "center",
+                  'MozFontFeatureSettings': "sso5",
+                  'WebkitFontFeatureSettings':'"ss50"',
+                  fontFeatureSettings:'"ss50"'
               }}>Varied&nbsp;fonts&nbsp;for <br/> varied vision</Typography>
           </Grid>
 
@@ -149,6 +160,7 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
                   my: 1,
                   px:5,
                   borderRadius: 10,
+
                   // width:'100%',
                   // minWidth: "146px",
                   // maxWidth: "53px",

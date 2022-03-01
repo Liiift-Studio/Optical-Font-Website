@@ -28,12 +28,18 @@ export const dm_icon ={
 export const logo_container={
     // py: 2,
     position:'relative',
-    // fontSize:{lg:'1.1rem',md:'1.1rem',sm:'1rem',xs:'.75rem'},
-    // height: '100%',
-    // width: '100%',
+
     justifyContent: 'flex-start',
     maxHeight: "48px",
-    borderRadius: 2,
+    // borderRadius: 2,
+    '&:focus-visible':{
+        p:'2.5rem',
+        mt:'1rem',
+        mb:'4rem',
+        borderRadius:'5px',
+        // border: '4px solid',
+        outline:'none'
+    },
 
 }
 export const logo_container_mobile={
@@ -115,10 +121,15 @@ export const content_container={
     pt:{sm:8},
     pb:{sm:12},
 }
+export const content_container_pp={
+    position:'relative',
+    px:{xs:margin_xs,md:margin_md},
+    // pt:{sm:8},
+    pb:{sm:12},
+}
 
 export const copy_container ={
     pb:'3rem',
-    display:'flex',
     alignContent:'center',
     '&:focus-visible':{
         p:'1rem',

@@ -11,7 +11,7 @@ import logo from '../public/images/logo.svg'
 import logoDark from '../public/images/logoDark.svg'
 
 import FooterLayout from '../components/footer-layout'
-import {dm_icon, header_container,logo_container, content_container, circle, copy, copy_container, header, img_container_ext, menu_container, focusStyle, header_button } from "../styles/layout.styles";
+import {dm_icon, header_container,logo_container, content_container, circle, copy, copy_container, header, img_container_ext, menu_container, focusStyle, header_button, content_container_pp } from "../styles/layout.styles";
 
 import { useRouter } from 'next/router'
 
@@ -143,17 +143,19 @@ useEffect(()=>{
                 <Grid container sx={header_container}>
                     <Grid item container direction ="row">
                 
-                        <Grid container item  sm={6}  sx={{justifyContent:'start',}}>
-                            <Grid container item xs={'auto'} justifyContent={{xs:'center', sm:'center', md:'flex-start'}} >
-                                <IconButton href="/" sx={logo_container} >
-                                    <Image  src={darkMode? logoDark:logo}/>
-                                </IconButton>
-                            </Grid>
+                        <Grid container item xs={12} md={6} alignContent={'center'} >
+                            <IconButton aria-labelledby='logo' href="/" sx={logo_container} >
+                                <img id='logo' src={darkMode? '/images/logoDark.svg': '/images/logo.svg'} alt='Optical project logo including an icon based on the text input cursor symbol.'/>
+                            </IconButton>
                         </Grid>
-                        <Grid container item  display={'flex'} sm={6} sx={{
+
+
+                        <Grid container item  display={'flex'} xs sx={{
                             display:'flex',
-                            justifyContent:{xs:'start',sm:'end'},
-                            my:{xs:2,sm:0},
+                            justifyContent:{xs:'start',md:'end'},
+                            pb:{xs:8,md:0},
+                            pt:{xs:4,md:0},
+  
                         }}>
                             <NextLink href={{
                                 pathname:"/",
@@ -170,7 +172,7 @@ useEffect(()=>{
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid container item sm={12} sx={content_container}>
+                <Grid container item sm={12} sx={content_container_pp}>
                     {/* Menu */}
                     <Grid item container sm={4} display={{xs:'none', md:'flex'}} sx={menu_container}>
                         {/* menu */}
@@ -180,7 +182,6 @@ useEffect(()=>{
                                     PRIVACY POLICY
                                 </Typography>
                             </Link>
-
                         </Grid>
                         <Grid container item onClick={()=>clickSet('Data Collection')} sx={menuItemStyle('Data Collection')}>
                             <Link  href="#Data" color='inherit' underline='none' sx={focusStyle} >

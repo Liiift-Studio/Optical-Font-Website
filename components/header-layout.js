@@ -33,16 +33,6 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
                             <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start' sx={{width:'100%',px:0,borderRadius:0,alignItems:'start'}}>
                                 <Image id='cursor' src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.'/>
                             </IconButton>
-                            {/* <IconButton aria-labelledby='cursor' sx={{
-                                px:0,
-                                width:'100%',
-                                borderRadius:0,
-                                bgcolor:'red',
-                                alignItems:'end' 
-                            }}>
-                                hi
-                                <Image id='cursor' src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.'/>
-                            </IconButton> */}
                         </Grid>
                     </Grid>
 

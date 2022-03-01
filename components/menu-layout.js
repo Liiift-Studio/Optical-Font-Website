@@ -230,7 +230,7 @@ return (
                     {/* </section> */}
                     </Grid>
 
-                    <Grid item container  id="Faq"  className="anchor" ref={faqRef} tabIndex={0}  sx={copy_container}>
+                    <Grid item container  id="Faq"  className="anchor" ref={faqRef} tabIndex={0}  display={{xs:'none', md:'flex'}} sx={copy_container}>
                     {/* <section id="Faq" ref={faqRef} tabIndex={0} className="sectionFocus"> */}
                         <Grid item container sx={header}>
                             <Typography variant ='h3'> 
@@ -265,7 +265,7 @@ return (
                     {/* </section> */}
                     </Grid>
 
-                    <Grid item container id="Accessibility"  className="anchor" ref={accessRef} tabIndex={0} sx={copy_container}>
+                    <Grid item container id="Accessibility"  className="anchor" ref={accessRef} tabIndex={0}  display={{xs:'none', md:'flex'}} sx={copy_container}>
                     {/* <section id="Accessibility" ref={accessRef} tabIndex={0} className="sectionFocus"> */}
                         <Grid item container sx={header}>
                             <Typography variant ='h3'> 
@@ -281,7 +281,7 @@ return (
 
                     </Grid>
 
-                    <Grid item container id="Feedback"  className="anchor" ref={feedbackRef} tabIndex={0} sx={copy_container}>
+                    <Grid item container id="Feedback"  className="anchor" ref={feedbackRef} tabIndex={0}  display={{xs:'none', md:'flex'}} sx={copy_container}>
 
                     {/* <section id="Feedback" ref={feedbackRef} tabIndex={0}className="sectionFocus"> */}
                         <Grid item container sx={header}>
@@ -298,7 +298,7 @@ return (
 
                     </Grid>
 
-                    <Grid item container id='Privacy'  className="anchor" tabIndex={0} ref={privacyRef} sx={copy_container}>
+                    <Grid item container id='Privacy'  className="anchor" tabIndex={0} ref={privacyRef}  display={{xs:'none', md:'flex'}} sx={copy_container}>
 
                     {/* <section id="Privacy" ref={privacyRef} > */}
                         <Grid item container sx={header}>
@@ -308,7 +308,7 @@ return (
                         </Grid>
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display ="block">
-                            Optical collects no data, including cookies or personal information. We rely on feedback and conversations to track Optical’s strengths and&nbsp;opportunities.<NextLink 
+                            Optical collects no data, including cookies or personal information. We rely on feedback and conversations to track Optical’s strengths and&nbsp;opportunities. <NextLink 
                                 href={{ pathname:"/privacy-policy/",
                                 query:{darkMode:darkMode},
                             }}><MUILink color="text.link" sx={focusStyle}>Read our full privacy&nbsp;policy.</MUILink></NextLink>                  
