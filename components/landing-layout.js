@@ -20,9 +20,9 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
             </Grid>
             <Grid container item md={6} pl={10} display={'block'}>
                 <Typography variant='h1' sx={{
-                      'MozFontFeatureSettings': '"ss50"',
-                      'WebkitFontFeatureSettings':'"ss50"',
-                      fontFeatureSettings:'"ss50"'
+                      'MozFontFeatureSettings': '"ss05"',
+                      'WebkitFontFeatureSettings':'"ss05"',
+                      fontFeatureSettings:'"ss05"'
                 }}>
                   <nobr>Varied fonts for</nobr> <br /> varied vision
                 </Typography>
@@ -62,9 +62,9 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
               justifyContent: 'center',
             }}>
                 <Typography variant='h1' sx={{
-                      'MozFontFeatureSettings': '"ss50"',
-                      'WebkitFontFeatureSettings':'"ss50"',
-                      fontFeatureSettings:'"ss50"'
+                      'MozFontFeatureSettings': '"ss05"',
+                      'WebkitFontFeatureSettings':'"ss05"',
+                      fontFeatureSettings:'"ss05"'
                 }}>
               Varied&nbsp;fonts&nbsp;for<br /> varied vision
             </Typography>
@@ -124,9 +124,9 @@ export default function LandingLayout({ children, aboutClick, imgSrc }) {
             <Typography variant='h1'
               sx={{               
                 textAlign: "center",
-                  'MozFontFeatureSettings': "sso5",
-                  'WebkitFontFeatureSettings':'"ss50"',
-                  fontFeatureSettings:'"ss50"'
+                  'MozFontFeatureSettings': "ss05",
+                  'WebkitFontFeatureSettings':'"ss0"',
+                  fontFeatureSettings:'"ss05"'
               }}>Varied&nbsp;fonts&nbsp;for <br/> varied vision</Typography>
           </Grid>
 
