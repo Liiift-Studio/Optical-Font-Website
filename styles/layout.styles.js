@@ -28,10 +28,11 @@ export const dm_icon ={
 export const logo_container={
     // py: 2,
     position:'relative',
+    minWidth:'120px',
 
     justifyContent: 'flex-start',
-    maxHeight: "48px",
-    // borderRadius: 2,
+    // maxHeight: "48px",
+    borderRadius: 0,
     '&:focus-visible':{
         p:'2.5rem',
         mt:'1rem',

@@ -29,8 +29,8 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
                             </IconButton>
                         </Grid>  
                         <Grid item xs={5}/>
-                        <Grid item xs={1} justifyContent='flex-end' display='flex' >
-                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start'  sx={{width:'100%', minWidth:'20px',px:0,borderRadius:0,alignItems:'start'}}>
+                        <Grid item xs={1} justifyContent='flex-end' display='flex' sx={{}}>
+                            <IconButton href="/" aria-labelledby='logotxt' justifycontent='flex-start'  sx={{width:'100%', minWidth:'20px',borderRadius:0,alignItems:'start',px:0}}>
                                 <Image id='cursor' src={darkMode? cursorDark:cursor} alt='An icon based on the text input cursor symbol.' />
                             </IconButton>
                         </Grid>
