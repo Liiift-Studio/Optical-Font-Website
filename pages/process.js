@@ -364,7 +364,7 @@ useEffect(()=>{
                                         {/* <section id='Contact' ref={contactRef}> */}
                                         <p>Currently Optical only works in the Chrome browser on desktops. We’d like to make the tool work offline and on other devices. Optical was built on literature review and feedback. Feedback sessions ranged from expert interviews to watching people with low vision use the tool through video calls and screen sharing. We’d like to conduct rigorous scientific testing. We haven’t yet. Optical doesn’t include an italic or oblique. Some research suggests that italics are poorly legible for low vision. This complexity of the project required that we spend time elsewhere. It's hard to imagine language, the internet, without italics. Optical needs an italic. Optical includes some accents and diacritics for latin based languages. The site and extension are available only in English. Improved language support is something needed in all design, Optical included. The most common letters and letter pairs in different languages play an interesting role in legibility and familiarity and deserve attention. </p>
                                         <p>One finding from research and feedback was the viability of software as a career for some with low vision. The prevalence of work from home in the industry means people don’t have to commute and can work from their own machines, set up with their own assistive tools. We’d like to expand Optical to work better for coding. This means a monospace, and possibly further refinement for dark mode to account for light bleed, hallation.</p>
-                                        <p>BAs this phase of development comes to an end, we’re currently looking for additional partners. Please reach out if you’d like to get involved.</p>
+                                        <p>As this phase of development comes to an end, we’re currently looking for additional partners. Please reach out if you’d like to get involved.</p>
                                         {/* </section> */}
                                     </Typography>
                                 </Grid>
@@ -399,7 +399,7 @@ useEffect(()=>{
                                     
                                         {/* <section id='Contact' ref={contactRef}> */}
                                         <p>I want to give a huge thank you to everyone in the low vision and font/ design communities who lent feedback and advice. This thing wouldn’t exist without you.</p>
-                                        <p> also want to specifically thank Caylee Raber, Nadia Beyzaei, Justina Loh, Karen Martin, Kate Armstrong, Lisa Boulton, Quinn Keaveney, Mirko Velimirovic, Colby May and George Macrae. </p>
+                                        <p>I also want to specifically thank Caylee Raber, Nadia Beyzaei, Justina Loh, Karen Martin, Kate Armstrong, Lisa Boulton, Quinn Keaveney, Mirko Velimirovic, Colby May and George Macrae. </p>
                                         <p>Finally, this project was created on the unceded land of the Coast Salish peoples, including the Musqueam, Squamish and Tsleil-Waututh nations. </p>
                                         {/* </section> */}
                                     </Typography>
