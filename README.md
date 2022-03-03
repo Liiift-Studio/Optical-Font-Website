@@ -4,7 +4,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 v14.17.7
 
-
 ## install dependencies
 
 npm install @mui/material@next @emotion/react @emotion/styled
