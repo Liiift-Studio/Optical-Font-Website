@@ -257,6 +257,14 @@ return (
                                 Websites are made in many different ways. We can’t guarentee that Optical will work perfectly in every scenario. Send us an email, let us know which sites aren’t perfect so we can keep tabs on this and hopefully address them in the next&nbsp;version.
                                 <br/><br/>
 
+                                → How do I uninstall or disable Optical?
+                                <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
+                                In the Chrome browser menu bar, click “Window” then “Extensions” and then find Optical. Click either “Remove” or toggle the blue/ grey on/off switch on the right.
+                                <br/><br/>
+                                → Optical seems to load slowly and/or not turn off or on the way I expected.
+                                <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
+                                Apologies, we’re working on it.
+
                                 {/* → Can I use Optical for my organization or project?
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
                                 Optical was created for individuals. If you’d like to set up Optical for general use, lets chat. We’ll see what we can do. <MUILink color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email&nbsp;us.</MUILink>                         */}
