@@ -254,7 +254,7 @@ return (
                         </Grid>
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display="block">
-                                Boldness controls line thickness (also called weight) and balances positive and negative shapes to clarify letters essential shapes. Width adds additional negative space to help improve legibility. Width also helps differentiate commonly misread similar narrow letters like I’s, l’s, and i’s. Spacing provides additional negative space. Resizing punctuation helps to clarify these essential small fine details and sentence structure. Alternates exagerate or improve legibility through exagerating differentiation (between different styles of zeros for example). 
+                                Boldness controls line thickness (also called weight) and balances positive and negative shapes to clarify letters essential shapes. Width adds additional negative space to help improve legibility. Width also helps differentiate commonly misread similar narrow letters like I’s, l’s, and i’s. Spacing provides additional negative space. Resizing punctuation helps to clarify these essential small fine details and sentence structure. Alternates exagerate or improve legibility through exagerating differentiation (between different styles of zeros for&nbsp;example). 
                             </Typography>
                         </Grid>
                         <Grid item sx={{width: "100%", mx:"auto", mt:"2rem", mb:"4rem"}}>
@@ -273,16 +273,16 @@ return (
                         
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display="block">
-                                Everyone’s vision is unique. Set your controls to what you think will work best. Legibility is improved by familiarity. Spend some time with your settings, then come back, keep toggling. Find your balance between exagerated legibility and conventional letters.
+                                Everyone’s vision is unique. Set your controls to what you think will work best. Legibility is improved by familiarity. Spend some time with your settings, then come back, keep toggling. Find your balance between exagerated legibility and conventional&nbsp;letters.
                                 <br/><br/>
-                                Click on the Optical Icon in your browser window next to the address bar to open or minimize the extension. Click the Off and On button to activate Optical. Click Menu to see other options: light and dark modes and access the website and FAQ. 
+                                Click on the Optical Icon in your browser window next to the address bar to open or minimize the extension. Click the Off and On button to activate Optical. Click Menu to see other options: light and dark modes and access the website and&nbsp;FAQ. 
                             </Typography>
                         </Grid>
                         
                     {/* </section> */}
                 </Grid>
 
-                <Grid item container id="Faq" className="anchor" ref={faqRef} tabIndex={0} sx={copy_container, { display: { xs: 'none!important', sm: 'block!important' } }}>
+                    <Grid item container  id="Faq"  className="anchor" ref={faqRef} tabIndex={0}  display={{xs:'none', md:'flex'}} sx={copy_container}>
                     {/* <section id="Faq" ref={faqRef} tabIndex={0} className="sectionFocus"> */}
                         <Grid item container sx={header}>
                             <Typography variant='h3'> 
@@ -309,7 +309,7 @@ return (
                                 Websites are made in many different ways. We can’t guarentee that Optical will work perfectly in every scenario. Send us an email, let us know which sites aren’t perfect so we can keep tabs on this and hopefully address them in the next&nbsp;version.
                                 <br/><br/>
 
-                                → Can I use Optical for my organization or project?
+                                → How do I uninstall or disable Optical?
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
                                 Optical was created for individuals. If you’d like to set up Optical for more general use, lets chat. <MUILink color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email&nbsp;us.</MUILink>                        
                             </Typography>
@@ -317,7 +317,7 @@ return (
                     {/* </section> */}
                 </Grid>
 
-                <Grid item container id="Accessibility"  className="anchor" ref={accessRef} tabIndex={0} sx={copy_container, { display: { xs: 'none!important', sm: 'block!important' } }}>
+                    <Grid item container id="Accessibility"  className="anchor" ref={accessRef} tabIndex={0}  display={{xs:'none', md:'flex'}} sx={copy_container}>
                     {/* <section id="Accessibility" ref={accessRef} tabIndex={0} className="sectionFocus"> */}
                         <Grid item container sx={header}>
                             <Typography variant='h3'> 
@@ -326,14 +326,14 @@ return (
                         </Grid>
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display="block">
-                            Optical was designed, developed, and tested with accessibility in mind. Let us know if we’ve missed something! <MUILink color='text.link' target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email&nbsp;us.</MUILink> 
+                            Optical was designed, developed, and tested with accessibility in mind. Let us know if we’ve missed&nbsp;something! <MUILink color='text.link' target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email&nbsp;us.</MUILink> 
                             </Typography>
                         </Grid>
                     {/* </section> */}
 
                 </Grid>
 
-                <Grid item container id="Feedback"  className="anchor" ref={feedbackRef} tabIndex={0} sx={copy_container, { display: { xs: 'none!important', sm: 'block!important' } }}>
+                    <Grid item container id="Feedback"  className="anchor" ref={feedbackRef} tabIndex={0}  display={{xs:'none', md:'flex'}} sx={copy_container}>
 
                     {/* <section id="Feedback" ref={feedbackRef} tabIndex={0}className="sectionFocus"> */}
                         <Grid item container sx={header}>
@@ -350,7 +350,7 @@ return (
 
                 </Grid>
 
-                <Grid item container id='Privacy'  className="anchor" tabIndex={0} ref={privacyRef} sx={copy_container, { display: { xs: 'none!important', sm: 'block!important' } }}>
+                    <Grid item container id='Privacy'  className="anchor" tabIndex={0} ref={privacyRef}  display={{xs:'none', md:'flex'}} sx={copy_container}>
 
                     {/* <section id="Privacy" ref={privacyRef} > */}
                         <Grid item container sx={header}>
@@ -360,7 +360,7 @@ return (
                         </Grid>
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display="block">
-                            Optical collects no data, including cookies or personal information. We rely on feedback and conversations to track use, strengths, and weaknesses. <NextLink 
+                            Optical collects no data, including cookies or personal information. We rely on feedback and conversations to track use, strengths, and&nbsp;weaknesses. <NextLink 
                                 href={{ pathname:"/privacy-policy/",
                                 query:{darkMode:darkMode},
                             }}><MUILink color="text.link" sx={focusStyle}>Read our full privacy&nbsp;policy.</MUILink></NextLink>                  

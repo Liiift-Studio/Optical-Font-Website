@@ -48,7 +48,6 @@ div[class^="layout_circle__"], div[class*=" layout_circle__"] {
 
 }
 .anchor{
-  display: block;
   position: relative;
   padding-top:2rem;
   display:'hidden';

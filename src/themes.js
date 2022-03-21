@@ -366,9 +366,7 @@ export let darkTheme = createTheme({
 					"&:hover": {
 						backgroundColor: "transparent",
 					},
-					img:{
-						borderRadius: 5,
-					},
+
 					svg: {
 						top: "0.1em",
 						borderRadius:50,
