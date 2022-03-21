@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## node version
 
-v14.17.7
+v14.17.8
 
 ## install dependencies
 
