@@ -13,7 +13,7 @@ const white = "#FFFFFF";
 export const yellow = "#FAFB45";
 const buttonDarkT_hover = black;
 export const buttonDarkBG = "#FCFF55";
-const buttonDarkBG_hover = "#FCFF55";
+const buttonDarkBG_hover = yellow;
 
 const buttonLightT = white; 
 const buttonLightT_hover = yellow;
@@ -41,6 +41,11 @@ let parentTheme = createTheme({
 
 parentTheme = responsiveFontSizes(parentTheme);
 
+parentTheme.typography.h1 = {
+	fontWeight: 130,
+	fontFamily: "Optical",
+	fontSize: '3.25 rem'
+};
 parentTheme.typography.body1 = {
 	fontWeight: 110,
 	fontFamily: "Optical",
@@ -60,13 +65,12 @@ parentTheme.typography.h2 = {
 
 	[parentTheme.breakpoints.down("md")]: {
 		textAlign: "center",
-		fontSize: '1.3rem',
+		fontSize: '1.2rem',
 	},
 	// mobile
 	[parentTheme.breakpoints.down("sm")]: {
 		textAlign: "center",
-		// fontSize: "1.25rem",
-		fontSize: "6vw",
+		fontSize: "1.25rem",
 
 	},
 };
@@ -151,11 +155,10 @@ export let lightTheme = createTheme({
 					// width:'100%',
 					backgroundColor: "transparent",
 					color: black,
-					border: "none",
-					boxShadow:'black 0px 0px 0px 3px',
+					border: "4px black solid",
 					borderRadius: 50,
 					"&:hover": {
-						border: "none",
+						border: "4px black solid",
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
 					},
@@ -183,7 +186,7 @@ export let lightTheme = createTheme({
 					// height: {xs:"53px", md:"63px"},
 					backgroundColor: black,
 					color: buttonLightT,
-					boxShadow:'black 0px 0px 0px 3px',
+					border: "3px black solid",
 					"&:hover": {
 						backgroundColor: buttonLightBG_hover,
 						color: buttonLightT_hover,
@@ -201,6 +204,9 @@ export let lightTheme = createTheme({
 					top: "0.1em",
 					alignContent: "center",
 					},
+					md:{
+						border:"none"
+					}
 				},
 			},
 		},
@@ -281,21 +287,13 @@ export let darkTheme = createTheme({
 					maxHeight: {xs:"53px", sm:"53px"},
 					backgroundColor: "transparent",
 					color: white,
-					border: 'none',
-					boxShadow:'white 0px 0px 0px 4px',
+					border:'4px white solid',
 					borderRadius: 50,
 					"&:hover": {
 						backgroundColor: yellow,
 						color: buttonDarkT_hover,
-						boxShadow:'#FAFB45 0px 0px 0px 3px',
-						border:'none',
+						border: "4px #FAFB45 solid",
 					},
-					// "&:focus": {
-					// 	border: '7px solid black',
-					// 	boxShadow:'yellow 0px 0px 0px 8px',
-					// 	backgroundColor: yellow,
-					// 	color: black,
-					// },
 					"&.Mui-focusVisible":{
 							border: '7px solid black',
 							boxShadow:'#FAFB45 0px 0px 0px 8px',
@@ -322,12 +320,19 @@ export let darkTheme = createTheme({
 					maxWidth: {xs:"156px", sm:"191px"},
 					maxHeight: {xs:"53px", sm:"63px"},
 					backgroundColor: white,
-					boxShadow:'white 0px 0px 0px 3px',
 					color: black,
+					border: "4px white solid",
+					[parentTheme.breakpoints.up('md')]: {
+						border:"none"
+					},
 					"&:hover": {
-						backgroundColor: buttonLightBG_hover,
+						backgroundColor: buttonDarkBG_hover,
 						color: buttonLightT_hover,
-						boxShadow:'#FAFB45 0px 0px 0px 3px',
+						borderColor:"#FAFB45",
+						border: "4px #FAFB45 solid",
+						[parentTheme.breakpoints.up('md')]: {
+							border:"none"
+						}
 					},
 					"&.Mui-focusVisible": {
 						border: '7px solid black',
@@ -422,23 +427,6 @@ darkTheme = createTheme(darkTheme, {
 		background: {
 			menuSelector: "#1e1e1e",
 			footerBorder: darkTheme.palette.primary,
-		},
-	},
-
-	components: {
-		MuiButton: {
-			styleOverrides: {
-				stringPrimary: {
-					backgroundColor: darkTheme.palette.secondary,
-					color: yellow,
-
-					"&:hover": {
-						backgroundColor: buttonDarkBG_hover,
-						color: buttonDarkT_hover,
-						borderColor: buttonDarkT_hover,
-					},
-				},
-			},
 		},
 	},
 });

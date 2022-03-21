@@ -213,7 +213,7 @@ return (
 
             {/* Copy */}
             <Grid item container md={8} mb={8} >
-                <Grid item container ref={aboutRef} tabIndex={0} sx={copy_container, { display: { xs: 'block', sm: 'none' } }}>
+                <Grid item container ref={aboutRef} tabIndex={0} sx={copy_container} display={{xs:'block', sm:'none'}}>
 
                     <Typography variant='body1' display="block">
                         Optical is a customizeable font and a free web tool for low vision. Install the Google Chrome browser extension, fine tune your font and read the internet in letters set to your legibility&nbsp;needs.
@@ -227,7 +227,7 @@ return (
 
                 </Grid>
                 
-                <Grid item container ref={aboutRef} tabIndex={0} sx={copy_container, { display: { xs: 'none!important', sm: 'block!important' } }}>
+                <Grid item container ref={aboutRef} tabIndex={0} sx={copy_container} display={{xs: 'none!important',sm: 'block!important' }}>
                     {/* <section id="About" ref={aboutRef} tabIndex={0} className="sectionFocus" > */}
                         <Grid item container sx={header}>
                             <Typography variant='h3'> 
@@ -241,7 +241,7 @@ return (
                                 <span paragraph={true}>Optical is being developed out of the <MUILink href="https://research.ecuad.ca/healthdesignlab/" target="_blank" rel="noopener" color="text.link" sx={focusStyle}>Health Design Lab</MUILink> at <MUILink color="text.link"  href="https://www.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>Emily Carr University</MUILink> in partnership with <MUILink color="text.link" href="https://disabilityalliancebc.org/" target="_blank" rel="noopener" sx={focusStyle}>Disability Alliance BC</MUILink>, <MUILink color="text.link" rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" sx={focusStyle}>The Accessible Technology Program</MUILink>, and <MUILink color="text.link" href="https://shumka.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>the Shumka&nbsp;Centre</MUILink>.</span>
                             </Typography>
                         </Grid>
-                        <Grid item sx={{mx:"auto", my:"8rem"}}>
+                        <Grid item sx={{mx:"auto", my:"8rem", display:'flex', justifyContent:"center"}}>
                             { darkMode ?
                                 <div>
                                     <img className="box-shadow-white" src="/images/Extension_Dark.svg" alt="Web exention including font legibility controls"/>

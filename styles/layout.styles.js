@@ -5,8 +5,6 @@ const margin_xs='12vw';
 const margin_md='6vw';
 //Header Bar
 export const header_button={
-
-    border: 0,
     borderRadius: 10,
     // maxWidth:'100%',
     minWidth: "145px",
@@ -17,8 +15,8 @@ export const header_container={
     // bgcolor:'blue',
     // pt:{xs:'50px',sm:'100px'},
     px:{xs:margin_xs,md:margin_md},
-    pt:6,
-    pb:{xs:0,md:10},
+    pt:19,
+    pb:{xs:0,md:24},
     alignItems: 'flex-end',
 }
 export const dm_icon ={
@@ -53,8 +51,8 @@ export const logo_container_mobile={
 
 export const landing_container={
     px:{md:margin_md,},
-    alignItems:'center',
-    minHeight:'55vh',
+    alignItems:'flex-start',
+    height: '206px',
     justifyContent:'center',
 }
 export const landing_container_mobile = {
@@ -78,15 +76,10 @@ export const landing_container_tablet = {
 export const img_container ={
     alignItems:"start",
     justifyContent:"center",
-    pt:2,
-    pb:2,
     filter: 'drop-shadow(0 0 5rem grey)',
     display:'flex',
-
-    minWidth:'auto',
-    minHeight:'auto',
-    maxHeight:'auto',
-    maxWidth:'515px !important',
+    height:"inherit",
+    justifyContent:'flex-end'
 }
 
 export const img_container_mobile ={
@@ -119,7 +112,7 @@ export const img_container_ext={
 export const content_container={
     position:'relative',
     px:{xs:margin_xs,md:margin_md},
-    pt:{sm:8},
+    pt:{sm:24},
     pb:{sm:12},
 }
 export const content_container_pp={
