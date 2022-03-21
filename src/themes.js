@@ -75,7 +75,7 @@ parentTheme.typography.h3 = {
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
 	letterSpacing: '.24em',
-	textTransform: 'uppercase',
+	textTransform: 'uppercase'
 };
 parentTheme.typography.h4 = {
 	fontWeight: 140,
