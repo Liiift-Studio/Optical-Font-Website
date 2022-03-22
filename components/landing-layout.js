@@ -15,8 +15,8 @@ export default function LandingLayout({darkMode, children, aboutClick, imgSrc })
     <>
       
       {/* DESKTOP */}
-      <Grid container sx={landing_container} display={{xs: 'none', sm:'none', md: 'flex'}}>
-          <Grid item md={6} sx={img_container}  >
+      <Grid container sx={landing_container} display={{xs: 'none', sm:'none', md: 'flex'}} className="landscape">
+          <Grid item md={6} sx={img_container}>
             {darkMode ?
               <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
               :
@@ -28,7 +28,7 @@ export default function LandingLayout({darkMode, children, aboutClick, imgSrc })
                     'MozFontFeatureSettings': '"ss05"',
                     'WebkitFontFeatureSettings':'"ss05"',
                     fontFeatureSettings:'"ss05"',
-                    fontSize: '3.25rem',
+                    fontSize: {sm:'1.875rem',md:'3.25rem'},
                     lineHeight:"110%",
               }}>
                 <nobr>Varied fonts for</nobr> <br /> varied vision
@@ -39,11 +39,11 @@ export default function LandingLayout({darkMode, children, aboutClick, imgSrc })
                   py:2,
                   border: 0,
                   borderRadius: 10,
-                  maxWidth: '10rem',
-                  maxHeight: '3.975rem',
+                  maxWidth: {sm:'5.9375rem',md:'10rem'},
+                  maxHeight: {sm:'1.9375rem',md:'3.975rem'},
                   }}>
 
-                  <Typography sx={{position:'relative', top: '.1rem', color:'inherit'}} variant="h2" alt="install">
+                  <Typography sx={{position:'relative', top: '.1rem', color:'inherit', fontSize:{sm:'.8175rem',md:'1.4rem'}}} variant="h2" alt="install">
                     Install
                   </Typography>
               </Button>
@@ -51,7 +51,7 @@ export default function LandingLayout({darkMode, children, aboutClick, imgSrc })
       </Grid>
 
       {/* TABLET */}
-      <Grid container item display={{ sm: 'flex', xs: 'none', md: 'none' }} >
+      <Grid container item display={{ sm: 'flex', xs: 'none', md: 'none' }} className="landscape-disabled" >
         <Grid container item sx={landing_container_tablet} >
 
           <Grid container item sm={12} justifyContent="center"  >
@@ -144,8 +144,8 @@ export default function LandingLayout({darkMode, children, aboutClick, imgSrc })
                   px:5,
                   // mx:10,
                   borderRadius: 10,
-                  // minWidth: "146px",
-                  // maxWidth: "53px",
+                  maxWidth: '10rem',
+                  maxHeight: '3rem',
                   
                 }}>
                 <Typography variant="h2" sx={{color:'inherit'}}>
@@ -165,8 +165,8 @@ export default function LandingLayout({darkMode, children, aboutClick, imgSrc })
                   borderRadius: 10,
 
                   // width:'100%',
-                  // minWidth: "146px",
-                  // maxWidth: "53px",
+                  width: '10rem',
+                  height: '3rem',
                 }}>
                 <Typography variant="h2">
                   About

@@ -67,3 +67,13 @@ div[class^="layout_circle__"], div[class*=" layout_circle__"] {
   box-shadow: 7.2px 1.31px 87.74px 0px rgba(0,0,0,0.75);
   border-radius: 10px;
 }
+/* @media screen and (orientation:landscape)
+and (min-device-width: 319px) 
+and (max-device-width: 880px) { 
+  .landscape{
+    display:flex;
+  }
+  .landscape-disabled{
+    display:none;
+  }
+} */

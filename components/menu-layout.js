@@ -227,7 +227,7 @@ return (
 
                 </Grid>
                 
-                <Grid item container ref={aboutRef} tabIndex={0} sx={copy_container} display={{xs: 'none!important',sm: 'block!important' }}>
+                <Grid item container ref={aboutRef} tabIndex={0} sx={copy_container} display={{xs: 'none!important',sm: 'flex!important' }}>
                     {/* <section id="About" ref={aboutRef} tabIndex={0} className="sectionFocus" > */}
                         <Grid item container sx={header}>
                             <Typography variant='h3'> 
@@ -241,7 +241,7 @@ return (
                                 <span paragraph={true}>Optical is being developed out of the <MUILink href="https://research.ecuad.ca/healthdesignlab/" target="_blank" rel="noopener" color="text.link" sx={focusStyle}>Health Design Lab</MUILink> at <MUILink color="text.link"  href="https://www.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>Emily Carr University</MUILink> in partnership with <MUILink color="text.link" href="https://disabilityalliancebc.org/" target="_blank" rel="noopener" sx={focusStyle}>Disability Alliance BC</MUILink>, <MUILink color="text.link" rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" sx={focusStyle}>The Accessible Technology Program</MUILink>, and <MUILink color="text.link" href="https://shumka.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>the Shumka&nbsp;Centre</MUILink>.</span>
                             </Typography>
                         </Grid>
-                        <Grid item sx={{mx:"auto", my:"8rem", display:'flex', justifyContent:"center"}}>
+                        <Grid item sx={{my:"8rem", display:'flex',maxWidth: {xs:"750px", lg:"900px"},width:'100%', justifyContent:"center"}}>
                             { darkMode ?
                                 <div>
                                     <img className="box-shadow-white" src="/images/Extension_Dark.svg" alt="Web exention including font legibility controls"/>
@@ -257,14 +257,14 @@ return (
                                 Boldness controls line thickness (also called weight) and balances positive and negative shapes to clarify letters essential shapes. Width adds additional negative space to help improve legibility. Width also helps differentiate commonly misread similar narrow letters like I’s, l’s, and i’s. Spacing provides additional negative space. Resizing punctuation helps to clarify these essential small fine details and sentence structure. Alternates exagerate or improve legibility through exagerating differentiation (between different styles of zeros for&nbsp;example). 
                             </Typography>
                         </Grid>
-                        <Grid item sx={{width: "100%", mx:"auto", mt:"2rem", mb:"4rem"}}>
+                        <Grid item display={'flex'} sx={{maxWidth: {xs:"750px", lg:"900px"}, width: "100%", mt:"2rem", mb:"4rem"}}>
                         { darkMode ?
-                            <div >
+                            <div style={{width: "100%"}}>
                                 <img style={{width: "100%"}} src="/images/About_Diagram_001 1.svg" alt="Web exention including font legibility controls"/>
                             </div>
                                 
                             :
-                            <div >
+                            <div style={{width: "100%"}}>
                                 <img style={{width: "100%"}} src="/images/About_Diagram_001 light.svg" alt="Extension Image"/>
                             </div>
                             

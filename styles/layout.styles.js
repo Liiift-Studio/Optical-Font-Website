@@ -11,12 +11,12 @@ export const header_button={
     minHeight: "55px",
 }
 export const header_container={
-    minHeight:'20vh',
+    minHeight:{xs:'10vh', md:'20vh'},
     // bgcolor:'blue',
     // pt:{xs:'50px',sm:'100px'},
     px:{xs:margin_xs,md:margin_md},
-    pt:19,
-    pb:{xs:0,md:24},
+    pt:{xs:0,sm:10,md:19},
+    pb:{xs:0,sm:10,md:24},
     alignItems: 'flex-end',
 }
 export const dm_icon ={
@@ -50,9 +50,9 @@ export const logo_container_mobile={
 //Landing - this could be condensed into just 1 container function & 1 img container
 
 export const landing_container={
-    px:{md:margin_md,},
+    px:{sm:margin_md,md:margin_md,},
     alignItems:'flex-start',
-    height: '206px',
+    height: {sm:'104px',md:'206px'},
     justifyContent:'center',
 }
 export const landing_container_mobile = {
