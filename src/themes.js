@@ -36,7 +36,15 @@ const footer = {
 };
 
 let parentTheme = createTheme({
-
+	breakpoints:{
+		values:{
+			xs: 0,
+			sm: 600,
+			md: 960,
+			lg: 1200,
+			xl: 15360,
+		}
+	}
 });
 
 parentTheme = responsiveFontSizes(parentTheme);
