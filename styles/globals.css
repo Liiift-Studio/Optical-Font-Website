@@ -26,6 +26,9 @@ html.loaded{
   font-weight: 100 1000;
   font-stretch: 25% 151%;
   font-display: swap;
+  -moz-font-feature-settings: "ss05";
+  -webkit-font-feature-settings: "ss05";
+  font-feature-settings:"ss05";
 }
 
 div[class^="layout_circle__"], div[class*=" layout_circle__"] {

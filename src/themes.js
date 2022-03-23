@@ -57,7 +57,10 @@ parentTheme.typography.h1 = {
 parentTheme.typography.body1 = {
 	fontWeight: 110,
 	fontFamily: "Optical",
-	fontSize: 18
+	fontSize: 18,
+	'MozFontFeatureSettings': '"ss05"',
+	'WebkitFontFeatureSettings':'"ss05"',
+	fontFeatureSettings:'"ss05"'
 };
 
 parentTheme.typography.h2 = {
@@ -87,7 +90,9 @@ parentTheme.typography.h3 = {
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
 	letterSpacing: '.24em',
-	textTransform: 'uppercase'
+	'MozFontFeatureSettings': '"ss05"',
+	'WebkitFontFeatureSettings':'"ss05"',
+	fontFeatureSettings:'"ss05"'
 };
 parentTheme.typography.h4 = {
 	fontWeight: 140,
