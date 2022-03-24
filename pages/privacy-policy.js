@@ -164,7 +164,7 @@ useEffect(()=>{
                                 <Grid container item xs={'auto'}sx={{alignItems:'center',mr:2,}}>
                                     <Button aria-labelledby='Home' variant="outlined" sx={header_button}>
                                         <Typography variant='h2' sx={{position:'relative', p: '.1rem', px:2, }} alt="Home">
-                                            home
+                                            Home
                                         </Typography>
                                     </Button>
                                 </Grid>

@@ -4,8 +4,6 @@ import {Icon,IconButton, Grid, Box, CssBaseline, Button, Typography, SvgIcon} fr
 import {ThemeProvider, responsiveFontSizes} from "@mui/material/styles"
 import {buttonDarkT, darkTheme, lightTheme} from '../src/themes'
 
-import imgLight from '../public/images/Extension.png'
-import imgDark from '../public/images/Extension.png'
 
 import HeaderLayout from '../components/header-layout'
 import LandingLayout from '/components/landing-layout'
@@ -64,7 +62,7 @@ export default function Home({lightSwitch, children }) {
                     <HeaderLayout darkMode={darkMode} changeDarkMode={changeDarkMode} aboutClick={aboutClick}/>
                 </section>
                 <section id="Install">
-                    <LandingLayout imgSrc={darkMode ? imgDark : imgLight} aboutClick={aboutClick}/>
+                    <LandingLayout darkMode={darkMode} aboutClick={aboutClick}/>
                 </section>
                 <MenusLayout darkMode={darkMode} about={about} footerRef={footerRef} changeDarkMode={changeDarkMode} />
                 <section id ="Footer" ref={footerRef}>

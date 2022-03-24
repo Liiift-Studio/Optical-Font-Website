@@ -259,7 +259,10 @@ useEffect(()=>{
                         <Grid item container sx={copy_container} >
                             <Box id="intro" ref={introRef} tabIndex={0} sx={focusStyle}>
                                 <Grid item container sx={header}>
-                                    <Typography variant='h3' sx={{}}
+                                    <Typography variant='h3' sx={{                      
+                                        'MozFontFeatureSettings': '"ss05"',
+                                        'WebkitFontFeatureSettings':'"ss05"',
+                                        fontFeatureSettings:'"ss05"'}}
                                         >Intro</Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
