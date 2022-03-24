@@ -67,6 +67,9 @@ parentTheme.typography.h2 = {
 	fontWeight: 130,
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
+	'MozFontFeatureSettings': '"ss05"',
+	'WebkitFontFeatureSettings':'"ss05"',
+	fontFeatureSettings:'"ss05"',
 	// fontSize: '1.8vw',
 
 	[parentTheme.breakpoints.down("lg")]: {
@@ -92,18 +95,27 @@ parentTheme.typography.h3 = {
 	letterSpacing: '.24em',
 	'MozFontFeatureSettings': '"ss05"',
 	'WebkitFontFeatureSettings':'"ss05"',
-	fontFeatureSettings:'"ss05"'
+	'MozFontFeatureSettings': '"ss05"',
+	'WebkitFontFeatureSettings':'"ss05"',
+	fontFeatureSettings:'"ss05"',
+
 };
 parentTheme.typography.h4 = {
 	fontWeight: 140,
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
+	'MozFontFeatureSettings': '"ss05"',
+	'WebkitFontFeatureSettings':'"ss05"',
+	fontFeatureSettings:'"ss05"',
 };
 parentTheme.typography.h1 = {
 	fontSize: "4vw",
 	lineHeight: 1.215,
 	fontFamily: "Optical",
 	fontWeight: 140,
+	'MozFontFeatureSettings': '"ss05"',
+	'WebkitFontFeatureSettings':'"ss05"',
+	fontFeatureSettings:'"ss05"',
 
 	[parentTheme.breakpoints.down("lg")]: {
 		fontSize: "5vw",
