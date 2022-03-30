@@ -58,18 +58,18 @@ parentTheme.typography.body1 = {
 	fontWeight: 110,
 	fontFamily: "Optical",
 	fontSize: 18,
-	'MozFontFeatureSettings': '"ss05"',
-	'WebkitFontFeatureSettings':'"ss05"',
-	fontFeatureSettings:'"ss05"'
+	'MozFontFeatureSettings': '"ss01","ss02" !important',
+	'WebkitFontFeatureSettings':'"ss01","ss02" !important',
+	fontFeatureSettings:'"ss01","ss02" !important'
 };
 
 parentTheme.typography.h2 = {
 	fontWeight: 130,
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
-	'MozFontFeatureSettings': '"ss05"',
-	'WebkitFontFeatureSettings':'"ss05"',
-	fontFeatureSettings:'"ss05"',
+	'MozFontFeatureSettings': '"i.ss01"',
+	'WebkitFontFeatureSettings':'"i.ss01"',
+	fontFeatureSettings:'"i.ss01"',
 	// fontSize: '1.8vw',
 
 	[parentTheme.breakpoints.down("lg")]: {
@@ -93,29 +93,29 @@ parentTheme.typography.h3 = {
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
 	letterSpacing: '.24em',
-	'MozFontFeatureSettings': '"ss05"',
-	'WebkitFontFeatureSettings':'"ss05"',
-	'MozFontFeatureSettings': '"ss05"',
-	'WebkitFontFeatureSettings':'"ss05"',
-	fontFeatureSettings:'"ss05"',
+	'MozFontFeatureSettings': '"ss01","ss02" !important',
+	'WebkitFontFeatureSettings':'"ss01","ss02" !important',
+	'MozFontFeatureSettings': '"ss01","ss02" !important',
+	'WebkitFontFeatureSettings':'"ss01","ss02" !important',
+	fontFeatureSettings:'"ss01","ss02" !important',
 
 };
 parentTheme.typography.h4 = {
 	fontWeight: 140,
 	fontFamily: "Optical",
 	fontSize: '1.4rem',
-	'MozFontFeatureSettings': '"ss05"',
-	'WebkitFontFeatureSettings':'"ss05"',
-	fontFeatureSettings:'"ss05"',
+	'MozFontFeatureSettings': '"ss01","ss02" !important',
+	'WebkitFontFeatureSettings':'"ss01","ss02" !important',
+	fontFeatureSettings:'"ss01","ss02" !important',
 };
 parentTheme.typography.h1 = {
 	fontSize: "4vw",
 	lineHeight: 1.215,
 	fontFamily: "Optical",
 	fontWeight: 140,
-	'MozFontFeatureSettings': '"ss05"',
-	'WebkitFontFeatureSettings':'"ss05"',
-	fontFeatureSettings:'"ss05"',
+	'MozFontFeatureSettings': '"ss01","ss02" !important',
+	'WebkitFontFeatureSettings':'"ss01","ss02" !important',
+	fontFeatureSettings:'"ss01","ss02" !important',
 
 	[parentTheme.breakpoints.down("lg")]: {
 		fontSize: "5vw",

@@ -119,7 +119,6 @@ const menuCircle= (state)=> {
                 smallest = sections[i];
             }
         }
-        console.log(index);
         if( index=== 0){
             setSection("intro");
 

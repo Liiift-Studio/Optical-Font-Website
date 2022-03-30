@@ -286,7 +286,7 @@ return (
                         </Grid>
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display="block">
-                                → How do I install&nbsp;Optical?
+                                → How do I Install&nbsp;Optical?
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
                                 Click <MUILink color="text.link" href="#Install" sx={focusStyle}> Install</MUILink> to go to the Google Chrome Web Store. Click the blue “Add to Chrome” button at the top right. You’ll see a popup that says Optical will be able to read and change data on websites. In the pop up click the “Add Extension” button to the right. Success! You should be all set. There should be another pop up at the top right, and the Optical Icon (a stylized version of the text select cursor resembling a capital I) next to your browser address bar. Click the icon button and get&nbsp;started.
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}>
