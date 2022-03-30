@@ -311,7 +311,8 @@ return (
 
                                 → How do I uninstall or disable Optical?
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
-                                Optical was created for individuals. If you’d like to set up Optical for more general use, lets chat. <MUILink color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email&nbsp;us.</MUILink>                        
+                                In the Chrome browser menu bar, click “Window” then “Extensions” and then find Optical. Click either “Remove” or toggle the blue/ grey on/off switch on the right
+                                {/* Optical was created for individuals. If you’d like to set up Optical for more general use, lets chat. <MUILink color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email&nbsp;us.</MUILink>                         */}
                             </Typography>
                         </Grid>
                     {/* </section> */}

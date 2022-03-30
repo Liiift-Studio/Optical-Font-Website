@@ -4,7 +4,7 @@ import { createTheme, styled, responsiveFontSizes } from "@mui/material/styles";
 // import opt_dark from './public/images/opt_dark'
 
 const landingBlue = "#CBDDFF";
-const footerBlue = "#E8EFFC";
+const footerBlue = "#E3EAFB";
 const black = "#111111";
 const buttonText = "#111111";
 const buttonBackDark = "#FCFF55";
