@@ -231,13 +231,6 @@ useEffect(()=>{
                                 </Typography>
                             </Link>
                         </Grid>
-                        <Grid container item onClick={()=>clickSet('NextSteps')} sx={menuItemStyle('NextSteps')}>
-                            <Link  href="#NextSteps" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
-                                Next Steps
-                                </Typography>
-                            </Link>
-                        </Grid>
                         <Grid container item onClick={()=>clickSet('Conclusions')} sx={menuItemStyle('Conclusions')}>
                             <Link  href="#Conclusions" color='inherit' underline='none' sx={focusStyle} >
                                 <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
@@ -245,6 +238,13 @@ useEffect(()=>{
                                 </Typography>
                             </Link>
                         </Grid>  
+                        <Grid container item onClick={()=>clickSet('NextSteps')} sx={menuItemStyle('NextSteps')}>
+                            <Link  href="#NextSteps" color='inherit' underline='none' sx={focusStyle} >
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                Next Steps
+                                </Typography>
+                            </Link>
+                        </Grid>
                         <Grid container item onClick={()=>clickSet('Team')} sx={menuItemStyle('Team')}>
                             <Link  href="#Team" color='inherit' underline='none' sx={focusStyle} >
                                 <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
