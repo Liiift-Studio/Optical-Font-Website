@@ -39,7 +39,12 @@ export default function HeaderLayout({darkMode, changeDarkMode, aboutClick, chil
                     {/* Desktop */}
                     <Grid container sx={{textAlign: "right"}} display={{xs:'none', sm:'flex'}}>
                         <Grid item xs={6} sx={{textAlign: "left"}}>
-                            <IconButton href="/" aria-labelledby='logotxt' sx={{p:0, width:'100%', borderRadius:0, justifyContent:'flex-start'}}>
+                            <IconButton href="/" aria-labelledby='logotxt' sx={{p:0, borderRadius:0, justifyContent:'flex-start','&:focus-visible':{
+                                // m: '.25rem',
+                                p:'.25em .25em',
+                                borderRadius:'5px',
+                                // outline: '4px solid',
+                            },}}>
                                 <img id='logo' style={{display: "inline-block", maxWidth: "300px"}} src={darkMode? '/images/logoDark.svg': '/images/logo.svg'} alt='Optical project logo including an icon based on the text input cursor symbol.'/>
                             </IconButton>
                         </Grid>

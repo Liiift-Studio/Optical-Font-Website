@@ -197,7 +197,7 @@ useEffect(()=>{
                         <Grid container item onClick={()=>clickSet('intro')} sx={menuItemStyle('intro')} >
                             <Link  href="#intro" color='inherit' underline='none' sx={focusStyle}>
                                 <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center',}}>
-                                Intro
+                                Introduction
                                 </Typography>
                             </Link>
 
@@ -226,7 +226,7 @@ useEffect(()=>{
                         <Grid container item onClick={()=>clickSet('BrowerExtWeb')} sx={menuItemStyle('BrowserExtWeb')}>
                             <Link  href="#BrowserExtWeb" color='inherit' underline='none' sx={focusStyle} >
                                 <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
-                                Browser Extension & Website
+                                Extension & Website
                                 </Typography>
                             </Link>
                         </Grid>
@@ -319,7 +319,7 @@ useEffect(()=>{
                             </Box>
                             <Box id="BrowserExtWeb" ref={browserExtWebRef} sx={focusStyle} tabIndex={0} mt="1.5rem">
                                 <Grid item container sx={header}>
-                                    <Typography variant='h3'>EXTENSION & WEB</Typography>
+                                    <Typography variant='h3'>EXTENSION & WEBSITE</Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
                                     <Typography variant='body1' display="block">
@@ -385,15 +385,15 @@ useEffect(()=>{
 
                     {/* Logos */}
                     <Grid item container md={4}/>
-                    <Grid item container md={8} alignItems="top" >
-                            <div sx={{maxWidth: {xs:"750px", lg:"900px"}}}>
+                    <Grid item container md={8} alignItems="top" sx={{pt:15,pb:20}} >
+                            <Box sx={{maxWidth:{xs:"750px", lg:"900px"}}}>
 
                                 { darkMode ?
-                                    <img  style={{maxWidth : '100%'}} src="/images/Logos_004_OffWhite.svg" alt="Funding Partner Logos"/>
+                                    <img  style={{width : '100%'}} src="/images/Logos_004_OffWhite.svg" alt="Funding Partner Logos"/>
                                     :
-                                    <img  style={{maxWidth : '100%'}} src="/images/Logos_003_OffBlack.svg" alt="Funding Partner Logos"/>
+                                    <img  style={{width : '100%'}} src="/images/Logos_003_OffBlack.svg" alt="Funding Partner Logos"/>
                                 }    
-                            </div>
+                            </Box>
                     </Grid>
                 </Grid>
 
