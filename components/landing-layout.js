@@ -56,7 +56,12 @@ export default function LandingLayout({darkMode, children, aboutClick, imgSrc })
 
           <Grid container item sm={12} justifyContent="center"  >
             <Grid item container sx={img_container_tablet}>
-              <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. "/>
+              {/* <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. "/> */}
+              {darkMode ?
+              <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+              :
+              <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+            }
             </Grid>
           </Grid>
 
@@ -116,7 +121,12 @@ export default function LandingLayout({darkMode, children, aboutClick, imgSrc })
       <Grid container display={{ xs: 'flex', sm: 'none', md: 'none' }}>
         <Grid container item sx={landing_container_mobile}>
           <Grid item xs={12} sx={img_container_mobile}>
-              <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+          {darkMode ?
+              <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+              :
+              <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+            }
+              {/* <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " /> */}
           </Grid>
 
           <Grid item xs={12}

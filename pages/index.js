@@ -6,7 +6,7 @@ import {buttonDarkT, darkTheme, lightTheme} from '../src/themes'
 
 
 import HeaderLayout from '../components/header-layout'
-import LandingLayout from '/components/landing-layout'
+import LandingLayout from '../components/landing-layout'
 import MenusLayout from '../components/menu-layout'
 import FooterLayout from '../components/footer-layout'
 import { useRouter } from 'next/router'
