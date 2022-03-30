@@ -308,6 +308,14 @@ return (
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
                                 In the Chrome browser menu bar, click “Window” then “Extensions” and then find Optical. Click either “Remove” or toggle the blue/ grey on/off switch on the right
                                 {/* Optical was created for individuals. If you’d like to set up Optical for more general use, lets chat. <MUILink color="text.link" target="_blank" rel="noopener" href="mailto: Tyler@opticalfont.com" sx={focusStyle}>Email&nbsp;us.</MUILink>                         */}
+
+//                             THIS IS A DUMMY FAQ TEXT 
+//                             <br/>
+//                             → Does Optical work in other browsers or on phones or&nbsp;tablets?
+//                             <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
+//                             For the time being, Optical works only in Chrome on&nbsp;desktops. 
+//                             <br/><br/>
+
                             </Typography>
                         </Grid>
                     {/* </section> */}
