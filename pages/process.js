@@ -197,7 +197,7 @@ useEffect(()=>{
                         {/* menu */}
                         <Grid container item onClick={()=>clickSet('intro')} sx={menuItemStyle('intro')} >
                             <Link  href="#intro" color='inherit' underline='none' sx={focusStyle}>
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center',}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center',}}>
                                 Intro
                                 </Typography>
                             </Link>
@@ -205,49 +205,49 @@ useEffect(()=>{
                         </Grid>
                         <Grid container item onClick={()=>clickSet('Background')} sx={menuItemStyle('Background')}>
                             <Link  href="#Background" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
                                 Background
                                 </Typography>
                             </Link>
                         </Grid>
                         <Grid container item onClick={()=>clickSet('Vision')} sx={menuItemStyle('Vision')}>
                             <Link  href="#Vision" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
                                 Vision
                                 </Typography>
                             </Link>
                         </Grid>
                         <Grid container item onClick={()=>clickSet('FontDesign')} sx={menuItemStyle('FontDesign')}>
                             <Link  href="#FontDesign" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
                                 Font Design
                                 </Typography>
                             </Link>
                         </Grid> 
                         <Grid container item onClick={()=>clickSet('BrowerExtWeb')} sx={menuItemStyle('BrowserExtWeb')}>
                             <Link  href="#BrowserExtWeb" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
                                 Browser Extension & Website
                                 </Typography>
                             </Link>
                         </Grid>
                         <Grid container item onClick={()=>clickSet('NextSteps')} sx={menuItemStyle('NextSteps')}>
                             <Link  href="#NextSteps" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
                                 Next Steps
                                 </Typography>
                             </Link>
                         </Grid>
                         <Grid container item onClick={()=>clickSet('Conclusions')} sx={menuItemStyle('Conclusions')}>
                             <Link  href="#Conclusions" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
                                 Conclusions
                                 </Typography>
                             </Link>
                         </Grid>  
                         <Grid container item onClick={()=>clickSet('Team')} sx={menuItemStyle('Team')}>
                             <Link  href="#Team" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
                                 Team 
                                 </Typography>
                             </Link>
@@ -259,11 +259,7 @@ useEffect(()=>{
                         <Grid item container sx={copy_container} >
                             <Box id="intro" ref={introRef} tabIndex={0} sx={focusStyle}>
                                 <Grid item container sx={header}>
-                                    <Typography variant='h3' sx={{                      
-                                        'MozFontFeatureSettings': '"ss05"',
-                                        'WebkitFontFeatureSettings':'"ss05"',
-                                        fontFeatureSettings:'"ss05"'}}
-                                        >Intro</Typography>
+                                    <Typography variant='h3'>INTRO</Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
                                     <Typography variant='body1' display="block">
@@ -276,12 +272,8 @@ useEffect(()=>{
                                 </Box>
                                 <Box id="Background" ref={backgroundRef} tabIndex={0} sx={focusStyle} mt="2rem">
                                 <Grid item container sx={header}>
-                                        <Typography variant='h3'sx={{                      
-                                        'MozFontFeatureSettings': '"ss05"',
-                                        'WebkitFontFeatureSettings':'"ss05"',
-                                        fontFeatureSettings:'"ss05"'}}
-                                        > 
-                                        Background
+                                        <Typography variant='h3' > 
+                                        BACKGROUND
                                         </Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
@@ -294,12 +286,8 @@ useEffect(()=>{
                             </Box>
                             <Box id="Vision" ref={visionRef} tabIndex={0} sx={focusStyle} mt="2rem">
                                 <Grid item container sx={header}>
-                                        <Typography variant='h3'sx={{                      
-                                        'MozFontFeatureSettings': '"ss05"',
-                                        'WebkitFontFeatureSettings':'"ss05"',
-                                        fontFeatureSettings:'"ss05"'}}
-                                        > 
-                                        Vision
+                                        <Typography variant='h3'> 
+                                        VISION
                                         </Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
@@ -314,12 +302,8 @@ useEffect(()=>{
                             </Box>
                                 <Box id="FontDesign" ref={fontDesignRef} tabIndex={0} sx={focusStyle} mt="2rem">
                                 <Grid item container sx={header}>
-                                        <Typography variant='h3'sx={{                      
-                                        'MozFontFeatureSettings': '"ss05"',
-                                        'WebkitFontFeatureSettings':'"ss05"',
-                                        fontFeatureSettings:'"ss05"'}}
-                                        > 
-                                        Font Design
+                                        <Typography variant='h3'> 
+                                        FONT DESIGN
                                         </Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
@@ -337,10 +321,7 @@ useEffect(()=>{
                             </Box>
                             <Box id="BrowserExtWeb" ref={browserExtWebRef} sx={focusStyle} tabIndex={0} mt="2rem">
                                 <Grid item container sx={header}>
-                                    <Typography variant='h3'sx={{'MozFontFeatureSettings': '"ss05"',
-                                        'WebkitFontFeatureSettings':'"ss05"',
-                                        fontFeatureSettings:'"ss05"'}}
-                                        >Browser Extension & Website</Typography>
+                                    <Typography variant='h3'>BROWSER EXTENSION & WEBSITE</Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
                                     <Typography variant='body1' display="block">
@@ -354,10 +335,7 @@ useEffect(()=>{
                             
                             <Box id='Conclusions' ref={conclusionstRef} sx={focusStyle} tabIndex={0} mt="2rem">
                                 <Grid item container sx={header}>
-                                    <Typography variant='h3'sx={{'MozFontFeatureSettings': '"ss05"',
-                                        'WebkitFontFeatureSettings':'"ss05"',
-                                        fontFeatureSettings:'"ss05"'}}
-                                        >Conclusions</Typography>
+                                    <Typography variant='h3'>CONCLUSIONS</Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
                                     <Typography variant='body1' display="block">
@@ -371,10 +349,7 @@ useEffect(()=>{
                             </Box>
                             <Box id='NextSteps' ref={nextStepstRef} sx={focusStyle} tabIndex={0} mt="2rem">
                                 <Grid item container sx={header}>
-                                    <Typography variant='h3'sx={{'MozFontFeatureSettings': '"ss05"',
-                                        'WebkitFontFeatureSettings':'"ss05"',
-                                        fontFeatureSettings:'"ss05"'}}
-                                        >Next Steps</Typography>
+                                    <Typography variant='h3'>NEXT STEPS</Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
                                     <Typography variant='body1' display="block">
@@ -393,10 +368,7 @@ useEffect(()=>{
                             </Box>
                             <Box id='Team' ref={teamRef} sx={focusStyle} tabIndex={0} mt="2rem">
                                 <Grid item container sx={header}>
-                                    <Typography variant='h3'sx={{'MozFontFeatureSettings': '"ss05"',
-                                        'WebkitFontFeatureSettings':'"ss05"',
-                                        fontFeatureSettings:'"ss05"'}}
-                                        >Team</Typography>
+                                    <Typography variant='h3'>TEAM</Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
                                     <Typography variant='body1' display="block">

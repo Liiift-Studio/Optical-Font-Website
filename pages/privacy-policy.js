@@ -178,28 +178,28 @@ useEffect(()=>{
                         {/* menu */}
                         <Grid container item onClick={()=>clickSet('Privacy Policy')} sx={menuItemStyle('Privacy Policy')} >
                             <Link  href="#Privacy" color='inherit' underline='none' sx={focusStyle}>
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center',}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center',}}>
                                     Privacy Policy
                                 </Typography>
                             </Link>
                         </Grid>
                         <Grid container item onClick={()=>clickSet('Data Collection')} sx={menuItemStyle('Data Collection')}>
                             <Link  href="#Data" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
                                 Data Collection
                                 </Typography>
                             </Link>
                         </Grid>
                         <Grid container item onClick={()=>clickSet('Terms')} sx={menuItemStyle('Terms')}>
                             <Link  href="#Terms" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
                                     Terms&nbsp;& Conditions
                                 </Typography>
                             </Link>
                         </Grid>
                         <Grid container item onClick={()=>clickSet('Contact')} sx={menuItemStyle('Contact')}>
                             <Link  href="#Contact" color='inherit' underline='none' sx={focusStyle} >
-                                <Typography variant="h3" padding='0' sx={{display:'flex',alignItems:'center'}}>
+                                <Typography variant="h4" padding='0' sx={{display:'flex',alignItems:'center'}}>
                                     Contact
                                 </Typography>
                             </Link>
@@ -213,7 +213,7 @@ useEffect(()=>{
                             {/* <section id="Privacy" ref={privacyRef}> */}
                                 <Grid item container sx={header}>
                                     <span>
-                                    <Typography variant ='h3'>Privacy Policy</Typography>
+                                        <Typography variant ='h3'>PRIVACY POLICY</Typography>
                                         <Typography variant ='body1'>Last Revised: February 9, 2022</Typography>
                                     </span>
                                 </Grid>
