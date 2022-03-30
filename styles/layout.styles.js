@@ -123,7 +123,7 @@ export const content_container_pp={
 }
 
 export const copy_container ={
-    pb:'3rem',
+    // pb:'1rem',
     alignContent:'center',
     '&:focus-visible':{
         p:'1rem',
@@ -137,7 +137,7 @@ export const copy_container ={
 export const header ={
     display:"flex",
     justifyContent:'start',
-    pb:4
+    // pb:1,
 }
 export const copy ={
     // diplay"flex

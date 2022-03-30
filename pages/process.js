@@ -259,18 +259,17 @@ useEffect(()=>{
                         <Grid item container sx={copy_container} >
                             <Box id="intro" ref={introRef} tabIndex={0} sx={focusStyle}>
                                 <Grid item container sx={header}>
-                                    <Typography variant='h3'>INTRO</Typography>
+                                    <Typography variant='h3'>INTRODUCTION</Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
                                     <Typography variant='body1' display="block">
                                         <p>Reading is not a trivial task. Two hundred and sixty million rods and cones in your eyes detect light and relay electrical signals to the language centres in the brain for identification and interpretation. Darwin himself struggled to reconcile the complexity of the eye with the randomness of natural selection. We depend on written language to stay informed, connected and employed, but we haven’t perfected it. Our alphabet was created for paper, for the general population. It works really well. It doesn’t work perfectly for everyone. Research suggests ways to improve letters for low vision. But low vision varies in both source and degree. There are no one size fits all solutions in accessibility.</p>
                                         <p>There are great fonts for low vision. There are great font customization tools. Optical simply combines the two.</p>
                                         <p>With this article I’d like to share a bit of the thought process behind the project. I hope Optical offers a small contribution to the conversation around the tools and techniques used to make letters a little bit better for everyone. I want to note that I’ve written this both for people with low vision and for other designers and developers working with accessibility. I’ve done my best to write clearly and avoid technical terminology. There’s some jargon. I apologize in advance.</p>
-                                        
                                     </Typography>
                                 </Grid>
                                 </Box>
-                                <Box id="Background" ref={backgroundRef} tabIndex={0} sx={focusStyle} mt="2rem">
+                                <Box id="Background" ref={backgroundRef} tabIndex={0} sx={focusStyle} mt="1.5rem">
                                 <Grid item container sx={header}>
                                         <Typography variant='h3' > 
                                         BACKGROUND
@@ -284,7 +283,7 @@ useEffect(()=>{
                                     </Typography>
                                 </Grid>
                             </Box>
-                            <Box id="Vision" ref={visionRef} tabIndex={0} sx={focusStyle} mt="2rem">
+                            <Box id="Vision" ref={visionRef} tabIndex={0} sx={focusStyle} mt="1.5rem">
                                 <Grid item container sx={header}>
                                         <Typography variant='h3'> 
                                         VISION
@@ -300,7 +299,7 @@ useEffect(()=>{
                                     </Typography>
                                 </Grid>
                             </Box>
-                                <Box id="FontDesign" ref={fontDesignRef} tabIndex={0} sx={focusStyle} mt="2rem">
+                                <Box id="FontDesign" ref={fontDesignRef} tabIndex={0} sx={focusStyle} mt="1.5rem">
                                 <Grid item container sx={header}>
                                         <Typography variant='h3'> 
                                         FONT DESIGN
@@ -319,9 +318,9 @@ useEffect(()=>{
                                     </Typography>
                                 </Grid>
                             </Box>
-                            <Box id="BrowserExtWeb" ref={browserExtWebRef} sx={focusStyle} tabIndex={0} mt="2rem">
+                            <Box id="BrowserExtWeb" ref={browserExtWebRef} sx={focusStyle} tabIndex={0} mt="1.5rem">
                                 <Grid item container sx={header}>
-                                    <Typography variant='h3'>BROWSER EXTENSION & WEBSITE</Typography>
+                                    <Typography variant='h3'>EXTENSION & WEB</Typography>
                                 </Grid>
                                 <Grid item container sx={copy}>
                                     <Typography variant='body1' display="block">
@@ -333,7 +332,7 @@ useEffect(()=>{
                                 </Grid>
                             </Box>
                             
-                            <Box id='Conclusions' ref={conclusionstRef} sx={focusStyle} tabIndex={0} mt="2rem">
+                            <Box id='Conclusions' ref={conclusionstRef} sx={focusStyle} tabIndex={0} mt="1.5rem">
                                 <Grid item container sx={header}>
                                     <Typography variant='h3'>CONCLUSIONS</Typography>
                                 </Grid>
@@ -347,7 +346,7 @@ useEffect(()=>{
                                     </Typography>
                                 </Grid>
                             </Box>
-                            <Box id='NextSteps' ref={nextStepstRef} sx={focusStyle} tabIndex={0} mt="2rem">
+                            <Box id='NextSteps' ref={nextStepstRef} sx={focusStyle} tabIndex={0} mt="1.5rem">
                                 <Grid item container sx={header}>
                                     <Typography variant='h3'>NEXT STEPS</Typography>
                                 </Grid>
@@ -366,7 +365,7 @@ useEffect(()=>{
                                     </Typography>
                                 </Grid>
                             </Box>
-                            <Box id='Team' ref={teamRef} sx={focusStyle} tabIndex={0} mt="2rem">
+                            <Box id='Team' ref={teamRef} sx={focusStyle} tabIndex={0} mt="1.5rem">
                                 <Grid item container sx={header}>
                                     <Typography variant='h3'>TEAM</Typography>
                                 </Grid>
@@ -383,6 +382,19 @@ useEffect(()=>{
                                 </Grid>
                             </Box>
                         </Grid>
+                    </Grid>
+
+                    {/* Logos */}
+                    <Grid item container md={4}/>
+                    <Grid item container md={8} alignItems="top" >
+                            <div sx={{maxWidth: {xs:"750px", lg:"900px"}}}>
+
+                                { darkMode ?
+                                    <img  style={{maxWidth : '100%'}} src="/images/Logos_004_OffWhite.svg" alt="Funding Partner Logos"/>
+                                    :
+                                    <img  style={{maxWidth : '100%'}} src="/images/Logos_003_OffBlack.svg" alt="Funding Partner Logos"/>
+                                }    
+                            </div>
                     </Grid>
                 </Grid>
 

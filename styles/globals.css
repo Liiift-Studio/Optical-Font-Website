@@ -21,8 +21,8 @@ html.loaded{
  
 @font-face{
   font-family:"Optical";
-  src:url("/fonts/Optical.woff2"),
-      url("/fonts/Optical.woff");
+  src:url("/fonts/Optical_73/Variable/Optical_073VF.woff2"),
+      url("/fonts/Optical_73/Variable/Optical_073VF.woff");
   font-weight: 100 1000;
   font-stretch: 25% 151%;
   font-display: swap;

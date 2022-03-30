@@ -236,7 +236,7 @@ useEffect(()=>{
                                         <p>1. INFORMATION WE DO NOT COLLECT</p>
                                         <p>We do not collect, store, or share personal health information.</p>
                                         <p>2. INFORMATION WE COLLECT</p>
-                                        <p>We collect the information you provide to us when you contact us with feedback or troubleshooting inquiries.</p>
+                                        <p>We collect data on website visits and downloads. We collect the information you provide to us when you contact us with feedback or troubleshooting inquiries.</p>
                                         <p>3. PURPOSES FOR COLLECTION AND USE OF YOUR INFORMATION</p>
                                         <p>To respond to your questions and concerns; To correct technical problems and malfunctions related to the Service.</p>
                                         <p>4. HOW YOUR INFORMATION IS DISCLOSED OR SHARED</p>
