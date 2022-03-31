@@ -214,7 +214,7 @@ useEffect(()=>{
                                 <Grid item container sx={header}>
                                     <span>
                                         <Typography variant ='h3'>PRIVACY POLICY</Typography>
-                                        <Typography variant ='body1'>Last Revised: February 9, 2022</Typography>
+                                        <Typography variant ='body1'>Last Revised: March 31, 2022</Typography>
                                     </span>
                                 </Grid>
                             {/* </section> */}
