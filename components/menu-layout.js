@@ -217,7 +217,7 @@ return (
 
                     <Typography variant='body1' display="block">
                         <p>Optical is a customizeable font and a free web tool for low vision. Install the Google Chrome browser extension, fine tune your font and read the internet in letters set to your legibility&nbsp;needs.</p>
-                        <p> Optical is being developed out of the Health Design Lab at Emily Carr University in partnership with  Disability Alliance BC, The Accessible Technology Program, and the Shumka Centre. Optical combines recent research into specific legibility goals with modern font&nbsp;software.</p>
+                        <p> Optical is being developed out of the Health Design Lab at Emily Carr University in partnership with  Disability Alliance BC, the Accessible Technology Program, and the Shumka Centre. Optical combines recent research into specific legibility goals with modern font&nbsp;software.</p>
                         <p>Please open this website on your desktop to install&nbsp;Optical.</p>
                         <p>Reading is not a trivial task. Two hundred and sixty million rods and cones in your eyes detect light and relay electrical signals to the language centres in the brain for identification and interpretation. We depend on written language to stay informed, connected and employed, but we haven’t perfected it. Our alphabet was created for paper, for the general population. It works really well. It doesn’t work perfectly for everyone. Specific enhancements have been found to be useful for people with low vision. But low vision varies in both source and degree. There are no one size fits all solutions in accessibility. Optical customizes to varied low&nbsp;vision.</p>
                     </Typography>
