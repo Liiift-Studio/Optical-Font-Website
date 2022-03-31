@@ -162,7 +162,12 @@ useEffect(()=>{
                     <Grid item container direction ="row">
                 
                         <Grid container item xs={12} md={6} alignContent={'center'} >
-                            <IconButton aria-labelledby='logo' href="/" sx={logo_container} >
+                            <IconButton aria-labelledby='logo' href="/" sx={{p:0, borderRadius:0, justifyContent:'flex-start','&:focus-visible':{
+                                // m: '.25rem',
+                                p:'.25em .25em',
+                                borderRadius:'5px',
+                                // outline: '4px solid',
+                            },}} >
                                 <img id='logo' src={darkMode? '/images/logoDark.svg': '/images/logo.svg'} alt='Optical project logo including an icon based on the text input cursor symbol.'/>
                             </IconButton>
                         </Grid>
@@ -179,7 +184,7 @@ useEffect(()=>{
                                 pathname:"/",
                                 query:{darkMode:darkMode},
                             }}>
-                                <Grid container item xs={'auto'}sx={{alignItems:'center',mr:2,}}>
+                                <Grid container item xs={'auto'}sx={{alignItems:'flex-start',mr:2,}}>
                                     <Button aria-labelledby='Home' variant="outlined" sx={header_button}>
                                         <Typography variant='h2' sx={{position:'relative', p: '.1rem', px:2, }} alt="Home">
                                             Home

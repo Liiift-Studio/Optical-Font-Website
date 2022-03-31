@@ -88,9 +88,6 @@ const hover = {
             <a href="https://shumka.ecuad.ca/" target="_blank" rel="noopener" className={styles.aFooter}>Shumka&nbsp;Centre&nbsp;at&nbsp;ECU</a>   
           </Typography>
           <Typography variant="body1">   
-            <a href="https://www.liiift.studio/" target="_blank" rel="noopener" className={styles.aFooter}>Liiift&nbsp;Studio</a>
-          </Typography>
-          <Typography variant="body1">   
             <a href="https://www.ecuad.ca/" target="_blank" rel="noopener" className={styles.aFooter}>Emily&nbsp;Carr&nbsp;University</a>   
           </Typography>
         </Grid>
