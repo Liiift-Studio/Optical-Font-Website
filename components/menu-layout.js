@@ -166,7 +166,7 @@ return (
                 <Grid container item onClick={()=>clickSet('Faq')} sx={menuItemStyle('Faq')}>
                      <MUILink href="#Faq" color='inherit' underline='none' sx={focusStyle} >
                         <Typography variant="h4" sx={{display:'flex',alignItems:'center'}}>
-                            Faq
+                            FAQ
                         </Typography>
                     </MUILink>
                 </Grid>
