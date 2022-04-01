@@ -1,6 +1,9 @@
-const isProd = process.env.NODE_ENV === 'production'
-
 module.exports = {
-  assetPrefix: isProd ? '/Optical-Font-Website/' : '',
   reactStrictMode: true,
+  // https://github.com/vercel/next.js/issues/21079
+  // Remove this workaround whenever the issue is fixed
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
 }
