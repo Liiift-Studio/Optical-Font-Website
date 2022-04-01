@@ -250,7 +250,7 @@ return (
                         </Grid>
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display="block">
-                                <p>Boldness controls line thickness (also called weight) and balances positive and negative shapes to clarify letters essential shapes. Width adds additional negative space to help improve legibility. Width also helps differentiate commonly misread similar narrow letters like I’s, l’s, and i’s. Spacing provides additional negative space. Resizing punctuation helps to clarify these essential small fine details and sentence structure. The preferred letter buttons alternate between available letter styles to exagerate or improve legibility through increased differentiation (between different styles of zeros for&nbsp;example). </p>
+                                <p>Boldness controls line thickness (also called weight) and balances positive and negative shapes to clarify letters essential shapes. Width adds additional negative space to help improve legibility. Width also helps differentiate commonly misread similar narrow letters like I’s, l’s, and i’s. Spacing provides additional negative space. Resizing punctuation helps to clarify these essential small fine details and sentence structure. The preferred letter buttons alternate between available letter styles to exaggerate or improve legibility through increased differentiation (between different styles of zeros for&nbsp;example). </p>
                             </Typography>
                         </Grid>
                         <Grid item display={'flex'} sx={{maxWidth: {xs:"750px", lg:"900px"}, width: "100%", mt:"2rem", mb:"4rem"}}>
