@@ -1,10 +1,10 @@
-v1.34
+# [Deploy](https://api.vercel.com/v1/integrations/deploy/prj_bz9Hq7v4m5rbzCMi5vmp7NDpXkoH/plIiK3pAiH) v1.34
    
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## node version
 
-v14.17.9
+v14.17.8
 
 ## install dependencies
 
