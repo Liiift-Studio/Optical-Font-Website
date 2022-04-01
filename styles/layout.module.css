@@ -6,25 +6,50 @@
 .a {
   color: inherit;
   text-decoration: inherit; /* no underline */
-  /* padding-left:2vw; */
-  /* margin-right:2vw; */
 }
+.circle{
+  display: none;
+} 
 
-.a:hover {
+[aria-pressed="true"] .circle,
+[href='FLV'] .circle,
+[href='P'] .circle,
+[href='UG'] .circle{
+  display: flex;
+}
+.a:hover { 
   color: inherit;
   text-decoration: inherit;
 }
+.a:hover .circle,
+.a:hover ~ .circle{
+  display: flex;
+}
+
 .aFooter {
   color: inherit;
   text-decoration: inherit;
+  line-height: 165%;
+
   /* margin-right:2vw; */
 }
 
 .aFooter:hover {
   color: inherit;
   text-decoration: inherit;
-}
+  border-bottom: 2px solid;
 
+}
+.aFooter:focus {
+  outline: none;
+}
+.aFooter:focus-visible {
+  padding: .1em .2em;
+  border-radius: 5px;
+  border-color:white;
+  border-style: solid;
+  border-width: 4px;
+}
 .is_current {
   font-size: 5vw;
 }
@@ -51,8 +76,4 @@
   top: 5vh;
 
   background-color: "green";
-}
-
-.landing_right_container {
-  filter: drop-shadow(0 0 5rem grey);
 }

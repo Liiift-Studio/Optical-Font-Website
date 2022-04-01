@@ -1,164 +1,184 @@
 import Image from 'next/image'
 import { Typography, Button, Grid, Box } from '@mui/material'
 import styles from '../styles/layout.module.css'
-import dials from '../public/images/opt_light.png'
-import { shadows } from '@mui/system';
-import { imgSource, source } from '../styles/utils.module.constants';
-import { useEffect } from 'react';
-
+import imgLight from '../public/images/Extension.png'
+import imgDark from '../public/images/Extension.png'
 import { img_container_mobile, img_container_tablet, landing_container_mobile, landing_container_tablet, landing_container, img_container } from '../styles/layout.styles';
 
 
 
-export default function LandingLayout({ children, imgSrc }) {
+export default function LandingLayout({darkMode, children, aboutClick, imgSrc }) {
+  
 
   // const [imgSource,setSource] = useState(false);
-
   return (
     <>
-
+      
       {/* DESKTOP */}
-      <Grid container display={{ xs: 'none', md: 'flex' }}>
-        <Grid container spacing={10}
-          sx={landing_container}>
-            <Grid item md={6} sx={img_container} className={styles.landing_right_container}>
-                <Image src={imgSrc} alt="" />
-            </Grid>
-            <Grid item md={6} display={'block'}>
-                <Typography variant='h1'>
-                  <nobr>Varied fonts for</nobr> <br /> varied vision.
-                </Typography>
-                <Button
-                  variant="string"
-                  sx={{
-                    my: 4,
-                    px: 4,
-                    py: 1.25,
-                    // py:1,
-                    border: 0,
-                    borderRadius: 10,
+      <Grid container sx={landing_container} display={{xs: 'none', sm:'none', md: 'flex'}} className="landscape">
+          <Grid item md={6} sx={img_container}>
+            {darkMode ?
+              <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+              :
+              <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+            }
+          </Grid>
+          <Grid item md={6} pl={10} display={'flex'} sx={{flexDirection:'column', justifyContent:'space-between', height:'inherit'}}>
+              <Typography variant='h1' sx={{
+                    'MozFontFeatureSettings': '"ss05"',
+                    'WebkitFontFeatureSettings':'"ss05"',
+                    fontFeatureSettings:'"ss05"',
+                    fontSize: {sm:'1.875rem',md:'3.25rem'},
+                    lineHeight:"110%",
+              }}>
+                <nobr>Varied fonts for</nobr> <br /> varied vision
+              </Typography>
+              <Button variant="string" display={'block'} href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
+                sx={{
+                  px:5,
+                  py:2,
+                  border: 0,
+                  borderRadius: 10,
+                  maxWidth: {sm:'5.9375rem',md:'10rem'},
+                  maxHeight: {sm:'1.9375rem',md:'3.975rem'},
                   }}>
-                    <Typography variant="h3">
-                      Install
-                    </Typography>
-                </Button>
-            </Grid>
+
+                  <Typography sx={{position:'relative', top: '.1rem', color:'inherit', fontSize:{sm:'.8175rem',md:'1.4rem'}}} variant="h2" alt="install">
+                    Install
+                  </Typography>
+              </Button>
           </Grid>
       </Grid>
 
-      {/* MOBILE */}
+      {/* TABLET */}
+      <Grid container item display={{ sm: 'flex', xs: 'none', md: 'none' }} className="landscape-disabled" >
+        <Grid container item sx={landing_container_tablet} >
 
-      <Grid container display={{ xs: 'flex', sm: 'none', md: 'none' }} >
-        <Grid container item sx={landing_container_mobile}>
-          <Grid container item xs={12} justifyContent="center" className={styles.landing_right_container} >
-            <Grid item container
-              sx={img_container_mobile}
-            >
-              <Image src={imgSrc} alt="" />
+          <Grid container item sm={12} justifyContent="center"  >
+            <Grid item container sx={img_container_tablet}>
+              {/* <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. "/> */}
+              {darkMode ?
+              <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+              :
+              <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+            }
             </Grid>
           </Grid>
 
-          <Grid container item xs={12}
+          <Grid container item sm={12}
             sx={{
-              pb: 5,
+              pb: 8,
+              pt: 4,
               justifyContent: 'center',
-
-            }} >
-            <Typography variant='h1'
-              sx={{
-                // fontSize: '1vw',
-                textAlign: "center",
-              }}>Varied fonts for <br/> varied vision.</Typography>
+            }}>
+                <Typography variant='h1' sx={{
+                      'MozFontFeatureSettings': '"ss05"',
+                      'WebkitFontFeatureSettings':'"ss05"',
+                      fontFeatureSettings:'"ss05"'
+                }}>
+              Varied&nbsp;fonts&nbsp;for<br /> varied vision
+            </Typography>
           </Grid>
 
-          <Grid container justifyContent="space-evenly" px={1} >
-            <Grid item xs={12} align={'center'}>
-              <Button display={'inline-block'} variant="string"
+          <Grid container item sm={12} display='flex' justifyContent='center' spacing={2}>
+            <Grid container item sm={6} sx={{display:'flex', justifyContent:'center'}} >
+              <Button
+                href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
+                variant="string"
                 sx={{
-                  my: 5,
-                  px: '10%',
-                  mx: 1,
-                  borderRadius: 11,
-                }}
-              >
-                <Typography variant="h3">Install</Typography>
+                  my: 1,
+                  borderRadius: 10,
+                  minWidth: "156px",
+                  minHeight: "53px",
+                }}>
+                <Typography variant="h2" sx={{color:'inherit'}}>
+                  Install
+                </Typography>
               </Button>
-              <Button display={'inline-block'}  variant="outlined"
+            </Grid>
+
+            <Grid container item sm={6} sx={{display:'flex', justifyContent:'center'}} >
+              <Button
+                href="#About"
+                variant="outlined"
+                onClick={aboutClick}
                 sx={{
-                  my: 5,
-                  px: '10%',
-                  mx: 1,
-                  borderRadius: 11,
-                }}
-              >
-                <Typography variant="h3">About</Typography>
+                  my: 1,
+                  borderRadius: 10,
+                  minWidth: "156px",
+                  minHeight: "53px",
+                }}>
+                <Typography variant="h2">
+                  About
+                </Typography>
               </Button>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
 
-
-
-
-      {/* TABLET */}
-
-      <Grid container display={{ sm: 'flex', xs: 'none', md: 'none' }} >
-        <Grid container item sx={landing_container_tablet} >
-
-          <Grid container item xs={12} justifyContent="center" className={styles.landing_right_container} >
-            <Grid item container
-              sx={img_container_tablet}
-            >
-              <Image src={imgSrc} alt="" />
-            </Grid>
+      {/* MOBILE */}
+      <Grid container display={{ xs: 'flex', sm: 'none', md: 'none' }}>
+        <Grid container item sx={landing_container_mobile}>
+          <Grid item xs={12} sx={img_container_mobile}>
+          {darkMode ?
+              <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+              :
+              <img style={{maxWidth:'100%', height:'inherit'}} src='../images/Extension.png'  alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " />
+            }
+              {/* <Image src={imgSrc} alt="Web extension illustration, a simplified 3d rendering showing three buttons, a slider and a digital screen with a lowercase a. " /> */}
           </Grid>
-          <Grid container item xs={12}
+
+          <Grid item xs={12}
             sx={{
-              // pt:4,
-              pb: 8,
-              justifyContent: 'center',
-
-            }} >
+              pb: 10,
+              minWidth: '326px',
+              maxWidth: '426px',
+            }}>
             <Typography variant='h1'
-              sx={{
-                fontSize: '200vw',
+              sx={{               
                 textAlign: "center",
-              }}>
-              Varied fonts for<br /> varied vision.
-            </Typography>
+                  'MozFontFeatureSettings': "ss05",
+                  'WebkitFontFeatureSettings':'"ss0"',
+                  fontFeatureSettings:'"ss05"'
+              }}>Varied&nbsp;fonts&nbsp;for <br/> varied vision</Typography>
           </Grid>
-          <Grid container xs={12} align={'center'} px={5} >
-            <Grid item sm={6}>
+
+          <Grid container item xs={12} pb={10} spacing={2}  >
+            <Grid xs={6} item sx={{display:'flex', minWidth:'55px'}} >
               <Button
+                href="https://chrome.google.com/webstore/detail/optical/jgnimjfkbkjejchhmpocakifegpakcad"
                 variant="string"
                 sx={{
-                  // padding:1,
-                  // paddingRight:2,
-                  my: 5,
-                  px: "20%",
-                  // pt:1.5,
-                  borderRadius: 11,
-                }}
-              >
-                <Typography variant="h3">
+                  my: 1,
+                  px:5,
+                  // mx:10,
+                  borderRadius: 10,
+                  maxWidth: '10rem',
+                  maxHeight: '3rem',
+                  
+                }}>
+                <Typography variant="h2" sx={{color:'inherit'}}>
                   Install
                 </Typography>
               </Button>
             </Grid>
-            <Grid item sm={6}>
+
+            <Grid item xs={6} sx={{display:'flex'}} >
               <Button
+                href="#About"
                 variant="outlined"
+                onClick={aboutClick}
                 sx={{
-                  // padding:1,
-                  // paddingRight:2,
-                  my: 5,
-                  px: "20%",
-                  // pt:1.5,
-                  borderRadius: 11,
-                }}
-              >
-                <Typography variant="h3">
+                  my: 1,
+                  px:5,
+                  borderRadius: 10,
+
+                  // width:'100%',
+                  width: '10rem',
+                  height: '3rem',
+                }}>
+                <Typography variant="h2">
                   About
                 </Typography>
               </Button>

@@ -6,19 +6,77 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   height: 100%;
 }
-
+html{
+  zoom: 90%;
+}
+html.loaded{
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
 }
-
+ 
 @font-face{
   font-family:"Optical";
-  src:url("/fonts/Optical9VF.woff2"),
-      url("/fonts/Optical9VF.woff");
-  font-weight:100 1000;
+  src:url("/fonts/Optical_73/Variable/Optical_073VF.woff2"),
+      url("/fonts/Optical_73/Variable/Optical_073VF.woff");
+  font-weight: 100 1000;
   font-stretch: 25% 151%;
-  font-dsplay:swap;
+  font-display: swap;
+  -moz-font-feature-settings: "ss05";
+  -webkit-font-feature-settings: "ss05";
+  font-feature-settings:"ss05";
 }
+
+div[class^="layout_circle__"], div[class*=" layout_circle__"] {
+  position: absolute;
+  left: 2rem;
+  top: 1.2rem;
+}
+
+.sectionFocus:focus-visible{
+  padding:1rem;
+  border-radius: 5px;
+  outline: 5px solid black;
+
+}
+.linkFocus:focus-visible{
+  padding:.25rem;
+  margin:.25rem;
+  
+  border-radius: 5px;
+  outline: 5px solid black;
+
+}
+.anchor{
+  position: relative;
+  padding-top:2rem;
+  display:'hidden';
+}
+.MuiTypography-h2{
+  letter-spacing: 0.05em!important;
+}
+#logo{
+  width: 100%;
+}
+.box-shadow-white{
+  box-shadow: 0px 10px 41px 0px rgba(255,255,255,0.75);
+  border-radius: 10px;
+}
+.box-shadow{
+  box-shadow: 7.2px 1.31px 87.74px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
+}
+/* @media screen and (orientation:landscape)
+and (min-device-width: 319px) 
+and (max-device-width: 880px) { 
+  .landscape{
+    display:flex;
+  }
+  .landscape-disabled{
+    display:none;
+  }
+} */
