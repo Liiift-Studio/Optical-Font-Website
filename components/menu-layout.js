@@ -269,7 +269,7 @@ return (
                         
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display="block">
-                                <p>Everyone’s vision is unique. Set your controls to what you think will work best. Legibility is improved by familiarity. Spend some time with your settings, then come back, keep toggling. Find your balance between exagerated legibility and conventional&nbsp;letters.</p>
+                                <p>Everyone’s vision is unique. Set your controls to what you think will work best. Legibility is improved by familiarity. Spend some time with your settings, then come back, keep toggling. Find your balance between exaggerated legibility and conventional&nbsp;letters.</p>
                                 <p>Click on the Optical Icon in your browser window next to the address bar to open or minimize the extension. Click the Off and On button to activate Optical. Click Menu to see other options: light and dark modes and access the website and&nbsp;FAQ. </p>
                             </Typography>
                         </Grid>
