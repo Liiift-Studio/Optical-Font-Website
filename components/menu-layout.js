@@ -216,7 +216,7 @@ return (
                 <Grid item container ref={aboutRef} tabIndex={0} sx={copy_container} display={{xs:'block', sm:'none'}}>
 
                     <Typography variant='body1' display="block">
-                        <p>Optical is a customizeable font and a free web tool for low vision. Install the Google Chrome browser extension, fine tune your font and read the internet in letters set to your legibility&nbsp;needs.</p>
+                        <p>Optical is a customizable font and a free web tool for low vision. Install the Google Chrome browser extension, fine-tune your font and read the internet in letters set to your legibility&nbsp;needs.</p>
                         <p> Optical is being developed out of the Health Design Lab at Emily Carr University in partnership with  Disability Alliance BC, the Accessible Technology Program, and the Shumka Centre. Optical combines recent research into specific legibility goals with modern font&nbsp;software.</p>
                         <p>Please open this website on your desktop to install&nbsp;Optical.</p>
                         <p>Reading is not a trivial task. Two hundred and sixty million rods and cones in your eyes detect light and relay electrical signals to the language centres in the brain for identification and interpretation. We depend on written language to stay informed, connected and employed, but we haven’t perfected it. Our alphabet was created for paper, for the general population. It works really well. It doesn’t work perfectly for everyone. Specific enhancements have been found to be useful for people with low vision. But low vision varies in both source and degree. There are no one size fits all solutions in accessibility. Optical customizes to varied low&nbsp;vision.</p>
@@ -250,7 +250,7 @@ return (
                         </Grid>
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display="block">
-                                <p>Boldness controls line thickness (also called weight) and balances positive and negative shapes to clarify letters essential shapes. Width adds additional negative space to help improve legibility. Width also helps differentiate commonly misread similar narrow letters like I’s, l’s, and i’s. Spacing provides additional negative space. Resizing punctuation helps to clarify these essential small fine details and sentence structure. The preferred letter buttons alternate between available letter styles to exaggerate or improve legibility through increased differentiation (between different styles of zeros for&nbsp;example). </p>
+                                <p>Boldness controls line thickness (also called weight) and balances positive and negative shapes to clarify letters' essential shapes. Width adds additional negative space to help improve legibility. Width also helps differentiate commonly misread similar narrow letters like I’s, l’s, and i’s. Spacing provides additional negative space. Resizing punctuation helps to clarify these essential small fine details and sentence structure. The preferred letter buttons alternate between available letter styles to exaggerate or improve legibility through increased differentiation (between different styles of zeros for&nbsp;example). </p>
                             </Typography>
                         </Grid>
                         <Grid item display={'flex'} sx={{maxWidth: {xs:"750px", lg:"900px"}, width: "100%", mt:"2rem", mb:"4rem"}}>
@@ -288,7 +288,7 @@ return (
                             <Typography variant='body1' display="block">
                                 → How do I Install&nbsp;Optical?
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
-                                Click <MUILink color="text.link" href="#Install" sx={focusStyle}> Install</MUILink> to go to the Google Chrome Web Store. Click the blue “Add to Chrome” button at the top right. You’ll see a popup that says Optical will be able to read and change data on websites. In the pop up click the “Add Extension” button to the right. Success! You should be all set. There should be another pop up at the top right, and the Optical Icon (a stylized version of the text select cursor resembling a capital I) next to your browser address bar. Click the icon button and get&nbsp;started.
+                                Click <MUILink color="text.link" href="#Install" sx={focusStyle}> Install</MUILink> to go to the Google Chrome Web Store. Click the blue “Add to Chrome” button at the top right. You’ll see a popup that says Optical will be able to read and change data on websites. In the pop up click the “Add Extension” button to the right. Success! You should be all set. There should be another popup at the top right, and the Optical Icon (a stylized version of the text select cursor resembling a capital I) next to your browser address bar. Click the icon button and get&nbsp;started.
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}>
                                     <br/>
                                     <img src="images/FAQ_Install.svg" width="100%" />
@@ -301,7 +301,7 @@ return (
                                 → Optical doesn’t seem to be working on every website.&nbsp;Why?
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
 
-                                Websites are made in many different ways. We can’t guarentee that Optical will work perfectly in every scenario. Send us an email, let us know which sites aren’t perfect so we can keep tabs on this and hopefully address them in the next&nbsp;version.
+                                Websites are made in many different ways. We can’t guarantee that Optical will work perfectly in every scenario. Send us an email, let us know which sites aren’t perfect so we can keep tabs on this and hopefully address them in the next&nbsp;version.
                                 <br/><br/>
 
                                 → How do I uninstall or disable Optical?
