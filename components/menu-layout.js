@@ -366,7 +366,7 @@ return (
                             <Typography variant='body1' display="block">
                                 <Box component="p">
 
-                                Optical collects no data, including cookies or personal information. We rely on feedback and conversations to track use, strengths, and&nbsp;weaknesses. <NextLink 
+                                Optical tracks page views and extension installations but collects no other data from you. <NextLink 
                                 href={{ pathname:"/privacy-policy/",
                                 query:{darkMode:darkMode},
                             }}><MUILink color="text.link" sx={focusStyle}>Read our full privacy&nbsp;policy.</MUILink></NextLink>                  
