@@ -270,11 +270,13 @@ useEffect(()=>{
                                         <p>Reading is not a trivial task. Two hundred and sixty million rods and cones in your eyes detect light and relay electrical signals to the language centres in the brain for identification and interpretation. Darwin himself struggled to reconcile the complexity of the eye with the randomness of natural selection. We depend on written language to stay informed, connected and employed, but we haven’t perfected it. Our alphabet was created for paper, for the general population. It works really well. It doesn’t work perfectly for everyone. Research suggests ways to improve letters for low vision. But low vision varies in both source and degree. There are no one size fits all solutions in accessibility.</p>
                                         <p>There are great fonts for low vision. There are great font customization tools. Optical simply combines the two.</p>
                                         <p>With this article, I’d like to share a bit of the thought process behind the project. I hope Optical offers a small contribution to the conversation around the tools and techniques used to make letters a little bit better for everyone. I want to note that I’ve written this both for people with low vision and for other designers and developers working with accessibility. I’ve done my best to write clearly and avoid technical terminology. There’s some jargon. I apologize in advance.</p>
+                                        <br>
                                         { darkMode ?
                                             <img  style={{width : '100%'}} src="/images/Optical_Process_2.svg" alt="Process Image letters A and B"/>
                                         :
                                             <img  style={{width : '100%'}} src="/images/Optical_Process_1.svg" alt="Process Image letters A and B"/>
-                                        }   
+                                        }
+                                        <br><br>   
                                     </Typography>
                                 </Grid>
                                 </Box>
