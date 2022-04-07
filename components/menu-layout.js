@@ -254,16 +254,16 @@ return (
                             </Typography>
                         </Grid>
                         <Grid item display={'flex'} sx={{maxWidth: {xs:"750px", lg:"900px"}, width: "100%", mt:"2rem", mb:"4rem"}}>
-                        { darkMode ?
-                            <div style={{width: "100%"}}>
-                                <img style={{width: "100%"}} src="/images/About_Diagram_001 1.svg" alt="Font features including boldness, width, letter alternatives, and resizeable punctuation."/>
-                            </div>
+                            { darkMode ?
+                                <div style={{width: "100%"}}>
+                                    <img style={{width: "100%"}} src="/images/About_Diagram_001 1.svg" alt="Font features including boldness, width, letter alternatives, and resizeable punctuation."/>
+                                </div>
+                                    
+                                :
+                                <div style={{width: "100%"}}>
+                                    <img style={{width: "100%"}} src="/images/About_Diagram_001 light.svg" alt="Font features including boldness, width, letter alternatives, and resizeable punctuation."/>
+                                </div>
                                 
-                            :
-                            <div style={{width: "100%"}}>
-                                <img style={{width: "100%"}} src="/images/About_Diagram_001 light.svg" alt="Font features including boldness, width, letter alternatives, and resizeable punctuation."/>
-                            </div>
-                            
                             }
                         </Grid>
                         
