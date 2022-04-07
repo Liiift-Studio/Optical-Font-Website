@@ -271,9 +271,9 @@ useEffect(()=>{
                                         <p>There are great fonts for low vision. There are great font customization tools. Optical simply combines the two.</p>
                                         <p>With this article, I’d like to share a bit of the thought process behind the project. I hope Optical offers a small contribution to the conversation around the tools and techniques used to make letters a little bit better for everyone. I want to note that I’ve written this both for people with low vision and for other designers and developers working with accessibility. I’ve done my best to write clearly and avoid technical terminology. There’s some jargon. I apologize in advance.</p>
                                         { darkMode ?
-                                            <img  style={{width : '100%'}} src="/images/Optical_Process_02.svg" alt="Process Image letters A and B"/>
+                                            <img  style={{width : '100%'}} src="/images/Optical_Process_2.svg" alt="Process Image letters A and B"/>
                                         :
-                                            <img  style={{width : '100%'}} src="/images/Optical_Process_01.svg" alt="Process Image letters A and B"/>
+                                            <img  style={{width : '100%'}} src="/images/Optical_Process_1.svg" alt="Process Image letters A and B"/>
                                         }   
                                     </Typography>
                                 </Grid>
