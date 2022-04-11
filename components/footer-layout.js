@@ -79,7 +79,7 @@ const hover = {
             <a rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" className={styles.aFooter}>The&nbsp;Accessible&nbsp;Technology&nbsp;Program</a>   
           </Typography>
           <Typography variant="body1">   
-            <a className={styles.aFooter} href="https://disabilityalliancebc.org/" target="_blank" rel="noopener">Disibility&nbsp;Alliance&nbsp;BC</a>   
+            <a className={styles.aFooter} href="https://disabilityalliancebc.org/" target="_blank" rel="noopener">Disability&nbsp;Alliance&nbsp;BC</a>   
           </Typography>
           <Typography variant="body1">   
             <a href="https://research.ecuad.ca/healthdesignlab/" target="_blank" rel="noopener" className={styles.aFooter}>The&nbsp;Health&nbsp;Design&nbsp;Lab&nbsp;at&nbsp;ECU</a>   
