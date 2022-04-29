@@ -406,7 +406,7 @@ useEffect(()=>{
                                         {/* </section> */}
                                     
                                         {/* <section id='Contact' ref={contactRef}> */}
-                                        <p>I want to thank everyone in the low vision community who lent feedback. Your work on Optical was essential. Optical wouldn’t exist without you.</p>
+                                        <p>I want to thank everyone in the low vision community who lent feedback. Your work on Optical was essential.</p>
                                         <p>I also want to specifically thank Caylee Raber, Nadia Beyzaei, Kate Armstrong, Justina Loh, Karen Martin, Quinn Keaveney, Mirko Velimirovic, Colby May, George Macrae, and Lisa Boulton for their work. Lastly, a note of appreciation is owed to Sofie Beier, Stephen Nixon, Dr. Peter Renke, Thomas Jockin, Kevin Larson and the Advanced Reading Technologies team at Microsoft for sharing feedback and expertise.</p>
                                         <p>Finally, Optical was largely created on the unceded land of the Coast Salish peoples, including the Musqueam, Squamish and Tsleil-Waututh Nations in coastal British Columbia. Land acknowledgements are a small step in a complex history, but it’d be a mistake not to share appreciation for the incredible land where we’re privileged to live and work.</p>
                                         {/* </section> */}
