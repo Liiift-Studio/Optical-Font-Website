@@ -216,8 +216,8 @@ return (
                 <Grid item container ref={aboutRef} tabIndex={0} sx={copy_container} display={{xs:'block', sm:'none'}}>
 
                     <Typography variant='body1' display="block">
-                        <p>Optical is a customizable font and a free web tool for low vision. Install the Google Chrome browser extension, fine-tune your font and read the internet in letters set to your legibility&nbsp;needs.</p>
-                        <p> Optical is being developed out of the Health Design Lab at Emily Carr University in partnership with  Disability Alliance BC, the Accessible Technology Program, and the Shumka Centre. Optical combines recent research into specific legibility goals with modern font&nbsp;software.</p>
+                        <p>Optical is a variable font family and a free web tool for varied low vision. Install the Google Chrome browser extension and adjust legibility to your needs.</p>
+                        <p>Version one was developed out of the Health Design Lab at Emily Carr University in partnership with  Disability Alliance BC, the Accessible Technology Program, and the Shumka Centre. Optical combines recent research into specific legibility goals with modern font&nbsp;software.</p>
                         <p>Please open this website on your desktop to install&nbsp;Optical.</p>
                         <p>Reading is not a trivial task. Two hundred and sixty million rods and cones in your eyes detect light and relay electrical signals to the language centres in the brain for identification and interpretation. We depend on written language to stay informed, connected and employed, but we haven’t perfected it. Our alphabet was created for paper, for the general population. It works really well. It doesn’t work perfectly for everyone. Specific enhancements have been found to be useful for people with low vision. But low vision varies in both source and degree. There are no one size fits all solutions in accessibility. Optical customizes to varied low&nbsp;vision.</p>
                     </Typography>
@@ -233,8 +233,8 @@ return (
                         </Grid>
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display="block">
-                                <p>Optical is a customizeable font and a free web tool for low vision. Install the Google Chrome browser extension, fine tune your font and read the internet in letters set to your legibility needs. It combines recent research into specific legibility goals with modern font software. <NextLink href={{pathname:"/process/",query:{darkMode:darkMode}}}><MUILink color="text.link" sx={focusStyle}> Learn more about how we made&nbsp;Optical.</MUILink></NextLink></p>
-                                <p><span paragraph={"true"}>Optical is being developed out of the <MUILink href="https://research.ecuad.ca/healthdesignlab/" target="_blank" rel="noopener" color="text.link" sx={focusStyle}>Health Design Lab</MUILink> at <MUILink color="text.link"  href="https://www.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>Emily Carr University</MUILink> in partnership with <MUILink color="text.link" href="https://disabilityalliancebc.org/" target="_blank" rel="noopener" sx={focusStyle}>Disability Alliance BC</MUILink>, <MUILink color="text.link" rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" sx={focusStyle}>the Accessible Technology Program</MUILink>, and <MUILink color="text.link" href="https://shumka.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>the Shumka&nbsp;Centre</MUILink>.</span></p>
+                                <p>Optical is a variable font family and a free web tool for varied low vision. Install the Google Chrome browser extension and adjust legibility to your needs. It combines recent research into specific legibility goals with modern font tools. <NextLink href={{pathname:"/process/",query:{darkMode:darkMode}}}><MUILink color="text.link" sx={focusStyle}> Learn more about how we made&nbsp;Optical.</MUILink></NextLink></p>
+                                <p><span paragraph={"true"}>Version one was developed out of the <MUILink href="https://research.ecuad.ca/healthdesignlab/" target="_blank" rel="noopener" color="text.link" sx={focusStyle}>Health Design Lab</MUILink> at <MUILink color="text.link"  href="https://www.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>Emily Carr University</MUILink> in partnership with <MUILink color="text.link" href="https://disabilityalliancebc.org/" target="_blank" rel="noopener" sx={focusStyle}>Disability Alliance BC</MUILink>, <MUILink color="text.link" rel="noopener noreferrer" href="https://www.ic.gc.ca/eic/site/118.nsf/eng/home" target="_blank" sx={focusStyle}>the Accessible Technology Program</MUILink>, and <MUILink color="text.link" href="https://shumka.ecuad.ca/" target="_blank" rel="noopener" sx={focusStyle}>the Shumka&nbsp;Centre</MUILink>.</span></p>
                             </Typography>
                         </Grid>
                         <Grid item sx={{my:"6rem", display:'flex',maxWidth: {xs:"750px", lg:"900px"},width:'100%', justifyContent:"center"}}>
@@ -269,8 +269,7 @@ return (
                         
                         <Grid item container sx={copy}>
                             <Typography variant='body1' display="block">
-                                <p>Everyone’s vision is unique. Set your controls to what you think will work best. Legibility is improved by familiarity. Spend some time with your settings, then come back, keep toggling. Find your balance between exaggerated legibility and conventional&nbsp;letters.</p>
-                                <p>Click on the Optical Icon in your browser window next to the address bar to open or minimize the extension. Click the Off and On button to activate Optical. Click Menu to see other options: light and dark modes and access the website and&nbsp;FAQ. </p>
+                                <p>Spend some time with your settings, then come back, keep toggling. Click on the Optical Icon in your browser window next to the address bar to open or minimize the extension. Click the Off and On button to activate Optical. Click Menu to see other options: light and dark modes and access the website and&nbsp;FAQ. </p>
                             </Typography>
                         </Grid>
                         
@@ -301,7 +300,7 @@ return (
                                 → Optical doesn’t seem to be working on every website.&nbsp;Why?
                                 <Box component="span" sx={{display:"block", lineHeight:'50%'}}><br/></Box>
 
-                                Websites are made in many different ways. We can’t guarantee that Optical will work perfectly in every scenario. Send us an email, let us know which sites aren’t perfect so we can keep tabs on this and hopefully address them in the next&nbsp;version.
+                                Websites are made in many different ways. We can’t guarantee that Optical will work perfectly in every scenario. Send us an email, let us know which sites aren’t working for you so we can keep tabs on this and hopefully address them in the next&nbsp;version.
                                 <br/><br/>
 
                                 → How do I uninstall or disable Optical?
